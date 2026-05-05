@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nowcasting IMACEC | Mauricio Ulloa</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Proyecto aplicado</p>
+      <h1>Nowcasting de actividad económica en Chile</h1>
+      <p class="hero-text">
+        Modelo mensual en R para proyectar el IMACEC total e IMACEC no minero
+        usando indicadores de alta frecuencia, variables calendario y rezagos
+        macroeconómicos.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Motivación</h2>
+      <p>
+        El objetivo del proyecto es construir una herramienta reproducible para
+        anticipar la evolución reciente de la actividad económica chilena antes
+        de la publicación oficial del IMACEC.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Datos</h2>
+      <p>
+        El pipeline integra series de actividad, ventas minoristas, crédito,
+        UF, desempleo, cobre, petróleo, días hábiles e indicadores sectoriales
+        del INE como minería, manufactura, comercio y electricidad.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Metodología</h2>
+      <p>
+        Se estiman modelos lineales para la variación anual del IMACEC total
+        y no minero. Las especificaciones incluyen rezagos de actividad,
+        variables contemporáneas, efectos calendario, dummies mensuales y
+        controles para meses atípicos.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Resultados</h2>
+      <p>
+        El modelo genera una tabla de nowcast mensual y gráficos de comparación
+        entre valores observados, ajuste del modelo y proyección del mes objetivo.
+      </p>
+
+      <img src="../img/imacec_total.png" alt="Nowcast IMACEC total" style="max-width:100%; border-radius: 12px;">
+      <br><br>
+      <img src="../img/imacec_no_minero.png" alt="Nowcast IMACEC no minero" style="max-width:100%; border-radius: 12px;">
+    </section>
+
+    <section class="section">
+      <h2>Herramientas</h2>
+      <ul class="skills">
+        <li>R</li>
+        <li>tidyverse</li>
+        <li>ggplot2</li>
+        <li>BCCh API</li>
+        <li>Series de tiempo</li>
+        <li>Nowcasting</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Código</h2>
+      <p>
+        Repositorio del proyecto:
+        <a href="https://github.com/mulloav3007/nowcasting-imacec-chile">
+          github.com/mulloav3007/nowcasting-imacec-chile
+        </a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>
