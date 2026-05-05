@@ -39,7 +39,7 @@
     "href": "proyectos/imacec.html#resultado-principal",
     "title": "Nowcasting de actividad económica en Chile",
     "section": "Resultado principal",
-    "text": "Resultado principal\n\n\n\nÚltimas observaciones y nowcast mensual\n\n\nPeríodo\nIMACEC total\nIMACEC no minero\nTipo\n\n\n\n\n2026-01\n1.36\n1.68\nObservado\n\n\n2026-02\n1.46\n1.80\nObservado\n\n\n2026-03\n1.53\n1.57\nObservado\n\n\n2026-04\n1.66\n2.32\nObservado\n\n\n2026-05\n1.43\n2.60\nObservado\n\n\n2026-06\n2.40\n2.10\nNowcast"
+    "text": "Resultado principal\n\n\n\nÚltimas observaciones y nowcast mensual\n\n\nPeríodo\nIMACEC total\nIMACEC no minero\nTipo\n\n\n\n\n2025-11\n1.37\n2.21\nObservado\n\n\n2025-12\n1.27\n2.64\nObservado\n\n\n2026-01\n-0.55\n-0.40\nObservado\n\n\n2026-02\n-0.34\n-0.34\nObservado\n\n\n2026-03\n-0.13\n0.87\nObservado\n\n\n2026-04\n-0.36\n0.79\nNowcast"
   },
   {
     "objectID": "proyectos/imacec.html#imacec-total-observado-versus-ajustenowcast",
@@ -74,7 +74,7 @@
     "href": "proyectos/imacec.html#métricas-de-ajuste",
     "title": "Nowcasting de actividad económica en Chile",
     "section": "Métricas de ajuste",
-    "text": "Métricas de ajuste\n\n\n\nMétricas de ajuste del modelo\n\n\n\n\n\n\n\n\n\nVariable\nN\nRMSE\nMAE\nNota\n\n\n\n\nIMACEC total\n101\n0.52\n0.39\nDatos demo; reemplazar ejecutando scripts/01_update_imacec.R\n\n\nIMACEC no minero\n101\n0.49\n0.36\nDatos demo; reemplazar ejecutando scripts/01_update_imacec.R\n\n\n\n\n\n\n\n\n\n\n\nImportanteLectura prudente\n\n\n\nLas métricas anteriores corresponden a ajuste interno del modelo. Para evaluar capacidad predictiva real, el siguiente paso es agregar una evaluación pseudo out-of-sample con ventanas móviles y comparación contra benchmarks autoregresivos."
+    "text": "Métricas de ajuste\n\n\n\nMétricas de ajuste del modelo\n\n\n\n\n\n\n\n\n\nVariable\nN\nRMSE\nMAE\nNota\n\n\n\n\nIMACEC total\n87\n1.30\n1.00\nMétricas in-sample; no interpretar como evaluación fuera de muestra.\n\n\nIMACEC no minero\n87\n1.33\n0.98\nMétricas in-sample; no interpretar como evaluación fuera de muestra.\n\n\n\n\n\n\n\n\n\n\n\nImportanteLectura prudente\n\n\n\nLas métricas anteriores corresponden a ajuste interno del modelo. Para evaluar capacidad predictiva real, el siguiente paso es agregar una evaluación pseudo out-of-sample con ventanas móviles y comparación contra benchmarks autoregresivos."
   },
   {
     "objectID": "proyectos/imacec.html#cómo-actualizar-el-proyecto",
