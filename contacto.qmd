@@ -4,9 +4,11 @@ title: "Contacto"
 
 Puedes contactarme en:
 
-- Email: `tu_correo@correo.com`
+- Email: `mulloav@fen.uchile.cl`
 - GitHub: <https://github.com/mulloav3007>
-- LinkedIn: agregar enlace
+- LinkedIn: www.linkedin.com/in/mauricio-andrés-ulloa-valdivia
+
+
 
 ::: {.mu-note}
 Antes de publicar definitivamente, reemplaza el correo y el enlace de LinkedIn.

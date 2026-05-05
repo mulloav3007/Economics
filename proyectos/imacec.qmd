@@ -1,0 +1,235 @@
+---
+title: "Nowcasting de actividad económica en Chile"
+subtitle: "Modelo mensual en R para seguimiento coyuntural del IMACEC total y no minero"
+execute:
+  echo: false
+  message: false
+  warning: false
+format:
+  html:
+    toc: true
+    page-layout: full
+---
+
+```{r setup}
+# Ejecutar chunks desde la raíz del repositorio Economics.
+knitr::opts_knit$set(root.dir = normalizePath(".."))
+
+library(dplyr)
+library(readr)
+library(ggplot2)
+library(plotly)
+library(scales)
+library(lubridate)
+library(knitr)
+
+choose_file <- function(real_path, demo_path) {
+  if (file.exists(real_path)) {
+    list(path = real_path, status = "real")
+  } else {
+    list(path = demo_path, status = "demo")
+  }
+}
+
+history_file <- choose_file(
+  "data/processed/imacec_nowcast_history.csv",
+  "data/processed/imacec_nowcast_history_demo.csv"
+)
+summary_file <- choose_file(
+  "data/processed/imacec_nowcast_summary.csv",
+  "data/processed/imacec_nowcast_summary_demo.csv"
+)
+metrics_file <- choose_file(
+  "data/processed/imacec_model_metrics.csv",
+  "data/processed/imacec_model_metrics_demo.csv"
+)
+projection_file <- choose_file(
+  "data/processed/imacec_projection.csv",
+  "data/processed/imacec_projection_demo.csv"
+)
+
+data_status <- history_file$status
+
+hist <- readr::read_csv(history_file$path, show_col_types = FALSE) |>
+  mutate(Periodo = as.Date(Periodo))
+
+resumen <- readr::read_csv(summary_file$path, show_col_types = FALSE) |>
+  mutate(Periodo = as.Date(Periodo))
+
+metricas <- readr::read_csv(metrics_file$path, show_col_types = FALSE)
+proyeccion <- readr::read_csv(projection_file$path, show_col_types = FALSE) |>
+  mutate(Periodo = as.Date(Periodo))
+```
+
+::: {.callout-note}
+## Estado del proyecto
+
+**Proyecto aplicado en desarrollo continuo.** La metodología base está implementada para actualizarse mensualmente con nueva información. La página está pensada como una vitrina técnica: muestra la motivación, la estructura del modelo, los resultados principales y el pipeline reproducible.
+:::
+
+```{r data-status, results='asis'}
+if (identical(data_status, "demo")) {
+  cat(
+    "::: {.callout-warning}\n",
+    "## Página usando datos demo\n\n",
+    "Todavía no se han generado los archivos reales `data/processed/imacec_nowcast_*.csv`. ",
+    "Ejecuta `Rscript scripts/01_update_imacec.R` desde la raíz del repositorio para reemplazar esta visualización por resultados actualizados.\n",
+    ":::"
+  )
+}
+```
+
+## Pregunta económica
+
+El IMACEC es una de las señales principales para evaluar la coyuntura económica chilena. Este proyecto busca responder una pregunta práctica:
+
+> ¿Es posible anticipar la evolución reciente del IMACEC total y no minero usando información mensual disponible antes de la publicación oficial?
+
+El objetivo no es producir una proyección oficial, sino construir una herramienta reproducible de seguimiento coyuntural que combine datos macroeconómicos, variables calendario, indicadores sectoriales y modelos econométricos simples.
+
+## Resultado principal
+
+```{r summary-table}
+resumen |>
+  mutate(Periodo = format(Periodo, "%Y-%m")) |>
+  knitr::kable(
+    digits = 2,
+    col.names = c("Período", "IMACEC total", "IMACEC no minero", "Tipo"),
+    caption = "Últimas observaciones y nowcast mensual"
+  )
+```
+
+## IMACEC total: observado versus ajuste/nowcast
+
+```{r plot-total}
+hist_plot <- hist |>
+  filter(Periodo >= max(Periodo, na.rm = TRUE) %m-% months(95))
+
+g_total <- ggplot(hist_plot, aes(x = Periodo)) +
+  geom_hline(yintercept = 0, linewidth = 0.25, color = "grey70") +
+  geom_line(aes(y = imacec, color = "Observado"), linewidth = 0.75, na.rm = TRUE) +
+  geom_line(aes(y = imacec_fit, color = "Ajuste / nowcast"), linewidth = 0.75, linetype = "dashed", na.rm = TRUE) +
+  geom_point(
+    data = filter(hist_plot, tipo == "Nowcast"),
+    aes(y = imacec_fit, color = "Nowcast"),
+    size = 2.5,
+    na.rm = TRUE
+  ) +
+  scale_color_manual(values = c("Observado" = "#1f4e79", "Ajuste / nowcast" = "#b03a2e", "Nowcast" = "#7f1d1d")) +
+  labs(
+    x = NULL,
+    y = "Var. 12m (%)",
+    color = NULL,
+    title = "IMACEC total: observado versus ajuste/nowcast"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = "top", panel.grid.minor = element_blank())
+
+plotly::ggplotly(g_total)
+```
+
+## IMACEC no minero: observado versus ajuste/nowcast
+
+```{r plot-nm}
+g_nm <- ggplot(hist_plot, aes(x = Periodo)) +
+  geom_hline(yintercept = 0, linewidth = 0.25, color = "grey70") +
+  geom_line(aes(y = imacec_nm, color = "Observado"), linewidth = 0.75, na.rm = TRUE) +
+  geom_line(aes(y = imacec_nm_fit, color = "Ajuste / nowcast"), linewidth = 0.75, linetype = "dashed", na.rm = TRUE) +
+  geom_point(
+    data = filter(hist_plot, tipo == "Nowcast"),
+    aes(y = imacec_nm_fit, color = "Nowcast"),
+    size = 2.5,
+    na.rm = TRUE
+  ) +
+  scale_color_manual(values = c("Observado" = "#1f4e79", "Ajuste / nowcast" = "#b03a2e", "Nowcast" = "#7f1d1d")) +
+  labs(
+    x = NULL,
+    y = "Var. 12m (%)",
+    color = NULL,
+    title = "IMACEC no minero: observado versus ajuste/nowcast"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = "top", panel.grid.minor = element_blank())
+
+plotly::ggplotly(g_nm)
+```
+
+## Datos utilizados
+
+El pipeline integra información mensual de actividad, comercio, crédito, precios, mercado laboral e indicadores sectoriales. La versión actual considera:
+
+- IMACEC total e IMACEC no minero.
+- Ventas minoristas.
+- Flujo y número de operaciones de crédito.
+- UF e inflación implícita asociada.
+- Desempleo.
+- Cobre y petróleo.
+- Días hábiles y variables calendario.
+- Indicadores sectoriales INE: minería, manufactura, comercio y electricidad.
+
+## Enfoque metodológico
+
+La versión actual implementa modelos lineales de nowcasting con rezagos de actividad, indicadores contemporáneos, dummies mensuales, efectos calendario y controles puntuales para episodios atípicos. También incluye una especificación alternativa con indicadores sectoriales INE.
+
+El flujo de trabajo está organizado en módulos:
+
+1. Descarga de series desde la API del Banco Central.
+2. Transformación mensual y construcción de variaciones interanuales.
+3. Integración de calendario de días hábiles.
+4. Estimación de modelos para IMACEC total y no minero.
+5. Construcción del mes objetivo.
+6. Exportación de tablas, gráficos y archivos procesados.
+
+## Métricas de ajuste
+
+```{r metrics-table}
+metricas |>
+  knitr::kable(
+    digits = 2,
+    col.names = c("Variable", "N", "RMSE", "MAE", "Nota"),
+    caption = "Métricas de ajuste del modelo"
+  )
+```
+
+::: {.callout-important}
+## Lectura prudente
+
+Las métricas anteriores corresponden a ajuste interno del modelo. Para evaluar capacidad predictiva real, el siguiente paso es agregar una evaluación pseudo out-of-sample con ventanas móviles y comparación contra benchmarks autoregresivos.
+:::
+
+## Cómo actualizar el proyecto
+
+Desde la raíz del repositorio `Economics`:
+
+```bash
+Rscript scripts/01_update_imacec.R
+quarto render
+```
+
+Luego se suben los cambios a GitHub:
+
+```bash
+git add .
+git commit -m "Actualiza proyecto IMACEC"
+git push
+```
+
+## Próximos pasos
+
+- Agregar evaluación fuera de muestra.
+- Comparar contra modelos benchmark AR y random walk con drift.
+- Incorporar intervalos de predicción calibrados con errores históricos.
+- Separar una versión “coyuntural” y una versión “research note”.
+- Automatizar actualización mensual con GitHub Actions.
+
+## Código
+
+El código fuente del proyecto queda organizado en módulos dentro del repositorio:
+
+- `R/imacec_config.R`
+- `R/imacec_utils.R`
+- `R/imacec_calendar.R`
+- `R/imacec_data.R`
+- `R/imacec_models.R`
+- `R/imacec_outputs.R`
+- `scripts/01_update_imacec.R`

@@ -12,3 +12,6 @@ Thumbs.db
 __pycache__/
 .ipynb_checkpoints/
 data/raw/private/
+
+/.quarto/
+**/*.quarto_ipynb

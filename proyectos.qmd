@@ -3,7 +3,37 @@ title: "Proyectos"
 subtitle: "Macroeconomía aplicada, política monetaria, finanzas y visualización de datos"
 ---
 
-Esta sección reúne proyectos aplicados orientados a análisis macroeconómico, seguimiento coyuntural y herramientas reproducibles.
+Esta sección reúne proyectos aplicados, notas técnicas y líneas de investigación en macroeconomía, política monetaria, econometría de series de tiempo y visualización de datos.
+
+## Proyectos aplicados
+
+Estos proyectos corresponden a herramientas o análisis con estructura metodológica más desarrollada, orientados a seguimiento macroeconómico, proyecciones y simulación de escenarios.
+
+::: {.mu-grid}
+
+::: {.mu-card}
+### [Nowcasting de actividad económica en Chile](proyectos/imacec.qmd)
+
+Modelo mensual en R para anticipar la evolución del IMACEC total y no minero usando indicadores sectoriales, variables calendario, rezagos macroeconómicos y evaluación de ajuste.
+
+**Estado:** proyecto aplicado en desarrollo continuo.  
+**Herramientas:** R, tidyverse, ggplot2, plotly, series de tiempo.
+:::
+
+::: {.mu-card}
+### Escenarios macroeconómicos inspirados en IPoM
+
+Construcción de escenarios base y alternativos usando supuestos externos, inflación, brecha de actividad, tipo de cambio real y tasa de política monetaria.
+
+**Estado:** proyecto aplicado avanzado.  
+**Herramientas:** Matlab, IRIS Toolbox, R.
+:::
+
+:::
+
+## Agenda de investigación
+
+Estas notas corresponden a líneas de trabajo en desarrollo, pensadas como base para futuros artículos, notas técnicas o documentos de investigación aplicada.
 
 ::: {.mu-grid}
 
@@ -12,6 +42,7 @@ Esta sección reúne proyectos aplicados orientados a análisis macroeconómico,
 
 Análisis visual y econométrico del traspaso de movimientos de la Tasa de Política Monetaria a distintas tasas de mercado en Chile.
 
+**Estado:** research note en desarrollo.  
 **Salida esperada:** series comparadas, heatmap de pass-through por horizonte, modelos de rezagos distribuidos y lectura macroeconómica prudente.
 :::
 
@@ -20,6 +51,7 @@ Análisis visual y econométrico del traspaso de movimientos de la Tasa de Polí
 
 Visualización interactiva de la curva nominal y real, pendiente de la curva y episodios macrofinancieros.
 
+**Estado:** prototipo visual-financiero en desarrollo.  
 **Salida esperada:** slider temporal, comparación por fechas, pendiente 10y-2y y señales de condiciones financieras.
 :::
 
@@ -28,6 +60,7 @@ Visualización interactiva de la curva nominal y real, pendiente de la curva y e
 
 Indicador sintético para monitorear condiciones externas relevantes para una economía pequeña y abierta.
 
+**Estado:** nota técnica preliminar.  
 **Salida esperada:** índice agregado, contribuciones por componente y comparación entre agregación simple y PCA.
 :::
 

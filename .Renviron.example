@@ -1,3 +1,7 @@
-# Ejemplo. No pongas credenciales reales en GitHub.
-BCCH_USER=tu_usuario
-BCCH_PASS=tu_password
+# Copia este archivo como .Renviron en tu computador local.
+# No subas .Renviron real a GitHub.
+
+BCCH_USER=mulloav@fen.uchile.cl
+BCCH_PASS=M20468153-8m
+IMACEC_FIRST_DATE=2017-01-01
+IMACEC_CAL_PATH=data/raw/cal_1985_2030.xlsx
