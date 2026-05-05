@@ -178,10 +178,26 @@ g_total <- ggplot(hist_plot, aes(x = Periodo)) +
     color = NULL,
     title = "IMACEC total: observado versus ajuste/nowcast"
   ) +
-  theme_minimal(base_size = 12) +
-  theme(legend.position = "top", panel.grid.minor = element_blank())
+theme_minimal(base_size = 12) +
+theme(
+  legend.position = "bottom",
+  legend.direction = "horizontal",
+  legend.title = element_blank(),
+  plot.title = element_text(face = "bold", margin = margin(b = 12)),
+  panel.grid.minor = element_blank()
+)
 
-plotly::ggplotly(g_total)
+plotly::ggplotly(g_total) |>
+  plotly::layout(
+    legend = list(
+      orientation = "h",
+      x = 0.5,
+      xanchor = "center",
+      y = -0.22,
+      yanchor = "top"
+    ),
+    margin = list(t = 70, b = 90)
+  )
 ```
 
 ## IMACEC no minero: observado versus ajuste/nowcast
@@ -204,10 +220,26 @@ g_nm <- ggplot(hist_plot, aes(x = Periodo)) +
     color = NULL,
     title = "IMACEC no minero: observado versus ajuste/nowcast"
   ) +
-  theme_minimal(base_size = 12) +
-  theme(legend.position = "top", panel.grid.minor = element_blank())
+theme_minimal(base_size = 12) +
+theme(
+  legend.position = "bottom",
+  legend.direction = "horizontal",
+  legend.title = element_blank(),
+  plot.title = element_text(face = "bold", margin = margin(b = 12)),
+  panel.grid.minor = element_blank()
+)
 
-plotly::ggplotly(g_nm)
+plotly::ggplotly(g_nm) |>
+  plotly::layout(
+    legend = list(
+      orientation = "h",
+      x = 0.5,
+      xanchor = "center",
+      y = -0.22,
+      yanchor = "top"
+    ),
+    margin = list(t = 70, b = 90)
+  )
 ```
 
 ## Datos utilizados

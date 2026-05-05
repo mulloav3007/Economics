@@ -120,8 +120,13 @@ plot_nowcast <- function(resultado, variable = c("total", "no_minero"), ultimos_
     ) +
     ggplot2::theme_minimal(base_size = 12) +
     ggplot2::theme(
-      legend.position = "top",
-      plot.title = ggplot2::element_text(face = "bold"),
+      legend.position = "bottom",
+      legend.direction = "horizontal",
+      legend.title = ggplot2::element_blank(),
+      plot.title = ggplot2::element_text(
+        face = "bold",
+        margin = ggplot2::margin(b = 12)
+      ),
       panel.grid.minor = ggplot2::element_blank()
     )
 }
