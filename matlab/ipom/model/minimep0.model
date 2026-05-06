@@ -71,7 +71,7 @@ ss_FFR, ss_VIX, ss_UST10, ss_L_PCU, ss_L_WTI, ss_T_COLOC, ss_L_Food,
 'Aggregate demand'
 L_GDP_GAP = b1*L_GDP_GAP{-1} - b2*(TPM{-1}-TPMN1) + b3*(CRECSC-ss_CRECSC) + b4*(FFR{-1}-ss_FFR)  +...
             b5*(VIX{-1}-ss_VIX) + b6*(UST10-ss_UST10) + b7*(L_PCU{-1} -ss_L_PCU) + ...
-            b8*0.7*(L_WTI{-2}-ss_L_WTI)+b8_b*0.75*(L_WTI{-1}-ss_L_WTI) + b9*(T_COLOC-ss_T_COLOC) + b10*(L_Z_GAP) + SHK_L_GDP_GAP;
+            b8*(L_WTI{-2}-ss_L_WTI)+b8_b*(L_WTI{-1}-ss_L_WTI) + b9*(T_COLOC-ss_T_COLOC) + b10*(L_Z_GAP) + SHK_L_GDP_GAP;
     
 % 2
 'Tasa de colocaciones' 
