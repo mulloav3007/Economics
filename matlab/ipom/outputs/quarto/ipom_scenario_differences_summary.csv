@@ -1,0 +1,49 @@
+scenario_id,scenario,variable,label,unit,promedio,minimo,maximo,ultimo
+baseline_modelo,Baseline modelo sin juicio IPoM,CRECSC,Crecimiento socios comerciales,% anual,0.0,0.0,0.0,0.0
+baseline_modelo,Baseline modelo sin juicio IPoM,D4L_CPI,Inflación total,% anual,-0.25644949750000007,-0.9543684400000001,0.37780113999999987,-0.9543684400000001
+baseline_modelo,Baseline modelo sin juicio IPoM,D4L_CPIXFE,Inflación subyacente sin volátiles,% anual,0.034085746666666604,-0.1206091800000002,0.29851693999999984,-0.1206091800000002
+baseline_modelo,Baseline modelo sin juicio IPoM,D4L_CPI_GAP_XFE,Brecha inflación total-subyacente,pp,-0.29053524225000005,-0.9861804900000002,0.476870695,-0.8337592579999998
+baseline_modelo,Baseline modelo sin juicio IPoM,FFR,Federal Funds Rate,% anual,0.0,0.0,0.0,0.0
+baseline_modelo,Baseline modelo sin juicio IPoM,L_GDP_GAP,Brecha de actividad,%,0.08318959420000001,-0.12185706499999999,0.51028709,-0.12185706499999999
+baseline_modelo,Baseline modelo sin juicio IPoM,L_PCU_NOM,Cobre nominal,nivel aproximado,-0.5185712716666665,-0.9982635899999996,0.0,-0.7074462399999994
+baseline_modelo,Baseline modelo sin juicio IPoM,L_WTI_NOM,WTI nominal,nivel aproximado,-11.489166358333334,-26.965675300000008,0.0,-7.333741500000002
+baseline_modelo,Baseline modelo sin juicio IPoM,L_Z_INDEX,Tipo de cambio real índice,índice,-4.068234934114419e-09,-4.618081561602594e-07,4.966322819655034e-07,1.29545625782157e-07
+baseline_modelo,Baseline modelo sin juicio IPoM,TPM,Tasa de Política Monetaria,% anual,0.0008486391666667018,-0.3124426100000002,0.3001419900000002,-0.3124426100000002
+baseline_modelo,Baseline modelo sin juicio IPoM,UST10,Treasury 10 años,% anual,0.0,0.0,0.0,0.0
+baseline_modelo,Baseline modelo sin juicio IPoM,VIX,VIX,índice,0.0,0.0,0.0,0.0
+escenario_alternativo,Escenario alternativo,CRECSC,Crecimiento socios comerciales,% anual,0.0,0.0,0.0,0.0
+escenario_alternativo,Escenario alternativo,D4L_CPI,Inflación total,% anual,-0.07933564333333332,-0.2918220200000001,0.0,-0.2918220200000001
+escenario_alternativo,Escenario alternativo,D4L_CPIXFE,Inflación subyacente sin volátiles,% anual,-0.024609270833333346,-0.07018557999999997,9.99999993922529e-09,-0.0598918799999999
+escenario_alternativo,Escenario alternativo,D4L_CPI_GAP_XFE,Brecha inflación total-subyacente,pp,-0.05472636925000002,-0.231930135,0.0,-0.231930135
+escenario_alternativo,Escenario alternativo,FFR,Federal Funds Rate,% anual,0.0,0.0,0.0,0.0
+escenario_alternativo,Escenario alternativo,L_GDP_GAP,Brecha de actividad,%,0.027301381166666666,-0.003226940999999983,0.08328149099999999,0.04334226299999999
+escenario_alternativo,Escenario alternativo,L_PCU_NOM,Cobre nominal,nivel aproximado,0.21452510000000005,0.0,0.8312651400000002,0.17072930000000053
+escenario_alternativo,Escenario alternativo,L_WTI_NOM,WTI nominal,nivel aproximado,-2.097190158333333,-10.913897499999997,0.0,-10.913897499999997
+escenario_alternativo,Escenario alternativo,L_Z_INDEX,Tipo de cambio real índice,índice,-0.11072033333333309,-0.5134369999999961,0.0,-0.036549000000007936
+escenario_alternativo,Escenario alternativo,TPM,Tasa de Política Monetaria,% anual,-0.010013144999999982,-0.03350204000000012,0.0,-0.03350204000000012
+escenario_alternativo,Escenario alternativo,UST10,Treasury 10 años,% anual,0.0,0.0,0.0,0.0
+escenario_alternativo,Escenario alternativo,VIX,VIX,índice,-0.6666666666666666,-2.0,0.0,-1.0
+iran_fin_anticipado,Fin anticipado conflicto Irán,CRECSC,Crecimiento socios comerciales,% anual,0.0,0.0,0.0,0.0
+iran_fin_anticipado,Fin anticipado conflicto Irán,D4L_CPI,Inflación total,% anual,0.0,0.0,0.0,0.0
+iran_fin_anticipado,Fin anticipado conflicto Irán,D4L_CPIXFE,Inflación subyacente sin volátiles,% anual,8.333333282687742e-10,0.0,9.99999993922529e-09,0.0
+iran_fin_anticipado,Fin anticipado conflicto Irán,D4L_CPI_GAP_XFE,Brecha inflación total-subyacente,pp,-3.3333334472270454e-10,-1.000000082740371e-09,0.0,-9.999999994736442e-10
+iran_fin_anticipado,Fin anticipado conflicto Irán,FFR,Federal Funds Rate,% anual,0.0,0.0,0.0,0.0
+iran_fin_anticipado,Fin anticipado conflicto Irán,L_GDP_GAP,Brecha de actividad,%,0.0,0.0,0.0,0.0
+iran_fin_anticipado,Fin anticipado conflicto Irán,L_PCU_NOM,Cobre nominal,nivel aproximado,-0.17235516166666662,-0.5087825800000001,0.0,-0.5062802199999998
+iran_fin_anticipado,Fin anticipado conflicto Irán,L_WTI_NOM,WTI nominal,nivel aproximado,-1.2359369083333327,-5.820745299999999,0.0,-5.820745299999999
+iran_fin_anticipado,Fin anticipado conflicto Irán,L_Z_INDEX,Tipo de cambio real índice,índice,-0.10259891666666594,-0.5134369999999961,0.0,0.0
+iran_fin_anticipado,Fin anticipado conflicto Irán,TPM,Tasa de Política Monetaria,% anual,0.0,0.0,0.0,0.0
+iran_fin_anticipado,Fin anticipado conflicto Irán,UST10,Treasury 10 años,% anual,0.0,0.0,0.0,0.0
+iran_fin_anticipado,Fin anticipado conflicto Irán,VIX,VIX,índice,-0.6666666666666666,-2.0,0.0,-1.0
+riskoff_global,Risk-off global,CRECSC,Crecimiento socios comerciales,% anual,0.0026321666666666577,0.0,0.03158599999999989,0.03158599999999989
+riskoff_global,Risk-off global,D4L_CPI,Inflación total,% anual,0.020738096666666667,-0.2388629299999998,0.17150105000000027,-0.2388629299999998
+riskoff_global,Risk-off global,D4L_CPIXFE,Inflación subyacente sin volátiles,% anual,-0.014167357500000052,-0.10650526000000005,0.1420044599999999,0.10919935999999986
+riskoff_global,Risk-off global,D4L_CPI_GAP_XFE,Brecha inflación total-subyacente,pp,0.03490545591666666,-0.34806229099999997,0.25999879800000003,-0.34806229099999997
+riskoff_global,Risk-off global,FFR,Federal Funds Rate,% anual,0.00033333333333333365,0.0,0.0040000000000000036,0.0040000000000000036
+riskoff_global,Risk-off global,L_GDP_GAP,Brecha de actividad,%,-0.066216313,-0.171783256,0.0,-0.15169811
+riskoff_global,Risk-off global,L_PCU_NOM,Cobre nominal,nivel aproximado,0.00014451500000004872,0.0,0.0017341800000005847,0.0017341800000005847
+riskoff_global,Risk-off global,L_WTI_NOM,WTI nominal,nivel aproximado,-0.11450488333333315,-1.374058599999998,0.0,-1.374058599999998
+riskoff_global,Risk-off global,L_Z_INDEX,Tipo de cambio real índice,índice,0.016840416666666396,0.0,0.20208499999999674,0.20208499999999674
+riskoff_global,Risk-off global,TPM,Tasa de Política Monetaria,% anual,-0.08814172166666674,-0.2807339200000003,0.05136470999999965,-0.23537008999999998
+riskoff_global,Risk-off global,UST10,Treasury 10 años,% anual,0.011083333333333334,0.0,0.133,0.133
+riskoff_global,Risk-off global,VIX,VIX,índice,0.01154812500000002,0.0,0.13857750000000024,0.13857750000000024

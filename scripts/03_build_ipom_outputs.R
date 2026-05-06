@@ -22,10 +22,10 @@ source("R/ipom_utils.R")
 project_root <- find_project_root()
 
 message("Raíz del proyecto: ", project_root)
-message("Leyendo outputs IRIS desde: ", file.path(project_root, "matlab", "ipom", "outputs"))
+message("Leyendo outputs IRIS desde: ", file.path(project_root, "matlab", "ipom", "outputs", "raw_iris"))
 
 out <- build_ipom_processed_data(
-  outputs_dir = file.path(project_root, "matlab", "ipom", "outputs"),
+  outputs_dir = file.path(project_root, "matlab", "ipom", "outputs", "raw_iris"),
   processed_dir = file.path(project_root, "data", "processed", "ipom"),
   forecast_start_year = 2025,
   forecast_end_year = 2027

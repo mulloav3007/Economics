@@ -285,7 +285,7 @@ El flujo está separado en dos niveles:
 1. **Matlab/IRIS** resuelve el modelo, impone trayectorias exógenas y endogeniza los shocks necesarios para cumplir los supuestos del escenario.
 2. **R/Quarto** lee los outputs, estandariza nombres, calcula diferencias contra el baseline y genera la visualización web.
 
-Esta separación evita que el sitio dependa de una instalación de Matlab al momento de publicarse. Para actualizar el proyecto, se reemplazan los CSV de `matlab/ipom/outputs/` y luego se ejecuta:
+Esta separación evita que el sitio dependa de una instalación de Matlab al momento de publicarse. Para actualizar el proyecto, se actualizan los CSV de `matlab/ipom/outputs/raw_iris/` y luego se ejecuta:
 
 ```bash
 Rscript scripts/03_build_ipom_outputs.R

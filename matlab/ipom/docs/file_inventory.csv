@@ -1,0 +1,47 @@
+original_path,new_path,status,size_bytes
+Iris/minimep0.model,matlab/ipom/model/minimep0.model,preservado_modelo,6048
+Iris/readmodel_alternativo.m,matlab/ipom/src/readmodel_alternativo.m,script_activo,5630
+Iris/readmodel.m,matlab/ipom/src/readmodel.m,script_activo,5128
+Iris/makedata.m,matlab/ipom/src/makedata.m,script_activo,971
+Iris/identificar_shocks_ipom.m,matlab/ipom/src/identificar_shocks_ipom.m,script_activo_parcheado_reportes_opcionales,16267
+Iris/fcast_alt_ipom.m,matlab/ipom/src/fcast_alt_ipom.m,script_activo_parcheado_reportes_opcionales,24312
+Iris/alternatives.m,matlab/ipom/src/alternatives.m,script_referencia_activa,16340
+Iris/Forecast.m,matlab/ipom/src/Forecast.m,script_referencia_activa,10704
+Iris/Forecast_V2.m,matlab/ipom/src/Forecast_V2.m,script_referencia_activa,7248
+Iris/history.csv,matlab/ipom/inputs/history.csv y outputs/raw_iris/history.csv,input_y_output_raw,95741
+Iris/Data.csv,matlab/ipom/inputs/Data.csv,input,46904
+Iris/fcast_ipom_exact.csv,matlab/ipom/outputs/raw_iris/fcast_ipom_exact.csv,output_raw_quarto,149469
+Iris/fcast_ipom_with_shocks.csv,matlab/ipom/outputs/raw_iris/fcast_ipom_with_shocks.csv,output_raw_quarto,149469
+Iris/fcast_alt_escenario.csv,matlab/ipom/outputs/raw_iris/fcast_alt_escenario.csv,output_raw_quarto,149475
+Iris/fcast_alt_iran_fin_anticipado.csv,matlab/ipom/outputs/raw_iris/fcast_alt_iran_fin_anticipado.csv,output_raw_quarto,149480
+Iris/fcast_alt_riskoff.csv,matlab/ipom/outputs/raw_iris/fcast_alt_riskoff.csv,output_raw_quarto,150510
+Iris/fcast_base_model.csv,matlab/ipom/outputs/raw_iris/fcast_base_model.csv,output_raw_quarto,146250
+Iris/GraficosGuerra.m,matlab/ipom/legacy_original/m_files/GraficosGuerra.m,legacy_respaldo,7327
+Iris/Report_3Scenarios - GuerraLarga.m,matlab/ipom/legacy_original/m_files/Report_3Scenarios - GuerraLarga.m,legacy_respaldo,7334
+Iris/Report_3Scenarios.m,matlab/ipom/legacy_original/m_files/Report_3Scenarios.m,legacy_respaldo,7327
+Iris/Report_3Scenarios_GuerraLarga.m,matlab/ipom/legacy_original/m_files/Report_3Scenarios_GuerraLarga.m,legacy_respaldo,7316
+Iris/Report_4Scenarios_Guerras.m,matlab/ipom/legacy_original/m_files/Report_4Scenarios_Guerras.m,legacy_respaldo,6547
+Iris/alternativesAjuste.m,matlab/ipom/legacy_original/m_files/alternativesAjuste.m,legacy_respaldo,12741
+Iris/alternativesAjuste_GuerraLargas.m,matlab/ipom/legacy_original/m_files/alternativesAjuste_GuerraLargas.m,legacy_respaldo,12818
+Iris/modelproperties.m,matlab/ipom/legacy_original/m_files/modelproperties.m,legacy_respaldo,5157
+Iris/AlternativeScenario.pdf,,legacy_pdf_no_quarto,83950
+Iris/AlternativeScenario_GlobalRiskOff.pdf,matlab/ipom/legacy_original/reports_pdf/AlternativeScenario_GlobalRiskOff.pdf,legacy_pdf_no_quarto,108103
+Iris/AlternativeScenario_GlobalRiskOff_ModelBaseline.pdf,matlab/ipom/legacy_original/reports_pdf/AlternativeScenario_GlobalRiskOff_ModelBaseline.pdf,legacy_pdf_no_quarto,101334
+Iris/AlternativeScenario_IranShort.pdf,matlab/ipom/legacy_original/reports_pdf/AlternativeScenario_IranShort.pdf,legacy_pdf_no_quarto,116956
+Iris/AlternativeScenario_Short.pdf,matlab/ipom/legacy_original/reports_pdf/AlternativeScenario_Short.pdf,legacy_pdf_no_quarto,110581
+Iris/Baseline_IPOM_Identificado.pdf,matlab/ipom/legacy_original/reports_pdf/Baseline_IPOM_Identificado.pdf,legacy_pdf_no_quarto,39021
+Iris/Compare.pdf,,legacy_pdf_no_quarto,95676
+"Iris/CompareGAP_0,3.pdf",,legacy_pdf_no_quarto,95416
+"Iris/CompareTPMQ3_5,0_TPMN1_4,5.pdf",,legacy_pdf_no_quarto,94756
+Iris/Escenarios_3paths.pdf,,legacy_pdf_no_quarto,87026
+Iris/Escenarios_3paths_Corta.pdf,,legacy_pdf_no_quarto,88155
+Iris/Escenarios_4paths_Guerras.pdf,,legacy_pdf_no_quarto,87925
+Iris/Forecast.pdf,,legacy_pdf_no_quarto,105142
+Iris/IPOM_Dec_Alternatives.pdf,,legacy_pdf_no_quarto,89055
+Iris/TPM_custom.pdf,,legacy_pdf_no_quarto,3540
+Iris/Taller1 - MPAF.pdf,,legacy_pdf_no_quarto,378361
+Iris/Forecast - copia.asv,,excluido_autosave,9710
+Iris/Data_calculos.xlsx,,excluido_dato_misc_grande,36586
+Iris/Datos.xlsx,,excluido_dato_misc_grande,28729
+Iris/Inflacion.xlsx,,excluido_dato_misc_grande,81337
+Iris/fcastdata_alt_Excel.xlsx,,excluido_dato_misc_grande,151696

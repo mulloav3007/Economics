@@ -1,44 +1,66 @@
-# Proyecto IPoM / IRIS Matlab
+# Subproyecto IPoM / IRIS Matlab
 
-Esta carpeta contiene una versión ordenada del motor Matlab/IRIS que alimenta la página Quarto `proyectos/ipom-iris.qmd`.
+Esta carpeta deja ordenado el trabajo IPoM dentro del mismo repositorio Quarto. La lógica es separar tres capas:
+
+1. **Motor IRIS/Matlab**: resuelve el modelo y genera `fcast_*.csv`.
+2. **Outputs limpios para Quarto**: R transforma los CSV crudos de IRIS a formato tidy.
+3. **Página Quarto**: `proyectos/ipom-iris.qmd` solo lee resultados procesados y grafica.
 
 ## Estructura
 
 ```text
 matlab/ipom/
 ├─ model/
-│  └─ minimep0.model
+│  └─ minimep0.model              # ecuaciones del modelo, preservadas
 ├─ src/
-│  ├─ readmodel_alternativo.m
-│  ├─ readmodel_original.m
-│  ├─ identificar_shocks_ipom_original.m
-│  ├─ fcast_alt_ipom_original.m
-│  ├─ makedata_original.m
-│  ├─ run_ipom_pipeline.m
-│  └─ exportar_outputs_quarto.m
-└─ outputs/
-   ├─ fcast_ipom_exact.csv
-   ├─ fcast_alt_iran_fin_anticipado.csv
-   ├─ fcast_alt_riskoff.csv
-   ├─ fcast_alt_escenario.csv
-   ├─ fcast_base_model.csv
-   └─ history.csv
+│  ├─ config_ipom.m               # configuración central del subproyecto
+│  ├─ setup_ipom_project.m         # prepara paths y carpetas
+│  ├─ run_all_ipom.m               # wrapper principal Matlab/IRIS
+│  ├─ readmodel_alternativo.m      # calibración/modelo usado actualmente
+│  ├─ identificar_shocks_ipom.m    # identifica shocks para baseline tipo IPoM
+│  ├─ fcast_alt_ipom.m             # escenario alternativo editable
+│  └─ exportar_outputs_quarto.m    # helper para guardar outputs IRIS
+├─ inputs/
+│  ├─ history.csv                  # historia base IRIS
+│  └─ Data.csv                     # input histórico para makedata, si se requiere
+├─ outputs/
+│  ├─ raw_iris/                    # CSV crudos exportados por IRIS/Matlab
+│  └─ quarto/                      # espejo de data/processed/ipom/*.csv
+├─ legacy_original/
+│  ├─ m_files/                     # scripts originales completos como respaldo
+│  └─ reports_pdf/                 # PDFs antiguos útiles solo como referencia
+└─ runtime/                        # legacy/respaldo; el flujo nuevo no depende de esto
 ```
 
-## Idea del flujo
+## Regla de oro
 
-1. Matlab/IRIS resuelve el modelo y produce archivos `fcast_*.csv`.
-2. R convierte esos CSV a formato largo y ancho para Quarto.
-3. Quarto solo lee `data/processed/ipom/*.csv` y genera la página HTML.
+- **No tocar `model/minimep0.model`** salvo cambios deliberados de ecuaciones.
+- Editar escenarios en `src/fcast_alt_ipom.m`.
+- Editar rutas/opciones generales en `src/config_ipom.m`.
+- Quarto debe leer solo `data/processed/ipom/`.
 
-## Actualización recomendada
+## Flujo recomendado
 
-Desde la raíz del repo:
+Desde la raíz del repositorio:
+
+```matlab
+% Desde MATLAB
+cd('D:\Users\mullo\Documents\GitHub\Economics\matlab\ipom\src')
+run_all_ipom
+```
+
+Luego, desde la raiz del repositorio:
 
 ```powershell
-.\scripts\04_run_ipom_matlab.ps1
 Rscript scripts/03_build_ipom_outputs.R
 quarto render
 ```
 
-El wrapper `run_ipom_pipeline.m` está preparado como punto de entrada, pero no ejecuta automáticamente los scripts originales porque esos archivos pueden depender de supuestos locales. Edita ese wrapper y activa las líneas que correspondan a tu flujo real.
+Para una primera prueba sin recalcular IRIS, basta con:
+
+```powershell
+Rscript scripts/03_build_ipom_outputs.R
+quarto render
+```
+
+porque ya se dejaron CSV crudos en `outputs/raw_iris/` y CSV limpios en `data/processed/ipom/`.

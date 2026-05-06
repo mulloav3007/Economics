@@ -122,7 +122,7 @@ p.ss_D4L_CPI_TAR = 3;
 p.ss_CRECSC = 3;
 p.ss_T_COLOC = 4;
 
-p.ss_FFR = 3.5  % 4.5 original
+p.ss_FFR = 3.5;  % 4.5 original
 p.ss_VIX = 17;   % 100 original
 p.ss_UST10 = 4.0;
 p.ss_L_PCU = 100 * log(3.75);
@@ -135,7 +135,19 @@ p.ss_L_Food = 3.1;
 % 'p' (see readmodel) and transforms the model for the matrix algebra.
 % Transformed model is written in the object 'm'.
 
-m = model('minimep0.model', 'linear=', false, 'assign', p);
+% Carga robusta del archivo .model. No depende del directorio actual (pwd).
+if exist('config_ipom', 'file') == 2
+    cfg_ipom = config_ipom();
+    modelFile = cfg_ipom.modelFile;
+else
+    modelFile = 'minimep0.model';
+end
+
+if exist(modelFile, 'file') ~= 2
+    error('No existe el archivo de modelo: %s', modelFile);
+end
+
+m = model(modelFile, 'linear=', false, 'assign', p);
 
 % Command 'sstate' takes the transformed model in object 'm', calculates the model's
 % steady-state and writes everything back in the object 'm'. Typing 'mss' in

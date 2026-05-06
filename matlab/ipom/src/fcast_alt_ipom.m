@@ -6,27 +6,39 @@
 %   Ejemplo:
 %      L_WTI_alt = L_WTI_base + 100*log(wti_mult)
 %
-%% - Variables en nivel, tasas, brechas o inflaciÛn: usar aditivos.
+%% - Variables en nivel, tasas, brechas o inflaci√≥n: usar aditivos.
 %   Ejemplo:
 %      VIX_alt = VIX_base + vix_add
 %
 %% Punto clave:
-%% - Multiplicador = 1  => no se impone la variable en ese perÌodo.
-% - Aditivo = 0        => no se impone la variable en ese perÌodo.
+%% - Multiplicador = 1  => no se impone la variable en ese per√≠odo.
+% - Aditivo = 0        => no se impone la variable en ese per√≠odo.
 %% - Si pones un shock solo en 2026Q3, solo se exogeniza 2026Q3.
-% - Los perÌodos siguientes quedan endÛgenos y los resuelve el modelo.
+% - Los per√≠odos siguientes quedan end√≥genos y los resuelve el modelo.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 close all;
-clear all;
+clearvars -except IPOM_RUN_REPORT;
 clc;
 
 %% ============================================================
-%% 0. ConfiguraciÛn principal
+%% 0. Configuraci√≥n principal
 %% ============================================================
 
-baselineFile = 'fcast_ipom_exact.csv';
-outputFile   = 'fcast_alt_escenario.csv';
+% Rutas robustas del proyecto
+if exist('config_ipom', 'file') == 2
+    cfg_ipom = config_ipom();
+    if exist(cfg_ipom.rawOutputDir, 'dir') ~= 7
+        mkdir(cfg_ipom.rawOutputDir);
+    end
+    baselineFile = fullfile(cfg_ipom.rawOutputDir, 'fcast_ipom_exact.csv');
+    outputFile   = fullfile(cfg_ipom.rawOutputDir, 'fcast_alt_petroleo_gap.csv');
+    outputFileGeneric = fullfile(cfg_ipom.rawOutputDir, 'fcast_alt_escenario.csv');
+else
+    baselineFile = 'fcast_ipom_exact.csv';
+    outputFile   = 'fcast_alt_petroleo_gap.csv';
+    outputFileGeneric = 'fcast_alt_escenario.csv';
+end
 
 startfcast_alt = qq(2026,1);
 endfcast       = qq(2027,4);
@@ -42,12 +54,19 @@ Tablerng       = qq(2025,1):endfcast;
 ObsRng         = qq(2025,1):qq(2025,4);
 AltRng         = altRange;
 
-altname        = 'Alternative Scenario';
+altname        = 'Escenario petroleo alto y gap mas negativo';
 country        = 'Chile';
 exchange       = 'CHL/USA';
 
-reportName     = 'AlternativeScenario_Short';
-runReport      = true;
+reportName     = 'Escenario_Petroleo_Gap';
+
+% Por defecto el pipeline ordenado no genera PDF, porque Quarto usa CSV.
+% Para forzar reportes IRIS, define IPOM_RUN_REPORT = true antes de ejecutar.
+if exist('IPOM_RUN_REPORT','var')
+    runReport = IPOM_RUN_REPORT;
+else
+    runReport = false;
+end
 
 fprintf('\n============================================================\n');
 fprintf('Escenario alternativo\n');
@@ -73,7 +92,7 @@ d = h;
 
 
 %% ============================================================
-%% 2. BLOQUE DE MANIPULACI”N DEL ESCENARIO
+%% 2. BLOQUE DE MANIPULACI√ìN DEL ESCENARIO
 % ============================================================
 %   one_path  para multiplicadores neutros.
 %   zero_path para aditivos neutros.
@@ -81,7 +100,7 @@ d = h;
 %   pcu_mult_path = local_set_path(pcu_mult_path, altRange, qq(2026,3), 1.10);
 % Para shock de varios trimestres:
 %   vix_add_path = local_set_path(vix_add_path, altRange, qq(2026,2):qq(2026,4), [5 3 1]);
-% Si una variable queda en 1 o 0 en todos los perÌodos, NO se exogeniza.
+% Si una variable queda en 1 o 0 en todos los per√≠odos, NO se exogeniza.
 
 one_path  = ones(1, nAlt);
 zero_path = zeros(1, nAlt);
@@ -104,7 +123,7 @@ lgdp_bar_mult_path = one_path;   % L_GDP_BAR, si existe
 
 
 %% ------------------------------------------------------------
-%% 2.2 Aditivos: niveles, tasas, brechas e inflaciÛn
+%% 2.2 Aditivos: niveles, tasas, brechas e inflaci√≥n
 %% ------------------------------------------------------------
 
 vix_add_path       = zero_path;  % VIX
@@ -126,57 +145,170 @@ d4lcpi_tar_add_path = zero_path; % D4L_CPI_TAR
 
 
 % ------------------------------------------------------------
-%% 2.3 Ejemplo de escenario: editar aquÌ
+%% 2.3 Escenario activo: petroleo alto + gap mas negativo
 % ------------------------------------------------------------
-% Esta es la ˙nica parte que normalmente deberÌas tocar.
-% Este ejemplo reproduce tu lÛgica 
-% Para apagar un bloque, comÈntalo o dÈjalo en one_path/zero_path.
+% Esta es la unica parte que normalmente deberias tocar.
+%
+% Escenario segun minuta:
+% - Petroleo nominal WTI: 100 en 2026Q2 y 2026Q3;
+%   90 en 2026Q4; 85 desde 2027Q1 hasta 2027Q4.
+% - Cobre: igual al baseline.
+% - Tipo de cambio real: igual al baseline.
+% - Output gap: -0.5 en 2026Q1 y 2026Q2; luego libre.
+% - TPM: libre, no se impone.
+% - Inflacion efectiva 2026Q1: opcional; idealmente debe entrar
+%   por history.csv/ipom_paths.csv antes de identificar shocks.
+%
+% Nota tecnica:
+% - L_WTI esta en 100*log(.), pero el escenario viene en nivel nominal.
+%   Por eso se convierte el objetivo nominal a multiplicador relativo al
+%   baseline usando local_nominal_level_to_multiplier().
+% - L_GDP_GAP esta en nivel, por lo que imponer -0.5 se traduce a un
+%   aditivo target - baseline usando local_level_to_additive().
+
+% Reset explicito para no arrastrar ningun shock de ejemplos anteriores
+wti_mult_path      = one_path;
+pcu_mult_path      = one_path;
+lz_mult_path       = one_path;
+
+lcpi_mult_path     = one_path;
+lcpixfe_mult_path  = one_path;
+lcpif_mult_path    = one_path;
+lcpie_mult_path    = one_path;
+
+lgdp_mult_path     = one_path;
+lgdp_bar_mult_path = one_path;
+
+vix_add_path       = zero_path;
+ffr_add_path       = zero_path;
+ust10_add_path     = zero_path;
+crec_add_path      = zero_path;
+
+gap_add_path       = zero_path;
+tpm_add_path       = zero_path;
+rs_unc_add_path    = zero_path;
+
+dla_cpi_add_path    = zero_path;
+dla_cpixfe_add_path = zero_path;
+dla_cpires_add_path = zero_path;
+
+d4lcpi_add_path     = zero_path;
+d4lcpixfe_add_path  = zero_path;
+d4lcpi_tar_add_path = zero_path;
+
+
+%% ------------------------------------------------------------
+%% A. Petroleo nominal impuesto
+%% ------------------------------------------------------------
+% El objetivo esta expresado en dolares nominales por barril.
+% El helper convierte ese objetivo a multiplicadores sobre L_WTI.
+
+wti_dates = qq(2026,2):qq(2027,4);
+
+wti_nominal_target = [ ...
+    100, ... % 2026Q2
+    100, ... % 2026Q3
+     90, ... % 2026Q4
+     85, ... % 2027Q1
+     85, ... % 2027Q2
+     85, ... % 2027Q3
+     85  ... % 2027Q4
+];
+
+wti_mult_values = local_nominal_level_to_multiplier( ...
+    h, 'L_WTI', wti_dates, wti_nominal_target ...
+);
 
 wti_mult_path = local_set_path( ...
-    wti_mult_path, altRange, ...
-    qq(2027,1):qq(2027,4), ...
-    [0.97 0.94 0.90 0.85] ...
-);
-
-pcu_mult_path = local_set_path(pcu_mult_path, altRange, qq(2026,3), 1.15);
-
-vix_add_path = local_set_path( ...
-    vix_add_path, altRange, ...
-    qq(2026,3):qq(2027,4), ...
-    [-0.50 -1.00 -2.00 -2.00 -1.50 -1.00] ...
-);
-
-lz_mult_path = local_set_path( ...
-    lz_mult_path, altRange, ...
-    qq(2026,3):qq(2027,4), ...
-    [0.997 0.995 0.997 0.999 1.000 1.000] ...
+    wti_mult_path, altRange, wti_dates, wti_mult_values ...
 );
 
 
-% Ejemplos alternativos:
+%% ------------------------------------------------------------
+%% B. Cobre igual al baseline
+%% ------------------------------------------------------------
+% No se toca L_PCU: pcu_mult_path queda en one_path.
+
+
+%% ------------------------------------------------------------
+%% C. Tipo de cambio real igual al baseline
+%% ------------------------------------------------------------
+% No se toca L_Z: lz_mult_path queda en one_path.
+
+
+%% ------------------------------------------------------------
+%% D. Output gap: -0.5 en 2026Q1 y 2026Q2
+%% ------------------------------------------------------------
+% Como L_GDP_GAP es una brecha en nivel, se impone como diferencia
+% respecto del baseline:
+%   gap_add = target - baseline
+
+gap_dates  = qq(2026,1):qq(2026,2);
+gap_target = [-0.5, -0.5];
+
+gap_add_values = local_level_to_additive( ...
+    h, 'L_GDP_GAP', gap_dates, gap_target ...
+);
+
+gap_add_path = local_set_path( ...
+    gap_add_path, altRange, gap_dates, gap_add_values ...
+);
+
+
+%% ------------------------------------------------------------
+%% E. Inflacion efectiva 2026Q1, opcional
+%% ------------------------------------------------------------
+% Recomendacion: no usar esta seccion salvo para prueba rapida.
+% Lo mas limpio es actualizar history.csv/ipom_paths.csv y volver a correr
+% identificar_shocks_ipom.m para que el baseline ya incorpore el dato.
 %
-% Shock puntual al cobre en 2026Q3:
-% pcu_mult_path = one_path;
-% pcu_mult_path = local_set_path(pcu_mult_path, altRange, qq(2026,3), 1.10);
+% Si de todas formas quieres imponer el dato observado dentro del escenario,
+% reemplaza NaN por el dato trimestral anualizado efectivo.
 %
-% Shock puntual al gap en 2026Q2:
-% gap_add_path = zero_path;
-% gap_add_path = local_set_path(gap_add_path, altRange, qq(2026,2), -0.50);
-%
-% Shock de TPM en tres trimestres:
-% tpm_add_path = zero_path;
-% tpm_add_path = local_set_path(tpm_add_path, altRange, qq(2026,2):qq(2026,4), [-0.25 -0.25 -0.25]);
+% Ejemplo:
+%   dla_cpi_2026q1_actual    = 4.2;
+%   dla_cpixfe_2026q1_actual = 3.8;
+
+dla_cpi_2026q1_actual    = NaN;
+dla_cpixfe_2026q1_actual = NaN;
+
+if ~isnan(dla_cpi_2026q1_actual)
+    dla_cpi_add_values = local_level_to_additive( ...
+        h, 'DLA_CPI', qq(2026,1), dla_cpi_2026q1_actual ...
+    );
+
+    dla_cpi_add_path = local_set_path( ...
+        dla_cpi_add_path, altRange, qq(2026,1), dla_cpi_add_values ...
+    );
+end
+
+if ~isnan(dla_cpixfe_2026q1_actual)
+    dla_cpixfe_add_values = local_level_to_additive( ...
+        h, 'DLA_CPIXFE', qq(2026,1), dla_cpixfe_2026q1_actual ...
+    );
+
+    dla_cpixfe_add_path = local_set_path( ...
+        dla_cpixfe_add_path, altRange, qq(2026,1), dla_cpixfe_add_values ...
+    );
+end
+
+
+%% ------------------------------------------------------------
+%% F. TPM libre
+%% ------------------------------------------------------------
+% No imponer TPM ni RS_UNC.
+% La pregunta de interes es si la regla del modelo sube la TPM en 2026Q3.
 
 
 %% ============================================================
-%% 3. Cat·logo de variables del escenario
+%% 3. Cat√°logo de variables del escenario
 %% ============================================================
 %
 % Formato:
 %   variable, shock, tipo, path
 %
 % tipo = 'mult' para variables en 100*log(.)
-% tipo = 'add'  para variables en niveles/tasas/brechas/inflaciÛn
+% tipo = 'add'  para variables en niveles/tasas/brechas/inflaci√≥n
 
 catalog = cell(0,4);
 
@@ -199,7 +331,7 @@ catalog = local_add_to_catalog(catalog, 'FFR',       'SHK_FFR',       'add', ffr
 catalog = local_add_to_catalog(catalog, 'UST10',     'SHK_UST10',     'add', ust10_add_path);
 catalog = local_add_to_catalog(catalog, 'CRECSC',    'SHK_CRECSC',    'add', crec_add_path);
 
-% Aditivos domÈsticos
+% Aditivos dom√©sticos
 catalog = local_add_to_catalog(catalog, 'L_GDP_GAP', 'SHK_L_GDP_GAP', 'add', gap_add_path);
 catalog = local_add_to_catalog(catalog, 'TPM',       'SHK_TPM',       'add', tpm_add_path);
 catalog = local_add_to_catalog(catalog, 'RS_UNC',    'SHK_RS_UNC',    'add', rs_unc_add_path);
@@ -256,12 +388,21 @@ d_alt = local_add_derived_variables(d_alt);
 
 dbsave(d_alt, outputFile);
 
+% Copia de compatibilidad: mantiene el nombre generico que ya lee el
+% pipeline R/Quarto si todavia no has agregado este escenario al catalogo.
+if exist('outputFileGeneric','var') && ~strcmp(outputFileGeneric, outputFile)
+    dbsave(d_alt, outputFileGeneric);
+end
+
 fprintf('\nEscenario alternativo guardado en:\n');
 fprintf(' - %s\n', outputFile);
+if exist('outputFileGeneric','var') && ~strcmp(outputFileGeneric, outputFile)
+    fprintf(' - %s  [copia compatible para Quarto]\n', outputFileGeneric);
+end
 
 
 %% ============================================================
-%% 8. DiagnÛstico
+%% 8. Diagn√≥stico
 %% ============================================================
 
 diagVars = { ...
@@ -333,11 +474,83 @@ function path = local_set_path(path, fullRange, dates, values)
         idx = find(fullRange == dates(k), 1);
 
         if isempty(idx)
-            error('local_set_path: la fecha %s no est· dentro de altRange.', local_dat2char(dates(k)));
+            error('local_set_path: la fecha %s no est√° dentro de altRange.', local_dat2char(dates(k)));
         end
 
         path(idx) = values(k);
     end
+end
+
+
+
+function multValues = local_nominal_level_to_multiplier(h, varName, dates, targetNominal)
+% Convierte un nivel nominal objetivo a multiplicador relativo al baseline.
+%
+% Caso tipico:
+%   L_WTI esta en 100*log(.).
+%   El escenario dice "WTI nominal = 100".
+%
+% Si existe CPI_US_2020, se usa la misma convencion que en
+% local_add_derived_variables():
+%   nominal = exp(L_WTI/100) * CPI_US_2020/100
+%
+% Entonces:
+%   multiplicador = targetNominal / baselineNominal
+
+    if ~isfield(h, varName)
+        error('No existe %s en el baseline.', varName);
+    end
+
+    targetNominal = reshape(targetNominal, 1, []);
+    dates         = reshape(dates, 1, []);
+
+    baseLevel   = h.(varName)(dates);
+    baseNominal = exp(baseLevel/100);
+
+    if isfield(h, 'CPI_US_2020')
+        baseNominal = baseNominal .* h.CPI_US_2020(dates)/100;
+    end
+
+    baseNominal = reshape(baseNominal, 1, []);
+
+    if numel(baseNominal) ~= numel(targetNominal)
+        error('local_nominal_level_to_multiplier: targetNominal no coincide con dates.');
+    end
+
+    if any(baseNominal == 0 | isnan(baseNominal))
+        error('local_nominal_level_to_multiplier: baseline nominal invalido para %s.', varName);
+    end
+
+    multValues = targetNominal ./ baseNominal;
+end
+
+
+function addValues = local_level_to_additive(h, varName, dates, targetLevel)
+% Convierte un nivel objetivo a aditivo respecto del baseline.
+%
+% Ejemplo:
+%   targetLevel = -0.5 para L_GDP_GAP.
+%   addValue    = -0.5 - baseline.
+
+    if ~isfield(h, varName)
+        error('No existe %s en el baseline.', varName);
+    end
+
+    targetLevel = reshape(targetLevel, 1, []);
+    dates       = reshape(dates, 1, []);
+
+    baseLevel = h.(varName)(dates);
+    baseLevel = reshape(baseLevel, 1, []);
+
+    if isscalar(targetLevel) && numel(baseLevel) > 1
+        targetLevel = repmat(targetLevel, 1, numel(baseLevel));
+    end
+
+    if numel(baseLevel) ~= numel(targetLevel)
+        error('local_level_to_additive: targetLevel no coincide con dates.');
+    end
+
+    addValues = targetLevel - baseLevel;
 end
 
 
@@ -346,7 +559,7 @@ function out = local_take_path(path, n)
     path = reshape(path, [], 1);
 
     if isempty(path)
-        error('local_take_path: path vacÌo.');
+        error('local_take_path: path vac√≠o.');
     end
 
     if length(path) >= n
@@ -392,7 +605,7 @@ function [d, planItems] = local_apply_scenario(h, d, catalog, altRange)
         end
 
         if isempty(activeIdx)
-            fprintf('[NEUTRO]  %-14s queda endÛgena.\n', v);
+            fprintf('[NEUTRO]  %-14s queda end√≥gena.\n', v);
             continue
         end
 
@@ -433,11 +646,11 @@ function simplan = local_build_plan(m, fcastrange, planItems)
     simplan = plan(m, fcastrange);
 
     fprintf('\n============================================================\n');
-    fprintf('Plan de simulaciÛn\n');
+    fprintf('Plan de simulaci√≥n\n');
     fprintf('============================================================\n');
 
     if isempty(planItems)
-        warning('No hay variables exogenizadas. El escenario ser· igual al baseline salvo cambios externos ya cargados.');
+        warning('No hay variables exogenizadas. El escenario ser√° igual al baseline salvo cambios externos ya cargados.');
         return
     end
 
@@ -563,7 +776,7 @@ function local_make_report(h, d_alt, planItems, country, altname, exchange, repo
 
 
     %% ========================================================
-    %% InflaciÛn domÈstica
+    %% Inflaci√≥n dom√©stica
     %% ========================================================
 
     x.figure([altname ' - Inflation Details'], ...

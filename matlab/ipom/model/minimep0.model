@@ -79,7 +79,7 @@ T_COLOC = rho_Coloc* T_COLOC{-1} + (1-rho_Coloc)*(TPM - (0.4*D4L_CPI+0.6*D4L_CPI
 
 % 3
 'Core Inflation --'
-DLA_CPIXFE =0.33009 *DLA_CPIXFE{-1} + 0.14458*DLA_CPIXFE{-4} +(1-0.4747)*(1/3*DLA_CPIXFE{1}+1/3*DLA_CPIXFE{2}+1/3*DLA_CPIXFE{4}) + 0.02587*L_GDP_GAP{-1} + 0.08368*(L_Z_GAP)  + 0.0212*(L_Food{-1}-L_Food{-5})+(a4*Q1 + a5*Q2 + a6*Q3 + a7*Q4) + SHK_DLA_CPIXFE;
+DLA_CPIXFE =-0.0081961+0.33009 *DLA_CPIXFE{-1} + 0.14458*DLA_CPIXFE{-4} +(1-0.4747)*(1/3*DLA_CPIXFE{1}+1/3*DLA_CPIXFE{2}+1/3*DLA_CPIXFE{4}) + 0.02587*L_GDP_GAP{-1} + 0.08368*(L_Z_GAP)  + 0.0212*(L_Food{-1}-L_Food{-5})+(a4*Q1 + a5*Q2 + a6*Q3 + a7*Q4) + SHK_DLA_CPIXFE;
 
 % 4
 'Headline inflation'

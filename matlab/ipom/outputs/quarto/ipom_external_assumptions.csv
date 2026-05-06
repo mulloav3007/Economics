@@ -1,0 +1,421 @@
+period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block,baseline_value,difference_vs_baseline
+2025Q1,2025-01-01,baseline_ipom,Baseline IPoM identificado,1,CRECSC,3.4881,Crecimiento socios comerciales,% anual,Bloque externo,3.4881,0.0
+2025Q2,2025-04-01,baseline_ipom,Baseline IPoM identificado,1,CRECSC,3.274572,Crecimiento socios comerciales,% anual,Bloque externo,3.274572,0.0
+2025Q3,2025-07-01,baseline_ipom,Baseline IPoM identificado,1,CRECSC,2.980154,Crecimiento socios comerciales,% anual,Bloque externo,2.980154,0.0
+2025Q4,2025-10-01,baseline_ipom,Baseline IPoM identificado,1,CRECSC,2.86465,Crecimiento socios comerciales,% anual,Bloque externo,2.86465,0.0
+2026Q1,2026-01-01,baseline_ipom,Baseline IPoM identificado,1,CRECSC,2.7,Crecimiento socios comerciales,% anual,Bloque externo,2.7,0.0
+2026Q2,2026-04-01,baseline_ipom,Baseline IPoM identificado,1,CRECSC,2.7,Crecimiento socios comerciales,% anual,Bloque externo,2.7,0.0
+2026Q3,2026-07-01,baseline_ipom,Baseline IPoM identificado,1,CRECSC,2.7,Crecimiento socios comerciales,% anual,Bloque externo,2.7,0.0
+2026Q4,2026-10-01,baseline_ipom,Baseline IPoM identificado,1,CRECSC,2.7,Crecimiento socios comerciales,% anual,Bloque externo,2.7,0.0
+2027Q1,2027-01-01,baseline_ipom,Baseline IPoM identificado,1,CRECSC,2.9,Crecimiento socios comerciales,% anual,Bloque externo,2.9,0.0
+2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,CRECSC,2.9,Crecimiento socios comerciales,% anual,Bloque externo,2.9,0.0
+2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,CRECSC,2.9,Crecimiento socios comerciales,% anual,Bloque externo,2.9,0.0
+2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,CRECSC,2.9,Crecimiento socios comerciales,% anual,Bloque externo,2.9,0.0
+2025Q1,2025-01-01,baseline_ipom,Baseline IPoM identificado,1,FFR,4.33,Federal Funds Rate,% anual,Bloque externo,4.33,0.0
+2025Q2,2025-04-01,baseline_ipom,Baseline IPoM identificado,1,FFR,4.33,Federal Funds Rate,% anual,Bloque externo,4.33,0.0
+2025Q3,2025-07-01,baseline_ipom,Baseline IPoM identificado,1,FFR,4.29333333,Federal Funds Rate,% anual,Bloque externo,4.29333333,0.0
+2025Q4,2025-10-01,baseline_ipom,Baseline IPoM identificado,1,FFR,3.89666667,Federal Funds Rate,% anual,Bloque externo,3.89666667,0.0
+2026Q1,2026-01-01,baseline_ipom,Baseline IPoM identificado,1,FFR,3.6,Federal Funds Rate,% anual,Bloque externo,3.6,0.0
+2026Q2,2026-04-01,baseline_ipom,Baseline IPoM identificado,1,FFR,3.6,Federal Funds Rate,% anual,Bloque externo,3.6,0.0
+2026Q3,2026-07-01,baseline_ipom,Baseline IPoM identificado,1,FFR,3.6,Federal Funds Rate,% anual,Bloque externo,3.6,0.0
+2026Q4,2026-10-01,baseline_ipom,Baseline IPoM identificado,1,FFR,3.6,Federal Funds Rate,% anual,Bloque externo,3.6,0.0
+2027Q1,2027-01-01,baseline_ipom,Baseline IPoM identificado,1,FFR,3.4,Federal Funds Rate,% anual,Bloque externo,3.4,0.0
+2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,FFR,3.4,Federal Funds Rate,% anual,Bloque externo,3.4,0.0
+2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,FFR,3.4,Federal Funds Rate,% anual,Bloque externo,3.4,0.0
+2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,FFR,3.4,Federal Funds Rate,% anual,Bloque externo,3.4,0.0
+2025Q1,2025-01-01,baseline_ipom,Baseline IPoM identificado,1,L_PCU_NOM,4.2392627,Cobre nominal,nivel aproximado,Bloque externo,4.2392627,0.0
+2025Q2,2025-04-01,baseline_ipom,Baseline IPoM identificado,1,L_PCU_NOM,4.3175468,Cobre nominal,nivel aproximado,Bloque externo,4.3175468,0.0
+2025Q3,2025-07-01,baseline_ipom,Baseline IPoM identificado,1,L_PCU_NOM,4.44170272,Cobre nominal,nivel aproximado,Bloque externo,4.44170272,0.0
+2025Q4,2025-10-01,baseline_ipom,Baseline IPoM identificado,1,L_PCU_NOM,5.03497052,Cobre nominal,nivel aproximado,Bloque externo,5.03497052,0.0
+2026Q1,2026-01-01,baseline_ipom,Baseline IPoM identificado,1,L_PCU_NOM,5.25087494,Cobre nominal,nivel aproximado,Bloque externo,5.25087494,0.0
+2026Q2,2026-04-01,baseline_ipom,Baseline IPoM identificado,1,L_PCU_NOM,5.46559142,Cobre nominal,nivel aproximado,Bloque externo,5.46559142,0.0
+2026Q3,2026-07-01,baseline_ipom,Baseline IPoM identificado,1,L_PCU_NOM,5.54176763,Cobre nominal,nivel aproximado,Bloque externo,5.54176763,0.0
+2026Q4,2026-10-01,baseline_ipom,Baseline IPoM identificado,1,L_PCU_NOM,5.46428494,Cobre nominal,nivel aproximado,Bloque externo,5.46428494,0.0
+2027Q1,2027-01-01,baseline_ipom,Baseline IPoM identificado,1,L_PCU_NOM,5.21284319,Cobre nominal,nivel aproximado,Bloque externo,5.21284319,0.0
+2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,L_PCU_NOM,5.13777248,Cobre nominal,nivel aproximado,Bloque externo,5.13777248,0.0
+2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,L_PCU_NOM,5.08782581,Cobre nominal,nivel aproximado,Bloque externo,5.08782581,0.0
+2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,L_PCU_NOM,5.06280225,Cobre nominal,nivel aproximado,Bloque externo,5.06280225,0.0
+2025Q1,2025-01-01,baseline_ipom,Baseline IPoM identificado,1,L_WTI_NOM,71.8366665,WTI nominal,nivel aproximado,Bloque externo,71.8366665,0.0
+2025Q2,2025-04-01,baseline_ipom,Baseline IPoM identificado,1,L_WTI_NOM,64.6266665,WTI nominal,nivel aproximado,Bloque externo,64.6266665,0.0
+2025Q3,2025-07-01,baseline_ipom,Baseline IPoM identificado,1,L_WTI_NOM,65.7366665,WTI nominal,nivel aproximado,Bloque externo,65.7366665,0.0
+2025Q4,2025-10-01,baseline_ipom,Baseline IPoM identificado,1,L_WTI_NOM,59.6400001,WTI nominal,nivel aproximado,Bloque externo,59.6400001,0.0
+2026Q1,2026-01-01,baseline_ipom,Baseline IPoM identificado,1,L_WTI_NOM,83.1504435,WTI nominal,nivel aproximado,Bloque externo,83.1504435,0.0
+2026Q2,2026-04-01,baseline_ipom,Baseline IPoM identificado,1,L_WTI_NOM,89.0397159,WTI nominal,nivel aproximado,Bloque externo,89.0397159,0.0
+2026Q3,2026-07-01,baseline_ipom,Baseline IPoM identificado,1,L_WTI_NOM,87.934257,WTI nominal,nivel aproximado,Bloque externo,87.934257,0.0
+2026Q4,2026-10-01,baseline_ipom,Baseline IPoM identificado,1,L_WTI_NOM,86.0248268,WTI nominal,nivel aproximado,Bloque externo,86.0248268,0.0
+2027Q1,2027-01-01,baseline_ipom,Baseline IPoM identificado,1,L_WTI_NOM,78.3871087,WTI nominal,nivel aproximado,Bloque externo,78.3871087,0.0
+2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,L_WTI_NOM,75.5732123,WTI nominal,nivel aproximado,Bloque externo,75.5732123,0.0
+2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,L_WTI_NOM,73.6637832,WTI nominal,nivel aproximado,Bloque externo,73.6637832,0.0
+2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,L_WTI_NOM,72.7593162,WTI nominal,nivel aproximado,Bloque externo,72.7593162,0.0
+2025Q1,2025-01-01,baseline_ipom,Baseline IPoM identificado,1,L_Z_INDEX,104.620721,Tipo de cambio real índice,índice,Bloque externo,104.620721,0.0
+2025Q2,2025-04-01,baseline_ipom,Baseline IPoM identificado,1,L_Z_INDEX,103.958546,Tipo de cambio real índice,índice,Bloque externo,103.958546,0.0
+2025Q3,2025-07-01,baseline_ipom,Baseline IPoM identificado,1,L_Z_INDEX,105.766116,Tipo de cambio real índice,índice,Bloque externo,105.766116,0.0
+2025Q4,2025-10-01,baseline_ipom,Baseline IPoM identificado,1,L_Z_INDEX,103.330267,Tipo de cambio real índice,índice,Bloque externo,103.330267,0.0
+2026Q1,2026-01-01,baseline_ipom,Baseline IPoM identificado,1,L_Z_INDEX,104.499993,Tipo de cambio real índice,índice,Bloque externo,104.499993,0.0
+2026Q2,2026-04-01,baseline_ipom,Baseline IPoM identificado,1,L_Z_INDEX,103.50004,Tipo de cambio real índice,índice,Bloque externo,103.50004,0.0
+2026Q3,2026-07-01,baseline_ipom,Baseline IPoM identificado,1,L_Z_INDEX,103.000001,Tipo de cambio real índice,índice,Bloque externo,103.000001,0.0
+2026Q4,2026-10-01,baseline_ipom,Baseline IPoM identificado,1,L_Z_INDEX,102.6875,Tipo de cambio real índice,índice,Bloque externo,102.6875,0.0
+2027Q1,2027-01-01,baseline_ipom,Baseline IPoM identificado,1,L_Z_INDEX,102.249999,Tipo de cambio real índice,índice,Bloque externo,102.249999,0.0
+2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,L_Z_INDEX,102.000019,Tipo de cambio real índice,índice,Bloque externo,102.000019,0.0
+2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,L_Z_INDEX,101.494032,Tipo de cambio real índice,índice,Bloque externo,101.494032,0.0
+2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,L_Z_INDEX,101.494032,Tipo de cambio real índice,índice,Bloque externo,101.494032,0.0
+2025Q1,2025-01-01,baseline_ipom,Baseline IPoM identificado,1,UST10,4.45333333,Treasury 10 años,% anual,Bloque externo,4.45333333,0.0
+2025Q2,2025-04-01,baseline_ipom,Baseline IPoM identificado,1,UST10,4.36,Treasury 10 años,% anual,Bloque externo,4.36,0.0
+2025Q3,2025-07-01,baseline_ipom,Baseline IPoM identificado,1,UST10,4.25666667,Treasury 10 años,% anual,Bloque externo,4.25666667,0.0
+2025Q4,2025-10-01,baseline_ipom,Baseline IPoM identificado,1,UST10,4.09666667,Treasury 10 años,% anual,Bloque externo,4.09666667,0.0
+2026Q1,2026-01-01,baseline_ipom,Baseline IPoM identificado,1,UST10,4.25,Treasury 10 años,% anual,Bloque externo,4.25,0.0
+2026Q2,2026-04-01,baseline_ipom,Baseline IPoM identificado,1,UST10,4.5,Treasury 10 años,% anual,Bloque externo,4.5,0.0
+2026Q3,2026-07-01,baseline_ipom,Baseline IPoM identificado,1,UST10,4.55,Treasury 10 años,% anual,Bloque externo,4.55,0.0
+2026Q4,2026-10-01,baseline_ipom,Baseline IPoM identificado,1,UST10,4.65,Treasury 10 años,% anual,Bloque externo,4.65,0.0
+2027Q1,2027-01-01,baseline_ipom,Baseline IPoM identificado,1,UST10,4.63,Treasury 10 años,% anual,Bloque externo,4.63,0.0
+2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,UST10,4.55,Treasury 10 años,% anual,Bloque externo,4.55,0.0
+2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,UST10,4.37,Treasury 10 años,% anual,Bloque externo,4.37,0.0
+2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,UST10,4.2,Treasury 10 años,% anual,Bloque externo,4.2,0.0
+2025Q1,2025-01-01,baseline_ipom,Baseline IPoM identificado,1,VIX,18.5211111,VIX,índice,Bloque externo,18.5211111,0.0
+2025Q2,2025-04-01,baseline_ipom,Baseline IPoM identificado,1,VIX,23.5614063,VIX,índice,Bloque externo,23.5614063,0.0
+2025Q3,2025-07-01,baseline_ipom,Baseline IPoM identificado,1,VIX,15.9830303,VIX,índice,Bloque externo,15.9830303,0.0
+2025Q4,2025-10-01,baseline_ipom,Baseline IPoM identificado,1,VIX,17.7452308,VIX,índice,Bloque externo,17.7452308,0.0
+2026Q1,2026-01-01,baseline_ipom,Baseline IPoM identificado,1,VIX,24.0,VIX,índice,Bloque externo,24.0,0.0
+2026Q2,2026-04-01,baseline_ipom,Baseline IPoM identificado,1,VIX,22.0,VIX,índice,Bloque externo,22.0,0.0
+2026Q3,2026-07-01,baseline_ipom,Baseline IPoM identificado,1,VIX,21.0,VIX,índice,Bloque externo,21.0,0.0
+2026Q4,2026-10-01,baseline_ipom,Baseline IPoM identificado,1,VIX,19.0,VIX,índice,Bloque externo,19.0,0.0
+2027Q1,2027-01-01,baseline_ipom,Baseline IPoM identificado,1,VIX,18.5,VIX,índice,Bloque externo,18.5,0.0
+2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,VIX,18.0,VIX,índice,Bloque externo,18.0,0.0
+2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,VIX,17.25,VIX,índice,Bloque externo,17.25,0.0
+2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,VIX,17.0,VIX,índice,Bloque externo,17.0,0.0
+2025Q1,2025-01-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,CRECSC,3.4881,Crecimiento socios comerciales,% anual,Bloque externo,3.4881,0.0
+2025Q2,2025-04-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,CRECSC,3.274572,Crecimiento socios comerciales,% anual,Bloque externo,3.274572,0.0
+2025Q3,2025-07-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,CRECSC,2.980154,Crecimiento socios comerciales,% anual,Bloque externo,2.980154,0.0
+2025Q4,2025-10-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,CRECSC,2.86465,Crecimiento socios comerciales,% anual,Bloque externo,2.86465,0.0
+2026Q1,2026-01-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,CRECSC,2.7,Crecimiento socios comerciales,% anual,Bloque externo,2.7,0.0
+2026Q2,2026-04-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,CRECSC,2.7,Crecimiento socios comerciales,% anual,Bloque externo,2.7,0.0
+2026Q3,2026-07-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,CRECSC,2.7,Crecimiento socios comerciales,% anual,Bloque externo,2.7,0.0
+2026Q4,2026-10-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,CRECSC,2.7,Crecimiento socios comerciales,% anual,Bloque externo,2.7,0.0
+2027Q1,2027-01-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,CRECSC,2.9,Crecimiento socios comerciales,% anual,Bloque externo,2.9,0.0
+2027Q2,2027-04-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,CRECSC,2.9,Crecimiento socios comerciales,% anual,Bloque externo,2.9,0.0
+2027Q3,2027-07-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,CRECSC,2.9,Crecimiento socios comerciales,% anual,Bloque externo,2.9,0.0
+2027Q4,2027-10-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,CRECSC,2.9,Crecimiento socios comerciales,% anual,Bloque externo,2.9,0.0
+2025Q1,2025-01-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,FFR,4.33,Federal Funds Rate,% anual,Bloque externo,4.33,0.0
+2025Q2,2025-04-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,FFR,4.33,Federal Funds Rate,% anual,Bloque externo,4.33,0.0
+2025Q3,2025-07-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,FFR,4.29333333,Federal Funds Rate,% anual,Bloque externo,4.29333333,0.0
+2025Q4,2025-10-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,FFR,3.89666667,Federal Funds Rate,% anual,Bloque externo,3.89666667,0.0
+2026Q1,2026-01-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,FFR,3.6,Federal Funds Rate,% anual,Bloque externo,3.6,0.0
+2026Q2,2026-04-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,FFR,3.6,Federal Funds Rate,% anual,Bloque externo,3.6,0.0
+2026Q3,2026-07-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,FFR,3.6,Federal Funds Rate,% anual,Bloque externo,3.6,0.0
+2026Q4,2026-10-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,FFR,3.6,Federal Funds Rate,% anual,Bloque externo,3.6,0.0
+2027Q1,2027-01-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,FFR,3.4,Federal Funds Rate,% anual,Bloque externo,3.4,0.0
+2027Q2,2027-04-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,FFR,3.4,Federal Funds Rate,% anual,Bloque externo,3.4,0.0
+2027Q3,2027-07-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,FFR,3.4,Federal Funds Rate,% anual,Bloque externo,3.4,0.0
+2027Q4,2027-10-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,FFR,3.4,Federal Funds Rate,% anual,Bloque externo,3.4,0.0
+2025Q1,2025-01-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_PCU_NOM,4.2392627,Cobre nominal,nivel aproximado,Bloque externo,4.2392627,0.0
+2025Q2,2025-04-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_PCU_NOM,4.3175468,Cobre nominal,nivel aproximado,Bloque externo,4.3175468,0.0
+2025Q3,2025-07-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_PCU_NOM,4.44170272,Cobre nominal,nivel aproximado,Bloque externo,4.44170272,0.0
+2025Q4,2025-10-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_PCU_NOM,5.03497052,Cobre nominal,nivel aproximado,Bloque externo,5.03497052,0.0
+2026Q1,2026-01-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_PCU_NOM,5.25087494,Cobre nominal,nivel aproximado,Bloque externo,5.25087494,0.0
+2026Q2,2026-04-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_PCU_NOM,5.46559142,Cobre nominal,nivel aproximado,Bloque externo,5.46559142,0.0
+2026Q3,2026-07-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_PCU_NOM,5.43093228,Cobre nominal,nivel aproximado,Bloque externo,5.54176763,-0.11083534999999944
+2026Q4,2026-10-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_PCU_NOM,5.24571354,Cobre nominal,nivel aproximado,Bloque externo,5.46428494,-0.21857140000000008
+2027Q1,2027-01-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_PCU_NOM,4.9000726,Cobre nominal,nivel aproximado,Bloque externo,5.21284319,-0.3127705900000004
+2027Q2,2027-04-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_PCU_NOM,4.72675068,Cobre nominal,nivel aproximado,Bloque externo,5.13777248,-0.41102179999999944
+2027Q3,2027-07-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_PCU_NOM,4.57904323,Cobre nominal,nivel aproximado,Bloque externo,5.08782581,-0.5087825800000001
+2027Q4,2027-10-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_PCU_NOM,4.55652203,Cobre nominal,nivel aproximado,Bloque externo,5.06280225,-0.5062802199999998
+2025Q1,2025-01-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_WTI_NOM,71.8366665,WTI nominal,nivel aproximado,Bloque externo,71.8366665,0.0
+2025Q2,2025-04-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_WTI_NOM,64.6266665,WTI nominal,nivel aproximado,Bloque externo,64.6266665,0.0
+2025Q3,2025-07-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_WTI_NOM,65.7366665,WTI nominal,nivel aproximado,Bloque externo,65.7366665,0.0
+2025Q4,2025-10-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_WTI_NOM,59.6400001,WTI nominal,nivel aproximado,Bloque externo,59.6400001,0.0
+2026Q1,2026-01-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_WTI_NOM,83.1504435,WTI nominal,nivel aproximado,Bloque externo,83.1504435,0.0
+2026Q2,2026-04-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_WTI_NOM,89.0397159,WTI nominal,nivel aproximado,Bloque externo,89.0397159,0.0
+2026Q3,2026-07-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_WTI_NOM,87.934257,WTI nominal,nivel aproximado,Bloque externo,87.934257,0.0
+2026Q4,2026-10-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_WTI_NOM,86.0248268,WTI nominal,nivel aproximado,Bloque externo,86.0248268,0.0
+2027Q1,2027-01-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_WTI_NOM,76.8193666,WTI nominal,nivel aproximado,Bloque externo,78.3871087,-1.5677421000000038
+2027Q2,2027-04-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_WTI_NOM,72.5502838,WTI nominal,nivel aproximado,Bloque externo,75.5732123,-3.022928499999992
+2027Q3,2027-07-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_WTI_NOM,69.2439562,WTI nominal,nivel aproximado,Bloque externo,73.6637832,-4.419826999999998
+2027Q4,2027-10-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_WTI_NOM,66.9385709,WTI nominal,nivel aproximado,Bloque externo,72.7593162,-5.820745299999999
+2025Q1,2025-01-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_Z_INDEX,104.620721,Tipo de cambio real índice,índice,Bloque externo,104.620721,0.0
+2025Q2,2025-04-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_Z_INDEX,103.958546,Tipo de cambio real índice,índice,Bloque externo,103.958546,0.0
+2025Q3,2025-07-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_Z_INDEX,105.766116,Tipo de cambio real índice,índice,Bloque externo,105.766116,0.0
+2025Q4,2025-10-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_Z_INDEX,103.330267,Tipo de cambio real índice,índice,Bloque externo,103.330267,0.0
+2026Q1,2026-01-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_Z_INDEX,104.499993,Tipo de cambio real índice,índice,Bloque externo,104.499993,0.0
+2026Q2,2026-04-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_Z_INDEX,103.50004,Tipo de cambio real índice,índice,Bloque externo,103.50004,0.0
+2026Q3,2026-07-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_Z_INDEX,102.691001,Tipo de cambio real índice,índice,Bloque externo,103.000001,-0.3089999999999975
+2026Q4,2026-10-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_Z_INDEX,102.174063,Tipo de cambio real índice,índice,Bloque externo,102.6875,-0.5134369999999961
+2027Q1,2027-01-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_Z_INDEX,101.943249,Tipo de cambio real índice,índice,Bloque externo,102.249999,-0.30675000000000807
+2027Q2,2027-04-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_Z_INDEX,101.898019,Tipo de cambio real índice,índice,Bloque externo,102.000019,-0.10199999999998965
+2027Q3,2027-07-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_Z_INDEX,101.494032,Tipo de cambio real índice,índice,Bloque externo,101.494032,0.0
+2027Q4,2027-10-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,L_Z_INDEX,101.494032,Tipo de cambio real índice,índice,Bloque externo,101.494032,0.0
+2025Q1,2025-01-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,UST10,4.45333333,Treasury 10 años,% anual,Bloque externo,4.45333333,0.0
+2025Q2,2025-04-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,UST10,4.36,Treasury 10 años,% anual,Bloque externo,4.36,0.0
+2025Q3,2025-07-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,UST10,4.25666667,Treasury 10 años,% anual,Bloque externo,4.25666667,0.0
+2025Q4,2025-10-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,UST10,4.09666667,Treasury 10 años,% anual,Bloque externo,4.09666667,0.0
+2026Q1,2026-01-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,UST10,4.25,Treasury 10 años,% anual,Bloque externo,4.25,0.0
+2026Q2,2026-04-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,UST10,4.5,Treasury 10 años,% anual,Bloque externo,4.5,0.0
+2026Q3,2026-07-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,UST10,4.55,Treasury 10 años,% anual,Bloque externo,4.55,0.0
+2026Q4,2026-10-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,UST10,4.65,Treasury 10 años,% anual,Bloque externo,4.65,0.0
+2027Q1,2027-01-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,UST10,4.63,Treasury 10 años,% anual,Bloque externo,4.63,0.0
+2027Q2,2027-04-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,UST10,4.55,Treasury 10 años,% anual,Bloque externo,4.55,0.0
+2027Q3,2027-07-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,UST10,4.37,Treasury 10 años,% anual,Bloque externo,4.37,0.0
+2027Q4,2027-10-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,UST10,4.2,Treasury 10 años,% anual,Bloque externo,4.2,0.0
+2025Q1,2025-01-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,VIX,18.5211111,VIX,índice,Bloque externo,18.5211111,0.0
+2025Q2,2025-04-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,VIX,23.5614063,VIX,índice,Bloque externo,23.5614063,0.0
+2025Q3,2025-07-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,VIX,15.9830303,VIX,índice,Bloque externo,15.9830303,0.0
+2025Q4,2025-10-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,VIX,17.7452308,VIX,índice,Bloque externo,17.7452308,0.0
+2026Q1,2026-01-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,VIX,24.0,VIX,índice,Bloque externo,24.0,0.0
+2026Q2,2026-04-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,VIX,22.0,VIX,índice,Bloque externo,22.0,0.0
+2026Q3,2026-07-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,VIX,20.5,VIX,índice,Bloque externo,21.0,-0.5
+2026Q4,2026-10-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,VIX,18.0,VIX,índice,Bloque externo,19.0,-1.0
+2027Q1,2027-01-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,VIX,16.5,VIX,índice,Bloque externo,18.5,-2.0
+2027Q2,2027-04-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,VIX,16.0,VIX,índice,Bloque externo,18.0,-2.0
+2027Q3,2027-07-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,VIX,15.75,VIX,índice,Bloque externo,17.25,-1.5
+2027Q4,2027-10-01,iran_fin_anticipado,Fin anticipado conflicto Irán,2,VIX,16.0,VIX,índice,Bloque externo,17.0,-1.0
+2025Q1,2025-01-01,riskoff_global,Risk-off global,3,CRECSC,3.4881,Crecimiento socios comerciales,% anual,Bloque externo,3.4881,0.0
+2025Q2,2025-04-01,riskoff_global,Risk-off global,3,CRECSC,3.274572,Crecimiento socios comerciales,% anual,Bloque externo,3.274572,0.0
+2025Q3,2025-07-01,riskoff_global,Risk-off global,3,CRECSC,2.980154,Crecimiento socios comerciales,% anual,Bloque externo,2.980154,0.0
+2025Q4,2025-10-01,riskoff_global,Risk-off global,3,CRECSC,2.86465,Crecimiento socios comerciales,% anual,Bloque externo,2.86465,0.0
+2026Q1,2026-01-01,riskoff_global,Risk-off global,3,CRECSC,2.7,Crecimiento socios comerciales,% anual,Bloque externo,2.7,0.0
+2026Q2,2026-04-01,riskoff_global,Risk-off global,3,CRECSC,2.7,Crecimiento socios comerciales,% anual,Bloque externo,2.7,0.0
+2026Q3,2026-07-01,riskoff_global,Risk-off global,3,CRECSC,2.7,Crecimiento socios comerciales,% anual,Bloque externo,2.7,0.0
+2026Q4,2026-10-01,riskoff_global,Risk-off global,3,CRECSC,2.7,Crecimiento socios comerciales,% anual,Bloque externo,2.7,0.0
+2027Q1,2027-01-01,riskoff_global,Risk-off global,3,CRECSC,2.9,Crecimiento socios comerciales,% anual,Bloque externo,2.9,0.0
+2027Q2,2027-04-01,riskoff_global,Risk-off global,3,CRECSC,2.9,Crecimiento socios comerciales,% anual,Bloque externo,2.9,0.0
+2027Q3,2027-07-01,riskoff_global,Risk-off global,3,CRECSC,2.9,Crecimiento socios comerciales,% anual,Bloque externo,2.9,0.0
+2027Q4,2027-10-01,riskoff_global,Risk-off global,3,CRECSC,2.931586,Crecimiento socios comerciales,% anual,Bloque externo,2.9,0.03158599999999989
+2025Q1,2025-01-01,riskoff_global,Risk-off global,3,FFR,4.33,Federal Funds Rate,% anual,Bloque externo,4.33,0.0
+2025Q2,2025-04-01,riskoff_global,Risk-off global,3,FFR,4.33,Federal Funds Rate,% anual,Bloque externo,4.33,0.0
+2025Q3,2025-07-01,riskoff_global,Risk-off global,3,FFR,4.29333333,Federal Funds Rate,% anual,Bloque externo,4.29333333,0.0
+2025Q4,2025-10-01,riskoff_global,Risk-off global,3,FFR,3.89666667,Federal Funds Rate,% anual,Bloque externo,3.89666667,0.0
+2026Q1,2026-01-01,riskoff_global,Risk-off global,3,FFR,3.6,Federal Funds Rate,% anual,Bloque externo,3.6,0.0
+2026Q2,2026-04-01,riskoff_global,Risk-off global,3,FFR,3.6,Federal Funds Rate,% anual,Bloque externo,3.6,0.0
+2026Q3,2026-07-01,riskoff_global,Risk-off global,3,FFR,3.6,Federal Funds Rate,% anual,Bloque externo,3.6,0.0
+2026Q4,2026-10-01,riskoff_global,Risk-off global,3,FFR,3.6,Federal Funds Rate,% anual,Bloque externo,3.6,0.0
+2027Q1,2027-01-01,riskoff_global,Risk-off global,3,FFR,3.4,Federal Funds Rate,% anual,Bloque externo,3.4,0.0
+2027Q2,2027-04-01,riskoff_global,Risk-off global,3,FFR,3.4,Federal Funds Rate,% anual,Bloque externo,3.4,0.0
+2027Q3,2027-07-01,riskoff_global,Risk-off global,3,FFR,3.4,Federal Funds Rate,% anual,Bloque externo,3.4,0.0
+2027Q4,2027-10-01,riskoff_global,Risk-off global,3,FFR,3.404,Federal Funds Rate,% anual,Bloque externo,3.4,0.0040000000000000036
+2025Q1,2025-01-01,riskoff_global,Risk-off global,3,L_PCU_NOM,4.2392627,Cobre nominal,nivel aproximado,Bloque externo,4.2392627,0.0
+2025Q2,2025-04-01,riskoff_global,Risk-off global,3,L_PCU_NOM,4.3175468,Cobre nominal,nivel aproximado,Bloque externo,4.3175468,0.0
+2025Q3,2025-07-01,riskoff_global,Risk-off global,3,L_PCU_NOM,4.44170272,Cobre nominal,nivel aproximado,Bloque externo,4.44170272,0.0
+2025Q4,2025-10-01,riskoff_global,Risk-off global,3,L_PCU_NOM,5.03497052,Cobre nominal,nivel aproximado,Bloque externo,5.03497052,0.0
+2026Q1,2026-01-01,riskoff_global,Risk-off global,3,L_PCU_NOM,5.25087494,Cobre nominal,nivel aproximado,Bloque externo,5.25087494,0.0
+2026Q2,2026-04-01,riskoff_global,Risk-off global,3,L_PCU_NOM,5.46559142,Cobre nominal,nivel aproximado,Bloque externo,5.46559142,0.0
+2026Q3,2026-07-01,riskoff_global,Risk-off global,3,L_PCU_NOM,5.54176763,Cobre nominal,nivel aproximado,Bloque externo,5.54176763,0.0
+2026Q4,2026-10-01,riskoff_global,Risk-off global,3,L_PCU_NOM,5.46428494,Cobre nominal,nivel aproximado,Bloque externo,5.46428494,0.0
+2027Q1,2027-01-01,riskoff_global,Risk-off global,3,L_PCU_NOM,5.21284319,Cobre nominal,nivel aproximado,Bloque externo,5.21284319,0.0
+2027Q2,2027-04-01,riskoff_global,Risk-off global,3,L_PCU_NOM,5.13777248,Cobre nominal,nivel aproximado,Bloque externo,5.13777248,0.0
+2027Q3,2027-07-01,riskoff_global,Risk-off global,3,L_PCU_NOM,5.08782581,Cobre nominal,nivel aproximado,Bloque externo,5.08782581,0.0
+2027Q4,2027-10-01,riskoff_global,Risk-off global,3,L_PCU_NOM,5.06453643,Cobre nominal,nivel aproximado,Bloque externo,5.06280225,0.0017341800000005847
+2025Q1,2025-01-01,riskoff_global,Risk-off global,3,L_WTI_NOM,71.8366665,WTI nominal,nivel aproximado,Bloque externo,71.8366665,0.0
+2025Q2,2025-04-01,riskoff_global,Risk-off global,3,L_WTI_NOM,64.6266665,WTI nominal,nivel aproximado,Bloque externo,64.6266665,0.0
+2025Q3,2025-07-01,riskoff_global,Risk-off global,3,L_WTI_NOM,65.7366665,WTI nominal,nivel aproximado,Bloque externo,65.7366665,0.0
+2025Q4,2025-10-01,riskoff_global,Risk-off global,3,L_WTI_NOM,59.6400001,WTI nominal,nivel aproximado,Bloque externo,59.6400001,0.0
+2026Q1,2026-01-01,riskoff_global,Risk-off global,3,L_WTI_NOM,83.1504435,WTI nominal,nivel aproximado,Bloque externo,83.1504435,0.0
+2026Q2,2026-04-01,riskoff_global,Risk-off global,3,L_WTI_NOM,89.0397159,WTI nominal,nivel aproximado,Bloque externo,89.0397159,0.0
+2026Q3,2026-07-01,riskoff_global,Risk-off global,3,L_WTI_NOM,87.934257,WTI nominal,nivel aproximado,Bloque externo,87.934257,0.0
+2026Q4,2026-10-01,riskoff_global,Risk-off global,3,L_WTI_NOM,86.0248268,WTI nominal,nivel aproximado,Bloque externo,86.0248268,0.0
+2027Q1,2027-01-01,riskoff_global,Risk-off global,3,L_WTI_NOM,78.3871087,WTI nominal,nivel aproximado,Bloque externo,78.3871087,0.0
+2027Q2,2027-04-01,riskoff_global,Risk-off global,3,L_WTI_NOM,75.5732123,WTI nominal,nivel aproximado,Bloque externo,75.5732123,0.0
+2027Q3,2027-07-01,riskoff_global,Risk-off global,3,L_WTI_NOM,73.6637832,WTI nominal,nivel aproximado,Bloque externo,73.6637832,0.0
+2027Q4,2027-10-01,riskoff_global,Risk-off global,3,L_WTI_NOM,71.3852576,WTI nominal,nivel aproximado,Bloque externo,72.7593162,-1.374058599999998
+2025Q1,2025-01-01,riskoff_global,Risk-off global,3,L_Z_INDEX,104.620721,Tipo de cambio real índice,índice,Bloque externo,104.620721,0.0
+2025Q2,2025-04-01,riskoff_global,Risk-off global,3,L_Z_INDEX,103.958546,Tipo de cambio real índice,índice,Bloque externo,103.958546,0.0
+2025Q3,2025-07-01,riskoff_global,Risk-off global,3,L_Z_INDEX,105.766116,Tipo de cambio real índice,índice,Bloque externo,105.766116,0.0
+2025Q4,2025-10-01,riskoff_global,Risk-off global,3,L_Z_INDEX,103.330267,Tipo de cambio real índice,índice,Bloque externo,103.330267,0.0
+2026Q1,2026-01-01,riskoff_global,Risk-off global,3,L_Z_INDEX,104.499993,Tipo de cambio real índice,índice,Bloque externo,104.499993,0.0
+2026Q2,2026-04-01,riskoff_global,Risk-off global,3,L_Z_INDEX,103.50004,Tipo de cambio real índice,índice,Bloque externo,103.50004,0.0
+2026Q3,2026-07-01,riskoff_global,Risk-off global,3,L_Z_INDEX,103.000001,Tipo de cambio real índice,índice,Bloque externo,103.000001,0.0
+2026Q4,2026-10-01,riskoff_global,Risk-off global,3,L_Z_INDEX,102.6875,Tipo de cambio real índice,índice,Bloque externo,102.6875,0.0
+2027Q1,2027-01-01,riskoff_global,Risk-off global,3,L_Z_INDEX,102.249999,Tipo de cambio real índice,índice,Bloque externo,102.249999,0.0
+2027Q2,2027-04-01,riskoff_global,Risk-off global,3,L_Z_INDEX,102.000019,Tipo de cambio real índice,índice,Bloque externo,102.000019,0.0
+2027Q3,2027-07-01,riskoff_global,Risk-off global,3,L_Z_INDEX,101.494032,Tipo de cambio real índice,índice,Bloque externo,101.494032,0.0
+2027Q4,2027-10-01,riskoff_global,Risk-off global,3,L_Z_INDEX,101.696117,Tipo de cambio real índice,índice,Bloque externo,101.494032,0.20208499999999674
+2025Q1,2025-01-01,riskoff_global,Risk-off global,3,UST10,4.45333333,Treasury 10 años,% anual,Bloque externo,4.45333333,0.0
+2025Q2,2025-04-01,riskoff_global,Risk-off global,3,UST10,4.36,Treasury 10 años,% anual,Bloque externo,4.36,0.0
+2025Q3,2025-07-01,riskoff_global,Risk-off global,3,UST10,4.25666667,Treasury 10 años,% anual,Bloque externo,4.25666667,0.0
+2025Q4,2025-10-01,riskoff_global,Risk-off global,3,UST10,4.09666667,Treasury 10 años,% anual,Bloque externo,4.09666667,0.0
+2026Q1,2026-01-01,riskoff_global,Risk-off global,3,UST10,4.25,Treasury 10 años,% anual,Bloque externo,4.25,0.0
+2026Q2,2026-04-01,riskoff_global,Risk-off global,3,UST10,4.5,Treasury 10 años,% anual,Bloque externo,4.5,0.0
+2026Q3,2026-07-01,riskoff_global,Risk-off global,3,UST10,4.55,Treasury 10 años,% anual,Bloque externo,4.55,0.0
+2026Q4,2026-10-01,riskoff_global,Risk-off global,3,UST10,4.65,Treasury 10 años,% anual,Bloque externo,4.65,0.0
+2027Q1,2027-01-01,riskoff_global,Risk-off global,3,UST10,4.63,Treasury 10 años,% anual,Bloque externo,4.63,0.0
+2027Q2,2027-04-01,riskoff_global,Risk-off global,3,UST10,4.55,Treasury 10 años,% anual,Bloque externo,4.55,0.0
+2027Q3,2027-07-01,riskoff_global,Risk-off global,3,UST10,4.37,Treasury 10 años,% anual,Bloque externo,4.37,0.0
+2027Q4,2027-10-01,riskoff_global,Risk-off global,3,UST10,4.333,Treasury 10 años,% anual,Bloque externo,4.2,0.133
+2025Q1,2025-01-01,riskoff_global,Risk-off global,3,VIX,18.5211111,VIX,índice,Bloque externo,18.5211111,0.0
+2025Q2,2025-04-01,riskoff_global,Risk-off global,3,VIX,23.5614063,VIX,índice,Bloque externo,23.5614063,0.0
+2025Q3,2025-07-01,riskoff_global,Risk-off global,3,VIX,15.9830303,VIX,índice,Bloque externo,15.9830303,0.0
+2025Q4,2025-10-01,riskoff_global,Risk-off global,3,VIX,17.7452308,VIX,índice,Bloque externo,17.7452308,0.0
+2026Q1,2026-01-01,riskoff_global,Risk-off global,3,VIX,24.0,VIX,índice,Bloque externo,24.0,0.0
+2026Q2,2026-04-01,riskoff_global,Risk-off global,3,VIX,22.0,VIX,índice,Bloque externo,22.0,0.0
+2026Q3,2026-07-01,riskoff_global,Risk-off global,3,VIX,21.0,VIX,índice,Bloque externo,21.0,0.0
+2026Q4,2026-10-01,riskoff_global,Risk-off global,3,VIX,19.0,VIX,índice,Bloque externo,19.0,0.0
+2027Q1,2027-01-01,riskoff_global,Risk-off global,3,VIX,18.5,VIX,índice,Bloque externo,18.5,0.0
+2027Q2,2027-04-01,riskoff_global,Risk-off global,3,VIX,18.0,VIX,índice,Bloque externo,18.0,0.0
+2027Q3,2027-07-01,riskoff_global,Risk-off global,3,VIX,17.25,VIX,índice,Bloque externo,17.25,0.0
+2027Q4,2027-10-01,riskoff_global,Risk-off global,3,VIX,17.1385775,VIX,índice,Bloque externo,17.0,0.13857750000000024
+2025Q1,2025-01-01,escenario_alternativo,Escenario alternativo,4,CRECSC,3.4881,Crecimiento socios comerciales,% anual,Bloque externo,3.4881,0.0
+2025Q2,2025-04-01,escenario_alternativo,Escenario alternativo,4,CRECSC,3.274572,Crecimiento socios comerciales,% anual,Bloque externo,3.274572,0.0
+2025Q3,2025-07-01,escenario_alternativo,Escenario alternativo,4,CRECSC,2.980154,Crecimiento socios comerciales,% anual,Bloque externo,2.980154,0.0
+2025Q4,2025-10-01,escenario_alternativo,Escenario alternativo,4,CRECSC,2.86465,Crecimiento socios comerciales,% anual,Bloque externo,2.86465,0.0
+2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,CRECSC,2.7,Crecimiento socios comerciales,% anual,Bloque externo,2.7,0.0
+2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,CRECSC,2.7,Crecimiento socios comerciales,% anual,Bloque externo,2.7,0.0
+2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,CRECSC,2.7,Crecimiento socios comerciales,% anual,Bloque externo,2.7,0.0
+2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,CRECSC,2.7,Crecimiento socios comerciales,% anual,Bloque externo,2.7,0.0
+2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,CRECSC,2.9,Crecimiento socios comerciales,% anual,Bloque externo,2.9,0.0
+2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,CRECSC,2.9,Crecimiento socios comerciales,% anual,Bloque externo,2.9,0.0
+2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,CRECSC,2.9,Crecimiento socios comerciales,% anual,Bloque externo,2.9,0.0
+2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,CRECSC,2.9,Crecimiento socios comerciales,% anual,Bloque externo,2.9,0.0
+2025Q1,2025-01-01,escenario_alternativo,Escenario alternativo,4,FFR,4.33,Federal Funds Rate,% anual,Bloque externo,4.33,0.0
+2025Q2,2025-04-01,escenario_alternativo,Escenario alternativo,4,FFR,4.33,Federal Funds Rate,% anual,Bloque externo,4.33,0.0
+2025Q3,2025-07-01,escenario_alternativo,Escenario alternativo,4,FFR,4.29333333,Federal Funds Rate,% anual,Bloque externo,4.29333333,0.0
+2025Q4,2025-10-01,escenario_alternativo,Escenario alternativo,4,FFR,3.89666667,Federal Funds Rate,% anual,Bloque externo,3.89666667,0.0
+2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,FFR,3.6,Federal Funds Rate,% anual,Bloque externo,3.6,0.0
+2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,FFR,3.6,Federal Funds Rate,% anual,Bloque externo,3.6,0.0
+2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,FFR,3.6,Federal Funds Rate,% anual,Bloque externo,3.6,0.0
+2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,FFR,3.6,Federal Funds Rate,% anual,Bloque externo,3.6,0.0
+2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,FFR,3.4,Federal Funds Rate,% anual,Bloque externo,3.4,0.0
+2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,FFR,3.4,Federal Funds Rate,% anual,Bloque externo,3.4,0.0
+2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,FFR,3.4,Federal Funds Rate,% anual,Bloque externo,3.4,0.0
+2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,FFR,3.4,Federal Funds Rate,% anual,Bloque externo,3.4,0.0
+2025Q1,2025-01-01,escenario_alternativo,Escenario alternativo,4,L_PCU_NOM,4.2392627,Cobre nominal,nivel aproximado,Bloque externo,4.2392627,0.0
+2025Q2,2025-04-01,escenario_alternativo,Escenario alternativo,4,L_PCU_NOM,4.3175468,Cobre nominal,nivel aproximado,Bloque externo,4.3175468,0.0
+2025Q3,2025-07-01,escenario_alternativo,Escenario alternativo,4,L_PCU_NOM,4.44170272,Cobre nominal,nivel aproximado,Bloque externo,4.44170272,0.0
+2025Q4,2025-10-01,escenario_alternativo,Escenario alternativo,4,L_PCU_NOM,5.03497052,Cobre nominal,nivel aproximado,Bloque externo,5.03497052,0.0
+2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,L_PCU_NOM,5.25087494,Cobre nominal,nivel aproximado,Bloque externo,5.25087494,0.0
+2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,L_PCU_NOM,5.46559142,Cobre nominal,nivel aproximado,Bloque externo,5.46559142,0.0
+2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,L_PCU_NOM,6.37303277,Cobre nominal,nivel aproximado,Bloque externo,5.54176763,0.8312651400000002
+2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,L_PCU_NOM,6.06815573,Cobre nominal,nivel aproximado,Bloque externo,5.46428494,0.6038707900000002
+2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,L_PCU_NOM,5.63919608,Cobre nominal,nivel aproximado,Bloque externo,5.21284319,0.42635288999999954
+2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,L_PCU_NOM,5.44981512,Cobre nominal,nivel aproximado,Bloque externo,5.13777248,0.3120426400000005
+2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,L_PCU_NOM,5.31786625,Cobre nominal,nivel aproximado,Bloque externo,5.08782581,0.2300404399999998
+2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,L_PCU_NOM,5.23353155,Cobre nominal,nivel aproximado,Bloque externo,5.06280225,0.17072930000000053
+2025Q1,2025-01-01,escenario_alternativo,Escenario alternativo,4,L_WTI_NOM,71.8366665,WTI nominal,nivel aproximado,Bloque externo,71.8366665,0.0
+2025Q2,2025-04-01,escenario_alternativo,Escenario alternativo,4,L_WTI_NOM,64.6266665,WTI nominal,nivel aproximado,Bloque externo,64.6266665,0.0
+2025Q3,2025-07-01,escenario_alternativo,Escenario alternativo,4,L_WTI_NOM,65.7366665,WTI nominal,nivel aproximado,Bloque externo,65.7366665,0.0
+2025Q4,2025-10-01,escenario_alternativo,Escenario alternativo,4,L_WTI_NOM,59.6400001,WTI nominal,nivel aproximado,Bloque externo,59.6400001,0.0
+2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,L_WTI_NOM,83.1504434,WTI nominal,nivel aproximado,Bloque externo,83.1504435,-9.999999406318238e-08
+2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,L_WTI_NOM,89.0397158,WTI nominal,nivel aproximado,Bloque externo,89.0397159,-1.000000082740371e-07
+2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,L_WTI_NOM,87.934257,WTI nominal,nivel aproximado,Bloque externo,87.934257,0.0
+2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,L_WTI_NOM,86.0248268,WTI nominal,nivel aproximado,Bloque externo,86.0248268,0.0
+2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,L_WTI_NOM,76.0354955,WTI nominal,nivel aproximado,Bloque externo,78.3871087,-2.3516132000000027
+2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,L_WTI_NOM,71.0388196,WTI nominal,nivel aproximado,Bloque externo,75.5732123,-4.534392699999998
+2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,L_WTI_NOM,66.2974049,WTI nominal,nivel aproximado,Bloque externo,73.6637832,-7.366378299999994
+2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,L_WTI_NOM,61.8454187,WTI nominal,nivel aproximado,Bloque externo,72.7593162,-10.913897499999997
+2025Q1,2025-01-01,escenario_alternativo,Escenario alternativo,4,L_Z_INDEX,104.620721,Tipo de cambio real índice,índice,Bloque externo,104.620721,0.0
+2025Q2,2025-04-01,escenario_alternativo,Escenario alternativo,4,L_Z_INDEX,103.958546,Tipo de cambio real índice,índice,Bloque externo,103.958546,0.0
+2025Q3,2025-07-01,escenario_alternativo,Escenario alternativo,4,L_Z_INDEX,105.766116,Tipo de cambio real índice,índice,Bloque externo,105.766116,0.0
+2025Q4,2025-10-01,escenario_alternativo,Escenario alternativo,4,L_Z_INDEX,103.330267,Tipo de cambio real índice,índice,Bloque externo,103.330267,0.0
+2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,L_Z_INDEX,104.499993,Tipo de cambio real índice,índice,Bloque externo,104.499993,0.0
+2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,L_Z_INDEX,103.50004,Tipo de cambio real índice,índice,Bloque externo,103.50004,0.0
+2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,L_Z_INDEX,102.691001,Tipo de cambio real índice,índice,Bloque externo,103.000001,-0.3089999999999975
+2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,L_Z_INDEX,102.174063,Tipo de cambio real índice,índice,Bloque externo,102.6875,-0.5134369999999961
+2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,L_Z_INDEX,101.943249,Tipo de cambio real índice,índice,Bloque externo,102.249999,-0.30675000000000807
+2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,L_Z_INDEX,101.898019,Tipo de cambio real índice,índice,Bloque externo,102.000019,-0.10199999999998965
+2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,L_Z_INDEX,101.433124,Tipo de cambio real índice,índice,Bloque externo,101.494032,-0.06090799999999774
+2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,L_Z_INDEX,101.457483,Tipo de cambio real índice,índice,Bloque externo,101.494032,-0.036549000000007936
+2025Q1,2025-01-01,escenario_alternativo,Escenario alternativo,4,UST10,4.45333333,Treasury 10 años,% anual,Bloque externo,4.45333333,0.0
+2025Q2,2025-04-01,escenario_alternativo,Escenario alternativo,4,UST10,4.36,Treasury 10 años,% anual,Bloque externo,4.36,0.0
+2025Q3,2025-07-01,escenario_alternativo,Escenario alternativo,4,UST10,4.25666667,Treasury 10 años,% anual,Bloque externo,4.25666667,0.0
+2025Q4,2025-10-01,escenario_alternativo,Escenario alternativo,4,UST10,4.09666667,Treasury 10 años,% anual,Bloque externo,4.09666667,0.0
+2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,UST10,4.25,Treasury 10 años,% anual,Bloque externo,4.25,0.0
+2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,UST10,4.5,Treasury 10 años,% anual,Bloque externo,4.5,0.0
+2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,UST10,4.55,Treasury 10 años,% anual,Bloque externo,4.55,0.0
+2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,UST10,4.65,Treasury 10 años,% anual,Bloque externo,4.65,0.0
+2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,UST10,4.63,Treasury 10 años,% anual,Bloque externo,4.63,0.0
+2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,UST10,4.55,Treasury 10 años,% anual,Bloque externo,4.55,0.0
+2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,UST10,4.37,Treasury 10 años,% anual,Bloque externo,4.37,0.0
+2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,UST10,4.2,Treasury 10 años,% anual,Bloque externo,4.2,0.0
+2025Q1,2025-01-01,escenario_alternativo,Escenario alternativo,4,VIX,18.5211111,VIX,índice,Bloque externo,18.5211111,0.0
+2025Q2,2025-04-01,escenario_alternativo,Escenario alternativo,4,VIX,23.5614063,VIX,índice,Bloque externo,23.5614063,0.0
+2025Q3,2025-07-01,escenario_alternativo,Escenario alternativo,4,VIX,15.9830303,VIX,índice,Bloque externo,15.9830303,0.0
+2025Q4,2025-10-01,escenario_alternativo,Escenario alternativo,4,VIX,17.7452308,VIX,índice,Bloque externo,17.7452308,0.0
+2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,VIX,24.0,VIX,índice,Bloque externo,24.0,0.0
+2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,VIX,22.0,VIX,índice,Bloque externo,22.0,0.0
+2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,VIX,20.5,VIX,índice,Bloque externo,21.0,-0.5
+2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,VIX,18.0,VIX,índice,Bloque externo,19.0,-1.0
+2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,VIX,16.5,VIX,índice,Bloque externo,18.5,-2.0
+2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,VIX,16.0,VIX,índice,Bloque externo,18.0,-2.0
+2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,VIX,15.75,VIX,índice,Bloque externo,17.25,-1.5
+2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,VIX,16.0,VIX,índice,Bloque externo,17.0,-1.0
+2025Q1,2025-01-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,CRECSC,3.4881,Crecimiento socios comerciales,% anual,Bloque externo,3.4881,0.0
+2025Q2,2025-04-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,CRECSC,3.274572,Crecimiento socios comerciales,% anual,Bloque externo,3.274572,0.0
+2025Q3,2025-07-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,CRECSC,2.980154,Crecimiento socios comerciales,% anual,Bloque externo,2.980154,0.0
+2025Q4,2025-10-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,CRECSC,2.86465,Crecimiento socios comerciales,% anual,Bloque externo,2.86465,0.0
+2026Q1,2026-01-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,CRECSC,2.7,Crecimiento socios comerciales,% anual,Bloque externo,2.7,0.0
+2026Q2,2026-04-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,CRECSC,2.7,Crecimiento socios comerciales,% anual,Bloque externo,2.7,0.0
+2026Q3,2026-07-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,CRECSC,2.7,Crecimiento socios comerciales,% anual,Bloque externo,2.7,0.0
+2026Q4,2026-10-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,CRECSC,2.7,Crecimiento socios comerciales,% anual,Bloque externo,2.7,0.0
+2027Q1,2027-01-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,CRECSC,2.9,Crecimiento socios comerciales,% anual,Bloque externo,2.9,0.0
+2027Q2,2027-04-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,CRECSC,2.9,Crecimiento socios comerciales,% anual,Bloque externo,2.9,0.0
+2027Q3,2027-07-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,CRECSC,2.9,Crecimiento socios comerciales,% anual,Bloque externo,2.9,0.0
+2027Q4,2027-10-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,CRECSC,2.9,Crecimiento socios comerciales,% anual,Bloque externo,2.9,0.0
+2025Q1,2025-01-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,FFR,4.33,Federal Funds Rate,% anual,Bloque externo,4.33,0.0
+2025Q2,2025-04-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,FFR,4.33,Federal Funds Rate,% anual,Bloque externo,4.33,0.0
+2025Q3,2025-07-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,FFR,4.29333333,Federal Funds Rate,% anual,Bloque externo,4.29333333,0.0
+2025Q4,2025-10-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,FFR,3.89666667,Federal Funds Rate,% anual,Bloque externo,3.89666667,0.0
+2026Q1,2026-01-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,FFR,3.6,Federal Funds Rate,% anual,Bloque externo,3.6,0.0
+2026Q2,2026-04-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,FFR,3.6,Federal Funds Rate,% anual,Bloque externo,3.6,0.0
+2026Q3,2026-07-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,FFR,3.6,Federal Funds Rate,% anual,Bloque externo,3.6,0.0
+2026Q4,2026-10-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,FFR,3.6,Federal Funds Rate,% anual,Bloque externo,3.6,0.0
+2027Q1,2027-01-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,FFR,3.4,Federal Funds Rate,% anual,Bloque externo,3.4,0.0
+2027Q2,2027-04-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,FFR,3.4,Federal Funds Rate,% anual,Bloque externo,3.4,0.0
+2027Q3,2027-07-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,FFR,3.4,Federal Funds Rate,% anual,Bloque externo,3.4,0.0
+2027Q4,2027-10-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,FFR,3.4,Federal Funds Rate,% anual,Bloque externo,3.4,0.0
+2025Q1,2025-01-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_PCU_NOM,4.2392627,Cobre nominal,nivel aproximado,Bloque externo,4.2392627,0.0
+2025Q2,2025-04-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_PCU_NOM,4.3175468,Cobre nominal,nivel aproximado,Bloque externo,4.3175468,0.0
+2025Q3,2025-07-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_PCU_NOM,4.44170272,Cobre nominal,nivel aproximado,Bloque externo,4.44170272,0.0
+2025Q4,2025-10-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_PCU_NOM,5.03497052,Cobre nominal,nivel aproximado,Bloque externo,5.03497052,0.0
+2026Q1,2026-01-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_PCU_NOM,4.81708275,Cobre nominal,nivel aproximado,Bloque externo,5.25087494,-0.43379219000000013
+2026Q2,2026-04-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_PCU_NOM,4.65550249,Cobre nominal,nivel aproximado,Bloque externo,5.46559142,-0.81008893
+2026Q3,2026-07-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_PCU_NOM,4.54350404,Cobre nominal,nivel aproximado,Bloque externo,5.54176763,-0.9982635899999996
+2026Q4,2026-10-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_PCU_NOM,4.46680191,Cobre nominal,nivel aproximado,Bloque externo,5.46428494,-0.9974830299999997
+2027Q1,2027-01-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_PCU_NOM,4.41558791,Cobre nominal,nivel aproximado,Bloque externo,5.21284319,-0.7972552799999999
+2027Q2,2027-04-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_PCU_NOM,4.38298445,Cobre nominal,nivel aproximado,Bloque externo,5.13777248,-0.7547880299999994
+2027Q3,2027-07-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_PCU_NOM,4.36408784,Cobre nominal,nivel aproximado,Bloque externo,5.08782581,-0.7237379700000002
+2027Q4,2027-10-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_PCU_NOM,4.35535601,Cobre nominal,nivel aproximado,Bloque externo,5.06280225,-0.7074462399999994
+2025Q1,2025-01-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_WTI_NOM,71.8366665,WTI nominal,nivel aproximado,Bloque externo,71.8366665,0.0
+2025Q2,2025-04-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_WTI_NOM,64.6266665,WTI nominal,nivel aproximado,Bloque externo,64.6266665,0.0
+2025Q3,2025-07-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_WTI_NOM,65.7366665,WTI nominal,nivel aproximado,Bloque externo,65.7366665,0.0
+2025Q4,2025-10-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_WTI_NOM,59.6400001,WTI nominal,nivel aproximado,Bloque externo,59.6400001,0.0
+2026Q1,2026-01-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_WTI_NOM,61.0806038,WTI nominal,nivel aproximado,Bloque externo,83.1504435,-22.069839699999996
+2026Q2,2026-04-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_WTI_NOM,62.0740406,WTI nominal,nivel aproximado,Bloque externo,89.0397159,-26.965675300000008
+2026Q3,2026-07-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_WTI_NOM,62.8711511,WTI nominal,nivel aproximado,Bloque externo,87.934257,-25.063105900000004
+2026Q4,2026-10-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_WTI_NOM,63.5286461,WTI nominal,nivel aproximado,Bloque externo,86.0248268,-22.496180699999996
+2027Q1,2027-01-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_WTI_NOM,64.0874948,WTI nominal,nivel aproximado,Bloque externo,78.3871087,-14.299613899999997
+2027Q2,2027-04-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_WTI_NOM,64.5770303,WTI nominal,nivel aproximado,Bloque externo,75.5732123,-10.99618199999999
+2027Q3,2027-07-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_WTI_NOM,65.0181259,WTI nominal,nivel aproximado,Bloque externo,73.6637832,-8.645657299999996
+2027Q4,2027-10-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_WTI_NOM,65.4255747,WTI nominal,nivel aproximado,Bloque externo,72.7593162,-7.333741500000002
+2025Q1,2025-01-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_Z_INDEX,104.62072104954404,Tipo de cambio real índice,índice,Bloque externo,104.620721,4.9544041758053936e-08
+2025Q2,2025-04-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_Z_INDEX,103.95854563334201,Tipo de cambio real índice,índice,Bloque externo,103.958546,-3.666579857508623e-07
+2025Q3,2025-07-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_Z_INDEX,105.7661156321201,Tipo de cambio real índice,índice,Bloque externo,105.766116,-3.678798918826942e-07
+2025Q4,2025-10-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_Z_INDEX,103.330266568364,Tipo de cambio real índice,índice,Bloque externo,103.330267,-4.3163601048945566e-07
+2026Q1,2026-01-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_Z_INDEX,104.49999253819185,Tipo de cambio real índice,índice,Bloque externo,104.499993,-4.618081561602594e-07
+2026Q2,2026-04-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_Z_INDEX,103.50004008499643,Tipo de cambio real índice,índice,Bloque externo,103.50004,8.499642945025698e-08
+2026Q3,2026-07-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_Z_INDEX,103.00000121234753,Tipo de cambio real índice,índice,Bloque externo,103.000001,2.123475297821642e-07
+2026Q4,2026-10-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_Z_INDEX,102.68750043154559,Tipo de cambio real índice,índice,Bloque externo,102.6875,4.3154558682090283e-07
+2027Q1,2027-01-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_Z_INDEX,102.24999949663228,Tipo de cambio real índice,índice,Bloque externo,102.249999,4.966322819655034e-07
+2027Q2,2027-04-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_Z_INDEX,102.0000190450061,Tipo de cambio real índice,índice,Bloque externo,102.000019,4.5006103732703195e-08
+2027Q3,2027-07-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_Z_INDEX,101.49403212954563,Tipo de cambio real índice,índice,Bloque externo,101.494032,1.29545625782157e-07
+2027Q4,2027-10-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,L_Z_INDEX,101.49403212954563,Tipo de cambio real índice,índice,Bloque externo,101.494032,1.29545625782157e-07
+2025Q1,2025-01-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,UST10,4.45333333,Treasury 10 años,% anual,Bloque externo,4.45333333,0.0
+2025Q2,2025-04-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,UST10,4.36,Treasury 10 años,% anual,Bloque externo,4.36,0.0
+2025Q3,2025-07-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,UST10,4.25666667,Treasury 10 años,% anual,Bloque externo,4.25666667,0.0
+2025Q4,2025-10-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,UST10,4.09666667,Treasury 10 años,% anual,Bloque externo,4.09666667,0.0
+2026Q1,2026-01-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,UST10,4.25,Treasury 10 años,% anual,Bloque externo,4.25,0.0
+2026Q2,2026-04-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,UST10,4.5,Treasury 10 años,% anual,Bloque externo,4.5,0.0
+2026Q3,2026-07-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,UST10,4.55,Treasury 10 años,% anual,Bloque externo,4.55,0.0
+2026Q4,2026-10-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,UST10,4.65,Treasury 10 años,% anual,Bloque externo,4.65,0.0
+2027Q1,2027-01-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,UST10,4.63,Treasury 10 años,% anual,Bloque externo,4.63,0.0
+2027Q2,2027-04-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,UST10,4.55,Treasury 10 años,% anual,Bloque externo,4.55,0.0
+2027Q3,2027-07-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,UST10,4.37,Treasury 10 años,% anual,Bloque externo,4.37,0.0
+2027Q4,2027-10-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,UST10,4.2,Treasury 10 años,% anual,Bloque externo,4.2,0.0
+2025Q1,2025-01-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,VIX,18.5211111,VIX,índice,Bloque externo,18.5211111,0.0
+2025Q2,2025-04-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,VIX,23.5614063,VIX,índice,Bloque externo,23.5614063,0.0
+2025Q3,2025-07-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,VIX,15.9830303,VIX,índice,Bloque externo,15.9830303,0.0
+2025Q4,2025-10-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,VIX,17.7452308,VIX,índice,Bloque externo,17.7452308,0.0
+2026Q1,2026-01-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,VIX,24.0,VIX,índice,Bloque externo,24.0,0.0
+2026Q2,2026-04-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,VIX,22.0,VIX,índice,Bloque externo,22.0,0.0
+2026Q3,2026-07-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,VIX,21.0,VIX,índice,Bloque externo,21.0,0.0
+2026Q4,2026-10-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,VIX,19.0,VIX,índice,Bloque externo,19.0,0.0
+2027Q1,2027-01-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,VIX,18.5,VIX,índice,Bloque externo,18.5,0.0
+2027Q2,2027-04-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,VIX,18.0,VIX,índice,Bloque externo,18.0,0.0
+2027Q3,2027-07-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,VIX,17.25,VIX,índice,Bloque externo,17.25,0.0
+2027Q4,2027-10-01,baseline_modelo,Baseline modelo sin juicio IPoM,5,VIX,17.0,VIX,índice,Bloque externo,17.0,0.0

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Transmisión de la TPM a tasas de mercado – Mauricio Ulloa</title>
+<title>notas_matlab_iris – Mauricio Ulloa</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -61,23 +61,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -105,27 +105,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
-<link href="../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
-
-<script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-
-<script src="../site_libs/plotly-binding-4.12.0/plotly.js"></script>
-
-<script src="../site_libs/typedarray-0.1/typedarray.min.js"></script>
-
-<script src="../site_libs/jquery-3.5.1/jquery.min.js"></script>
-
-<link href="../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
-
-<script src="../site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
-
-<link href="../site_libs/plotly-htmlwidgets-css-2.25.2/plotly-htmlwidgets.css" rel="stylesheet">
-
-<script src="../site_libs/plotly-main-2.25.2/plotly-latest.min.js"></script>
 
 
-
-<link rel="stylesheet" href="../assets/css/styles.css">
+<link rel="stylesheet" href="../../assets/css/styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -135,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Mauricio Ulloa</span>
     </a>
   </div>
@@ -146,19 +128,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Inicio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../proyectos.html"> 
+    <a class="nav-link" href="../../proyectos.html"> 
 <span class="menu-text">Proyectos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../cv.html"> 
+    <a class="nav-link" href="../../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../contacto.html"> 
+    <a class="nav-link" href="../../contacto.html"> 
 <span class="menu-text">Contacto</span></a>
   </li>  
 </ul>
@@ -184,70 +166,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">En esta página</h2>
    
   <ul>
-  <li><a href="#motivación" id="toc-motivación" class="nav-link active" data-scroll-target="#motivación">Motivación</a></li>
-  <li><a href="#diseño-inicial" id="toc-diseño-inicial" class="nav-link" data-scroll-target="#diseño-inicial">Diseño inicial</a></li>
-  <li><a href="#demo-visual-heatmap-de-pass-through" id="toc-demo-visual-heatmap-de-pass-through" class="nav-link" data-scroll-target="#demo-visual-heatmap-de-pass-through">Demo visual: heatmap de pass-through</a></li>
-  <li><a href="#próximas-mejoras" id="toc-próximas-mejoras" class="nav-link" data-scroll-target="#próximas-mejoras">Próximas mejoras</a></li>
+  <li><a href="#notas-de-la-reestructuracion-matlabiris" id="toc-notas-de-la-reestructuracion-matlabiris" class="nav-link active" data-scroll-target="#notas-de-la-reestructuracion-matlabiris">Notas de la reestructuracion Matlab/IRIS</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Transmisión de la TPM a tasas de mercado</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Código</button></div></div>
-<p class="subtitle lead">Monitor de pass-through de política monetaria en Chile</p>
-</div>
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7"></h1></header><div class="quarto-title-block"><div class="quarto-title-tools-only"><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Código</button></div></div>
 
 
 
-<div class="quarto-title-meta column-page-left">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="motivación" class="level2">
-<h2 class="anchored" data-anchor-id="motivación">Motivación</h2>
-<p>Este proyecto analiza el traspaso dinámico de movimientos de la Tasa de Política Monetaria hacia distintas tasas de mercado en Chile.</p>
-<p>La pregunta central es simple: cuando cambia la TPM, ¿qué tasas reaccionan más rápido y con mayor intensidad?</p>
-<div class="mu-note">
-<p>El objetivo no es afirmar causalidad estructural sin identificación de shocks monetarios. La primera versión se presenta como un monitor descriptivo y econométrico de traspaso dinámico.</p>
-</div>
-</section>
-<section id="diseño-inicial" class="level2">
-<h2 class="anchored" data-anchor-id="diseño-inicial">Diseño inicial</h2>
-<ul>
-<li>TPM y tasas de mercado en frecuencia mensual.</li>
-<li>Tasas comerciales, consumo, hipotecarias, depósitos y bonos.</li>
-<li>Modelos de rezagos distribuidos o ARDL.</li>
-<li>Heatmap de coeficientes acumulados por horizonte.</li>
-</ul>
-</section>
-<section id="demo-visual-heatmap-de-pass-through" class="level2">
-<h2 class="anchored" data-anchor-id="demo-visual-heatmap-de-pass-through">Demo visual: heatmap de pass-through</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div class="plotly html-widget html-fill-item" id="htmlwidget-6c04d3a15b670239e029" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-6c04d3a15b670239e029">{"x":{"visdat":{"17143283c55":["function () ","plotlyVisDat"]},"cur_data":"17143283c55","attrs":{"17143283c55":{"x":{},"y":{},"z":{},"hovertemplate":"Tasa: %{y}<br>Horizonte: %{x}<br>Pass-through demo: %{z:.2f}<extra><\/extra>","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"heatmap"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Pass-through acumulado por horizonte: demo visual","xaxis":{"domain":[0,1],"automargin":true,"title":"Horizonte","type":"category","categoryorder":"array","categoryarray":["1 mes","12 meses","3 meses","6 meses"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Tipo de tasa","type":"category","categoryorder":"array","categoryarray":["Bonos 2y","Bonos 5y","Comercial","Consumo","Depósitos","Hipotecaria","Interbancaria"]},"scene":{"zaxis":{"title":"pass_through"}},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"colorbar":{"title":"pass_through","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":true,"x":["1 mes","3 meses","6 meses","12 meses","1 mes","3 meses","6 meses","12 meses","1 mes","3 meses","6 meses","12 meses","1 mes","3 meses","6 meses","12 meses","1 mes","3 meses","6 meses","12 meses","1 mes","3 meses","6 meses","12 meses","1 mes","3 meses","6 meses","12 meses"],"y":["Interbancaria","Interbancaria","Interbancaria","Interbancaria","Depósitos","Depósitos","Depósitos","Depósitos","Comercial","Comercial","Comercial","Comercial","Consumo","Consumo","Consumo","Consumo","Hipotecaria","Hipotecaria","Hipotecaria","Hipotecaria","Bonos 2y","Bonos 2y","Bonos 2y","Bonos 2y","Bonos 5y","Bonos 5y","Bonos 5y","Bonos 5y"],"z":[0.44337828448817318,0.67748001181661066,0.74616654028891793,0.87778176216251524,0.33146219410393535,0.50225628213945361,0.62962139999856115,0.63036429095203061,0.31183436177384244,0.48749671981503928,0.56133924159031612,0.64434901431160674,0.23383981004405857,0.27575089476995673,0.3598068233750138,0.4441400310125016,0.15358519024346073,0.12853096524094404,0.19948723100091287,0.22833248503391324,0.31538576198242735,0.39750481236871221,0.57405673228859599,0.62264477032031251,0.14861634113874375,0.30162919077083972,0.35259788783111906,0.44071239182798194],"hovertemplate":"Tasa: %{y}<br>Horizonte: %{x}<br>Pass-through demo: %{z:.2f}<extra><\/extra>","type":"heatmap","xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
-</section>
-<section id="próximas-mejoras" class="level2">
-<h2 class="anchored" data-anchor-id="próximas-mejoras">Próximas mejoras</h2>
-<ul>
-<li>Conectar con datos reales del BCCh.</li>
-<li>Estimar traspaso acumulado con modelos de rezagos distribuidos.</li>
-<li>Comparar subperíodos, por ejemplo pre y post ciclo inflacionario reciente.</li>
-<li>Agregar sección de discusión metodológica sobre endogeneidad e identificación.</li>
-</ul>
+<section id="notas-de-la-reestructuracion-matlabiris" class="level1">
+<h1>Notas de la reestructuracion Matlab/IRIS</h1>
+<p>Cambios aplicados:</p>
+<ol type="1">
+<li><code>setup_ipom_project.m</code> ahora activa IRIS Release 20191112 con <code>irisstartup</code>.</li>
+<li><code>run_all_ipom.m</code> ahora es una funcion y ya no copia scripts a <code>runtime/</code>.</li>
+<li><code>identificar_shocks_ipom.m</code> lee <code>history.csv</code> e <code>ipom_paths.csv</code> desde <code>matlab/ipom/inputs/</code>.</li>
+<li><code>identificar_shocks_ipom.m</code> guarda <code>fcast_ipom_exact.csv</code> y <code>fcast_ipom_with_shocks.csv</code> en <code>matlab/ipom/outputs/raw_iris/</code>.</li>
+<li><code>fcast_alt_ipom.m</code> lee el baseline desde <code>outputs/raw_iris/fcast_ipom_exact.csv</code>.</li>
+<li><code>fcast_alt_ipom.m</code> guarda el escenario en <code>outputs/raw_iris/fcast_alt_escenario.csv</code>.</li>
+<li><code>readmodel_alternativo.m</code> carga el modelo desde <code>matlab/ipom/model/minimep0.model</code>, no desde el directorio actual.</li>
+<li><code>makedata.m</code> reconstruye <code>inputs/history.csv</code> desde <code>inputs/Data.csv</code> solo si activas <code>cfg.runMakeData=true</code>.</li>
+</ol>
+<p>Comando recomendado en MATLAB:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">cd</span>(<span class="ss">'D:\Users\mullo\Documents\GitHub\Economics\matlab\ipom\src'</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="va">run_all_ipom</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Despues, desde la raiz del repositorio:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Rscript scripts<span class="op">/</span>03_build_ipom_outputs<span class="op">.</span><span class="fu">R</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>quarto render</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 <!-- -->
@@ -706,81 +653,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Ejecutar el código</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Transmisión de la TPM a tasas de mercado"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Monitor de pass-through de política monetaria en Chile"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Motivación</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Este proyecto analiza el traspaso dinámico de movimientos de la Tasa de Política Monetaria hacia distintas tasas de mercado en Chile.</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>La pregunta central es simple: cuando cambia la TPM, ¿qué tasas reaccionan más rápido y con mayor intensidad?</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>::: {.mu-note}</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>El objetivo no es afirmar causalidad estructural sin identificación de shocks monetarios. La primera versión se presenta como un monitor descriptivo y econométrico de traspaso dinámico.</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## Diseño inicial</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>TPM y tasas de mercado en frecuencia mensual.</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tasas comerciales, consumo, hipotecarias, depósitos y bonos.</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Modelos de rezagos distribuidos o ARDL.</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Heatmap de coeficientes acumulados por horizonte.</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## Demo visual: heatmap de pass-through</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>tasas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Interbancaria"</span>, <span class="st">"Depósitos"</span>, <span class="st">"Comercial"</span>, <span class="st">"Consumo"</span>, <span class="st">"Hipotecaria"</span>, <span class="st">"Bonos 2y"</span>, <span class="st">"Bonos 5y"</span>)</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>horizontes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"1 mes"</span>, <span class="st">"3 meses"</span>, <span class="st">"6 meses"</span>, <span class="st">"12 meses"</span>)</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>demo <span class="ot">&lt;-</span> <span class="fu">expand_grid</span>(<span class="at">tasa =</span> tasas, <span class="at">horizonte =</span> horizontes) <span class="sc">|&gt;</span> </span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">h =</span> <span class="fu">match</span>(horizonte, horizontes),</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">base =</span> <span class="fu">case_when</span>(</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>      tasa <span class="sc">==</span> <span class="st">"Interbancaria"</span> <span class="sc">~</span> <span class="fl">0.95</span>,</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>      tasa <span class="sc">==</span> <span class="st">"Depósitos"</span> <span class="sc">~</span> <span class="fl">0.75</span>,</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>      tasa <span class="sc">==</span> <span class="st">"Comercial"</span> <span class="sc">~</span> <span class="fl">0.70</span>,</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>      tasa <span class="sc">==</span> <span class="st">"Consumo"</span> <span class="sc">~</span> <span class="fl">0.45</span>,</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>      tasa <span class="sc">==</span> <span class="st">"Hipotecaria"</span> <span class="sc">~</span> <span class="fl">0.25</span>,</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>      tasa <span class="sc">==</span> <span class="st">"Bonos 2y"</span> <span class="sc">~</span> <span class="fl">0.65</span>,</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>      tasa <span class="sc">==</span> <span class="st">"Bonos 5y"</span> <span class="sc">~</span> <span class="fl">0.45</span>,</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="fl">0.5</span></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    <span class="at">pass_through =</span> <span class="fu">pmin</span>(<span class="fl">1.1</span>, base <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fu">exp</span>(<span class="sc">-</span><span class="fl">0.55</span> <span class="sc">*</span> h)) <span class="sc">+</span> <span class="fu">runif</span>(<span class="fu">n</span>(), <span class="sc">-</span><span class="fl">0.05</span>, <span class="fl">0.05</span>))</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_ly</span>(</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>  demo,</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="sc">~</span>horizonte,</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> <span class="sc">~</span>tasa,</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>  <span class="at">z =</span> <span class="sc">~</span>pass_through,</span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"heatmap"</span>,</span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>  <span class="at">hovertemplate =</span> <span class="st">"Tasa: %{y}&lt;br&gt;Horizonte: %{x}&lt;br&gt;Pass-through demo: %{z:.2f}&lt;extra&gt;&lt;/extra&gt;"</span></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span> </span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>  <span class="fu">layout</span>(</span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Pass-through acumulado por horizonte: demo visual"</span>,</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>    <span class="at">xaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">"Horizonte"</span>),</span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>    <span class="at">yaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">"Tipo de tasa"</span>)</span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="fu">## Próximas mejoras</span></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Conectar con datos reales del BCCh.</span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Estimar traspaso acumulado con modelos de rezagos distribuidos.</span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Comparar subperíodos, por ejemplo pre y post ciclo inflacionario reciente.</span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Agregar sección de discusión metodológica sobre endogeneidad e identificación.</span>
-</code></pre></div><button title="Copiar al portapapeles" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Notas de la reestructuracion Matlab/IRIS</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Cambios aplicados:</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span><span class="in">`setup_ipom_project.m`</span> ahora activa IRIS Release 20191112 con <span class="in">`irisstartup`</span>.</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span><span class="in">`run_all_ipom.m`</span> ahora es una funcion y ya no copia scripts a <span class="in">`runtime/`</span>.</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span><span class="in">`identificar_shocks_ipom.m`</span> lee <span class="in">`history.csv`</span> e <span class="in">`ipom_paths.csv`</span> desde <span class="in">`matlab/ipom/inputs/`</span>.</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span><span class="in">`identificar_shocks_ipom.m`</span> guarda <span class="in">`fcast_ipom_exact.csv`</span> y <span class="in">`fcast_ipom_with_shocks.csv`</span> en <span class="in">`matlab/ipom/outputs/raw_iris/`</span>.</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span><span class="in">`fcast_alt_ipom.m`</span> lee el baseline desde <span class="in">`outputs/raw_iris/fcast_ipom_exact.csv`</span>.</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span><span class="in">`fcast_alt_ipom.m`</span> guarda el escenario en <span class="in">`outputs/raw_iris/fcast_alt_escenario.csv`</span>.</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span><span class="in">`readmodel_alternativo.m`</span> carga el modelo desde <span class="in">`matlab/ipom/model/minimep0.model`</span>, no desde el directorio actual.</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="ss">8. </span><span class="in">`makedata.m`</span> reconstruye <span class="in">`inputs/history.csv`</span> desde <span class="in">`inputs/Data.csv`</span> solo si activas <span class="in">`cfg.runMakeData=true`</span>.</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>Comando recomendado en MATLAB:</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="in">```matlab</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="va">cd</span>(<span class="ss">'D:\Users\mullo\Documents\GitHub\Economics\matlab\ipom\src'</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="va">run_all_ipom</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>Despues, desde la raiz del repositorio:</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="in">```powershell</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="in">Rscript scripts/03_build_ipom_outputs.R</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="in">quarto render</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

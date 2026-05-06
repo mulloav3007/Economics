@@ -1,0 +1,6 @@
+scenario_id,scenario,scenario_order,source_file
+baseline_ipom,Baseline IPoM identificado,1,fcast_ipom_exact.csv
+iran_fin_anticipado,Fin anticipado conflicto Irán,2,fcast_alt_iran_fin_anticipado.csv
+riskoff_global,Risk-off global,3,fcast_alt_riskoff.csv
+escenario_alternativo,Escenario alternativo,4,fcast_alt_escenario.csv
+baseline_modelo,Baseline modelo sin juicio IPoM,5,fcast_base_model.csv

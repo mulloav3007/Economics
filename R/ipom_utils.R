@@ -74,7 +74,7 @@ add_ipom_derived_variables <- function(df) {
 }
 
 build_ipom_processed_data <- function(
-    outputs_dir = path_project("matlab", "ipom", "outputs"),
+    outputs_dir = path_project("matlab", "ipom", "outputs", "raw_iris"),
     processed_dir = path_project("data", "processed", "ipom"),
     forecast_start_year = 2025,
     forecast_end_year = 2027

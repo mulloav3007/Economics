@@ -60,7 +60,7 @@
     "href": "proyectos/ipom-iris.html#supuestos-externos",
     "title": "Escenarios macroeconómicos inspirados en IPoM",
     "section": "Supuestos externos",
-    "text": "Supuestos externos\nLa tabla resume los supuestos externos procesados para el período 2025-2027. Las diferencias se calculan contra el baseline IPoM identificado.\n\n\n\nSupuestos externos: promedio 2025-2027 y desvíos frente al baseline.\n\n\n\n\n\n\n\n\n\n\n\nEscenario\nVariable\nUnidad\nPromedio escenario\nDiferencia promedio vs baseline\nDiferencia máxima vs baseline\nDiferencia mínima vs baseline\n\n\n\n\nEscenario alternativo\nCobre nominal\nnivel aproximado\n5,24\n0,21\n0,83\n0,00\n\n\nEscenario alternativo\nCrecimiento socios comerciales\n% anual\n2,92\n0,00\n0,00\n0,00\n\n\nEscenario alternativo\nFederal Funds Rate\n% anual\n3,74\n0,00\n0,00\n0,00\n\n\nEscenario alternativo\nTipo de cambio real índice\níndice\n103,11\n-0,11\n0,00\n-0,51\n\n\nEscenario alternativo\nTreasury 10 años\n% anual\n4,41\n0,00\n0,00\n0,00\n\n\nEscenario alternativo\nVIX\níndice\n18,71\n-0,67\n0,00\n-2,00\n\n\nEscenario alternativo\nWTI nominal\nnivel aproximado\n73,60\n-2,10\n0,00\n-10,91\n\n\nFin anticipado conflicto Irán\nCobre nominal\nnivel aproximado\n4,85\n-0,17\n0,00\n-0,51\n\n\nFin anticipado conflicto Irán\nCrecimiento socios comerciales\n% anual\n2,92\n0,00\n0,00\n0,00\n\n\nFin anticipado conflicto Irán\nFederal Funds Rate\n% anual\n3,74\n0,00\n0,00\n0,00\n\n\nFin anticipado conflicto Irán\nTipo de cambio real índice\níndice\n103,11\n-0,10\n0,00\n-0,51\n\n\nFin anticipado conflicto Irán\nTreasury 10 años\n% anual\n4,41\n0,00\n0,00\n0,00\n\n\nFin anticipado conflicto Irán\nVIX\níndice\n18,71\n-0,67\n0,00\n-2,00\n\n\nFin anticipado conflicto Irán\nWTI nominal\nnivel aproximado\n74,46\n-1,24\n0,00\n-5,82\n\n\nRisk-off global\nCobre nominal\nnivel aproximado\n5,02\n0,00\n0,00\n0,00\n\n\nRisk-off global\nCrecimiento socios comerciales\n% anual\n2,92\n0,00\n0,03\n0,00\n\n\nRisk-off global\nFederal Funds Rate\n% anual\n3,74\n0,00\n0,00\n0,00\n\n\nRisk-off global\nTipo de cambio real índice\níndice\n103,23\n0,02\n0,20\n0,00\n\n\nRisk-off global\nTreasury 10 años\n% anual\n4,42\n0,01\n0,13\n0,00\n\n\nRisk-off global\nVIX\níndice\n19,39\n0,01\n0,14\n0,00\n\n\nRisk-off global\nWTI nominal\nnivel aproximado\n75,58\n-0,11\n0,00\n-1,37"
+    "text": "Supuestos externos\nLa tabla resume los supuestos externos procesados para el período 2025-2027. Las diferencias se calculan contra el baseline IPoM identificado.\n\n\n\nSupuestos externos: promedio 2025-2027 y desvíos frente al baseline.\n\n\n\n\n\n\n\n\n\n\n\nEscenario\nVariable\nUnidad\nPromedio escenario\nDiferencia promedio vs baseline\nDiferencia máxima vs baseline\nDiferencia mínima vs baseline\n\n\n\n\nEscenario alternativo\nCobre nominal\nnivel aproximado\n5,02\n0,00\n0,00\n0\n\n\nEscenario alternativo\nCrecimiento socios comerciales\n% anual\n2,92\n0,00\n0,00\n0\n\n\nEscenario alternativo\nFederal Funds Rate\n% anual\n3,74\n0,00\n0,00\n0\n\n\nEscenario alternativo\nTipo de cambio real índice\níndice\n103,22\n0,00\n0,00\n0\n\n\nEscenario alternativo\nTreasury 10 años\n% anual\n4,41\n0,00\n0,00\n0\n\n\nEscenario alternativo\nVIX\níndice\n19,38\n0,00\n0,00\n0\n\n\nEscenario alternativo\nWTI nominal\nnivel aproximado\n81,25\n5,55\n12,24\n0"
   },
   {
     "objectID": "proyectos/ipom-iris.html#desvíos-frente-al-baseline",
@@ -74,14 +74,14 @@
     "href": "proyectos/ipom-iris.html#tabla-resumen-de-impactos",
     "title": "Escenarios macroeconómicos inspirados en IPoM",
     "section": "Tabla resumen de impactos",
-    "text": "Tabla resumen de impactos\n\n\n\nDesvíos frente al baseline IPoM en 2025-2027.\n\n\n\n\n\n\n\n\n\n\n\nEscenario\nVariable\nUnidad\nPromedio\nMínimo\nMáximo\nÚltimo\n\n\n\n\nEscenario alternativo\nBrecha de actividad\n%\n0,03\n0,00\n0,08\n0,04\n\n\nEscenario alternativo\nCrecimiento socios comerciales\n% anual\n0,00\n0,00\n0,00\n0,00\n\n\nEscenario alternativo\nFederal Funds Rate\n% anual\n0,00\n0,00\n0,00\n0,00\n\n\nEscenario alternativo\nInflación subyacente sin volátiles\n% anual\n-0,02\n-0,07\n0,00\n-0,06\n\n\nEscenario alternativo\nInflación total\n% anual\n-0,08\n-0,29\n0,00\n-0,29\n\n\nEscenario alternativo\nTasa de Política Monetaria\n% anual\n-0,01\n-0,03\n0,00\n-0,03\n\n\nEscenario alternativo\nTreasury 10 años\n% anual\n0,00\n0,00\n0,00\n0,00\n\n\nEscenario alternativo\nVIX\níndice\n-0,67\n-2,00\n0,00\n-1,00\n\n\nFin anticipado conflicto Irán\nBrecha de actividad\n%\n0,00\n0,00\n0,00\n0,00\n\n\nFin anticipado conflicto Irán\nCrecimiento socios comerciales\n% anual\n0,00\n0,00\n0,00\n0,00\n\n\nFin anticipado conflicto Irán\nFederal Funds Rate\n% anual\n0,00\n0,00\n0,00\n0,00\n\n\nFin anticipado conflicto Irán\nInflación subyacente sin volátiles\n% anual\n0,00\n0,00\n0,00\n0,00\n\n\nFin anticipado conflicto Irán\nInflación total\n% anual\n0,00\n0,00\n0,00\n0,00\n\n\nFin anticipado conflicto Irán\nTasa de Política Monetaria\n% anual\n0,00\n0,00\n0,00\n0,00\n\n\nFin anticipado conflicto Irán\nTreasury 10 años\n% anual\n0,00\n0,00\n0,00\n0,00\n\n\nFin anticipado conflicto Irán\nVIX\níndice\n-0,67\n-2,00\n0,00\n-1,00\n\n\nRisk-off global\nBrecha de actividad\n%\n-0,07\n-0,17\n0,00\n-0,15\n\n\nRisk-off global\nCrecimiento socios comerciales\n% anual\n0,00\n0,00\n0,03\n0,03\n\n\nRisk-off global\nFederal Funds Rate\n% anual\n0,00\n0,00\n0,00\n0,00\n\n\nRisk-off global\nInflación subyacente sin volátiles\n% anual\n-0,01\n-0,11\n0,14\n0,11\n\n\nRisk-off global\nInflación total\n% anual\n0,02\n-0,24\n0,17\n-0,24\n\n\nRisk-off global\nTasa de Política Monetaria\n% anual\n-0,09\n-0,28\n0,05\n-0,24\n\n\nRisk-off global\nTreasury 10 años\n% anual\n0,01\n0,00\n0,13\n0,13\n\n\nRisk-off global\nVIX\níndice\n0,01\n0,00\n0,14\n0,14"
+    "text": "Tabla resumen de impactos\n\n\n\nDesvíos frente al baseline IPoM en 2025-2027.\n\n\n\n\n\n\n\n\n\n\n\nEscenario\nVariable\nUnidad\nPromedio\nMínimo\nMáximo\nÚltimo\n\n\n\n\nEscenario alternativo\nBrecha de actividad\n%\n-0,02\n-0,14\n0,07\n0,07\n\n\nEscenario alternativo\nCrecimiento socios comerciales\n% anual\n0,00\n0,00\n0,00\n0,00\n\n\nEscenario alternativo\nFederal Funds Rate\n% anual\n0,00\n0,00\n0,00\n0,00\n\n\nEscenario alternativo\nInflación subyacente sin volátiles\n% anual\n0,00\n-0,01\n0,00\n0,00\n\n\nEscenario alternativo\nInflación total\n% anual\n0,04\n-0,14\n0,28\n-0,03\n\n\nEscenario alternativo\nTasa de Política Monetaria\n% anual\n0,00\n-0,02\n0,01\n0,01\n\n\nEscenario alternativo\nTreasury 10 años\n% anual\n0,00\n0,00\n0,00\n0,00\n\n\nEscenario alternativo\nVIX\níndice\n0,00\n0,00\n0,00\n0,00"
   },
   {
     "objectID": "proyectos/ipom-iris.html#lectura-metodológica",
     "href": "proyectos/ipom-iris.html#lectura-metodológica",
     "title": "Escenarios macroeconómicos inspirados en IPoM",
     "section": "Lectura metodológica",
-    "text": "Lectura metodológica\nEl flujo está separado en dos niveles:\n\nMatlab/IRIS resuelve el modelo, impone trayectorias exógenas y endogeniza los shocks necesarios para cumplir los supuestos del escenario.\nR/Quarto lee los outputs, estandariza nombres, calcula diferencias contra el baseline y genera la visualización web.\n\nEsta separación evita que el sitio dependa de una instalación de Matlab al momento de publicarse. Para actualizar el proyecto, se reemplazan los CSV de matlab/ipom/outputs/ y luego se ejecuta:\nRscript scripts/03_build_ipom_outputs.R\nquarto render"
+    "text": "Lectura metodológica\nEl flujo está separado en dos niveles:\n\nMatlab/IRIS resuelve el modelo, impone trayectorias exógenas y endogeniza los shocks necesarios para cumplir los supuestos del escenario.\nR/Quarto lee los outputs, estandariza nombres, calcula diferencias contra el baseline y genera la visualización web.\n\nEsta separación evita que el sitio dependa de una instalación de Matlab al momento de publicarse. Para actualizar el proyecto, se actualizan los CSV de matlab/ipom/outputs/raw_iris/ y luego se ejecuta:\nRscript scripts/03_build_ipom_outputs.R\nquarto render"
   },
   {
     "objectID": "proyectos/ipom-iris.html#limitaciones",
@@ -196,6 +196,13 @@
     "text": "7. Limitación de este ZIP\nNo pude renderizar el sitio dentro del entorno donde se preparó el ZIP porque ahí no estaban instalados Rscript ni quarto. Por eso dejé los archivos listos, los CSV procesados ya creados y los scripts de reconstrucción, pero la validación final debe hacerla tu máquina con R y Quarto instalados."
   },
   {
+    "objectID": "matlab/ipom/NOTAS_MATLAB_IRIS.html",
+    "href": "matlab/ipom/NOTAS_MATLAB_IRIS.html",
+    "title": "",
+    "section": "",
+    "text": "Código\n\n\n\n\n\nNotas de la reestructuracion Matlab/IRIS\nCambios aplicados:\n\nsetup_ipom_project.m ahora activa IRIS Release 20191112 con irisstartup.\nrun_all_ipom.m ahora es una funcion y ya no copia scripts a runtime/.\nidentificar_shocks_ipom.m lee history.csv e ipom_paths.csv desde matlab/ipom/inputs/.\nidentificar_shocks_ipom.m guarda fcast_ipom_exact.csv y fcast_ipom_with_shocks.csv en matlab/ipom/outputs/raw_iris/.\nfcast_alt_ipom.m lee el baseline desde outputs/raw_iris/fcast_ipom_exact.csv.\nfcast_alt_ipom.m guarda el escenario en outputs/raw_iris/fcast_alt_escenario.csv.\nreadmodel_alternativo.m carga el modelo desde matlab/ipom/model/minimep0.model, no desde el directorio actual.\nmakedata.m reconstruye inputs/history.csv desde inputs/Data.csv solo si activas cfg.runMakeData=true.\n\nComando recomendado en MATLAB:\ncd('D:\\Users\\mullo\\Documents\\GitHub\\Economics\\matlab\\ipom\\src')\nrun_all_ipom\nDespues, desde la raiz del repositorio:\nRscript scripts/03_build_ipom_outputs.R\nquarto render"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Mauricio Ulloa",
@@ -292,6 +299,62 @@
     "title": "",
     "section": "5. Importante",
     "text": "5. Importante\nLas páginas de proyectos traen gráficos demo con datos simulados. Sirven para comprobar que la arquitectura funciona. Antes de usar la página como portafolio definitivo, reemplaza esos bloques por datos reales."
+  },
+  {
+    "objectID": "matlab/ipom/RUNBOOK.html",
+    "href": "matlab/ipom/RUNBOOK.html",
+    "title": "",
+    "section": "",
+    "text": "Código"
+  },
+  {
+    "objectID": "matlab/ipom/RUNBOOK.html#correr-el-flujo-iris-desde-matlab",
+    "href": "matlab/ipom/RUNBOOK.html#correr-el-flujo-iris-desde-matlab",
+    "title": "",
+    "section": "1. Correr el flujo IRIS desde MATLAB",
+    "text": "1. Correr el flujo IRIS desde MATLAB\nEste proyecto esta preparado para IRIS Toolbox Release 20191112. La activacion se hace dentro de setup_ipom_project.m usando:\naddpath C:\\IRIS-Toolbox-Release-20191112\nirisstartup\nDesde MATLAB, corre:\ncd('D:\\Users\\mullo\\Documents\\GitHub\\Economics\\matlab\\ipom\\src')\nrun_all_ipom\nEl flujo ejecuta:\nsetup_ipom_project.m\nidentificar_shocks_ipom.m\nfcast_alt_ipom.m\nLos CSV crudos se guardan directamente en:\nmatlab/ipom/outputs/raw_iris/\nYa no se depende de copiar archivos a runtime/. Esa carpeta queda solo como respaldo/legacy."
+  },
+  {
+    "objectID": "matlab/ipom/RUNBOOK.html#actualizar-quarto-despues-de-correr-iris",
+    "href": "matlab/ipom/RUNBOOK.html#actualizar-quarto-despues-de-correr-iris",
+    "title": "",
+    "section": "2. Actualizar Quarto despues de correr IRIS",
+    "text": "2. Actualizar Quarto despues de correr IRIS\nDesde la raiz del repositorio:\nRscript scripts/03_build_ipom_outputs.R\nquarto render\nLa pagina resultante queda en:\ndocs/proyectos/ipom-iris.html"
+  },
+  {
+    "objectID": "matlab/ipom/RUNBOOK.html#actualizar-la-pagina-sin-recalcular-iris",
+    "href": "matlab/ipom/RUNBOOK.html#actualizar-la-pagina-sin-recalcular-iris",
+    "title": "",
+    "section": "3. Actualizar la pagina sin recalcular IRIS",
+    "text": "3. Actualizar la pagina sin recalcular IRIS\nSi solo quieres reconstruir los CSV limpios o la pagina con los ultimos fcast_*.csv ya existentes:\nRscript scripts/03_build_ipom_outputs.R\nquarto render"
+  },
+  {
+    "objectID": "matlab/ipom/RUNBOOK.html#cambiar-un-escenario",
+    "href": "matlab/ipom/RUNBOOK.html#cambiar-un-escenario",
+    "title": "",
+    "section": "4. Cambiar un escenario",
+    "text": "4. Cambiar un escenario\nEdita solamente este bloque en:\nmatlab/ipom/src/fcast_alt_ipom.m\nBusca la seccion:\n2.3 Ejemplo de escenario: editar aqui\nRegla de interpretacion:\n\nVariables en 100*log(nivel): usar multiplicadores. Ejemplo: 0.95 implica caida aproximada de 5%.\nVariables en nivel/tasas/brechas: usar aditivos. Ejemplo: +0.25 implica 25 puntos base si la variable esta en porcentaje.\nMultiplicador 1: no se impone la variable.\nAditivo 0: no se impone la variable."
+  },
+  {
+    "objectID": "matlab/ipom/RUNBOOK.html#cambiar-iris-horizonte-operativo-o-reportes-pdf",
+    "href": "matlab/ipom/RUNBOOK.html#cambiar-iris-horizonte-operativo-o-reportes-pdf",
+    "title": "",
+    "section": "5. Cambiar IRIS, horizonte operativo o reportes PDF",
+    "text": "5. Cambiar IRIS, horizonte operativo o reportes PDF\nEdita:\nmatlab/ipom/src/config_ipom.m\nCampos importantes:\ncfg.irisPath          = 'C:\\IRIS-Toolbox-Release-20191112';\ncfg.runMakeData       = false;\ncfg.runBaseline       = true;\ncfg.runAlternative    = true;\ncfg.runIrisPdfReports = false;\nSi quieres reconstruir inputs/history.csv desde inputs/Data.csv, cambia:\ncfg.runMakeData = true;\nSi quieres que IRIS genere PDFs, cambia:\ncfg.runIrisPdfReports = true;"
+  },
+  {
+    "objectID": "matlab/ipom/RUNBOOK.html#archivos-que-alimentan-quarto",
+    "href": "matlab/ipom/RUNBOOK.html#archivos-que-alimentan-quarto",
+    "title": "",
+    "section": "6. Archivos que alimentan Quarto",
+    "text": "6. Archivos que alimentan Quarto\nQuarto usa:\ndata/processed/ipom/ipom_scenarios_long.csv\ndata/processed/ipom/ipom_scenario_differences_long.csv\ndata/processed/ipom/ipom_external_assumptions.csv\ndata/processed/ipom/ipom_scenario_metadata.csv\ndata/processed/ipom/ipom_variable_metadata.csv\nEsos archivos se construyen desde:\nmatlab/ipom/outputs/raw_iris/fcast_*.csv"
+  },
+  {
+    "objectID": "matlab/ipom/RUNBOOK.html#que-no-usar-como-fuente-principal",
+    "href": "matlab/ipom/RUNBOOK.html#que-no-usar-como-fuente-principal",
+    "title": "",
+    "section": "7. Que NO usar como fuente principal",
+    "text": "7. Que NO usar como fuente principal\nNo uses como fuente principal:\nlegacy_original/reports_pdf/\nlegacy_original/m_files/\nruntime/\nLa fuente ordenada esta en:\nsrc/\nmodel/\ninputs/\noutputs/raw_iris/"
   },
   {
     "objectID": "proyectos/curva-rendimiento.html",

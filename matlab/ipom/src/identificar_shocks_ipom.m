@@ -21,7 +21,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 close all;
-clear all;
+clearvars -except IPOM_RUN_REPORT;
 clc;
 
 %% ============================================================
@@ -42,12 +42,44 @@ ipomRange     = startfcast:endfcast;
 fullRange     = histStart:(endfcast + bufferPeriods);
 
 % Flags
-matchHeadlineExactly = true;   % Si true, intenta hacer calzar inflación total exacta.
-useIpomPathsFile     = exist('ipom_paths.csv','file') == 2;
+matchHeadlineExactly = true;
+
+% Rutas robustas del proyecto
+if exist('config_ipom', 'file') == 2
+    cfg_ipom = config_ipom();
+
+    historyFile   = fullfile(cfg_ipom.inputDir, 'history.csv');
+    ipomPathsFile = fullfile(cfg_ipom.inputDir, 'ipom_paths.csv');
+else
+    historyFile   = 'history.csv';
+    ipomPathsFile = 'ipom_paths.csv';
+end
+
+if exist(historyFile, 'file') ~= 2
+    error('No existe history.csv. Se esperaba encontrarlo en: %s', historyFile);
+end
+
+useIpomPathsFile = exist(ipomPathsFile, 'file') == 2;
+
+% Por defecto el pipeline ordenado no genera PDF, porque Quarto usa CSV.
+% Para forzar reportes IRIS, define IPOM_RUN_REPORT = true antes de ejecutar.
+if exist('IPOM_RUN_REPORT','var')
+    runReport = IPOM_RUN_REPORT;
+else
+    runReport = false;
+end
 
 % Archivos de salida
-outBaseline = 'fcast_ipom_exact.csv';
-outShocks   = 'fcast_ipom_with_shocks.csv';
+if exist('cfg_ipom', 'var') && isfield(cfg_ipom, 'rawOutputDir')
+    if exist(cfg_ipom.rawOutputDir, 'dir') ~= 7
+        mkdir(cfg_ipom.rawOutputDir);
+    end
+    outBaseline = fullfile(cfg_ipom.rawOutputDir, 'fcast_ipom_exact.csv');
+    outShocks   = fullfile(cfg_ipom.rawOutputDir, 'fcast_ipom_with_shocks.csv');
+else
+    outBaseline = 'fcast_ipom_exact.csv';
+    outShocks   = 'fcast_ipom_with_shocks.csv';
+end
 
 fprintf('\n============================================================\n');
 fprintf('Identificando shocks del baseline IPOM\n');
@@ -66,11 +98,11 @@ fprintf('============================================================\n\n');
 %% 2. Cargar bases
 %% ============================================================
 
-hist_db = dbload('history.csv');
+hist_db = dbload(historyFile);
 
 if useIpomPathsFile
     fprintf('Usando ipom_paths.csv como fuente de trayectorias IPOM.\n');
-    ipom_db = dbload('ipom_paths.csv');
+    ipom_db = dbload(ipomPathsFile);
 else
     fprintf('ADVERTENCIA: No se encontró ipom_paths.csv.\n');
     fprintf('Se usará history.csv también como fuente de trayectorias IPOM.\n');
@@ -349,6 +381,7 @@ end
 %% 12. Reporte simple del baseline
 %% ============================================================
 
+if runReport
 try
     Plotrng = qq(2025,1):endfcast;
     ObsRng  = qq(2025,1):qq(2025,4);
@@ -456,6 +489,9 @@ try
 catch ME
     fprintf('\nNo se pudo generar el reporte automático.\n');
     fprintf('Mensaje: %s\n', ME.message);
+end
+else
+    fprintf('\nReporte PDF omitido por runReport = false. Los CSV quedan disponibles para Quarto.\n');
 end
 
 fprintf('\nDone: baseline IPOM identificado.\n');
