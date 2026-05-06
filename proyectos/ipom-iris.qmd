@@ -195,6 +195,83 @@ ipom_plot_var(
 )
 ```
 
+## Bloque internacional
+
+Además de las variables macro domésticas, el ejercicio depende de los supuestos externos que alimentan el modelo. Esta sección muestra las trayectorias de petróleo, cobre, crecimiento internacional y volatilidad financiera usadas en el baseline y en los escenarios alternativos.
+
+### Precio del petróleo WTI nominal
+
+```{r plot-wti-nominal}
+ipom_plot_var(
+  ipom_long,
+  "L_WTI_NOM",
+  title = "Precio del petróleo WTI nominal",
+  subtitle = "Nivel aproximado usado como supuesto externo",
+  start_period = forecast_start,
+  scenarios = main_scenarios
+)
+```
+
+### Precio del cobre nominal
+
+```{r plot-cobre-nominal}
+ipom_plot_var(
+  ipom_long,
+  "L_PCU_NOM",
+  title = "Precio del cobre nominal",
+  subtitle = "Nivel aproximado usado como supuesto externo",
+  start_period = forecast_start,
+  scenarios = main_scenarios
+)
+```
+
+### Crecimiento internacional
+
+```{r plot-crecimiento-internacional}
+ipom_plot_var(
+  ipom_long,
+  "CRECSC",
+  title = "Crecimiento de socios comerciales",
+  subtitle = "Crecimiento externo relevante para la economía chilena",
+  start_period = forecast_start,
+  scenarios = main_scenarios
+)
+```
+
+### VIX
+
+```{r plot-vix}
+ipom_plot_var(
+  ipom_long,
+  "VIX",
+  title = "VIX",
+  subtitle = "Indicador de volatilidad financiera internacional",
+  start_period = forecast_start,
+  scenarios = main_scenarios
+)
+```
+
+### Desvíos externos frente al baseline
+
+```{r external-diff-table}
+ipom_external |>
+  filter(
+    scenario_id %in% setdiff(main_scenarios, "baseline_ipom"),
+    variable %in% c("L_WTI_NOM", "L_PCU_NOM", "CRECSC", "VIX")
+  ) |>
+  group_by(scenario, label, unit) |>
+  summarise(
+    `Promedio escenario` = mean(value, na.rm = TRUE),
+    `Desvío promedio vs baseline` = mean(difference_vs_baseline, na.rm = TRUE),
+    `Desvío máximo vs baseline` = max(difference_vs_baseline, na.rm = TRUE),
+    `Desvío mínimo vs baseline` = min(difference_vs_baseline, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  arrange(scenario, label) |>
+  rename(Escenario = scenario, Variable = label, Unidad = unit) |>
+  ipom_kable(caption = "Supuestos externos principales: niveles promedio y desvíos frente al baseline.")
+```
+
 ## Supuestos externos
 
 La tabla resume los supuestos externos procesados para el período 2025-2027. Las diferencias se calculan contra el baseline IPoM identificado.

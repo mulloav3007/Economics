@@ -56,6 +56,13 @@
     "text": "Resultado principal\nEl gráfico compara el baseline identificado con escenarios alternativos. Para evitar sobrecargar la visualización, se muestran tres alternativas principales junto al baseline.\n\nInflación total\n\n\n\n\n\n\n\n\nInflación subyacente\n\n\n\n\n\n\n\n\nTasa de Política Monetaria\n\n\n\n\n\n\n\n\nBrecha de actividad"
   },
   {
+    "objectID": "proyectos/ipom-iris.html#bloque-internacional",
+    "href": "proyectos/ipom-iris.html#bloque-internacional",
+    "title": "Escenarios macroeconómicos inspirados en IPoM",
+    "section": "Bloque internacional",
+    "text": "Bloque internacional\nAdemás de las variables macro domésticas, el ejercicio depende de los supuestos externos que alimentan el modelo. Esta sección muestra las trayectorias de petróleo, cobre, crecimiento internacional y volatilidad financiera usadas en el baseline y en los escenarios alternativos.\n\nPrecio del petróleo WTI nominal\n\n\n\n\n\n\n\n\nPrecio del cobre nominal\n\n\n\n\n\n\n\n\nCrecimiento internacional\n\n\n\n\n\n\n\n\nVIX\n\n\n\n\n\n\n\n\nDesvíos externos frente al baseline\n\n\n\nSupuestos externos principales: niveles promedio y desvíos frente al baseline.\n\n\n\n\n\n\n\n\n\n\n\nEscenario\nVariable\nUnidad\nPromedio escenario\nDesvío promedio vs baseline\nDesvío máximo vs baseline\nDesvío mínimo vs baseline\n\n\n\n\nEscenario alternativo\nCobre nominal\nnivel aproximado\n5,02\n0,00\n0,00\n0\n\n\nEscenario alternativo\nCrecimiento socios comerciales\n% anual\n2,92\n0,00\n0,00\n0\n\n\nEscenario alternativo\nVIX\níndice\n19,38\n0,00\n0,00\n0\n\n\nEscenario alternativo\nWTI nominal\nnivel aproximado\n81,25\n5,55\n12,24\n0"
+  },
+  {
     "objectID": "proyectos/ipom-iris.html#supuestos-externos",
     "href": "proyectos/ipom-iris.html#supuestos-externos",
     "title": "Escenarios macroeconómicos inspirados en IPoM",
