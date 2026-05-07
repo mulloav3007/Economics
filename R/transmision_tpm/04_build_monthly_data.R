@@ -78,18 +78,50 @@ make_model_data <- function(monthly_panel) {
     dplyr::arrange(date) |>
     dplyr::mutate(
       dtpm = tpm - dplyr::lag(tpm),
+
       # Cambios de TPM separados por signo.
       # dtpm_up mide alzas en puntos porcentuales.
       # dtpm_down mide bajas como magnitud positiva: una baja de -1 pp queda como 1.
-      # Se mantienen dtpm_pos/dtpm_neg por compatibilidad con salidas anteriores.
       dtpm_up = pmax(dtpm, 0),
       dtpm_down = pmax(-dtpm, 0),
       dtpm_pos = dtpm_up,
       dtpm_neg = pmin(dtpm, 0)
     )
 
+  # Controles de curva: se crean, pero NO se usan en el modelo principal.
+  # Quedan disponibles para especificaciones de robustez.
   for (cc in control_cols) {
     base[[paste0("d", cc)]] <- base[[cc]] - dplyr::lag(base[[cc]])
+  }
+
+  # Controles macro mínimos.
+  # infl_yoy: inflación anual aproximada como diferencia logarítmica *100.
+  # dlog_tc_12: depreciación anual del peso respecto al dólar observado.
+  # imacec_yoy: crecimiento anual del IMACEC si la serie está disponible.
+  if ("ipc" %in% names(base)) {
+    base <- base |>
+      dplyr::mutate(
+        log_ipc = 100 * log(ipc),
+        infl_yoy = log_ipc - dplyr::lag(log_ipc, 12),
+        infl_mom = log_ipc - dplyr::lag(log_ipc, 1)
+      )
+  }
+
+  if ("tc_obs" %in% names(base)) {
+    base <- base |>
+      dplyr::mutate(
+        log_tc = 100 * log(tc_obs),
+        dlog_tc = log_tc - dplyr::lag(log_tc, 1),
+        dlog_tc_12 = log_tc - dplyr::lag(log_tc, 12)
+      )
+  }
+
+  if ("imacec" %in% names(base)) {
+    base <- base |>
+      dplyr::mutate(
+        log_imacec = 100 * log(imacec),
+        imacec_yoy = log_imacec - dplyr::lag(log_imacec, 12)
+      )
   }
 
   out <- base |>

@@ -46,18 +46,31 @@ model_data <- make_model_data(monthly_panel)
 readr::write_csv(model_data, file.path(cfg$processed_dir, "model_data_pass_through.csv"))
 
 message("3) Estimando rezagos distribuidos...")
-dlm_models <- estimate_all_dlm(model_data, k = cfg$dlm_lags, asymmetric = FALSE)
+# Modelo principal corregido: macro controls, sin curva BCP/BCU como bad controls.
+dlm_models <- estimate_all_dlm(model_data, k = cfg$dlm_lags, asymmetric = FALSE, spec = "macro")
 pt_tbl <- purrr::map_dfr(dlm_models, ~ extract_cumulative_pt(.x, k = cfg$dlm_lags, asymmetric = FALSE))
 readr::write_csv(pt_tbl, file.path(cfg$tables_dir, "pass_through_cumulative.csv"))
 
+# Especificaciones de comparación: base puro y robustez con curva.
+dlm_models_base <- estimate_all_dlm(model_data, k = cfg$dlm_lags, asymmetric = FALSE, spec = "base")
+pt_tbl_base <- purrr::map_dfr(dlm_models_base, ~ extract_cumulative_pt(.x, k = cfg$dlm_lags, asymmetric = FALSE))
+readr::write_csv(pt_tbl_base, file.path(cfg$tables_dir, "pass_through_cumulative_base.csv"))
+
+dlm_models_curve <- estimate_all_dlm(model_data, k = cfg$dlm_lags, asymmetric = FALSE, spec = "curve")
+pt_tbl_curve <- purrr::map_dfr(dlm_models_curve, ~ extract_cumulative_pt(.x, k = cfg$dlm_lags, asymmetric = FALSE))
+readr::write_csv(pt_tbl_curve, file.path(cfg$tables_dir, "pass_through_cumulative_curve_robustness.csv"))
+
 message("4) Estimando modelos asimétricos...")
-dlm_models_asym <- estimate_all_dlm(model_data, k = cfg$dlm_lags, asymmetric = TRUE)
+dlm_models_asym <- estimate_all_dlm(model_data, k = cfg$dlm_lags, asymmetric = TRUE, spec = "macro")
 pt_asym_tbl <- purrr::map_dfr(dlm_models_asym, ~ extract_cumulative_pt(.x, k = cfg$dlm_lags, asymmetric = TRUE))
 readr::write_csv(pt_asym_tbl, file.path(cfg$tables_dir, "pass_through_asymmetric.csv"))
 
 message("5) Estimando local projections...")
-lp_tbl <- estimate_all_lp(model_data, h_max = cfg$lp_hmax, shock_var = "dtpm")
+lp_tbl <- estimate_all_lp(model_data, h_max = cfg$lp_hmax, shock_var = "dtpm", spec = "macro")
 readr::write_csv(lp_tbl, file.path(cfg$tables_dir, "local_projections.csv"))
+
+lp_tbl_base <- estimate_all_lp(model_data, h_max = cfg$lp_hmax, shock_var = "dtpm", spec = "base")
+readr::write_csv(lp_tbl_base, file.path(cfg$tables_dir, "local_projections_base.csv"))
 
 message("6) Tablas resumen y robustez...")
 summary_tbl <- make_pass_through_summary(pt_tbl, horizons = c(1, 3, 6))
@@ -81,7 +94,7 @@ ggplot2::ggsave(file.path(cfg$figures_dir, "fig_pass_through_asymmetric.png"), p
 ggplot2::ggsave(file.path(cfg$figures_dir, "fig_local_projections.png"), p_lp, width = 11, height = 8, dpi = 300)
 
 saveRDS(
-  list(dlm = dlm_models, dlm_asym = dlm_models_asym, lp = lp_tbl),
+  list(dlm = dlm_models, dlm_base = dlm_models_base, dlm_curve = dlm_models_curve, dlm_asym = dlm_models_asym, lp = lp_tbl, lp_base = lp_tbl_base),
   file.path(cfg$model_dir, "models.rds")
 )
 

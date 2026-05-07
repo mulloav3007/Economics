@@ -18,17 +18,66 @@ nw_tidy <- function(model, lag = 6) {
   broom::tidy(lmtest::coeftest(model, vcov. = vc))
 }
 
-available_controls_formula <- function(dat) {
-  controls <- c()
-  if ("dbcp_2y" %in% names(dat) && any(!is.na(dat$dbcp_2y))) controls <- c(controls, "dbcp_2y")
-  if ("dbcp_5y" %in% names(dat) && any(!is.na(dat$dbcp_5y))) controls <- c(controls, "dbcp_5y")
-  if ("dbcp_10y" %in% names(dat) && any(!is.na(dat$dbcp_10y))) controls <- c(controls, "dbcp_10y")
-
-  if (length(controls) == 0) return("1")
-  paste(controls, collapse = " + ")
+has_non_na <- function(dat, nm) {
+  nm %in% names(dat) && any(!is.na(dat[[nm]]))
 }
 
-estimate_dlm_product <- function(df, product_name, k = 6, asymmetric = FALSE) {
+macro_controls_formula <- function(dat) {
+  controls <- c()
+  if (has_non_na(dat, "infl_yoy")) controls <- c(controls, "infl_yoy")
+  if (has_non_na(dat, "dlog_tc_12")) controls <- c(controls, "dlog_tc_12")
+  if (has_non_na(dat, "imacec_yoy")) controls <- c(controls, "imacec_yoy")
+  controls
+}
+
+curve_controls_formula <- function(dat, product_name) {
+  controls <- c()
+
+  # Para vivienda UF, la curva real es más coherente que BCP nominal.
+  if (product_name == "vivienda_uf") {
+    if (has_non_na(dat, "dbcu_5y")) controls <- c(controls, "dbcu_5y")
+    if (has_non_na(dat, "dbcu_10y")) controls <- c(controls, "dbcu_10y")
+    return(controls)
+  }
+
+  # Para captaciones, NO se agregan BCP/BCU por defecto: son demasiado cercanas
+  # al mecanismo de transmisión y pueden absorber el efecto de la TPM.
+  if (grepl("^cap_", product_name)) {
+    return(controls)
+  }
+
+  # Para consumo/comercial, BCP 2y y 5y quedan como robustez, no como base.
+  if (has_non_na(dat, "dbcp_2y")) controls <- c(controls, "dbcp_2y")
+  if (has_non_na(dat, "dbcp_5y")) controls <- c(controls, "dbcp_5y")
+  controls
+}
+
+build_control_terms <- function(dat, product_name, spec = c("base", "macro", "curve", "macro_curve")) {
+  spec <- match.arg(spec)
+
+  controls <- c()
+
+  if (spec %in% c("macro", "macro_curve")) {
+    controls <- c(controls, macro_controls_formula(dat))
+  }
+
+  if (spec %in% c("curve", "macro_curve")) {
+    controls <- c(controls, curve_controls_formula(dat, product_name))
+  }
+
+  unique(controls)
+}
+
+rhs_join <- function(...) {
+  terms <- unlist(list(...), use.names = FALSE)
+  terms <- terms[!is.na(terms) & nzchar(terms)]
+  paste(unique(terms), collapse = " + ")
+}
+
+estimate_dlm_product <- function(df, product_name, k = 6, asymmetric = FALSE,
+                                 spec = c("macro", "base", "curve", "macro_curve")) {
+  spec <- match.arg(spec)
+
   dat <- df |>
     dplyr::filter(product == product_name) |>
     dplyr::arrange(date)
@@ -57,8 +106,9 @@ estimate_dlm_product <- function(df, product_name, k = 6, asymmetric = FALSE) {
     )
   }
 
-  controls <- available_controls_formula(dat)
-  fml <- stats::as.formula(paste("drate ~", rhs_tpm, "+ drate_l1 +", controls, "+ month_fe"))
+  controls <- build_control_terms(dat, product_name, spec = spec)
+  rhs <- rhs_join(rhs_tpm, "drate_l1", controls, "month_fe")
+  fml <- stats::as.formula(paste("drate ~", rhs))
 
   model <- stats::lm(fml, data = dat)
 
@@ -67,7 +117,8 @@ estimate_dlm_product <- function(df, product_name, k = 6, asymmetric = FALSE) {
     model = model,
     tidy = nw_tidy(model, lag = k),
     data = dat,
-    formula = fml
+    formula = fml,
+    spec = spec
   )
 }
 
@@ -114,10 +165,15 @@ extract_cumulative_pt <- function(est_obj, k = 6, asymmetric = FALSE) {
   }
 
   vals |>
-    dplyr::mutate(product = est_obj$product)
+    dplyr::mutate(
+      product = est_obj$product,
+      spec = est_obj$spec %||% NA_character_
+    )
 }
 
-estimate_all_dlm <- function(model_data, k = 6, asymmetric = FALSE) {
+estimate_all_dlm <- function(model_data, k = 6, asymmetric = FALSE,
+                             spec = c("macro", "base", "curve", "macro_curve")) {
+  spec <- match.arg(spec)
   products <- sort(unique(model_data$product))
-  purrr::map(products, ~ estimate_dlm_product(model_data, .x, k = k, asymmetric = asymmetric))
+  purrr::map(products, ~ estimate_dlm_product(model_data, .x, k = k, asymmetric = asymmetric, spec = spec))
 }
