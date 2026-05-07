@@ -40,10 +40,10 @@ Estas notas corresponden a líneas de trabajo en desarrollo, pensadas como base 
 ::: {.mu-card}
 ### [Transmisión de la TPM a tasas de mercado](proyectos/transmision-tpm.qmd)
 
-Análisis visual y econométrico del traspaso de movimientos de la Tasa de Política Monetaria a distintas tasas de mercado en Chile.
+Monitor reproducible del pass-through de movimientos de la TPM a tasas de consumo, comerciales, vivienda, captación y tasas de mercado en Chile.
 
-**Estado:** research note en desarrollo.  
-**Salida esperada:** series comparadas, heatmap de pass-through por horizonte, modelos de rezagos distribuidos y lectura macroeconómica prudente.
+**Estado:** research note en desarrollo con primera versión empírica.  
+**Salida actual:** series comparadas, heatmap de pass-through, rezagos distribuidos, asimetría alzas/bajas y local projections.
 :::
 
 ::: {.mu-card}

@@ -1,13 +1,13 @@
 scenario_id,scenario,variable,label,unit,promedio,minimo,maximo,ultimo
 escenario_alternativo,Escenario alternativo,CRECSC,Crecimiento socios comerciales,% anual,0,0,0,0
-escenario_alternativo,Escenario alternativo,D4L_CPI,Inflación total,% anual,0.035015203333333335,-0.1535548499999999,0.28144912999999994,-0.05297522999999993
-escenario_alternativo,Escenario alternativo,D4L_CPIXFE,Inflación subyacente sin volátiles,% anual,-0.008039313333333445,-0.018268270000000086,0,-0.018268270000000086
+escenario_alternativo,Escenario alternativo,D4L_CPI,Inflación total,% anual,0.035663993333333255,-0.14790738000000037,0.2784939300000002,-0.042697449999999915
+escenario_alternativo,Escenario alternativo,D4L_CPIXFE,Inflación subyacente sin volátiles,% anual,-0.007390525000000037,-0.016420259999999853,0,-0.007990500000000011
 escenario_alternativo,Escenario alternativo,D4L_CPI_GAP_XFE,Brecha inflación total-subyacente,pp,0.04305451891666666,-0.13587855,0.2902191759999999,-0.03470695899999998
 escenario_alternativo,Escenario alternativo,FFR,Federal Funds Rate,% anual,0,0,0,0
-escenario_alternativo,Escenario alternativo,L_GDP_GAP,Brecha de actividad,%,-0.05474156283333333,-0.139,0,-0.04222045699999999
+escenario_alternativo,Escenario alternativo,L_GDP_GAP,Brecha de actividad,%,-0.039857505333333335,-0.139,0,-0.005812570999999989
 escenario_alternativo,Escenario alternativo,L_PCU_NOM,Cobre nominal,nivel aproximado,0,0,0,0
 escenario_alternativo,Escenario alternativo,L_WTI_NOM,WTI nominal,nivel aproximado,5.55148165,-9.999999406318238e-8,12.2406838,12.2406838
 escenario_alternativo,Escenario alternativo,L_Z_INDEX,Tipo de cambio real índice,índice,0,0,0,0
-escenario_alternativo,Escenario alternativo,TPM,Tasa de Política Monetaria,% anual,-0.015142692500000074,-0.04378335999999994,0,-0.02983621999999997
+escenario_alternativo,Escenario alternativo,TPM,Tasa de Política Monetaria,% anual,-0.011163896666666728,-0.0365371699999999,0.004460810000000315,-0.014154559999999705
 escenario_alternativo,Escenario alternativo,UST10,Treasury 10 años,% anual,0,0,0,0
 escenario_alternativo,Escenario alternativo,VIX,VIX,índice,0,0,0,0

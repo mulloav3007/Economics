@@ -24,9 +24,9 @@ Trabajo principalmente con **R**, **Matlab/IRIS** y **Python**, desarrollando he
 ::: {.mu-card}
 ### Transmisión de la TPM a tasas de mercado
 
-Monitor del traspaso dinámico de la Tasa de Política Monetaria hacia tasas bancarias y financieras en Chile.
+Research note en desarrollo sobre el pass-through de movimientos de la TPM hacia tasas bancarias, de captación y de mercado en Chile.
 
-<span class="mu-tag">R</span> <span class="mu-tag">Series de tiempo</span> <span class="mu-tag">Política monetaria</span>
+<span class="mu-tag">R</span> <span class="mu-tag">Pass-through</span> <span class="mu-tag">Política monetaria</span>
 
 [Ver proyecto](proyectos/transmision-tpm.qmd){.mu-button}
 :::

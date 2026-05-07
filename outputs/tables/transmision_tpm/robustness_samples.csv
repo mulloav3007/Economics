@@ -1,0 +1,31 @@
+sample,product,product_label,horizon,cumulative
+excl_2020_2023,cap_30_89,Captación 30-89d,6,0.0700430188898913
+full,cap_30_89,Captación 30-89d,6,0.06960884283152181
+post_2010,cap_30_89,Captación 30-89d,6,0.07248273479442817
+excl_2020_2023,cap_90_1y,Captación 90d-1a,6,0.05015272788866479
+full,cap_90_1y,Captación 90d-1a,6,0.04518965501123505
+post_2010,cap_90_1y,Captación 90d-1a,6,0.04813969897300839
+excl_2020_2023,comercial_cuotas,Comercial: cuotas,6,0.9332720484029394
+full,comercial_cuotas,Comercial: cuotas,6,0.872143672812638
+post_2010,comercial_cuotas,Comercial: cuotas,6,0.872143672812638
+excl_2020_2023,comercial_sobregiro,Comercial: sobregiro,6,1.571001676760896
+full,comercial_sobregiro,Comercial: sobregiro,6,1.269590605393571
+post_2010,comercial_sobregiro,Comercial: sobregiro,6,1.269590605393571
+excl_2020_2023,comercial_total,Comercial total,6,1.3860766848727126
+full,comercial_total,Comercial total,6,1.271255495950726
+post_2010,comercial_total,Comercial total,6,1.103811209124107
+excl_2020_2023,consumo_cuotas,Consumo: cuotas,6,0.26534065268225676
+full,consumo_cuotas,Consumo: cuotas,6,0.5766689952614542
+post_2010,consumo_cuotas,Consumo: cuotas,6,0.5766689952614542
+excl_2020_2023,consumo_tarj_cuota,Tarjeta: cuota,6,0.8208096760888813
+full,consumo_tarj_cuota,Tarjeta: cuota,6,1.1335471429827833
+post_2010,consumo_tarj_cuota,Tarjeta: cuota,6,1.1335471429827833
+excl_2020_2023,consumo_tarj_rot,Tarjeta: rotativo,6,1.4498171661960215
+full,consumo_tarj_rot,Tarjeta: rotativo,6,1.1201591221512914
+post_2010,consumo_tarj_rot,Tarjeta: rotativo,6,1.1201591221512914
+excl_2020_2023,consumo_total,Consumo total,6,1.3595586096577028
+full,consumo_total,Consumo total,6,1.3392494811542004
+post_2010,consumo_total,Consumo total,6,0.9036542731186827
+excl_2020_2023,vivienda_uf,Vivienda UF >3 años,6,0.12432960000723296
+full,vivienda_uf,Vivienda UF >3 años,6,0.08147568446933749
+post_2010,vivienda_uf,Vivienda UF >3 años,6,0.035902405938762136

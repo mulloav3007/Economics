@@ -1,74 +1,378 @@
 ---
 title: "Transmisión de la TPM a tasas de mercado"
-subtitle: "Monitor de pass-through de política monetaria en Chile"
+subtitle: "Research note en desarrollo sobre pass-through de política monetaria en Chile"
+format:
+  html:
+    toc: true
+    code-tools: false
+execute:
+  echo: false
+  message: false
+  warning: false
 ---
 
-## Motivación
+```{r setup}
+suppressPackageStartupMessages({
+  library(dplyr)
+  library(tidyr)
+  library(readr)
+  library(ggplot2)
+  library(plotly)
+  library(scales)
+  library(lubridate)
+  library(knitr)
+})
 
-Este proyecto analiza el traspaso dinámico de movimientos de la Tasa de Política Monetaria hacia distintas tasas de mercado en Chile.
+root_dir <- normalizePath(getwd(), winslash = "/", mustWork = TRUE)
+if (!dir.exists(file.path(root_dir, "data")) && basename(root_dir) == "proyectos") {
+  root_dir <- normalizePath(file.path(root_dir, ".."), winslash = "/", mustWork = TRUE)
+}
 
-La pregunta central es simple: cuando cambia la TPM, ¿qué tasas reaccionan más rápido y con mayor intensidad?
+p <- function(...) file.path(root_dir, ...)
 
-::: {.mu-note}
-El objetivo no es afirmar causalidad estructural sin identificación de shocks monetarios. La primera versión se presenta como un monitor descriptivo y econométrico de traspaso dinámico.
-:::
+data_dir <- p("data", "processed", "transmision_tpm")
+meta_dir <- p("data", "metadata", "transmision_tpm")
+table_dir <- p("outputs", "tables", "transmision_tpm")
 
-## Diseño inicial
-
-- TPM y tasas de mercado en frecuencia mensual.
-- Tasas comerciales, consumo, hipotecarias, depósitos y bonos.
-- Modelos de rezagos distribuidos o ARDL.
-- Heatmap de coeficientes acumulados por horizonte.
-
-## Demo visual: heatmap de pass-through
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-
-library(tidyverse)
-library(plotly)
-
-set.seed(42)
-
-tasas <- c("Interbancaria", "Depósitos", "Comercial", "Consumo", "Hipotecaria", "Bonos 2y", "Bonos 5y")
-horizontes <- c("1 mes", "3 meses", "6 meses", "12 meses")
-
-demo <- expand_grid(tasa = tasas, horizonte = horizontes) |> 
-  mutate(
-    h = match(horizonte, horizontes),
-    base = case_when(
-      tasa == "Interbancaria" ~ 0.95,
-      tasa == "Depósitos" ~ 0.75,
-      tasa == "Comercial" ~ 0.70,
-      tasa == "Consumo" ~ 0.45,
-      tasa == "Hipotecaria" ~ 0.25,
-      tasa == "Bonos 2y" ~ 0.65,
-      tasa == "Bonos 5y" ~ 0.45,
-      TRUE ~ 0.5
-    ),
-    pass_through = pmin(1.1, base * (1 - exp(-0.55 * h)) + runif(n(), -0.05, 0.05))
+label_product <- function(x) {
+  dplyr::recode(
+    x,
+    consumo_total = "Consumo total",
+    consumo_cuotas = "Consumo: cuotas",
+    consumo_tarj_rot = "Tarjeta: rotativo",
+    consumo_tarj_cuota = "Tarjeta: cuota",
+    comercial_total = "Comercial total",
+    comercial_cuotas = "Comercial: cuotas",
+    comercial_sobregiro = "Comercial: sobregiro",
+    vivienda_uf = "Vivienda UF >3 años",
+    cap_30_89 = "Captación 30-89d",
+    cap_90_1y = "Captación 90d-1a",
+    .default = x
   )
+}
 
-plot_ly(
-  demo,
-  x = ~horizonte,
-  y = ~tasa,
-  z = ~pass_through,
-  type = "heatmap",
-  hovertemplate = "Tasa: %{y}<br>Horizonte: %{x}<br>Pass-through demo: %{z:.2f}<extra></extra>"
-) |> 
-  layout(
-    title = "Pass-through acumulado por horizonte: demo visual",
-    xaxis = list(title = "Horizonte"),
-    yaxis = list(title = "Tipo de tasa")
-  )
+read_csv_if_exists <- function(path) {
+  if (!file.exists(path)) return(NULL)
+  readr::read_csv(path, show_col_types = FALSE)
+}
+
+monthly_panel <- read_csv_if_exists(file.path(data_dir, "monthly_panel_rates.csv"))
+pt_summary <- read_csv_if_exists(file.path(table_dir, "pass_through_summary.csv"))
+pt_cum <- read_csv_if_exists(file.path(table_dir, "pass_through_cumulative.csv"))
+pt_asym <- read_csv_if_exists(file.path(table_dir, "pass_through_asymmetric.csv"))
+lp_tbl <- read_csv_if_exists(file.path(table_dir, "local_projections.csv"))
+rob_tbl <- read_csv_if_exists(file.path(table_dir, "robustness_samples.csv"))
+fetch_log <- read_csv_if_exists(file.path(meta_dir, "fetch_log.csv"))
+series_dict <- read_csv_if_exists(file.path(meta_dir, "series_dictionary.csv"))
+
+has_outputs <- !is.null(monthly_panel) && !is.null(pt_summary) && !is.null(pt_cum) && !is.null(lp_tbl)
+
+if (has_outputs) {
+  monthly_panel <- monthly_panel |> mutate(date = as.Date(date))
+  last_date <- max(monthly_panel$date, na.rm = TRUE)
+  last_tpm <- monthly_panel |> filter(date == last_date) |> pull(tpm) |> dplyr::first()
+  n_products <- if (!is.null(pt_summary)) nrow(pt_summary) else NA_integer_
+  n_series_ok <- if (!is.null(fetch_log) && "ok" %in% names(fetch_log)) sum(fetch_log$ok, na.rm = TRUE) else NA_integer_
+} else {
+  last_date <- NA
+  last_tpm <- NA_real_
+  n_products <- NA_integer_
+  n_series_ok <- NA_integer_
+}
 ```
 
-## Próximas mejoras
+::: {.mu-note}
+**Estado:** research note en desarrollo. Esta página no busca afirmar una identificación causal definitiva de shocks monetarios. Su objetivo inicial es construir un monitor reproducible del **traspaso dinámico** entre movimientos observados de la TPM y distintas tasas bancarias/financieras en Chile.
+:::
 
-- Conectar con datos reales del BCCh.
-- Estimar traspaso acumulado con modelos de rezagos distribuidos.
-- Comparar subperíodos, por ejemplo pre y post ciclo inflacionario reciente.
-- Agregar sección de discusión metodológica sobre endogeneidad e identificación.
+## Pregunta de investigación
+
+La pregunta central es simple:
+
+> Cuando cambia la Tasa de Política Monetaria, ¿qué tasas de mercado reaccionan más rápido, con qué intensidad y con qué grado de heterogeneidad entre productos?
+
+El proyecto parte como una herramienta visual y econométrica de portafolio, pero está organizado para transformarse en una futura nota técnica o artículo aplicado. La primera versión trabaja con datos agregados públicos; una versión más académica debería incorporar sorpresas monetarias, expectativas de TPM o microdatos bancarios.
+
+```{r data-status, results='asis'}
+if (!has_outputs) {
+  cat("\n::: {.mu-note}\n")
+  cat("No se encontraron los archivos procesados del proyecto. Ejecuta `source('scripts/05_update_transmision_tpm.R')` y luego `quarto render --execute`.\n")
+  cat(":::\n")
+}
+```
+
+```{r kpi-cards, results='asis'}
+if (has_outputs) {
+  cat('<div class="mu-kpi-grid">')
+  cat('<div class="mu-kpi-card"><div class="mu-kpi-label">Último mes</div><div class="mu-kpi-value">', format(last_date, "%Y-%m"), '</div></div>', sep = '')
+  cat('<div class="mu-kpi-card"><div class="mu-kpi-label">TPM último dato</div><div class="mu-kpi-value">', sprintf("%.2f%%", last_tpm), '</div></div>', sep = '')
+  cat('<div class="mu-kpi-card"><div class="mu-kpi-label">Productos estimados</div><div class="mu-kpi-value">', n_products, '</div></div>', sep = '')
+  cat('<div class="mu-kpi-card"><div class="mu-kpi-label">Series descargadas</div><div class="mu-kpi-value">', n_series_ok, '</div></div>', sep = '')
+  cat('</div>')
+}
+```
+
+## Lectura rápida
+
+El monitor se organiza en cuatro salidas:
+
+1. **Series comparadas:** TPM y tasas bancarias/financieras seleccionadas.
+2. **Pass-through acumulado:** suma de coeficientes de rezagos distribuidos a distintos horizontes.
+3. **Asimetría:** comparación preliminar entre alzas y bajas de TPM.
+4. **Local projections:** respuesta dinámica de tasas ante movimientos observados de la TPM.
+
+La interpretación recomendada es **condicional y descriptiva**: los coeficientes resumen comovimientos dinámicos controlados, pero la TPM es endógena al escenario macroeconómico.
+
+## TPM y tasas seleccionadas
+
+```{r plot-rates}
+if (has_outputs) {
+  keep <- c("tpm", "consumo_total", "comercial_total", "vivienda_uf", "cap_90_1y", "bcp_2y", "bcp_5y")
+  keep <- intersect(keep, names(monthly_panel))
+
+  rates_long <- monthly_panel |>
+    filter(date >= as.Date("2015-01-01")) |>
+    select(date, all_of(keep)) |>
+    pivot_longer(-date, names_to = "serie", values_to = "value") |>
+    filter(!is.na(value)) |>
+    mutate(
+      serie_lab = recode(
+        serie,
+        tpm = "TPM",
+        consumo_total = "Consumo total",
+        comercial_total = "Comercial total",
+        vivienda_uf = "Vivienda UF",
+        cap_90_1y = "Captación 90d-1a",
+        bcp_2y = "BCP 2 años",
+        bcp_5y = "BCP 5 años",
+        .default = serie
+      )
+    )
+
+  g_rates <- ggplot(rates_long, aes(date, value, linetype = serie_lab, group = serie_lab)) +
+    geom_line(linewidth = 0.75) +
+    labs(
+      title = "TPM y tasas seleccionadas",
+      subtitle = "Tasas anuales, porcentaje. Serie mensual desde 2015 para legibilidad visual.",
+      x = NULL,
+      y = "Porcentaje",
+      linetype = NULL
+    ) +
+    theme_minimal(base_size = 12) +
+    theme(
+      legend.position = "bottom",
+      legend.direction = "horizontal",
+      panel.grid.minor = element_blank(),
+      plot.title = element_text(face = "bold")
+    )
+
+  ggplotly(g_rates, tooltip = c("x", "y", "linetype")) |>
+    layout(legend = list(orientation = "h", x = 0.5, xanchor = "center", y = -0.22),
+           margin = list(b = 90))
+}
+```
+
+## Pass-through acumulado
+
+El primer ejercicio estima, para cada producto financiero, una especificación de rezagos distribuidos:
+
+\[
+\Delta r_{j,t} = \alpha_j + \sum_{k=0}^{K}\beta_{j,k}\Delta TPM_{t-k} + \Gamma_j X_t + \varepsilon_{j,t}
+\]
+
+El pass-through acumulado a horizonte \(h\) se define como:
+
+\[
+PT_{j,h}=\sum_{k=0}^{h}\beta_{j,k}
+\]
+
+Un valor cercano a 1 indica que un aumento de 100 puntos base en la TPM se asocia con un aumento acumulado cercano a 100 puntos base en esa tasa al horizonte correspondiente.
+
+### Resumen por horizonte
+
+```{r summary-table}
+if (has_outputs) {
+  pt_summary |>
+    mutate(across(starts_with("h"), ~ round(.x, 2))) |>
+    select(product_label, h1, h3, h6) |>
+    arrange(desc(h6)) |>
+    knitr::kable(
+      col.names = c("Producto", "1 mes", "3 meses", "6 meses"),
+      caption = "Pass-through acumulado estimado por producto. Coeficientes en puntos porcentuales por punto porcentual de TPM."
+    )
+}
+```
+
+### Heatmap de pass-through
+
+```{r heatmap-pt}
+if (has_outputs) {
+  heat <- pt_cum |>
+    filter(type == "total", horizon %in% 0:6) |>
+    mutate(product_label = label_product(product)) |>
+    select(product_label, horizon, cumulative)
+
+  plot_ly(
+    data = heat,
+    x = ~horizon,
+    y = ~product_label,
+    z = ~cumulative,
+    type = "heatmap",
+    hovertemplate = "Producto: %{y}<br>Horizonte: %{x} meses<br>Pass-through: %{z:.2f}<extra></extra>"
+  ) |>
+    layout(
+      title = "Pass-through acumulado por producto y horizonte",
+      xaxis = list(title = "Horizonte mensual"),
+      yaxis = list(title = "Producto")
+    )
+}
+```
+
+## Asimetría: alzas versus bajas de TPM
+
+```{r plot-asym}
+if (has_outputs && !is.null(pt_asym)) {
+  asym_plot <- pt_asym |>
+    filter(horizon <= 6) |>
+    mutate(
+      product_label = label_product(product),
+      tipo = recode(type, alza_tpm = "Alzas de TPM", baja_tpm = "Bajas de TPM", .default = type)
+    )
+
+  g_asym <- ggplot(asym_plot, aes(horizon, cumulative, group = tipo, linetype = tipo)) +
+    geom_hline(yintercept = 0, linewidth = 0.3) +
+    geom_hline(yintercept = 1, linewidth = 0.3) +
+    geom_line(linewidth = 0.75) +
+    facet_wrap(~ product_label, scales = "free_y") +
+    labs(
+      title = "Pass-through acumulado: alzas versus bajas de TPM",
+      subtitle = "Ejercicio preliminar. Los ciclos contractivos y expansivos no son necesariamente comparables.",
+      x = "Horizonte mensual",
+      y = "Pass-through acumulado",
+      linetype = NULL
+    ) +
+    theme_minimal(base_size = 12) +
+    theme(
+      legend.position = "bottom",
+      panel.grid.minor = element_blank(),
+      strip.text = element_text(face = "bold"),
+      plot.title = element_text(face = "bold")
+    )
+
+  ggplotly(g_asym, tooltip = c("x", "y", "linetype")) |>
+    layout(legend = list(orientation = "h", x = 0.5, xanchor = "center", y = -0.16),
+           margin = list(b = 80))
+}
+```
+
+## Local projections
+
+Como contraste, se estiman local projections para cada horizonte \(h\):
+
+\[
+r_{j,t+h}-r_{j,t-1} = \alpha_{j,h}+\beta_{j,h}\Delta TPM_t+\Gamma_{j,h}X_t+u_{j,t+h}
+\]
+
+```{r plot-lp}
+if (has_outputs) {
+  lp_plot <- lp_tbl |>
+    mutate(product_label = label_product(product))
+
+  g_lp <- ggplot(lp_plot, aes(horizon, estimate)) +
+    geom_hline(yintercept = 0, linewidth = 0.3) +
+    geom_ribbon(aes(ymin = conf_low, ymax = conf_high), alpha = 0.16) +
+    geom_line(linewidth = 0.75) +
+    facet_wrap(~ product_label, scales = "free_y") +
+    labs(
+      title = "Respuesta dinámica de tasas a cambios de TPM",
+      subtitle = "Local projections con intervalos aproximados de 95% usando errores Newey-West.",
+      x = "Horizonte mensual",
+      y = "Respuesta acumulada"
+    ) +
+    theme_minimal(base_size = 12) +
+    theme(
+      panel.grid.minor = element_blank(),
+      strip.text = element_text(face = "bold"),
+      plot.title = element_text(face = "bold")
+    )
+
+  ggplotly(g_lp, tooltip = c("x", "y"))
+}
+```
+
+## Robustez por muestra
+
+```{r robustness-table}
+if (has_outputs && !is.null(rob_tbl)) {
+  rob_tbl |>
+    mutate(sample = recode(sample,
+      full = "Muestra completa",
+      post_2010 = "Desde 2010",
+      excl_2020_2023 = "Excluye 2020-2023",
+      .default = sample
+    )) |>
+    select(product_label, sample, cumulative) |>
+    mutate(cumulative = round(cumulative, 2)) |>
+    pivot_wider(names_from = sample, values_from = cumulative) |>
+    arrange(product_label) |>
+    knitr::kable(
+      col.names = c("Producto", "Excluye 2020-2023", "Muestra completa", "Desde 2010"),
+      caption = "Pass-through acumulado a seis meses bajo distintas muestras."
+    )
+}
+```
+
+## Datos y pipeline
+
+La fuente principal es la API BDE del Banco Central de Chile. El pipeline descarga tasas de política, tasas bancarias y algunas tasas de mercado, las transforma a frecuencia mensual y genera bases reproducibles.
+
+```{r dictionary-table}
+if (!is.null(series_dict)) {
+  series_dict |>
+    select(name, series_id, frequency, block, product_group, required, description) |>
+    knitr::kable(caption = "Diccionario de series utilizadas en el proyecto.")
+}
+```
+
+## Limitaciones metodológicas
+
+::: {.mu-note}
+La TPM no es un shock exógeno. Reacciona a inflación, actividad, expectativas y condiciones externas. Por eso, los resultados deben leerse como **pass-through condicional** y no como una identificación causal plena.
+:::
+
+Principales cautelas:
+
+- Las tasas promedio bancarias agregadas mezclan precio puro con composición de operaciones.
+- Las tasas de vivienda y tasas largas incorporan expectativas, inflación esperada, premios por plazo y condiciones de fondeo.
+- Las asimetrías entre alzas y bajas pueden reflejar fricciones bancarias, pero también contextos macroeconómicos diferentes.
+- El ciclo 2021-2023 puede dominar parte de la estimación reciente.
+- Una versión de paper debería incorporar sorpresas monetarias, expectativas de TPM o una estrategia externa de identificación.
+
+## Cómo actualizar el proyecto
+
+Desde la raíz del repositorio `Economics`:
+
+```powershell
+& "C:\Program Files\R\R-4.3.2\bin\x64\Rscript.exe" "scripts\05_update_transmision_tpm.R"
+quarto render --execute
+git add .
+git commit -m "Actualiza proyecto transmision TPM"
+git push
+```
+
+El script espera credenciales BDE en un archivo local `.Renviron`:
+
+```text
+BCCH_USER=tu_usuario
+BCCH_PASS=tu_password
+```
+
+Ese archivo no debe subirse a GitHub.
+
+## Próximos pasos
+
+1. Agregar sorpresas de política monetaria alrededor de RPM para mejorar identificación.
+2. Separar tasas por plazo, moneda, tipo de crédito y subperíodos.
+3. Incorporar condiciones de crédito de la Encuesta de Crédito Bancario.
+4. Explorar modelos time-varying o ventanas móviles.
+5. Convertir el monitor en una nota técnica breve con discusión de literatura y estrategia empírica.

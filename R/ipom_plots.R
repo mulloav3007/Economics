@@ -12,7 +12,7 @@ ipom_plot_var <- function(
     end_period = NULL,
     scenarios = NULL,
     baseline_id = "baseline_ipom",
-    line_size = 0.60,
+    line_size = 0.50,
     baseline_color = "#E76F51",
     scenario_color = "#00BFC4",
     y_nticks = 8,
@@ -162,7 +162,7 @@ ipom_plot_diff <- function(
     start_period = "2025Q1",
     end_period = NULL,
     scenarios = NULL,
-    line_size = 0.60,
+    line_size = 0.50,
     scenario_color = "#00BFC4",
     y_nticks = 8,
     x_nticks = 10

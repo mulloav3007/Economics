@@ -1,395 +1,122 @@
 [
   {
-    "objectID": "proyectos.html",
-    "href": "proyectos.html",
-    "title": "Proyectos",
+    "objectID": "README_TRANSMISION_TPM.html",
+    "href": "README_TRANSMISION_TPM.html",
+    "title": "",
     "section": "",
-    "text": "Esta sección reúne proyectos aplicados, notas técnicas y líneas de investigación en macroeconomía, política monetaria, econometría de series de tiempo y visualización de datos."
+    "text": "Código"
   },
   {
-    "objectID": "proyectos.html#proyectos-aplicados",
-    "href": "proyectos.html#proyectos-aplicados",
-    "title": "Proyectos",
-    "section": "Proyectos aplicados",
-    "text": "Proyectos aplicados\nEstos proyectos corresponden a herramientas o análisis con estructura metodológica más desarrollada, orientados a seguimiento macroeconómico, proyecciones y simulación de escenarios.\n\n\nNowcasting de actividad económica en Chile\nModelo mensual en R para anticipar la evolución del IMACEC total y no minero usando indicadores sectoriales, variables calendario, rezagos macroeconómicos y evaluación de ajuste.\nEstado: proyecto aplicado en desarrollo continuo.\nHerramientas: R, tidyverse, ggplot2, plotly, series de tiempo.\n\n\nEscenarios macroeconómicos inspirados en IPoM\nModelo semi-estructural en IRIS/Matlab para construir un baseline tipo IPoM, simular escenarios externos alternativos y comparar inflación, TPM y brecha de actividad.\nEstado: proyecto aplicado avanzado.\nHerramientas: Matlab, IRIS Toolbox, R, Quarto."
+    "objectID": "README_TRANSMISION_TPM.html#qué-agrega",
+    "href": "README_TRANSMISION_TPM.html#qué-agrega",
+    "title": "",
+    "section": "Qué agrega",
+    "text": "Qué agrega\n\nPágina Quarto: proyectos/transmision-tpm.qmd.\nPipeline R: R/transmision_tpm/.\nScript de actualización: scripts/05_update_transmision_tpm.R.\nDatos procesados iniciales: data/processed/transmision_tpm/.\nTablas: outputs/tables/transmision_tpm/.\nFiguras de respaldo: assets/img/transmision_tpm/.\nMetadatos de descarga: data/metadata/transmision_tpm/."
   },
   {
-    "objectID": "proyectos.html#agenda-de-investigación",
-    "href": "proyectos.html#agenda-de-investigación",
-    "title": "Proyectos",
-    "section": "Agenda de investigación",
-    "text": "Agenda de investigación\nEstas notas corresponden a líneas de trabajo en desarrollo, pensadas como base para futuros artículos, notas técnicas o documentos de investigación aplicada.\n\n\nTransmisión de la TPM a tasas de mercado\nAnálisis visual y econométrico del traspaso de movimientos de la Tasa de Política Monetaria a distintas tasas de mercado en Chile.\nEstado: research note en desarrollo.\nSalida esperada: series comparadas, heatmap de pass-through por horizonte, modelos de rezagos distribuidos y lectura macroeconómica prudente.\n\n\nCurva de rendimiento chilena interactiva\nVisualización interactiva de la curva nominal y real, pendiente de la curva y episodios macrofinancieros.\nEstado: prototipo visual-financiero en desarrollo.\nSalida esperada: slider temporal, comparación por fechas, pendiente 10y-2y y señales de condiciones financieras.\n\n\nÍndice de estrés externo para Chile\nIndicador sintético para monitorear condiciones externas relevantes para una economía pequeña y abierta.\nEstado: nota técnica preliminar.\nSalida esperada: índice agregado, contribuciones por componente y comparación entre agregación simple y PCA."
+    "objectID": "README_TRANSMISION_TPM.html#cómo-actualizar",
+    "href": "README_TRANSMISION_TPM.html#cómo-actualizar",
+    "title": "",
+    "section": "Cómo actualizar",
+    "text": "Cómo actualizar\nDesde la raíz del repositorio Economics:\n& \"C:\\Program Files\\R\\R-4.3.2\\bin\\x64\\Rscript.exe\" \"scripts\\05_update_transmision_tpm.R\"\nquarto render --execute\ngit add .\ngit commit -m \"Actualiza proyecto transmision TPM\"\ngit push"
   },
   {
-    "objectID": "proyectos/ipom-iris.html",
-    "href": "proyectos/ipom-iris.html",
-    "title": "Escenarios macroeconómicos inspirados en IPoM",
-    "section": "",
-    "text": "NotaEstado del proyecto\n\n\n\nProyecto aplicado avanzado. Esta página está pensada como vitrina técnica del flujo de simulación: el modelo y los escenarios se ejecutan en Matlab/IRIS, mientras que Quarto presenta resultados procesados en formato limpio. La versión pública no pretende replicar el modelo oficial del Banco Central de Chile; es un ejercicio académico/aplicado de escenarios macroeconómicos."
+    "objectID": "README_TRANSMISION_TPM.html#credenciales",
+    "href": "README_TRANSMISION_TPM.html#credenciales",
+    "title": "",
+    "section": "Credenciales",
+    "text": "Credenciales\nEl script requiere la API BDE del BCCh. Debes tener en .Renviron:\nBCCH_USER=tu_usuario\nBCCH_PASS=tu_password\nNo subas .Renviron a GitHub."
   },
   {
-    "objectID": "proyectos/ipom-iris.html#pregunta-económica",
-    "href": "proyectos/ipom-iris.html#pregunta-económica",
-    "title": "Escenarios macroeconómicos inspirados en IPoM",
-    "section": "Pregunta económica",
-    "text": "Pregunta económica\nEl objetivo es evaluar cómo cambian las trayectorias de inflación, tasa de política monetaria y brecha de actividad cuando se reemplazan algunos supuestos externos del escenario base por trayectorias alternativas.\nEn términos prácticos, el ejercicio responde:\n\n¿Qué pasa con inflación, TPM y actividad si el escenario externo cambia respecto de un baseline tipo IPoM, manteniendo el juicio doméstico del escenario base?"
-  },
-  {
-    "objectID": "proyectos/ipom-iris.html#arquitectura-del-proyecto",
-    "href": "proyectos/ipom-iris.html#arquitectura-del-proyecto",
-    "title": "Escenarios macroeconómicos inspirados en IPoM",
-    "section": "Arquitectura del proyecto",
-    "text": "Arquitectura del proyecto\n\n\n1. Motor macroeconómico\nModelo semi-estructural en IRIS/Matlab con bloque de demanda, curva de Phillips, regla de política monetaria, bloque externo y shocks estructurales.\n\n\n2. Identificación del baseline\nSe identifica un conjunto de shocks que permite reproducir una trayectoria base tipo IPoM. Ese baseline funciona como punto de comparación.\n\n\n3. Publicación Quarto\nMatlab exporta bases fcast_*.csv; R las convierte a formato largo y Quarto genera gráficos, tablas y diagnóstico comparado."
-  },
-  {
-    "objectID": "proyectos/ipom-iris.html#escenarios-incluidos",
-    "href": "proyectos/ipom-iris.html#escenarios-incluidos",
-    "title": "Escenarios macroeconómicos inspirados en IPoM",
-    "section": "Escenarios incluidos",
-    "text": "Escenarios incluidos\n\n\n\nEscenarios disponibles en la base procesada.\n\n\n\n\n\n\n\nEscenario\nID interno\nArchivo fuente\n\n\n\n\nBaseline IPoM identificado\nbaseline_ipom\nfcast_ipom_exact.csv\n\n\nFin anticipado conflicto Irán\niran_fin_anticipado\nfcast_alt_iran_fin_anticipado.csv\n\n\nRisk-off global\nriskoff_global\nfcast_alt_riskoff.csv\n\n\nEscenario alternativo\nescenario_alternativo\nfcast_alt_escenario.csv\n\n\nBaseline modelo sin juicio IPoM\nbaseline_modelo\nfcast_base_model.csv"
-  },
-  {
-    "objectID": "proyectos/ipom-iris.html#resultado-principal",
-    "href": "proyectos/ipom-iris.html#resultado-principal",
-    "title": "Escenarios macroeconómicos inspirados en IPoM",
-    "section": "Resultado principal",
-    "text": "Resultado principal\nEl gráfico compara el baseline identificado con escenarios alternativos. Para evitar sobrecargar la visualización, se muestran tres alternativas principales junto al baseline.\n\nInflación total\n\n\n\n\n\n\n\n\nInflación subyacente\n\n\n\n\n\n\n\n\nTasa de Política Monetaria\n\n\n\n\n\n\n\n\nBrecha de actividad"
-  },
-  {
-    "objectID": "proyectos/ipom-iris.html#bloque-internacional",
-    "href": "proyectos/ipom-iris.html#bloque-internacional",
-    "title": "Escenarios macroeconómicos inspirados en IPoM",
-    "section": "Bloque internacional",
-    "text": "Bloque internacional\nAdemás de las variables macro domésticas, el ejercicio depende de los supuestos externos que alimentan el modelo. Esta sección muestra las trayectorias de petróleo, cobre, crecimiento internacional y volatilidad financiera usadas en el baseline y en los escenarios alternativos.\n\nPrecio del petróleo WTI nominal\n\n\n\n\n\n\n\n\nPrecio del cobre nominal\n\n\n\n\n\n\n\n\nCrecimiento internacional\n\n\n\n\n\n\n\n\nVIX\n\n\n\n\n\n\n\n\nDesvíos externos frente al baseline\n\n\n\nSupuestos externos principales: niveles promedio y desvíos frente al baseline.\n\n\n\n\n\n\n\n\n\n\n\nEscenario\nVariable\nUnidad\nPromedio escenario\nDesvío promedio vs baseline\nDesvío máximo vs baseline\nDesvío mínimo vs baseline\n\n\n\n\nEscenario alternativo\nCobre nominal\nnivel aproximado\n5,02\n0,00\n0,00\n0\n\n\nEscenario alternativo\nCrecimiento socios comerciales\n% anual\n2,92\n0,00\n0,00\n0\n\n\nEscenario alternativo\nVIX\níndice\n19,38\n0,00\n0,00\n0\n\n\nEscenario alternativo\nWTI nominal\nnivel aproximado\n81,25\n5,55\n12,24\n0"
-  },
-  {
-    "objectID": "proyectos/ipom-iris.html#supuestos-externos",
-    "href": "proyectos/ipom-iris.html#supuestos-externos",
-    "title": "Escenarios macroeconómicos inspirados en IPoM",
-    "section": "Supuestos externos",
-    "text": "Supuestos externos\nLa tabla resume los supuestos externos procesados para el período 2025-2027. Las diferencias se calculan contra el baseline IPoM identificado.\n\n\n\nSupuestos externos: promedio 2025-2027 y desvíos frente al baseline.\n\n\n\n\n\n\n\n\n\n\n\nEscenario\nVariable\nUnidad\nPromedio escenario\nDiferencia promedio vs baseline\nDiferencia máxima vs baseline\nDiferencia mínima vs baseline\n\n\n\n\nEscenario alternativo\nCobre nominal\nnivel aproximado\n5,02\n0,00\n0,00\n0\n\n\nEscenario alternativo\nCrecimiento socios comerciales\n% anual\n2,92\n0,00\n0,00\n0\n\n\nEscenario alternativo\nFederal Funds Rate\n% anual\n3,74\n0,00\n0,00\n0\n\n\nEscenario alternativo\nTipo de cambio real índice\níndice\n103,22\n0,00\n0,00\n0\n\n\nEscenario alternativo\nTreasury 10 años\n% anual\n4,41\n0,00\n0,00\n0\n\n\nEscenario alternativo\nVIX\níndice\n19,38\n0,00\n0,00\n0\n\n\nEscenario alternativo\nWTI nominal\nnivel aproximado\n81,25\n5,55\n12,24\n0"
-  },
-  {
-    "objectID": "proyectos/ipom-iris.html#desvíos-frente-al-baseline",
-    "href": "proyectos/ipom-iris.html#desvíos-frente-al-baseline",
-    "title": "Escenarios macroeconómicos inspirados en IPoM",
-    "section": "Desvíos frente al baseline",
-    "text": "Desvíos frente al baseline\n\nInflación total: diferencia respecto del baseline\n\n\n\n\n\n\n\n\nTPM: diferencia respecto del baseline\n\n\n\n\n\n\n\n\nBrecha de actividad: diferencia respecto del baseline"
-  },
-  {
-    "objectID": "proyectos/ipom-iris.html#tabla-resumen-de-impactos",
-    "href": "proyectos/ipom-iris.html#tabla-resumen-de-impactos",
-    "title": "Escenarios macroeconómicos inspirados en IPoM",
-    "section": "Tabla resumen de impactos",
-    "text": "Tabla resumen de impactos\n\n\n\nDesvíos frente al baseline IPoM en 2025-2027.\n\n\n\n\n\n\n\n\n\n\n\nEscenario\nVariable\nUnidad\nPromedio\nMínimo\nMáximo\nÚltimo\n\n\n\n\nEscenario alternativo\nBrecha de actividad\n%\n-0,05\n-0,14\n0,00\n-0,04\n\n\nEscenario alternativo\nCrecimiento socios comerciales\n% anual\n0,00\n0,00\n0,00\n0,00\n\n\nEscenario alternativo\nFederal Funds Rate\n% anual\n0,00\n0,00\n0,00\n0,00\n\n\nEscenario alternativo\nInflación subyacente sin volátiles\n% anual\n-0,01\n-0,02\n0,00\n-0,02\n\n\nEscenario alternativo\nInflación total\n% anual\n0,04\n-0,15\n0,28\n-0,05\n\n\nEscenario alternativo\nTasa de Política Monetaria\n% anual\n-0,02\n-0,04\n0,00\n-0,03\n\n\nEscenario alternativo\nTreasury 10 años\n% anual\n0,00\n0,00\n0,00\n0,00\n\n\nEscenario alternativo\nVIX\níndice\n0,00\n0,00\n0,00\n0,00"
-  },
-  {
-    "objectID": "proyectos/ipom-iris.html#lectura-metodológica",
-    "href": "proyectos/ipom-iris.html#lectura-metodológica",
-    "title": "Escenarios macroeconómicos inspirados en IPoM",
-    "section": "Lectura metodológica",
-    "text": "Lectura metodológica\nEl flujo está separado en dos niveles:\n\nMatlab/IRIS resuelve el modelo, impone trayectorias exógenas y endogeniza los shocks necesarios para cumplir los supuestos del escenario.\nR/Quarto lee los outputs, estandariza nombres, calcula diferencias contra el baseline y genera la visualización web.\n\nEsta separación evita que el sitio dependa de una instalación de Matlab al momento de publicarse. Para actualizar el proyecto, se actualizan los CSV de matlab/ipom/outputs/raw_iris/ y luego se ejecuta:\nRscript scripts/03_build_ipom_outputs.R\nquarto render"
-  },
-  {
-    "objectID": "proyectos/ipom-iris.html#limitaciones",
-    "href": "proyectos/ipom-iris.html#limitaciones",
-    "title": "Escenarios macroeconómicos inspirados en IPoM",
-    "section": "Limitaciones",
-    "text": "Limitaciones\n\n\n\n\n\n\nAdvertencia\n\n\n\nEste ejercicio no es una réplica del modelo oficial del Banco Central de Chile. La interpretación debe hacerse como simulación condicional de escenarios bajo una estructura semi-estructural propia, calibrada y adaptada para análisis aplicado."
-  },
-  {
-    "objectID": "proyectos/ipom-iris.html#próximos-pasos",
-    "href": "proyectos/ipom-iris.html#próximos-pasos",
-    "title": "Escenarios macroeconómicos inspirados en IPoM",
-    "section": "Próximos pasos",
-    "text": "Próximos pasos\n\nConsolidar una nomenclatura única para escenarios.\nDocumentar formalmente qué variables se exogenizan y qué shocks se endogenizan en cada escenario.\nAgregar descomposición de shocks y contribuciones por bloque.\nConstruir una tabla de supuestos externos editable desde CSV o YAML.\nAgregar una nota técnica descargable cuando la metodología esté cerrada."
-  },
-  {
-    "objectID": "proyectos/estres-externo.html",
-    "href": "proyectos/estres-externo.html",
-    "title": "Índice de estrés externo para Chile",
-    "section": "",
-    "text": "Chile es una economía pequeña y abierta, expuesta a cambios en condiciones financieras globales, precios de commodities y apetito por riesgo internacional.\nEste proyecto construye un índice sintético de estrés externo a partir de variables como VIX, precio del cobre, petróleo, tasas de Estados Unidos y dólar global.\n\nEsta versión inicial usa datos simulados solo para validar la arquitectura visual del sitio. La siguiente etapa es reemplazar el bloque de simulación por datos reales desde FRED, BCCh u otra fuente pública."
-  },
-  {
-    "objectID": "proyectos/estres-externo.html#motivación",
-    "href": "proyectos/estres-externo.html#motivación",
-    "title": "Índice de estrés externo para Chile",
-    "section": "",
-    "text": "Chile es una economía pequeña y abierta, expuesta a cambios en condiciones financieras globales, precios de commodities y apetito por riesgo internacional.\nEste proyecto construye un índice sintético de estrés externo a partir de variables como VIX, precio del cobre, petróleo, tasas de Estados Unidos y dólar global.\n\nEsta versión inicial usa datos simulados solo para validar la arquitectura visual del sitio. La siguiente etapa es reemplazar el bloque de simulación por datos reales desde FRED, BCCh u otra fuente pública."
-  },
-  {
-    "objectID": "proyectos/estres-externo.html#metodología",
-    "href": "proyectos/estres-externo.html#metodología",
-    "title": "Índice de estrés externo para Chile",
-    "section": "Metodología",
-    "text": "Metodología\nEl índice se construye en cuatro pasos:\n\nTransformación de series a frecuencia mensual.\nEstandarización mediante z-scores.\nAjuste de signos según interpretación económica.\nAgregación mediante promedio simple o componentes principales."
-  },
-  {
-    "objectID": "proyectos/estres-externo.html#visualización-interactiva-inicial",
-    "href": "proyectos/estres-externo.html#visualización-interactiva-inicial",
-    "title": "Índice de estrés externo para Chile",
-    "section": "Visualización interactiva inicial",
-    "text": "Visualización interactiva inicial"
-  },
-  {
-    "objectID": "proyectos/estres-externo.html#interpretación",
-    "href": "proyectos/estres-externo.html#interpretación",
-    "title": "Índice de estrés externo para Chile",
+    "objectID": "README_TRANSMISION_TPM.html#interpretación",
+    "href": "README_TRANSMISION_TPM.html#interpretación",
+    "title": "",
     "section": "Interpretación",
-    "text": "Interpretación\nValores positivos indican un entorno externo más restrictivo o adverso para Chile. Valores negativos indican condiciones externas más favorables."
+    "text": "Interpretación\nLa versión actual es un monitor de pass-through dinámico. No debe presentarse como identificación causal plena de shocks monetarios. Para ese salto metodológico se recomienda incorporar sorpresas de política monetaria, expectativas de TPM, microdatos bancarios o una estrategia externa de identificación."
   },
   {
-    "objectID": "proyectos/estres-externo.html#próximas-mejoras",
-    "href": "proyectos/estres-externo.html#próximas-mejoras",
-    "title": "Índice de estrés externo para Chile",
-    "section": "Próximas mejoras",
-    "text": "Próximas mejoras\n\nReemplazar datos simulados por series reales.\nAgregar gráfico de contribuciones por componente.\nComparar índice simple versus índice por componentes principales.\nMarcar episodios históricos: crisis financiera global, pandemia, ciclo de alzas de la Fed y episodios geopolíticos."
-  },
-  {
-    "objectID": "NOTAS_DESPUES_DE_DESCARGAR.html",
-    "href": "NOTAS_DESPUES_DE_DESCARGAR.html",
-    "title": "",
+    "objectID": "proyectos/transmision-tpm.html",
+    "href": "proyectos/transmision-tpm.html",
+    "title": "Transmisión de la TPM a tasas de mercado",
     "section": "",
-    "text": "Código"
+    "text": "Estado: research note en desarrollo. Esta página no busca afirmar una identificación causal definitiva de shocks monetarios. Su objetivo inicial es construir un monitor reproducible del traspaso dinámico entre movimientos observados de la TPM y distintas tasas bancarias/financieras en Chile."
   },
   {
-    "objectID": "NOTAS_DESPUES_DE_DESCARGAR.html#qué-quedó-agregado",
-    "href": "NOTAS_DESPUES_DE_DESCARGAR.html#qué-quedó-agregado",
-    "title": "",
-    "section": "1. Qué quedó agregado",
-    "text": "1. Qué quedó agregado\n\nPágina nueva\n\nproyectos/ipom-iris.qmd\n\nEs la página pública del proyecto. Lee archivos procesados desde data/processed/ipom/ y muestra:\n\narquitectura del proyecto;\nescenarios disponibles;\ngráficos interactivos de inflación total, inflación subyacente, TPM y brecha de actividad;\ntabla de supuestos externos;\ndiferencias frente al baseline IPoM;\ntabla resumen de impactos.\n\n\n\nTarjeta en la página de proyectos\nSe actualizó:\n\nproyectos.qmd\n\nLa tarjeta del proyecto IPoM ahora enlaza a proyectos/ipom-iris.qmd.\n\n\nScripts R nuevos\n\nR/ipom_config.R\nR/ipom_utils.R\nR/ipom_plots.R\nscripts/03_build_ipom_outputs.R\n\nEstos scripts permiten tomar CSV exportados desde IRIS/Matlab y construir bases limpias para Quarto.\n\n\nCarpeta Matlab/IRIS ordenada\n\nmatlab/ipom/model/minimep0.model\nmatlab/ipom/src/readmodel_alternativo.m\nmatlab/ipom/src/readmodel_original.m\nmatlab/ipom/src/identificar_shocks_ipom_original.m\nmatlab/ipom/src/fcast_alt_ipom_original.m\nmatlab/ipom/src/makedata_original.m\nmatlab/ipom/src/run_ipom_pipeline.m\nmatlab/ipom/src/exportar_outputs_quarto.m\nmatlab/ipom/outputs/*.csv\n\nLa carpeta outputs/ contiene algunos CSV ya generados desde tu ZIP original para que la página pueda renderizar sin correr Matlab inmediatamente.\n\n\nBases procesadas listas\n\ndata/processed/ipom/ipom_scenarios_long.csv\ndata/processed/ipom/ipom_scenarios_wide.csv\ndata/processed/ipom/ipom_scenario_differences_long.csv\ndata/processed/ipom/ipom_scenario_differences_summary.csv\ndata/processed/ipom/ipom_external_assumptions.csv\ndata/processed/ipom/ipom_variable_metadata.csv\ndata/processed/ipom/ipom_scenario_metadata.csv\ndata/processed/ipom/ipom_metadata.yml\n\nEstas bases son las que consume la página Quarto."
+    "objectID": "proyectos/transmision-tpm.html#pregunta-de-investigación",
+    "href": "proyectos/transmision-tpm.html#pregunta-de-investigación",
+    "title": "Transmisión de la TPM a tasas de mercado",
+    "section": "Pregunta de investigación",
+    "text": "Pregunta de investigación\nLa pregunta central es simple:\n\nCuando cambia la Tasa de Política Monetaria, ¿qué tasas de mercado reaccionan más rápido, con qué intensidad y con qué grado de heterogeneidad entre productos?\n\nEl proyecto parte como una herramienta visual y econométrica de portafolio, pero está organizado para transformarse en una futura nota técnica o artículo aplicado. La primera versión trabaja con datos agregados públicos; una versión más académica debería incorporar sorpresas monetarias, expectativas de TPM o microdatos bancarios.\n\n\n\nÚltimo mes\n\n\n2026-05\n\n\n\n\nTPM último dato\n\n\n4.50%\n\n\n\n\nProductos estimados\n\n\n10\n\n\n\n\nSeries descargadas\n\n\n16"
   },
   {
-    "objectID": "NOTAS_DESPUES_DE_DESCARGAR.html#qué-hacer-apenas-descargues",
-    "href": "NOTAS_DESPUES_DE_DESCARGAR.html#qué-hacer-apenas-descargues",
-    "title": "",
-    "section": "2. Qué hacer apenas descargues",
-    "text": "2. Qué hacer apenas descargues\nDesde la raíz del proyecto:\nquarto render\nLuego abre:\ndocs/proyectos/ipom-iris.html\nSi todo está bien, deberías ver la nueva página IPoM dentro del sitio."
+    "objectID": "proyectos/transmision-tpm.html#lectura-rápida",
+    "href": "proyectos/transmision-tpm.html#lectura-rápida",
+    "title": "Transmisión de la TPM a tasas de mercado",
+    "section": "Lectura rápida",
+    "text": "Lectura rápida\nEl monitor se organiza en cuatro salidas:\n\nSeries comparadas: TPM y tasas bancarias/financieras seleccionadas.\nPass-through acumulado: suma de coeficientes de rezagos distribuidos a distintos horizontes.\nAsimetría: comparación preliminar entre alzas y bajas de TPM.\nLocal projections: respuesta dinámica de tasas ante movimientos observados de la TPM.\n\nLa interpretación recomendada es condicional y descriptiva: los coeficientes resumen comovimientos dinámicos controlados, pero la TPM es endógena al escenario macroeconómico."
   },
   {
-    "objectID": "NOTAS_DESPUES_DE_DESCARGAR.html#si-quarto-dice-que-faltan-paquetes-de-r",
-    "href": "NOTAS_DESPUES_DE_DESCARGAR.html#si-quarto-dice-que-faltan-paquetes-de-r",
-    "title": "",
-    "section": "3. Si Quarto dice que faltan paquetes de R",
-    "text": "3. Si Quarto dice que faltan paquetes de R\nInstala estos paquetes:\ninstall.packages(c(\n  \"dplyr\", \"tidyr\", \"readr\", \"ggplot2\", \"plotly\", \"knitr\", \"tibble\"\n))\nDespués vuelve a ejecutar:\nquarto render"
+    "objectID": "proyectos/transmision-tpm.html#tpm-y-tasas-seleccionadas",
+    "href": "proyectos/transmision-tpm.html#tpm-y-tasas-seleccionadas",
+    "title": "Transmisión de la TPM a tasas de mercado",
+    "section": "TPM y tasas seleccionadas",
+    "text": "TPM y tasas seleccionadas"
   },
   {
-    "objectID": "NOTAS_DESPUES_DE_DESCARGAR.html#cómo-actualizar-los-resultados-cuando-cambies-matlabiris",
-    "href": "NOTAS_DESPUES_DE_DESCARGAR.html#cómo-actualizar-los-resultados-cuando-cambies-matlabiris",
-    "title": "",
-    "section": "4. Cómo actualizar los resultados cuando cambies Matlab/IRIS",
-    "text": "4. Cómo actualizar los resultados cuando cambies Matlab/IRIS\nEl flujo recomendado es:\n# 1. Correr o actualizar tus simulaciones Matlab/IRIS\n# Los CSV deben quedar en matlab/ipom/outputs/\n\n# 2. Regenerar bases limpias para Quarto\nRscript scripts/03_build_ipom_outputs.R\n\n# 3. Renderizar sitio\nquarto render\nSi quieres intentar el wrapper PowerShell:\n.\\scripts\\04_run_ipom_matlab.ps1\nRscript scripts/03_build_ipom_outputs.R\nquarto render\nPero ojo: run_ipom_pipeline.m todavía está como wrapper seguro. No ejecuta automáticamente tus scripts originales porque algunos pueden depender de rutas locales o decisiones manuales de escenario. Hay que editarlo y activar el flujo exacto cuando estés listo."
+    "objectID": "proyectos/transmision-tpm.html#pass-through-acumulado",
+    "href": "proyectos/transmision-tpm.html#pass-through-acumulado",
+    "title": "Transmisión de la TPM a tasas de mercado",
+    "section": "Pass-through acumulado",
+    "text": "Pass-through acumulado\nEl primer ejercicio estima, para cada producto financiero, una especificación de rezagos distribuidos:\n[ r_{j,t} = j + {k=0}^{K}{j,k}TPM{t-k} + j X_t + {j,t} ]\nEl pass-through acumulado a horizonte (h) se define como:\n[ PT_{j,h}={k=0}^{h}{j,k} ]\nUn valor cercano a 1 indica que un aumento de 100 puntos base en la TPM se asocia con un aumento acumulado cercano a 100 puntos base en esa tasa al horizonte correspondiente.\n\nResumen por horizonte\n\n\n\nPass-through acumulado estimado por producto. Coeficientes en puntos porcentuales por punto porcentual de TPM.\n\n\nProducto\n1 mes\n3 meses\n6 meses\n\n\n\n\nConsumo total\n0.84\n1.16\n1.34\n\n\nComercial: sobregiro\n0.82\n0.73\n1.27\n\n\nComercial total\n0.92\n1.07\n1.27\n\n\nTarjeta: cuota\n0.14\n1.34\n1.13\n\n\nTarjeta: rotativo\n0.28\n1.17\n1.12\n\n\nComercial: cuotas\n0.72\n0.90\n0.87\n\n\nConsumo: cuotas\n1.02\n0.34\n0.58\n\n\nVivienda UF &gt;3 años\n0.16\n0.05\n0.08\n\n\nCaptación 30-89d\n0.07\n0.07\n0.07\n\n\nCaptación 90d-1a\n0.05\n0.05\n0.05\n\n\n\n\n\n\n\nHeatmap de pass-through"
   },
   {
-    "objectID": "NOTAS_DESPUES_DE_DESCARGAR.html#qué-hay-que-revisar-manualmente-después",
-    "href": "NOTAS_DESPUES_DE_DESCARGAR.html#qué-hay-que-revisar-manualmente-después",
-    "title": "",
-    "section": "5. Qué hay que revisar manualmente después",
-    "text": "5. Qué hay que revisar manualmente después\n\nA. Revisar los nombres de escenarios\nAhora dejé nombres razonables:\n\nBaseline IPoM identificado\nFin anticipado conflicto Irán\nRisk-off global\nEscenario alternativo\nBaseline modelo sin juicio IPoM\n\nSi quieres nombres más formales para el portafolio, edita:\nR/ipom_config.R\n\n\nB. Confirmar ventana de publicación\nLas tablas de impactos usan por defecto 2025-2027. Puedes cambiarlo en:\nscripts/03_build_ipom_outputs.R\no directamente dentro de:\nR/ipom_utils.R\nargumentos:\nforecast_start_year = 2025\nforecast_end_year = 2027\n\n\nC. Revisar variables exógenas/endógenas por escenario\nLa página todavía describe el flujo general. Falta agregar una tabla específica por escenario con:\n\nvariables exogenizadas;\nshocks endogenizados;\nhorizonte de imposición;\ninterpretación económica del shock.\n\nEse sería el siguiente paso metodológico más importante.\n\n\nD. Ordenar los scripts Matlab originales\nPreservé tus scripts originales con sufijo _original.m. Conviene convertirlos después en funciones más limpias, por ejemplo:\nidentificar_baseline_ipom.m\nsimular_escenario_externo.m\nsimular_riskoff_global.m\nsimular_iran_fin_anticipado.m\nLa meta es que cada script reciba parámetros y exporte un CSV sin intervención manual.\n\n\nE. No subir credenciales\nNo subas .Renviron, claves del Banco Central, FRED API keys, usuarios ni contraseñas.\nEl .gitignore ya excluye .Renviron, pero revisa antes de hacer commit:\ngit status"
+    "objectID": "proyectos/transmision-tpm.html#asimetría-alzas-versus-bajas-de-tpm",
+    "href": "proyectos/transmision-tpm.html#asimetría-alzas-versus-bajas-de-tpm",
+    "title": "Transmisión de la TPM a tasas de mercado",
+    "section": "Asimetría: alzas versus bajas de TPM",
+    "text": "Asimetría: alzas versus bajas de TPM"
   },
   {
-    "objectID": "NOTAS_DESPUES_DE_DESCARGAR.html#comandos-git-sugeridos",
-    "href": "NOTAS_DESPUES_DE_DESCARGAR.html#comandos-git-sugeridos",
-    "title": "",
-    "section": "6. Comandos Git sugeridos",
-    "text": "6. Comandos Git sugeridos\nDespués de revisar que renderiza:\ngit status\ngit add .\ngit commit -m \"Agrega proyecto IPoM IRIS al sitio Quarto\"\ngit push"
+    "objectID": "proyectos/transmision-tpm.html#local-projections",
+    "href": "proyectos/transmision-tpm.html#local-projections",
+    "title": "Transmisión de la TPM a tasas de mercado",
+    "section": "Local projections",
+    "text": "Local projections\nComo contraste, se estiman local projections para cada horizonte (h):\n[ r_{j,t+h}-r_{j,t-1} = {j,h}+{j,h}TPM_t+{j,h}X_t+u{j,t+h} ]"
   },
   {
-    "objectID": "NOTAS_DESPUES_DE_DESCARGAR.html#limitación-de-este-zip",
-    "href": "NOTAS_DESPUES_DE_DESCARGAR.html#limitación-de-este-zip",
-    "title": "",
-    "section": "7. Limitación de este ZIP",
-    "text": "7. Limitación de este ZIP\nNo pude renderizar el sitio dentro del entorno donde se preparó el ZIP porque ahí no estaban instalados Rscript ni quarto. Por eso dejé los archivos listos, los CSV procesados ya creados y los scripts de reconstrucción, pero la validación final debe hacerla tu máquina con R y Quarto instalados."
+    "objectID": "proyectos/transmision-tpm.html#robustez-por-muestra",
+    "href": "proyectos/transmision-tpm.html#robustez-por-muestra",
+    "title": "Transmisión de la TPM a tasas de mercado",
+    "section": "Robustez por muestra",
+    "text": "Robustez por muestra\n\n\n\nPass-through acumulado a seis meses bajo distintas muestras.\n\n\nProducto\nExcluye 2020-2023\nMuestra completa\nDesde 2010\n\n\n\n\nCaptación 30-89d\n0.07\n0.07\n0.07\n\n\nCaptación 90d-1a\n0.05\n0.05\n0.05\n\n\nComercial total\n1.39\n1.27\n1.10\n\n\nComercial: cuotas\n0.93\n0.87\n0.87\n\n\nComercial: sobregiro\n1.57\n1.27\n1.27\n\n\nConsumo total\n1.36\n1.34\n0.90\n\n\nConsumo: cuotas\n0.27\n0.58\n0.58\n\n\nTarjeta: cuota\n0.82\n1.13\n1.13\n\n\nTarjeta: rotativo\n1.45\n1.12\n1.12\n\n\nVivienda UF &gt;3 años\n0.12\n0.08\n0.04"
   },
   {
-    "objectID": "matlab/ipom/NOTAS_MATLAB_IRIS.html",
-    "href": "matlab/ipom/NOTAS_MATLAB_IRIS.html",
-    "title": "",
-    "section": "",
-    "text": "Código\n\n\n\n\n\nNotas de la reestructuracion Matlab/IRIS\nCambios aplicados:\n\nsetup_ipom_project.m ahora activa IRIS Release 20191112 con irisstartup.\nrun_all_ipom.m ahora es una funcion y ya no copia scripts a runtime/.\nidentificar_shocks_ipom.m lee history.csv e ipom_paths.csv desde matlab/ipom/inputs/.\nidentificar_shocks_ipom.m guarda fcast_ipom_exact.csv y fcast_ipom_with_shocks.csv en matlab/ipom/outputs/raw_iris/.\nfcast_alt_ipom.m lee el baseline desde outputs/raw_iris/fcast_ipom_exact.csv.\nfcast_alt_ipom.m guarda el escenario en outputs/raw_iris/fcast_alt_escenario.csv.\nreadmodel_alternativo.m carga el modelo desde matlab/ipom/model/minimep0.model, no desde el directorio actual.\nmakedata.m reconstruye inputs/history.csv desde inputs/Data.csv solo si activas cfg.runMakeData=true.\n\nComando recomendado en MATLAB:\ncd('D:\\Users\\mullo\\Documents\\GitHub\\Economics\\matlab\\ipom\\src')\nrun_all_ipom\nDespues, desde la raiz del repositorio:\nRscript scripts/03_build_ipom_outputs.R\nquarto render"
+    "objectID": "proyectos/transmision-tpm.html#datos-y-pipeline",
+    "href": "proyectos/transmision-tpm.html#datos-y-pipeline",
+    "title": "Transmisión de la TPM a tasas de mercado",
+    "section": "Datos y pipeline",
+    "text": "Datos y pipeline\nLa fuente principal es la API BDE del Banco Central de Chile. El pipeline descarga tasas de política, tasas bancarias y algunas tasas de mercado, las transforma a frecuencia mensual y genera bases reproducibles.\n\n\n\nDiccionario de series utilizadas en el proyecto.\n\n\n\n\n\n\n\n\n\n\n\nname\nseries_id\nfrequency\nblock\nproduct_group\nrequired\ndescription\n\n\n\n\ntpm\nF022.TPM.TIN.D001.NO.Z.D\nDAILY\npolicy\npolicy\nTRUE\nTasa de Política Monetaria diaria\n\n\nconsumo_total\nF022.CON.TIP.Z.NO.Z.M\nMONTHLY\nlending\nconsumo\nTRUE\nTasa promedio colocación consumo total\n\n\nconsumo_cuotas\nF022.CONCUOT.TIP.Z.NO.Z.M\nMONTHLY\nlending\nconsumo\nFALSE\nTasa promedio créditos de consumo en cuotas\n\n\nconsumo_tarj_rot\nF022.CONTARJR.TIP.Z.NO.Z.M\nMONTHLY\nlending\nconsumo\nFALSE\nTasa tarjeta de crédito rotativo\n\n\nconsumo_tarj_cuota\nF022.CONTARJC.TIP.Z.NO.Z.M\nMONTHLY\nlending\nconsumo\nFALSE\nTasa tarjeta de crédito en cuotas\n\n\ncomercial_total\nF022.COM.TIP.Z.NO.Z.M\nMONTHLY\nlending\ncomercial\nTRUE\nTasa promedio créditos comerciales total\n\n\ncomercial_cuotas\nF022.COMCUOT.TIP.Z.NO.Z.M\nMONTHLY\nlending\ncomercial\nFALSE\nTasa créditos comerciales en cuotas\n\n\ncomercial_sobregiro\nF022.COMSOBR.TIP.Z.NO.Z.M\nMONTHLY\nlending\ncomercial\nFALSE\nTasa créditos comerciales sobregiros\n\n\nvivienda_uf\nF022.VIV.TIP.MA03.UF.Z.M\nMONTHLY\nlending\nvivienda\nTRUE\nTasa vivienda UF mayor a 3 años\n\n\ncap_30_89\nF022.CAP.TIP.D089.NO.Z.D\nDAILY\nfunding\ncaptacion\nFALSE\nTasa captación pesos 30-89 días\n\n\ncap_90_1y\nF022.CAP.TIP.AN01.NO.Z.D\nDAILY\nfunding\ncaptacion\nTRUE\nTasa captación pesos 90 días a 1 año\n\n\nbcp_2y\nF022.BCLP.TIS.AN02.NO.Z.D\nDAILY\nmarket\ncurva\nFALSE\nBCP 2 años\n\n\nbcp_5y\nF022.BCLP.TIS.AN05.NO.Z.D\nDAILY\nmarket\ncurva\nFALSE\nBCP 5 años\n\n\nbcp_10y\nF022.BCLP.TIS.AN10.NO.Z.D\nDAILY\nmarket\ncurva\nFALSE\nBCP 10 años\n\n\nbcu_5y\nF022.BUF.TIS.AN05.UF.Z.D\nDAILY\nmarket\ncurva_real\nFALSE\nBCU 5 años\n\n\nbcu_10y\nF022.BUF.TIS.AN10.UF.Z.D\nDAILY\nmarket\ncurva_real\nFALSE\nBCU 10 años"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Mauricio Ulloa",
-    "section": "",
-    "text": "Portafolio técnico\n\n\n\nSoy economista con formación de Magíster en Análisis Económico, interesado en macroeconomía aplicada, política monetaria, proyecciones, econometría de series de tiempo y análisis de datos.\nTrabajo principalmente con R, Matlab/IRIS y Python, desarrollando herramientas reproducibles para análisis macroeconómico, visualización de datos y simulación de escenarios."
+    "objectID": "proyectos/transmision-tpm.html#limitaciones-metodológicas",
+    "href": "proyectos/transmision-tpm.html#limitaciones-metodológicas",
+    "title": "Transmisión de la TPM a tasas de mercado",
+    "section": "Limitaciones metodológicas",
+    "text": "Limitaciones metodológicas\n\nLa TPM no es un shock exógeno. Reacciona a inflación, actividad, expectativas y condiciones externas. Por eso, los resultados deben leerse como pass-through condicional y no como una identificación causal plena.\n\nPrincipales cautelas:\n\nLas tasas promedio bancarias agregadas mezclan precio puro con composición de operaciones.\nLas tasas de vivienda y tasas largas incorporan expectativas, inflación esperada, premios por plazo y condiciones de fondeo.\nLas asimetrías entre alzas y bajas pueden reflejar fricciones bancarias, pero también contextos macroeconómicos diferentes.\nEl ciclo 2021-2023 puede dominar parte de la estimación reciente.\nUna versión de paper debería incorporar sorpresas monetarias, expectativas de TPM o una estrategia externa de identificación."
   },
   {
-    "objectID": "index.html#proyectos-destacados",
-    "href": "index.html#proyectos-destacados",
-    "title": "Mauricio Ulloa",
-    "section": "Proyectos destacados",
-    "text": "Proyectos destacados\n\n\nTransmisión de la TPM a tasas de mercado\nMonitor del traspaso dinámico de la Tasa de Política Monetaria hacia tasas bancarias y financieras en Chile.\nR Series de tiempo Política monetaria\nVer proyecto\n\n\nCurva de rendimiento chilena interactiva\nVisualizador de la estructura temporal de tasas nominales y reales, pendiente de curva y señales macrofinancieras.\nR Plotly Tasas\nVer proyecto\n\n\nÍndice de estrés externo para Chile\nIndicador compuesto de condiciones externas usando VIX, cobre, petróleo, tasas de Estados Unidos y dólar global.\nR Macro internacional Visualización\nVer proyecto"
+    "objectID": "proyectos/transmision-tpm.html#cómo-actualizar-el-proyecto",
+    "href": "proyectos/transmision-tpm.html#cómo-actualizar-el-proyecto",
+    "title": "Transmisión de la TPM a tasas de mercado",
+    "section": "Cómo actualizar el proyecto",
+    "text": "Cómo actualizar el proyecto\nDesde la raíz del repositorio Economics:\n& \"C:\\Program Files\\R\\R-4.3.2\\bin\\x64\\Rscript.exe\" \"scripts\\05_update_transmision_tpm.R\"\nquarto render --execute\ngit add .\ngit commit -m \"Actualiza proyecto transmision TPM\"\ngit push\nEl script espera credenciales BDE en un archivo local .Renviron:\nBCCH_USER=tu_usuario\nBCCH_PASS=tu_password\nEse archivo no debe subirse a GitHub."
   },
   {
-    "objectID": "index.html#enfoque",
-    "href": "index.html#enfoque",
-    "title": "Mauricio Ulloa",
-    "section": "Enfoque",
-    "text": "Enfoque\nLa página está pensada como un portafolio sobrio y técnico: cada proyecto parte desde una pregunta económica clara, construye una base reproducible, presenta una metodología defendible y termina en visualizaciones comprensibles."
-  },
-  {
-    "objectID": "contacto.html",
-    "href": "contacto.html",
-    "title": "Contacto",
-    "section": "",
-    "text": "Puedes contactarme en:\n\nEmail: mulloav@fen.uchile.cl\nGitHub: https://github.com/mulloav3007\nLinkedIn: www.linkedin.com/in/mauricio-andrés-ulloa-valdivia\n\n\nAntes de publicar definitivamente, reemplaza el correo y el enlace de LinkedIn."
-  },
-  {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "CV",
-    "section": "",
-    "text": "Magíster en Análisis Económico\nUniversidad de Chile\nIngeniería Comercial, mención Economía\nUniversidad de Chile"
-  },
-  {
-    "objectID": "cv.html#formación",
-    "href": "cv.html#formación",
-    "title": "CV",
-    "section": "",
-    "text": "Magíster en Análisis Económico\nUniversidad de Chile\nIngeniería Comercial, mención Economía\nUniversidad de Chile"
-  },
-  {
-    "objectID": "cv.html#herramientas",
-    "href": "cv.html#herramientas",
-    "title": "CV",
-    "section": "Herramientas",
-    "text": "Herramientas\n\nR: tidyverse, ggplot2, lubridate, modelsummary, Quarto/RMarkdown.\nMatlab / IRIS Toolbox: simulación macroeconómica y modelos semiestructurales.\nPython: automatización, manejo de datos y extracción de información.\nStata: econometría aplicada.\nExcel, LaTeX y GitHub."
-  },
-  {
-    "objectID": "cv.html#áreas-de-interés",
-    "href": "cv.html#áreas-de-interés",
-    "title": "CV",
-    "section": "Áreas de interés",
-    "text": "Áreas de interés\n\nMacroeconomía aplicada.\nPolítica monetaria.\nProyecciones y nowcasting.\nEconometría de series de tiempo.\nAnálisis de datos para política pública.\n\n\nCuando tengas tu CV final en PDF, guárdalo en la carpeta principal con el nombre cv_mauricio_ulloa.pdf y agrega aquí el enlace de descarga.\n\nDescargar CV"
-  },
-  {
-    "objectID": "INSTRUCCIONES.html",
-    "href": "INSTRUCCIONES.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "INSTRUCCIONES.html#cómo-copiarla-en-windows",
-    "href": "INSTRUCCIONES.html#cómo-copiarla-en-windows",
-    "title": "",
-    "section": "1. Cómo copiarla en Windows",
-    "text": "1. Cómo copiarla en Windows\nTienes dos opciones:\n\nOpción recomendada\n\nDescomprime el ZIP.\nAbre la carpeta Economics del ZIP.\nCopia todo su contenido dentro de:\n\nD:\\Users\\mullo\\Documents\\GitHub\\Economics\nNo copies la carpeta completa dentro de otra carpeta Economics, porque podrías quedar con:\nD:\\Users\\mullo\\Documents\\GitHub\\Economics\\Economics\nEso no conviene.\n\n\nSi tu carpeta Economics está vacía\nPuedes reemplazarla completa por la carpeta descomprimida."
-  },
-  {
-    "objectID": "INSTRUCCIONES.html#renderizar-con-quarto",
-    "href": "INSTRUCCIONES.html#renderizar-con-quarto",
-    "title": "",
-    "section": "2. Renderizar con Quarto",
-    "text": "2. Renderizar con Quarto\nAbre PowerShell y ejecuta:\ncd \"D:\\Users\\mullo\\Documents\\GitHub\\Economics\"\nquarto render\nEso genera o actualiza la carpeta docs/."
-  },
-  {
-    "objectID": "INSTRUCCIONES.html#configurar-github-pages",
-    "href": "INSTRUCCIONES.html#configurar-github-pages",
-    "title": "",
-    "section": "3. Configurar GitHub Pages",
-    "text": "3. Configurar GitHub Pages\nEn GitHub:\nSettings → Pages → Build and deployment\nUsa:\nSource: Deploy from a branch\nBranch: main\nFolder: /docs"
-  },
-  {
-    "objectID": "INSTRUCCIONES.html#subir-cambios",
-    "href": "INSTRUCCIONES.html#subir-cambios",
-    "title": "",
-    "section": "4. Subir cambios",
-    "text": "4. Subir cambios\nCon PowerShell:\ngit add .\ngit commit -m \"Configura sitio Quarto Economics\"\ngit push\nO con GitHub Desktop:\nCommit to main → Push origin"
-  },
-  {
-    "objectID": "INSTRUCCIONES.html#importante",
-    "href": "INSTRUCCIONES.html#importante",
-    "title": "",
-    "section": "5. Importante",
-    "text": "5. Importante\nLas páginas de proyectos traen gráficos demo con datos simulados. Sirven para comprobar que la arquitectura funciona. Antes de usar la página como portafolio definitivo, reemplaza esos bloques por datos reales."
-  },
-  {
-    "objectID": "matlab/ipom/RUNBOOK.html",
-    "href": "matlab/ipom/RUNBOOK.html",
-    "title": "",
-    "section": "",
-    "text": "Código"
-  },
-  {
-    "objectID": "matlab/ipom/RUNBOOK.html#correr-el-flujo-iris-desde-matlab",
-    "href": "matlab/ipom/RUNBOOK.html#correr-el-flujo-iris-desde-matlab",
-    "title": "",
-    "section": "1. Correr el flujo IRIS desde MATLAB",
-    "text": "1. Correr el flujo IRIS desde MATLAB\nEste proyecto esta preparado para IRIS Toolbox Release 20191112. La activacion se hace dentro de setup_ipom_project.m usando:\naddpath C:\\IRIS-Toolbox-Release-20191112\nirisstartup\nDesde MATLAB, corre:\ncd('D:\\Users\\mullo\\Documents\\GitHub\\Economics\\matlab\\ipom\\src')\nrun_all_ipom\nEl flujo ejecuta:\nsetup_ipom_project.m\nidentificar_shocks_ipom.m\nfcast_alt_ipom.m\nLos CSV crudos se guardan directamente en:\nmatlab/ipom/outputs/raw_iris/\nYa no se depende de copiar archivos a runtime/. Esa carpeta queda solo como respaldo/legacy."
-  },
-  {
-    "objectID": "matlab/ipom/RUNBOOK.html#actualizar-quarto-despues-de-correr-iris",
-    "href": "matlab/ipom/RUNBOOK.html#actualizar-quarto-despues-de-correr-iris",
-    "title": "",
-    "section": "2. Actualizar Quarto despues de correr IRIS",
-    "text": "2. Actualizar Quarto despues de correr IRIS\nDesde la raiz del repositorio:\nRscript scripts/03_build_ipom_outputs.R\nquarto render\nLa pagina resultante queda en:\ndocs/proyectos/ipom-iris.html"
-  },
-  {
-    "objectID": "matlab/ipom/RUNBOOK.html#actualizar-la-pagina-sin-recalcular-iris",
-    "href": "matlab/ipom/RUNBOOK.html#actualizar-la-pagina-sin-recalcular-iris",
-    "title": "",
-    "section": "3. Actualizar la pagina sin recalcular IRIS",
-    "text": "3. Actualizar la pagina sin recalcular IRIS\nSi solo quieres reconstruir los CSV limpios o la pagina con los ultimos fcast_*.csv ya existentes:\nRscript scripts/03_build_ipom_outputs.R\nquarto render"
-  },
-  {
-    "objectID": "matlab/ipom/RUNBOOK.html#cambiar-un-escenario",
-    "href": "matlab/ipom/RUNBOOK.html#cambiar-un-escenario",
-    "title": "",
-    "section": "4. Cambiar un escenario",
-    "text": "4. Cambiar un escenario\nEdita solamente este bloque en:\nmatlab/ipom/src/fcast_alt_ipom.m\nBusca la seccion:\n2.3 Ejemplo de escenario: editar aqui\nRegla de interpretacion:\n\nVariables en 100*log(nivel): usar multiplicadores. Ejemplo: 0.95 implica caida aproximada de 5%.\nVariables en nivel/tasas/brechas: usar aditivos. Ejemplo: +0.25 implica 25 puntos base si la variable esta en porcentaje.\nMultiplicador 1: no se impone la variable.\nAditivo 0: no se impone la variable."
-  },
-  {
-    "objectID": "matlab/ipom/RUNBOOK.html#cambiar-iris-horizonte-operativo-o-reportes-pdf",
-    "href": "matlab/ipom/RUNBOOK.html#cambiar-iris-horizonte-operativo-o-reportes-pdf",
-    "title": "",
-    "section": "5. Cambiar IRIS, horizonte operativo o reportes PDF",
-    "text": "5. Cambiar IRIS, horizonte operativo o reportes PDF\nEdita:\nmatlab/ipom/src/config_ipom.m\nCampos importantes:\ncfg.irisPath          = 'C:\\IRIS-Toolbox-Release-20191112';\ncfg.runMakeData       = false;\ncfg.runBaseline       = true;\ncfg.runAlternative    = true;\ncfg.runIrisPdfReports = false;\nSi quieres reconstruir inputs/history.csv desde inputs/Data.csv, cambia:\ncfg.runMakeData = true;\nSi quieres que IRIS genere PDFs, cambia:\ncfg.runIrisPdfReports = true;"
-  },
-  {
-    "objectID": "matlab/ipom/RUNBOOK.html#archivos-que-alimentan-quarto",
-    "href": "matlab/ipom/RUNBOOK.html#archivos-que-alimentan-quarto",
-    "title": "",
-    "section": "6. Archivos que alimentan Quarto",
-    "text": "6. Archivos que alimentan Quarto\nQuarto usa:\ndata/processed/ipom/ipom_scenarios_long.csv\ndata/processed/ipom/ipom_scenario_differences_long.csv\ndata/processed/ipom/ipom_external_assumptions.csv\ndata/processed/ipom/ipom_scenario_metadata.csv\ndata/processed/ipom/ipom_variable_metadata.csv\nEsos archivos se construyen desde:\nmatlab/ipom/outputs/raw_iris/fcast_*.csv"
-  },
-  {
-    "objectID": "matlab/ipom/RUNBOOK.html#que-no-usar-como-fuente-principal",
-    "href": "matlab/ipom/RUNBOOK.html#que-no-usar-como-fuente-principal",
-    "title": "",
-    "section": "7. Que NO usar como fuente principal",
-    "text": "7. Que NO usar como fuente principal\nNo uses como fuente principal:\nlegacy_original/reports_pdf/\nlegacy_original/m_files/\nruntime/\nLa fuente ordenada esta en:\nsrc/\nmodel/\ninputs/\noutputs/raw_iris/"
-  },
-  {
-    "objectID": "proyectos/curva-rendimiento.html",
-    "href": "proyectos/curva-rendimiento.html",
-    "title": "Curva de rendimiento chilena interactiva",
-    "section": "",
-    "text": "Este proyecto busca visualizar la evolución de la estructura temporal de tasas en Chile y extraer señales macrofinancieras relevantes.\nLa curva de rendimiento permite observar cambios en condiciones financieras, expectativas de tasas, pendiente de curva y episodios de aplanamiento o empinamiento.\n\nEsta página contiene una demo visual con datos simulados. La versión final debe usar tasas nominales y reales chilenas publicadas en fuentes oficiales o de mercado."
-  },
-  {
-    "objectID": "proyectos/curva-rendimiento.html#motivación",
-    "href": "proyectos/curva-rendimiento.html#motivación",
-    "title": "Curva de rendimiento chilena interactiva",
-    "section": "",
-    "text": "Este proyecto busca visualizar la evolución de la estructura temporal de tasas en Chile y extraer señales macrofinancieras relevantes.\nLa curva de rendimiento permite observar cambios en condiciones financieras, expectativas de tasas, pendiente de curva y episodios de aplanamiento o empinamiento.\n\nEsta página contiene una demo visual con datos simulados. La versión final debe usar tasas nominales y reales chilenas publicadas en fuentes oficiales o de mercado."
-  },
-  {
-    "objectID": "proyectos/curva-rendimiento.html#demo-visual-curva-por-fecha",
-    "href": "proyectos/curva-rendimiento.html#demo-visual-curva-por-fecha",
-    "title": "Curva de rendimiento chilena interactiva",
-    "section": "Demo visual: curva por fecha",
-    "text": "Demo visual: curva por fecha"
-  },
-  {
-    "objectID": "proyectos/curva-rendimiento.html#próximas-mejoras",
-    "href": "proyectos/curva-rendimiento.html#próximas-mejoras",
-    "title": "Curva de rendimiento chilena interactiva",
-    "section": "Próximas mejoras",
-    "text": "Próximas mejoras\n\nIncorporar curva nominal y curva real/UF.\nCalcular pendiente 10y-2y.\nMostrar breakeven inflation aproximado, con advertencia sobre primas de riesgo y liquidez.\nMarcar fechas de episodios macrofinancieros relevantes."
+    "objectID": "proyectos/transmision-tpm.html#próximos-pasos",
+    "href": "proyectos/transmision-tpm.html#próximos-pasos",
+    "title": "Transmisión de la TPM a tasas de mercado",
+    "section": "Próximos pasos",
+    "text": "Próximos pasos\n\nAgregar sorpresas de política monetaria alrededor de RPM para mejorar identificación.\nSeparar tasas por plazo, moneda, tipo de crédito y subperíodos.\nIncorporar condiciones de crédito de la Encuesta de Crédito Bancario.\nExplorar modelos time-varying o ventanas móviles.\nConvertir el monitor en una nota técnica breve con discusión de literatura y estrategia empírica."
   },
   {
     "objectID": "proyectos/imacec.html",
@@ -469,38 +196,395 @@
     "text": "Código\nEl código fuente del proyecto queda organizado en módulos dentro del repositorio:\n\nR/imacec_config.R\nR/imacec_utils.R\nR/imacec_calendar.R\nR/imacec_data.R\nR/imacec_models.R\nR/imacec_outputs.R\nscripts/01_update_imacec.R"
   },
   {
-    "objectID": "proyectos/transmision-tpm.html",
-    "href": "proyectos/transmision-tpm.html",
-    "title": "Transmisión de la TPM a tasas de mercado",
+    "objectID": "proyectos/curva-rendimiento.html",
+    "href": "proyectos/curva-rendimiento.html",
+    "title": "Curva de rendimiento chilena interactiva",
     "section": "",
-    "text": "Este proyecto analiza el traspaso dinámico de movimientos de la Tasa de Política Monetaria hacia distintas tasas de mercado en Chile.\nLa pregunta central es simple: cuando cambia la TPM, ¿qué tasas reaccionan más rápido y con mayor intensidad?\n\nEl objetivo no es afirmar causalidad estructural sin identificación de shocks monetarios. La primera versión se presenta como un monitor descriptivo y econométrico de traspaso dinámico."
+    "text": "Este proyecto busca visualizar la evolución de la estructura temporal de tasas en Chile y extraer señales macrofinancieras relevantes.\nLa curva de rendimiento permite observar cambios en condiciones financieras, expectativas de tasas, pendiente de curva y episodios de aplanamiento o empinamiento.\n\nEsta página contiene una demo visual con datos simulados. La versión final debe usar tasas nominales y reales chilenas publicadas en fuentes oficiales o de mercado."
   },
   {
-    "objectID": "proyectos/transmision-tpm.html#motivación",
-    "href": "proyectos/transmision-tpm.html#motivación",
-    "title": "Transmisión de la TPM a tasas de mercado",
+    "objectID": "proyectos/curva-rendimiento.html#motivación",
+    "href": "proyectos/curva-rendimiento.html#motivación",
+    "title": "Curva de rendimiento chilena interactiva",
     "section": "",
-    "text": "Este proyecto analiza el traspaso dinámico de movimientos de la Tasa de Política Monetaria hacia distintas tasas de mercado en Chile.\nLa pregunta central es simple: cuando cambia la TPM, ¿qué tasas reaccionan más rápido y con mayor intensidad?\n\nEl objetivo no es afirmar causalidad estructural sin identificación de shocks monetarios. La primera versión se presenta como un monitor descriptivo y econométrico de traspaso dinámico."
+    "text": "Este proyecto busca visualizar la evolución de la estructura temporal de tasas en Chile y extraer señales macrofinancieras relevantes.\nLa curva de rendimiento permite observar cambios en condiciones financieras, expectativas de tasas, pendiente de curva y episodios de aplanamiento o empinamiento.\n\nEsta página contiene una demo visual con datos simulados. La versión final debe usar tasas nominales y reales chilenas publicadas en fuentes oficiales o de mercado."
   },
   {
-    "objectID": "proyectos/transmision-tpm.html#diseño-inicial",
-    "href": "proyectos/transmision-tpm.html#diseño-inicial",
-    "title": "Transmisión de la TPM a tasas de mercado",
-    "section": "Diseño inicial",
-    "text": "Diseño inicial\n\nTPM y tasas de mercado en frecuencia mensual.\nTasas comerciales, consumo, hipotecarias, depósitos y bonos.\nModelos de rezagos distribuidos o ARDL.\nHeatmap de coeficientes acumulados por horizonte."
+    "objectID": "proyectos/curva-rendimiento.html#demo-visual-curva-por-fecha",
+    "href": "proyectos/curva-rendimiento.html#demo-visual-curva-por-fecha",
+    "title": "Curva de rendimiento chilena interactiva",
+    "section": "Demo visual: curva por fecha",
+    "text": "Demo visual: curva por fecha"
   },
   {
-    "objectID": "proyectos/transmision-tpm.html#demo-visual-heatmap-de-pass-through",
-    "href": "proyectos/transmision-tpm.html#demo-visual-heatmap-de-pass-through",
-    "title": "Transmisión de la TPM a tasas de mercado",
-    "section": "Demo visual: heatmap de pass-through",
-    "text": "Demo visual: heatmap de pass-through"
-  },
-  {
-    "objectID": "proyectos/transmision-tpm.html#próximas-mejoras",
-    "href": "proyectos/transmision-tpm.html#próximas-mejoras",
-    "title": "Transmisión de la TPM a tasas de mercado",
+    "objectID": "proyectos/curva-rendimiento.html#próximas-mejoras",
+    "href": "proyectos/curva-rendimiento.html#próximas-mejoras",
+    "title": "Curva de rendimiento chilena interactiva",
     "section": "Próximas mejoras",
-    "text": "Próximas mejoras\n\nConectar con datos reales del BCCh.\nEstimar traspaso acumulado con modelos de rezagos distribuidos.\nComparar subperíodos, por ejemplo pre y post ciclo inflacionario reciente.\nAgregar sección de discusión metodológica sobre endogeneidad e identificación."
+    "text": "Próximas mejoras\n\nIncorporar curva nominal y curva real/UF.\nCalcular pendiente 10y-2y.\nMostrar breakeven inflation aproximado, con advertencia sobre primas de riesgo y liquidez.\nMarcar fechas de episodios macrofinancieros relevantes."
+  },
+  {
+    "objectID": "matlab/ipom/RUNBOOK.html",
+    "href": "matlab/ipom/RUNBOOK.html",
+    "title": "",
+    "section": "",
+    "text": "Código"
+  },
+  {
+    "objectID": "matlab/ipom/RUNBOOK.html#correr-el-flujo-iris-desde-matlab",
+    "href": "matlab/ipom/RUNBOOK.html#correr-el-flujo-iris-desde-matlab",
+    "title": "",
+    "section": "1. Correr el flujo IRIS desde MATLAB",
+    "text": "1. Correr el flujo IRIS desde MATLAB\nEste proyecto esta preparado para IRIS Toolbox Release 20191112. La activacion se hace dentro de setup_ipom_project.m usando:\naddpath C:\\IRIS-Toolbox-Release-20191112\nirisstartup\nDesde MATLAB, corre:\ncd('D:\\Users\\mullo\\Documents\\GitHub\\Economics\\matlab\\ipom\\src')\nrun_all_ipom\nEl flujo ejecuta:\nsetup_ipom_project.m\nidentificar_shocks_ipom.m\nfcast_alt_ipom.m\nLos CSV crudos se guardan directamente en:\nmatlab/ipom/outputs/raw_iris/\nYa no se depende de copiar archivos a runtime/. Esa carpeta queda solo como respaldo/legacy."
+  },
+  {
+    "objectID": "matlab/ipom/RUNBOOK.html#actualizar-quarto-despues-de-correr-iris",
+    "href": "matlab/ipom/RUNBOOK.html#actualizar-quarto-despues-de-correr-iris",
+    "title": "",
+    "section": "2. Actualizar Quarto despues de correr IRIS",
+    "text": "2. Actualizar Quarto despues de correr IRIS\nDesde la raiz del repositorio:\nRscript scripts/03_build_ipom_outputs.R\nquarto render\nLa pagina resultante queda en:\ndocs/proyectos/ipom-iris.html"
+  },
+  {
+    "objectID": "matlab/ipom/RUNBOOK.html#actualizar-la-pagina-sin-recalcular-iris",
+    "href": "matlab/ipom/RUNBOOK.html#actualizar-la-pagina-sin-recalcular-iris",
+    "title": "",
+    "section": "3. Actualizar la pagina sin recalcular IRIS",
+    "text": "3. Actualizar la pagina sin recalcular IRIS\nSi solo quieres reconstruir los CSV limpios o la pagina con los ultimos fcast_*.csv ya existentes:\nRscript scripts/03_build_ipom_outputs.R\nquarto render"
+  },
+  {
+    "objectID": "matlab/ipom/RUNBOOK.html#cambiar-un-escenario",
+    "href": "matlab/ipom/RUNBOOK.html#cambiar-un-escenario",
+    "title": "",
+    "section": "4. Cambiar un escenario",
+    "text": "4. Cambiar un escenario\nEdita solamente este bloque en:\nmatlab/ipom/src/fcast_alt_ipom.m\nBusca la seccion:\n2.3 Ejemplo de escenario: editar aqui\nRegla de interpretacion:\n\nVariables en 100*log(nivel): usar multiplicadores. Ejemplo: 0.95 implica caida aproximada de 5%.\nVariables en nivel/tasas/brechas: usar aditivos. Ejemplo: +0.25 implica 25 puntos base si la variable esta en porcentaje.\nMultiplicador 1: no se impone la variable.\nAditivo 0: no se impone la variable."
+  },
+  {
+    "objectID": "matlab/ipom/RUNBOOK.html#cambiar-iris-horizonte-operativo-o-reportes-pdf",
+    "href": "matlab/ipom/RUNBOOK.html#cambiar-iris-horizonte-operativo-o-reportes-pdf",
+    "title": "",
+    "section": "5. Cambiar IRIS, horizonte operativo o reportes PDF",
+    "text": "5. Cambiar IRIS, horizonte operativo o reportes PDF\nEdita:\nmatlab/ipom/src/config_ipom.m\nCampos importantes:\ncfg.irisPath          = 'C:\\IRIS-Toolbox-Release-20191112';\ncfg.runMakeData       = false;\ncfg.runBaseline       = true;\ncfg.runAlternative    = true;\ncfg.runIrisPdfReports = false;\nSi quieres reconstruir inputs/history.csv desde inputs/Data.csv, cambia:\ncfg.runMakeData = true;\nSi quieres que IRIS genere PDFs, cambia:\ncfg.runIrisPdfReports = true;"
+  },
+  {
+    "objectID": "matlab/ipom/RUNBOOK.html#archivos-que-alimentan-quarto",
+    "href": "matlab/ipom/RUNBOOK.html#archivos-que-alimentan-quarto",
+    "title": "",
+    "section": "6. Archivos que alimentan Quarto",
+    "text": "6. Archivos que alimentan Quarto\nQuarto usa:\ndata/processed/ipom/ipom_scenarios_long.csv\ndata/processed/ipom/ipom_scenario_differences_long.csv\ndata/processed/ipom/ipom_external_assumptions.csv\ndata/processed/ipom/ipom_scenario_metadata.csv\ndata/processed/ipom/ipom_variable_metadata.csv\nEsos archivos se construyen desde:\nmatlab/ipom/outputs/raw_iris/fcast_*.csv"
+  },
+  {
+    "objectID": "matlab/ipom/RUNBOOK.html#que-no-usar-como-fuente-principal",
+    "href": "matlab/ipom/RUNBOOK.html#que-no-usar-como-fuente-principal",
+    "title": "",
+    "section": "7. Que NO usar como fuente principal",
+    "text": "7. Que NO usar como fuente principal\nNo uses como fuente principal:\nlegacy_original/reports_pdf/\nlegacy_original/m_files/\nruntime/\nLa fuente ordenada esta en:\nsrc/\nmodel/\ninputs/\noutputs/raw_iris/"
+  },
+  {
+    "objectID": "INSTRUCCIONES.html",
+    "href": "INSTRUCCIONES.html",
+    "title": "",
+    "section": "",
+    "text": "Código"
+  },
+  {
+    "objectID": "INSTRUCCIONES.html#cómo-copiarla-en-windows",
+    "href": "INSTRUCCIONES.html#cómo-copiarla-en-windows",
+    "title": "",
+    "section": "1. Cómo copiarla en Windows",
+    "text": "1. Cómo copiarla en Windows\nTienes dos opciones:\n\nOpción recomendada\n\nDescomprime el ZIP.\nAbre la carpeta Economics del ZIP.\nCopia todo su contenido dentro de:\n\nD:\\Users\\mullo\\Documents\\GitHub\\Economics\nNo copies la carpeta completa dentro de otra carpeta Economics, porque podrías quedar con:\nD:\\Users\\mullo\\Documents\\GitHub\\Economics\\Economics\nEso no conviene.\n\n\nSi tu carpeta Economics está vacía\nPuedes reemplazarla completa por la carpeta descomprimida."
+  },
+  {
+    "objectID": "INSTRUCCIONES.html#renderizar-con-quarto",
+    "href": "INSTRUCCIONES.html#renderizar-con-quarto",
+    "title": "",
+    "section": "2. Renderizar con Quarto",
+    "text": "2. Renderizar con Quarto\nAbre PowerShell y ejecuta:\ncd \"D:\\Users\\mullo\\Documents\\GitHub\\Economics\"\nquarto render\nEso genera o actualiza la carpeta docs/."
+  },
+  {
+    "objectID": "INSTRUCCIONES.html#configurar-github-pages",
+    "href": "INSTRUCCIONES.html#configurar-github-pages",
+    "title": "",
+    "section": "3. Configurar GitHub Pages",
+    "text": "3. Configurar GitHub Pages\nEn GitHub:\nSettings → Pages → Build and deployment\nUsa:\nSource: Deploy from a branch\nBranch: main\nFolder: /docs"
+  },
+  {
+    "objectID": "INSTRUCCIONES.html#subir-cambios",
+    "href": "INSTRUCCIONES.html#subir-cambios",
+    "title": "",
+    "section": "4. Subir cambios",
+    "text": "4. Subir cambios\nCon PowerShell:\ngit add .\ngit commit -m \"Configura sitio Quarto Economics\"\ngit push\nO con GitHub Desktop:\nCommit to main → Push origin"
+  },
+  {
+    "objectID": "INSTRUCCIONES.html#importante",
+    "href": "INSTRUCCIONES.html#importante",
+    "title": "",
+    "section": "5. Importante",
+    "text": "5. Importante\nLas páginas de proyectos traen gráficos demo con datos simulados. Sirven para comprobar que la arquitectura funciona. Antes de usar la página como portafolio definitivo, reemplaza esos bloques por datos reales."
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV",
+    "section": "",
+    "text": "Magíster en Análisis Económico\nUniversidad de Chile\nIngeniería Comercial, mención Economía\nUniversidad de Chile"
+  },
+  {
+    "objectID": "cv.html#formación",
+    "href": "cv.html#formación",
+    "title": "CV",
+    "section": "",
+    "text": "Magíster en Análisis Económico\nUniversidad de Chile\nIngeniería Comercial, mención Economía\nUniversidad de Chile"
+  },
+  {
+    "objectID": "cv.html#herramientas",
+    "href": "cv.html#herramientas",
+    "title": "CV",
+    "section": "Herramientas",
+    "text": "Herramientas\n\nR: tidyverse, ggplot2, lubridate, modelsummary, Quarto/RMarkdown.\nMatlab / IRIS Toolbox: simulación macroeconómica y modelos semiestructurales.\nPython: automatización, manejo de datos y extracción de información.\nStata: econometría aplicada.\nExcel, LaTeX y GitHub."
+  },
+  {
+    "objectID": "cv.html#áreas-de-interés",
+    "href": "cv.html#áreas-de-interés",
+    "title": "CV",
+    "section": "Áreas de interés",
+    "text": "Áreas de interés\n\nMacroeconomía aplicada.\nPolítica monetaria.\nProyecciones y nowcasting.\nEconometría de series de tiempo.\nAnálisis de datos para política pública.\n\n\nCuando tengas tu CV final en PDF, guárdalo en la carpeta principal con el nombre cv_mauricio_ulloa.pdf y agrega aquí el enlace de descarga.\n\nDescargar CV"
+  },
+  {
+    "objectID": "contacto.html",
+    "href": "contacto.html",
+    "title": "Contacto",
+    "section": "",
+    "text": "Puedes contactarme en:\n\nEmail: mulloav@fen.uchile.cl\nGitHub: https://github.com/mulloav3007\nLinkedIn: www.linkedin.com/in/mauricio-andrés-ulloa-valdivia\n\n\nAntes de publicar definitivamente, reemplaza el correo y el enlace de LinkedIn."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Mauricio Ulloa",
+    "section": "",
+    "text": "Portafolio técnico\n\n\n\nSoy economista con formación de Magíster en Análisis Económico, interesado en macroeconomía aplicada, política monetaria, proyecciones, econometría de series de tiempo y análisis de datos.\nTrabajo principalmente con R, Matlab/IRIS y Python, desarrollando herramientas reproducibles para análisis macroeconómico, visualización de datos y simulación de escenarios."
+  },
+  {
+    "objectID": "index.html#proyectos-destacados",
+    "href": "index.html#proyectos-destacados",
+    "title": "Mauricio Ulloa",
+    "section": "Proyectos destacados",
+    "text": "Proyectos destacados\n\n\nTransmisión de la TPM a tasas de mercado\nResearch note en desarrollo sobre el pass-through de movimientos de la TPM hacia tasas bancarias, de captación y de mercado en Chile.\nR Pass-through Política monetaria\nVer proyecto\n\n\nCurva de rendimiento chilena interactiva\nVisualizador de la estructura temporal de tasas nominales y reales, pendiente de curva y señales macrofinancieras.\nR Plotly Tasas\nVer proyecto\n\n\nÍndice de estrés externo para Chile\nIndicador compuesto de condiciones externas usando VIX, cobre, petróleo, tasas de Estados Unidos y dólar global.\nR Macro internacional Visualización\nVer proyecto"
+  },
+  {
+    "objectID": "index.html#enfoque",
+    "href": "index.html#enfoque",
+    "title": "Mauricio Ulloa",
+    "section": "Enfoque",
+    "text": "Enfoque\nLa página está pensada como un portafolio sobrio y técnico: cada proyecto parte desde una pregunta económica clara, construye una base reproducible, presenta una metodología defendible y termina en visualizaciones comprensibles."
+  },
+  {
+    "objectID": "matlab/ipom/NOTAS_MATLAB_IRIS.html",
+    "href": "matlab/ipom/NOTAS_MATLAB_IRIS.html",
+    "title": "",
+    "section": "",
+    "text": "Código\n\n\n\n\n\nNotas de la reestructuracion Matlab/IRIS\nCambios aplicados:\n\nsetup_ipom_project.m ahora activa IRIS Release 20191112 con irisstartup.\nrun_all_ipom.m ahora es una funcion y ya no copia scripts a runtime/.\nidentificar_shocks_ipom.m lee history.csv e ipom_paths.csv desde matlab/ipom/inputs/.\nidentificar_shocks_ipom.m guarda fcast_ipom_exact.csv y fcast_ipom_with_shocks.csv en matlab/ipom/outputs/raw_iris/.\nfcast_alt_ipom.m lee el baseline desde outputs/raw_iris/fcast_ipom_exact.csv.\nfcast_alt_ipom.m guarda el escenario en outputs/raw_iris/fcast_alt_escenario.csv.\nreadmodel_alternativo.m carga el modelo desde matlab/ipom/model/minimep0.model, no desde el directorio actual.\nmakedata.m reconstruye inputs/history.csv desde inputs/Data.csv solo si activas cfg.runMakeData=true.\n\nComando recomendado en MATLAB:\ncd('D:\\Users\\mullo\\Documents\\GitHub\\Economics\\matlab\\ipom\\src')\nrun_all_ipom\nDespues, desde la raiz del repositorio:\nRscript scripts/03_build_ipom_outputs.R\nquarto render"
+  },
+  {
+    "objectID": "NOTAS_DESPUES_DE_DESCARGAR.html",
+    "href": "NOTAS_DESPUES_DE_DESCARGAR.html",
+    "title": "",
+    "section": "",
+    "text": "Código"
+  },
+  {
+    "objectID": "NOTAS_DESPUES_DE_DESCARGAR.html#qué-quedó-agregado",
+    "href": "NOTAS_DESPUES_DE_DESCARGAR.html#qué-quedó-agregado",
+    "title": "",
+    "section": "1. Qué quedó agregado",
+    "text": "1. Qué quedó agregado\n\nPágina nueva\n\nproyectos/ipom-iris.qmd\n\nEs la página pública del proyecto. Lee archivos procesados desde data/processed/ipom/ y muestra:\n\narquitectura del proyecto;\nescenarios disponibles;\ngráficos interactivos de inflación total, inflación subyacente, TPM y brecha de actividad;\ntabla de supuestos externos;\ndiferencias frente al baseline IPoM;\ntabla resumen de impactos.\n\n\n\nTarjeta en la página de proyectos\nSe actualizó:\n\nproyectos.qmd\n\nLa tarjeta del proyecto IPoM ahora enlaza a proyectos/ipom-iris.qmd.\n\n\nScripts R nuevos\n\nR/ipom_config.R\nR/ipom_utils.R\nR/ipom_plots.R\nscripts/03_build_ipom_outputs.R\n\nEstos scripts permiten tomar CSV exportados desde IRIS/Matlab y construir bases limpias para Quarto.\n\n\nCarpeta Matlab/IRIS ordenada\n\nmatlab/ipom/model/minimep0.model\nmatlab/ipom/src/readmodel_alternativo.m\nmatlab/ipom/src/readmodel_original.m\nmatlab/ipom/src/identificar_shocks_ipom_original.m\nmatlab/ipom/src/fcast_alt_ipom_original.m\nmatlab/ipom/src/makedata_original.m\nmatlab/ipom/src/run_ipom_pipeline.m\nmatlab/ipom/src/exportar_outputs_quarto.m\nmatlab/ipom/outputs/*.csv\n\nLa carpeta outputs/ contiene algunos CSV ya generados desde tu ZIP original para que la página pueda renderizar sin correr Matlab inmediatamente.\n\n\nBases procesadas listas\n\ndata/processed/ipom/ipom_scenarios_long.csv\ndata/processed/ipom/ipom_scenarios_wide.csv\ndata/processed/ipom/ipom_scenario_differences_long.csv\ndata/processed/ipom/ipom_scenario_differences_summary.csv\ndata/processed/ipom/ipom_external_assumptions.csv\ndata/processed/ipom/ipom_variable_metadata.csv\ndata/processed/ipom/ipom_scenario_metadata.csv\ndata/processed/ipom/ipom_metadata.yml\n\nEstas bases son las que consume la página Quarto."
+  },
+  {
+    "objectID": "NOTAS_DESPUES_DE_DESCARGAR.html#qué-hacer-apenas-descargues",
+    "href": "NOTAS_DESPUES_DE_DESCARGAR.html#qué-hacer-apenas-descargues",
+    "title": "",
+    "section": "2. Qué hacer apenas descargues",
+    "text": "2. Qué hacer apenas descargues\nDesde la raíz del proyecto:\nquarto render\nLuego abre:\ndocs/proyectos/ipom-iris.html\nSi todo está bien, deberías ver la nueva página IPoM dentro del sitio."
+  },
+  {
+    "objectID": "NOTAS_DESPUES_DE_DESCARGAR.html#si-quarto-dice-que-faltan-paquetes-de-r",
+    "href": "NOTAS_DESPUES_DE_DESCARGAR.html#si-quarto-dice-que-faltan-paquetes-de-r",
+    "title": "",
+    "section": "3. Si Quarto dice que faltan paquetes de R",
+    "text": "3. Si Quarto dice que faltan paquetes de R\nInstala estos paquetes:\ninstall.packages(c(\n  \"dplyr\", \"tidyr\", \"readr\", \"ggplot2\", \"plotly\", \"knitr\", \"tibble\"\n))\nDespués vuelve a ejecutar:\nquarto render"
+  },
+  {
+    "objectID": "NOTAS_DESPUES_DE_DESCARGAR.html#cómo-actualizar-los-resultados-cuando-cambies-matlabiris",
+    "href": "NOTAS_DESPUES_DE_DESCARGAR.html#cómo-actualizar-los-resultados-cuando-cambies-matlabiris",
+    "title": "",
+    "section": "4. Cómo actualizar los resultados cuando cambies Matlab/IRIS",
+    "text": "4. Cómo actualizar los resultados cuando cambies Matlab/IRIS\nEl flujo recomendado es:\n# 1. Correr o actualizar tus simulaciones Matlab/IRIS\n# Los CSV deben quedar en matlab/ipom/outputs/\n\n# 2. Regenerar bases limpias para Quarto\nRscript scripts/03_build_ipom_outputs.R\n\n# 3. Renderizar sitio\nquarto render\nSi quieres intentar el wrapper PowerShell:\n.\\scripts\\04_run_ipom_matlab.ps1\nRscript scripts/03_build_ipom_outputs.R\nquarto render\nPero ojo: run_ipom_pipeline.m todavía está como wrapper seguro. No ejecuta automáticamente tus scripts originales porque algunos pueden depender de rutas locales o decisiones manuales de escenario. Hay que editarlo y activar el flujo exacto cuando estés listo."
+  },
+  {
+    "objectID": "NOTAS_DESPUES_DE_DESCARGAR.html#qué-hay-que-revisar-manualmente-después",
+    "href": "NOTAS_DESPUES_DE_DESCARGAR.html#qué-hay-que-revisar-manualmente-después",
+    "title": "",
+    "section": "5. Qué hay que revisar manualmente después",
+    "text": "5. Qué hay que revisar manualmente después\n\nA. Revisar los nombres de escenarios\nAhora dejé nombres razonables:\n\nBaseline IPoM identificado\nFin anticipado conflicto Irán\nRisk-off global\nEscenario alternativo\nBaseline modelo sin juicio IPoM\n\nSi quieres nombres más formales para el portafolio, edita:\nR/ipom_config.R\n\n\nB. Confirmar ventana de publicación\nLas tablas de impactos usan por defecto 2025-2027. Puedes cambiarlo en:\nscripts/03_build_ipom_outputs.R\no directamente dentro de:\nR/ipom_utils.R\nargumentos:\nforecast_start_year = 2025\nforecast_end_year = 2027\n\n\nC. Revisar variables exógenas/endógenas por escenario\nLa página todavía describe el flujo general. Falta agregar una tabla específica por escenario con:\n\nvariables exogenizadas;\nshocks endogenizados;\nhorizonte de imposición;\ninterpretación económica del shock.\n\nEse sería el siguiente paso metodológico más importante.\n\n\nD. Ordenar los scripts Matlab originales\nPreservé tus scripts originales con sufijo _original.m. Conviene convertirlos después en funciones más limpias, por ejemplo:\nidentificar_baseline_ipom.m\nsimular_escenario_externo.m\nsimular_riskoff_global.m\nsimular_iran_fin_anticipado.m\nLa meta es que cada script reciba parámetros y exporte un CSV sin intervención manual.\n\n\nE. No subir credenciales\nNo subas .Renviron, claves del Banco Central, FRED API keys, usuarios ni contraseñas.\nEl .gitignore ya excluye .Renviron, pero revisa antes de hacer commit:\ngit status"
+  },
+  {
+    "objectID": "NOTAS_DESPUES_DE_DESCARGAR.html#comandos-git-sugeridos",
+    "href": "NOTAS_DESPUES_DE_DESCARGAR.html#comandos-git-sugeridos",
+    "title": "",
+    "section": "6. Comandos Git sugeridos",
+    "text": "6. Comandos Git sugeridos\nDespués de revisar que renderiza:\ngit status\ngit add .\ngit commit -m \"Agrega proyecto IPoM IRIS al sitio Quarto\"\ngit push"
+  },
+  {
+    "objectID": "NOTAS_DESPUES_DE_DESCARGAR.html#limitación-de-este-zip",
+    "href": "NOTAS_DESPUES_DE_DESCARGAR.html#limitación-de-este-zip",
+    "title": "",
+    "section": "7. Limitación de este ZIP",
+    "text": "7. Limitación de este ZIP\nNo pude renderizar el sitio dentro del entorno donde se preparó el ZIP porque ahí no estaban instalados Rscript ni quarto. Por eso dejé los archivos listos, los CSV procesados ya creados y los scripts de reconstrucción, pero la validación final debe hacerla tu máquina con R y Quarto instalados."
+  },
+  {
+    "objectID": "proyectos/estres-externo.html",
+    "href": "proyectos/estres-externo.html",
+    "title": "Índice de estrés externo para Chile",
+    "section": "",
+    "text": "Chile es una economía pequeña y abierta, expuesta a cambios en condiciones financieras globales, precios de commodities y apetito por riesgo internacional.\nEste proyecto construye un índice sintético de estrés externo a partir de variables como VIX, precio del cobre, petróleo, tasas de Estados Unidos y dólar global.\n\nEsta versión inicial usa datos simulados solo para validar la arquitectura visual del sitio. La siguiente etapa es reemplazar el bloque de simulación por datos reales desde FRED, BCCh u otra fuente pública."
+  },
+  {
+    "objectID": "proyectos/estres-externo.html#motivación",
+    "href": "proyectos/estres-externo.html#motivación",
+    "title": "Índice de estrés externo para Chile",
+    "section": "",
+    "text": "Chile es una economía pequeña y abierta, expuesta a cambios en condiciones financieras globales, precios de commodities y apetito por riesgo internacional.\nEste proyecto construye un índice sintético de estrés externo a partir de variables como VIX, precio del cobre, petróleo, tasas de Estados Unidos y dólar global.\n\nEsta versión inicial usa datos simulados solo para validar la arquitectura visual del sitio. La siguiente etapa es reemplazar el bloque de simulación por datos reales desde FRED, BCCh u otra fuente pública."
+  },
+  {
+    "objectID": "proyectos/estres-externo.html#metodología",
+    "href": "proyectos/estres-externo.html#metodología",
+    "title": "Índice de estrés externo para Chile",
+    "section": "Metodología",
+    "text": "Metodología\nEl índice se construye en cuatro pasos:\n\nTransformación de series a frecuencia mensual.\nEstandarización mediante z-scores.\nAjuste de signos según interpretación económica.\nAgregación mediante promedio simple o componentes principales."
+  },
+  {
+    "objectID": "proyectos/estres-externo.html#visualización-interactiva-inicial",
+    "href": "proyectos/estres-externo.html#visualización-interactiva-inicial",
+    "title": "Índice de estrés externo para Chile",
+    "section": "Visualización interactiva inicial",
+    "text": "Visualización interactiva inicial"
+  },
+  {
+    "objectID": "proyectos/estres-externo.html#interpretación",
+    "href": "proyectos/estres-externo.html#interpretación",
+    "title": "Índice de estrés externo para Chile",
+    "section": "Interpretación",
+    "text": "Interpretación\nValores positivos indican un entorno externo más restrictivo o adverso para Chile. Valores negativos indican condiciones externas más favorables."
+  },
+  {
+    "objectID": "proyectos/estres-externo.html#próximas-mejoras",
+    "href": "proyectos/estres-externo.html#próximas-mejoras",
+    "title": "Índice de estrés externo para Chile",
+    "section": "Próximas mejoras",
+    "text": "Próximas mejoras\n\nReemplazar datos simulados por series reales.\nAgregar gráfico de contribuciones por componente.\nComparar índice simple versus índice por componentes principales.\nMarcar episodios históricos: crisis financiera global, pandemia, ciclo de alzas de la Fed y episodios geopolíticos."
+  },
+  {
+    "objectID": "proyectos/ipom-iris.html",
+    "href": "proyectos/ipom-iris.html",
+    "title": "Escenarios macroeconómicos inspirados en IPoM",
+    "section": "",
+    "text": "NotaEstado del proyecto\n\n\n\nProyecto aplicado avanzado. Esta página está pensada como vitrina técnica del flujo de simulación: el modelo y los escenarios se ejecutan en Matlab/IRIS, mientras que Quarto presenta resultados procesados en formato limpio. La versión pública no pretende replicar el modelo oficial del Banco Central de Chile; es un ejercicio académico/aplicado de escenarios macroeconómicos."
+  },
+  {
+    "objectID": "proyectos/ipom-iris.html#pregunta-económica",
+    "href": "proyectos/ipom-iris.html#pregunta-económica",
+    "title": "Escenarios macroeconómicos inspirados en IPoM",
+    "section": "Pregunta económica",
+    "text": "Pregunta económica\nEl objetivo es evaluar cómo cambian las trayectorias de inflación, tasa de política monetaria y brecha de actividad cuando se reemplazan algunos supuestos externos del escenario base por trayectorias alternativas.\nEn términos prácticos, el ejercicio responde:\n\n¿Qué pasa con inflación, TPM y actividad si el escenario externo cambia respecto de un baseline tipo IPoM, manteniendo el juicio doméstico del escenario base?"
+  },
+  {
+    "objectID": "proyectos/ipom-iris.html#arquitectura-del-proyecto",
+    "href": "proyectos/ipom-iris.html#arquitectura-del-proyecto",
+    "title": "Escenarios macroeconómicos inspirados en IPoM",
+    "section": "Arquitectura del proyecto",
+    "text": "Arquitectura del proyecto\n\n\n1. Motor macroeconómico\nModelo semi-estructural en IRIS/Matlab con bloque de demanda, curva de Phillips, regla de política monetaria, bloque externo y shocks estructurales.\n\n\n2. Identificación del baseline\nSe identifica un conjunto de shocks que permite reproducir una trayectoria base tipo IPoM. Ese baseline funciona como punto de comparación.\n\n\n3. Publicación Quarto\nMatlab exporta bases fcast_*.csv; R las convierte a formato largo y Quarto genera gráficos, tablas y diagnóstico comparado."
+  },
+  {
+    "objectID": "proyectos/ipom-iris.html#escenarios-incluidos",
+    "href": "proyectos/ipom-iris.html#escenarios-incluidos",
+    "title": "Escenarios macroeconómicos inspirados en IPoM",
+    "section": "Escenarios incluidos",
+    "text": "Escenarios incluidos\n\n\n\nEscenarios disponibles en la base procesada.\n\n\n\n\n\n\n\nEscenario\nID interno\nArchivo fuente\n\n\n\n\nBaseline IPoM identificado\nbaseline_ipom\nfcast_ipom_exact.csv\n\n\nFin anticipado conflicto Irán\niran_fin_anticipado\nfcast_alt_iran_fin_anticipado.csv\n\n\nRisk-off global\nriskoff_global\nfcast_alt_riskoff.csv\n\n\nEscenario alternativo\nescenario_alternativo\nfcast_alt_escenario.csv\n\n\nBaseline modelo sin juicio IPoM\nbaseline_modelo\nfcast_base_model.csv"
+  },
+  {
+    "objectID": "proyectos/ipom-iris.html#resultado-principal",
+    "href": "proyectos/ipom-iris.html#resultado-principal",
+    "title": "Escenarios macroeconómicos inspirados en IPoM",
+    "section": "Resultado principal",
+    "text": "Resultado principal\nEl gráfico compara el baseline identificado con escenarios alternativos. Para evitar sobrecargar la visualización, se muestran tres alternativas principales junto al baseline.\n\nInflación total\n\n\n\n\n\n\n\n\nInflación subyacente\n\n\n\n\n\n\n\n\nTasa de Política Monetaria\n\n\n\n\n\n\n\n\nBrecha de actividad"
+  },
+  {
+    "objectID": "proyectos/ipom-iris.html#bloque-internacional",
+    "href": "proyectos/ipom-iris.html#bloque-internacional",
+    "title": "Escenarios macroeconómicos inspirados en IPoM",
+    "section": "Bloque internacional",
+    "text": "Bloque internacional\nAdemás de las variables macro domésticas, el ejercicio depende de los supuestos externos que alimentan el modelo. Esta sección muestra las trayectorias de petróleo, cobre, crecimiento internacional y volatilidad financiera usadas en el baseline y en los escenarios alternativos.\n\nPrecio del petróleo WTI nominal\n\n\n\n\n\n\n\n\nPrecio del cobre nominal\n\n\n\n\n\n\n\n\nCrecimiento internacional\n\n\n\n\n\n\n\n\nVIX\n\n\n\n\n\n\n\n\nDesvíos externos frente al baseline\n\n\n\nSupuestos externos principales: niveles promedio y desvíos frente al baseline.\n\n\n\n\n\n\n\n\n\n\n\nEscenario\nVariable\nUnidad\nPromedio escenario\nDesvío promedio vs baseline\nDesvío máximo vs baseline\nDesvío mínimo vs baseline\n\n\n\n\nEscenario alternativo\nCobre nominal\nnivel aproximado\n5,02\n0,00\n0,00\n0\n\n\nEscenario alternativo\nCrecimiento socios comerciales\n% anual\n2,92\n0,00\n0,00\n0\n\n\nEscenario alternativo\nVIX\níndice\n19,38\n0,00\n0,00\n0\n\n\nEscenario alternativo\nWTI nominal\nnivel aproximado\n81,25\n5,55\n12,24\n0"
+  },
+  {
+    "objectID": "proyectos/ipom-iris.html#supuestos-externos",
+    "href": "proyectos/ipom-iris.html#supuestos-externos",
+    "title": "Escenarios macroeconómicos inspirados en IPoM",
+    "section": "Supuestos externos",
+    "text": "Supuestos externos\nLa tabla resume los supuestos externos procesados para el período 2025-2027. Las diferencias se calculan contra el baseline IPoM identificado.\n\n\n\nSupuestos externos: promedio 2025-2027 y desvíos frente al baseline.\n\n\n\n\n\n\n\n\n\n\n\nEscenario\nVariable\nUnidad\nPromedio escenario\nDiferencia promedio vs baseline\nDiferencia máxima vs baseline\nDiferencia mínima vs baseline\n\n\n\n\nEscenario alternativo\nCobre nominal\nnivel aproximado\n5,02\n0,00\n0,00\n0\n\n\nEscenario alternativo\nCrecimiento socios comerciales\n% anual\n2,92\n0,00\n0,00\n0\n\n\nEscenario alternativo\nFederal Funds Rate\n% anual\n3,74\n0,00\n0,00\n0\n\n\nEscenario alternativo\nTipo de cambio real índice\níndice\n103,22\n0,00\n0,00\n0\n\n\nEscenario alternativo\nTreasury 10 años\n% anual\n4,41\n0,00\n0,00\n0\n\n\nEscenario alternativo\nVIX\níndice\n19,38\n0,00\n0,00\n0\n\n\nEscenario alternativo\nWTI nominal\nnivel aproximado\n81,25\n5,55\n12,24\n0"
+  },
+  {
+    "objectID": "proyectos/ipom-iris.html#desvíos-frente-al-baseline",
+    "href": "proyectos/ipom-iris.html#desvíos-frente-al-baseline",
+    "title": "Escenarios macroeconómicos inspirados en IPoM",
+    "section": "Desvíos frente al baseline",
+    "text": "Desvíos frente al baseline\n\nInflación total: diferencia respecto del baseline\n\n\n\n\n\n\n\n\nTPM: diferencia respecto del baseline\n\n\n\n\n\n\n\n\nBrecha de actividad: diferencia respecto del baseline"
+  },
+  {
+    "objectID": "proyectos/ipom-iris.html#tabla-resumen-de-impactos",
+    "href": "proyectos/ipom-iris.html#tabla-resumen-de-impactos",
+    "title": "Escenarios macroeconómicos inspirados en IPoM",
+    "section": "Tabla resumen de impactos",
+    "text": "Tabla resumen de impactos\n\n\n\nDesvíos frente al baseline IPoM en 2025-2027.\n\n\n\n\n\n\n\n\n\n\n\nEscenario\nVariable\nUnidad\nPromedio\nMínimo\nMáximo\nÚltimo\n\n\n\n\nEscenario alternativo\nBrecha de actividad\n%\n-0,04\n-0,14\n0,00\n-0,01\n\n\nEscenario alternativo\nCrecimiento socios comerciales\n% anual\n0,00\n0,00\n0,00\n0,00\n\n\nEscenario alternativo\nFederal Funds Rate\n% anual\n0,00\n0,00\n0,00\n0,00\n\n\nEscenario alternativo\nInflación subyacente sin volátiles\n% anual\n-0,01\n-0,02\n0,00\n-0,01\n\n\nEscenario alternativo\nInflación total\n% anual\n0,04\n-0,15\n0,28\n-0,04\n\n\nEscenario alternativo\nTasa de Política Monetaria\n% anual\n-0,01\n-0,04\n0,00\n-0,01\n\n\nEscenario alternativo\nTreasury 10 años\n% anual\n0,00\n0,00\n0,00\n0,00\n\n\nEscenario alternativo\nVIX\níndice\n0,00\n0,00\n0,00\n0,00"
+  },
+  {
+    "objectID": "proyectos/ipom-iris.html#lectura-metodológica",
+    "href": "proyectos/ipom-iris.html#lectura-metodológica",
+    "title": "Escenarios macroeconómicos inspirados en IPoM",
+    "section": "Lectura metodológica",
+    "text": "Lectura metodológica\nEl flujo está separado en dos niveles:\n\nMatlab/IRIS resuelve el modelo, impone trayectorias exógenas y endogeniza los shocks necesarios para cumplir los supuestos del escenario.\nR/Quarto lee los outputs, estandariza nombres, calcula diferencias contra el baseline y genera la visualización web.\n\nEsta separación evita que el sitio dependa de una instalación de Matlab al momento de publicarse. Para actualizar el proyecto, se actualizan los CSV de matlab/ipom/outputs/raw_iris/ y luego se ejecuta:\nRscript scripts/03_build_ipom_outputs.R\nquarto render"
+  },
+  {
+    "objectID": "proyectos/ipom-iris.html#limitaciones",
+    "href": "proyectos/ipom-iris.html#limitaciones",
+    "title": "Escenarios macroeconómicos inspirados en IPoM",
+    "section": "Limitaciones",
+    "text": "Limitaciones\n\n\n\n\n\n\nAdvertencia\n\n\n\nEste ejercicio no es una réplica del modelo oficial del Banco Central de Chile. La interpretación debe hacerse como simulación condicional de escenarios bajo una estructura semi-estructural propia, calibrada y adaptada para análisis aplicado."
+  },
+  {
+    "objectID": "proyectos/ipom-iris.html#próximos-pasos",
+    "href": "proyectos/ipom-iris.html#próximos-pasos",
+    "title": "Escenarios macroeconómicos inspirados en IPoM",
+    "section": "Próximos pasos",
+    "text": "Próximos pasos\n\nConsolidar una nomenclatura única para escenarios.\nDocumentar formalmente qué variables se exogenizan y qué shocks se endogenizan en cada escenario.\nAgregar descomposición de shocks y contribuciones por bloque.\nConstruir una tabla de supuestos externos editable desde CSV o YAML.\nAgregar una nota técnica descargable cuando la metodología esté cerrada."
+  },
+  {
+    "objectID": "proyectos.html",
+    "href": "proyectos.html",
+    "title": "Proyectos",
+    "section": "",
+    "text": "Esta sección reúne proyectos aplicados, notas técnicas y líneas de investigación en macroeconomía, política monetaria, econometría de series de tiempo y visualización de datos."
+  },
+  {
+    "objectID": "proyectos.html#proyectos-aplicados",
+    "href": "proyectos.html#proyectos-aplicados",
+    "title": "Proyectos",
+    "section": "Proyectos aplicados",
+    "text": "Proyectos aplicados\nEstos proyectos corresponden a herramientas o análisis con estructura metodológica más desarrollada, orientados a seguimiento macroeconómico, proyecciones y simulación de escenarios.\n\n\nNowcasting de actividad económica en Chile\nModelo mensual en R para anticipar la evolución del IMACEC total y no minero usando indicadores sectoriales, variables calendario, rezagos macroeconómicos y evaluación de ajuste.\nEstado: proyecto aplicado en desarrollo continuo.\nHerramientas: R, tidyverse, ggplot2, plotly, series de tiempo.\n\n\nEscenarios macroeconómicos inspirados en IPoM\nModelo semi-estructural en IRIS/Matlab para construir un baseline tipo IPoM, simular escenarios externos alternativos y comparar inflación, TPM y brecha de actividad.\nEstado: proyecto aplicado avanzado.\nHerramientas: Matlab, IRIS Toolbox, R, Quarto."
+  },
+  {
+    "objectID": "proyectos.html#agenda-de-investigación",
+    "href": "proyectos.html#agenda-de-investigación",
+    "title": "Proyectos",
+    "section": "Agenda de investigación",
+    "text": "Agenda de investigación\nEstas notas corresponden a líneas de trabajo en desarrollo, pensadas como base para futuros artículos, notas técnicas o documentos de investigación aplicada.\n\n\nTransmisión de la TPM a tasas de mercado\nMonitor reproducible del pass-through de movimientos de la TPM a tasas de consumo, comerciales, vivienda, captación y tasas de mercado en Chile.\nEstado: research note en desarrollo con primera versión empírica.\nSalida actual: series comparadas, heatmap de pass-through, rezagos distribuidos, asimetría alzas/bajas y local projections.\n\n\nCurva de rendimiento chilena interactiva\nVisualización interactiva de la curva nominal y real, pendiente de la curva y episodios macrofinancieros.\nEstado: prototipo visual-financiero en desarrollo.\nSalida esperada: slider temporal, comparación por fechas, pendiente 10y-2y y señales de condiciones financieras.\n\n\nÍndice de estrés externo para Chile\nIndicador sintético para monitorear condiciones externas relevantes para una economía pequeña y abierta.\nEstado: nota técnica preliminar.\nSalida esperada: índice agregado, contribuciones por componente y comparación entre agregación simple y PCA."
   }
 ]

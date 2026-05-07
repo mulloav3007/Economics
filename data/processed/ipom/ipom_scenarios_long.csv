@@ -226,19 +226,19 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2026Q1,2026-01-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,2.55732078,Inflación total,% anual,Inflación
 2026Q2,2026-04-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,3.89976154,Inflación total,% anual,Inflación
 2026Q3,2026-07-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,3.84540822,Inflación total,% anual,Inflación
-2026Q4,2026-10-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,3.96302447,Inflación total,% anual,Inflación
+2026Q4,2026-10-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,3.96302446,Inflación total,% anual,Inflación
 2027Q1,2027-01-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,3.91601344,Inflación total,% anual,Inflación
 2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,2.71199082,Inflación total,% anual,Inflación
-2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,2.52963328,Inflación total,% anual,Inflación
-2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,2.76355949,Inflación total,% anual,Inflación
-2028Q1,2028-01-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,2.76517543,Inflación total,% anual,Inflación
-2028Q2,2028-04-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,2.80977772,Inflación total,% anual,Inflación
-2028Q3,2028-07-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,3.00136805,Inflación total,% anual,Inflación
-2028Q4,2028-10-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,2.80822336,Inflación total,% anual,Inflación
-2029Q1,2029-01-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,2.96351484,Inflación total,% anual,Inflación
-2029Q2,2029-04-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,3.04551336,Inflación total,% anual,Inflación
-2029Q3,2029-07-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,3.08348405,Inflación total,% anual,Inflación
-2029Q4,2029-10-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,3.09116583,Inflación total,% anual,Inflación
+2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,2.52963327,Inflación total,% anual,Inflación
+2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,2.76355948,Inflación total,% anual,Inflación
+2028Q1,2028-01-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,2.81405447,Inflación total,% anual,Inflación
+2028Q2,2028-04-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,2.92661404,Inflación total,% anual,Inflación
+2028Q3,2028-07-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,3.17931752,Inflación total,% anual,Inflación
+2028Q4,2028-10-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,3.04267133,Inflación total,% anual,Inflación
+2029Q1,2029-01-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,3.24303961,Inflación total,% anual,Inflación
+2029Q2,2029-04-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,3.36703667,Inflación total,% anual,Inflación
+2029Q3,2029-07-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,3.44289847,Inflación total,% anual,Inflación
+2029Q4,2029-10-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI,3.48446479,Inflación total,% anual,Inflación
 2000Q1,2000-01-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPIXFE,NA,Inflación subyacente sin volátiles,% anual,Inflación
 2000Q2,2000-04-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPIXFE,NA,Inflación subyacente sin volátiles,% anual,Inflación
 2000Q3,2000-07-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPIXFE,NA,Inflación subyacente sin volátiles,% anual,Inflación
@@ -351,14 +351,14 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPIXFE,3.22009398,Inflación subyacente sin volátiles,% anual,Inflación
 2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPIXFE,2.95646274,Inflación subyacente sin volátiles,% anual,Inflación
 2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPIXFE,2.96452063,Inflación subyacente sin volátiles,% anual,Inflación
-2028Q1,2028-01-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPIXFE,2.79727826,Inflación subyacente sin volátiles,% anual,Inflación
-2028Q2,2028-04-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPIXFE,2.8218634,Inflación subyacente sin volátiles,% anual,Inflación
-2028Q3,2028-07-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPIXFE,2.97324974,Inflación subyacente sin volátiles,% anual,Inflación
-2028Q4,2028-10-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPIXFE,3.03976183,Inflación subyacente sin volátiles,% anual,Inflación
-2029Q1,2029-01-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPIXFE,3.10018894,Inflación subyacente sin volátiles,% anual,Inflación
-2029Q2,2029-04-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPIXFE,3.10994798,Inflación subyacente sin volátiles,% anual,Inflación
-2029Q3,2029-07-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPIXFE,3.07823246,Inflación subyacente sin volátiles,% anual,Inflación
-2029Q4,2029-10-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPIXFE,2.99994697,Inflación subyacente sin volátiles,% anual,Inflación
+2028Q1,2028-01-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPIXFE,2.8461573,Inflación subyacente sin volátiles,% anual,Inflación
+2028Q2,2028-04-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPIXFE,2.93869972,Inflación subyacente sin volátiles,% anual,Inflación
+2028Q3,2028-07-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPIXFE,3.15119922,Inflación subyacente sin volátiles,% anual,Inflación
+2028Q4,2028-10-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPIXFE,3.2742098,Inflación subyacente sin volátiles,% anual,Inflación
+2029Q1,2029-01-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPIXFE,3.37971371,Inflación subyacente sin volátiles,% anual,Inflación
+2029Q2,2029-04-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPIXFE,3.43147129,Inflación subyacente sin volátiles,% anual,Inflación
+2029Q3,2029-07-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPIXFE,3.43764688,Inflación subyacente sin volátiles,% anual,Inflación
+2029Q4,2029-10-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPIXFE,3.39324593,Inflación subyacente sin volátiles,% anual,Inflación
 2000Q1,2000-01-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI_GAP_XFE,NA,Brecha inflación total-subyacente,pp,Inflación
 2000Q2,2000-04-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI_GAP_XFE,NA,Brecha inflación total-subyacente,pp,Inflación
 2000Q3,2000-07-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI_GAP_XFE,NA,Brecha inflación total-subyacente,pp,Inflación
@@ -477,7 +477,7 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2028Q4,2028-10-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI_GAP_XFE,-0.231538469,Brecha inflación total-subyacente,pp,Inflación
 2029Q1,2029-01-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI_GAP_XFE,-0.136674101,Brecha inflación total-subyacente,pp,Inflación
 2029Q2,2029-04-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI_GAP_XFE,-0.0644346233,Brecha inflación total-subyacente,pp,Inflación
-2029Q3,2029-07-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI_GAP_XFE,0.00525158887,Brecha inflación total-subyacente,pp,Inflación
+2029Q3,2029-07-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI_GAP_XFE,0.00525158886,Brecha inflación total-subyacente,pp,Inflación
 2029Q4,2029-10-01,baseline_ipom,Baseline IPoM identificado,1,D4L_CPI_GAP_XFE,0.0912188593,Brecha inflación total-subyacente,pp,Inflación
 2000Q1,2000-01-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,NA,PIB: crecimiento anual,% anual,Actividad
 2000Q2,2000-04-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,NA,PIB: crecimiento anual,% anual,Actividad
@@ -587,18 +587,18 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2026Q2,2026-04-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,1.93034659,PIB: crecimiento anual,% anual,Actividad
 2026Q3,2026-07-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,2.31958884,PIB: crecimiento anual,% anual,Actividad
 2026Q4,2026-10-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,2.21860592,PIB: crecimiento anual,% anual,Actividad
-2027Q1,2027-01-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,2.50262154,PIB: crecimiento anual,% anual,Actividad
+2027Q1,2027-01-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,2.50262155,PIB: crecimiento anual,% anual,Actividad
 2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,2.4711149,PIB: crecimiento anual,% anual,Actividad
 2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,2.00869006,PIB: crecimiento anual,% anual,Actividad
 2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,1.92760181,PIB: crecimiento anual,% anual,Actividad
-2028Q1,2028-01-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,2.05886179,PIB: crecimiento anual,% anual,Actividad
-2028Q2,2028-04-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,1.70856097,PIB: crecimiento anual,% anual,Actividad
-2028Q3,2028-07-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,1.77549444,PIB: crecimiento anual,% anual,Actividad
-2028Q4,2028-10-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,1.86985789,PIB: crecimiento anual,% anual,Actividad
-2029Q1,2029-01-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,1.95422474,PIB: crecimiento anual,% anual,Actividad
-2029Q2,2029-04-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,2.0076646,PIB: crecimiento anual,% anual,Actividad
-2029Q3,2029-07-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,2.038413,PIB: crecimiento anual,% anual,Actividad
-2029Q4,2029-10-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,2.05629116,PIB: crecimiento anual,% anual,Actividad
+2028Q1,2028-01-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,2.05460576,PIB: crecimiento anual,% anual,Actividad
+2028Q2,2028-04-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,1.69176201,PIB: crecimiento anual,% anual,Actividad
+2028Q3,2028-07-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,1.75027367,PIB: crecimiento anual,% anual,Actividad
+2028Q4,2028-10-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,1.83508686,PIB: crecimiento anual,% anual,Actividad
+2029Q1,2029-01-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,1.91215968,PIB: crecimiento anual,% anual,Actividad
+2029Q2,2029-04-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,1.96420706,PIB: crecimiento anual,% anual,Actividad
+2029Q3,2029-07-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,1.98623507,PIB: crecimiento anual,% anual,Actividad
+2029Q4,2029-10-01,baseline_ipom,Baseline IPoM identificado,1,D4L_GDP,1.99431669,PIB: crecimiento anual,% anual,Actividad
 2000Q1,2000-01-01,baseline_ipom,Baseline IPoM identificado,1,D4L_PCU,NA,Cobre: variación anual,% anual,Bloque externo
 2000Q2,2000-04-01,baseline_ipom,Baseline IPoM identificado,1,D4L_PCU,NA,Cobre: variación anual,% anual,Bloque externo
 2000Q3,2000-07-01,baseline_ipom,Baseline IPoM identificado,1,D4L_PCU,NA,Cobre: variación anual,% anual,Bloque externo
@@ -951,14 +951,14 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPI,3.15638057,Inflación total trimestral anualizada,% t/t anualizado,Inflación
 2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPI,2.39908853,Inflación total trimestral anualizada,% t/t anualizado,Inflación
 2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPI,3.23725383,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2028Q1,2028-01-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPI,2.26797878,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2028Q2,2028-04-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPI,3.33478973,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2028Q3,2028-07-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPI,3.16544984,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2028Q4,2028-10-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPI,2.4646751,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2029Q1,2029-01-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPI,2.88914467,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2029Q2,2029-04-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPI,3.66278383,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2029Q3,2029-07-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPI,3.31733259,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2029Q4,2029-10-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPI,2.49540222,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2028Q1,2028-01-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPI,2.46349494,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2028Q2,2028-04-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPI,3.60661885,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2028Q3,2028-07-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPI,3.40990246,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2028Q4,2028-10-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPI,2.69066906,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2029Q1,2029-01-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPI,3.26496805,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2029Q2,2029-04-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPI,4.10260711,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2029Q3,2029-07-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPI,3.71334965,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2029Q4,2029-10-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPI,2.85693434,Inflación total trimestral anualizada,% t/t anualizado,Inflación
 2000Q1,2000-01-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPIRES,NA,Inflación residual trimestral anualizada,% t/t anualizado,Inflación
 2000Q2,2000-04-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPIRES,-0.512166825,Inflación residual trimestral anualizada,% t/t anualizado,Inflación
 2000Q3,2000-07-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPIRES,1.28368975,Inflación residual trimestral anualizada,% t/t anualizado,Inflación
@@ -1191,14 +1191,14 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPIXFE,4.17243611,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
 2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPIXFE,2.16280749,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
 2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPIXFE,1.30549923,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2028Q1,2028-01-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPIXFE,3.54837022,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2028Q2,2028-04-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPIXFE,4.27077667,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2028Q3,2028-07-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPIXFE,2.76835285,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2028Q4,2028-10-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPIXFE,1.57154759,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2029Q1,2029-01-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPIXFE,3.79007864,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2029Q2,2029-04-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPIXFE,4.30981286,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2029Q3,2029-07-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPIXFE,2.64149075,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2029Q4,2029-10-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPIXFE,1.25840563,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2028Q1,2028-01-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPIXFE,3.74388638,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2028Q2,2028-04-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPIXFE,4.54260579,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2028Q3,2028-07-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPIXFE,3.01280546,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2028Q4,2028-10-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPIXFE,1.79754155,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2029Q1,2029-01-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPIXFE,4.16590202,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2029Q2,2029-04-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPIXFE,4.74963613,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2029Q3,2029-07-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPIXFE,3.03750781,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2029Q4,2029-10-01,baseline_ipom,Baseline IPoM identificado,1,DLA_CPIXFE,1.61993775,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
 2000Q1,2000-01-01,baseline_ipom,Baseline IPoM identificado,1,DLA_GDP,NA,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
 2000Q2,2000-04-01,baseline_ipom,Baseline IPoM identificado,1,DLA_GDP,1.18662668,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
 2000Q3,2000-07-01,baseline_ipom,Baseline IPoM identificado,1,DLA_GDP,6.05494918,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
@@ -1311,14 +1311,14 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,DLA_GDP,3.24283144,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
 2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,DLA_GDP,1.67770962,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
 2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,DLA_GDP,1.6219953,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
-2028Q1,2028-01-01,baseline_ipom,Baseline IPoM identificado,1,DLA_GDP,1.6929108,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
-2028Q2,2028-04-01,baseline_ipom,Baseline IPoM identificado,1,DLA_GDP,1.84162817,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
-2028Q3,2028-07-01,baseline_ipom,Baseline IPoM identificado,1,DLA_GDP,1.94544349,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
-2028Q4,2028-10-01,baseline_ipom,Baseline IPoM identificado,1,DLA_GDP,1.99944908,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
-2029Q1,2029-01-01,baseline_ipom,Baseline IPoM identificado,1,DLA_GDP,2.0303782,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
-2029Q2,2029-04-01,baseline_ipom,Baseline IPoM identificado,1,DLA_GDP,2.0553876,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
-2029Q3,2029-07-01,baseline_ipom,Baseline IPoM identificado,1,DLA_GDP,2.06843711,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
-2029Q4,2029-10-01,baseline_ipom,Baseline IPoM identificado,1,DLA_GDP,2.07096171,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
+2028Q1,2028-01-01,baseline_ipom,Baseline IPoM identificado,1,DLA_GDP,1.67588668,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
+2028Q2,2028-04-01,baseline_ipom,Baseline IPoM identificado,1,DLA_GDP,1.79145644,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
+2028Q3,2028-07-01,baseline_ipom,Baseline IPoM identificado,1,DLA_GDP,1.91175627,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
+2028Q4,2028-10-01,baseline_ipom,Baseline IPoM identificado,1,DLA_GDP,1.96124805,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
+2029Q1,2029-01-01,baseline_ipom,Baseline IPoM identificado,1,DLA_GDP,1.98417796,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
+2029Q2,2029-04-01,baseline_ipom,Baseline IPoM identificado,1,DLA_GDP,1.99964597,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
+2029Q3,2029-07-01,baseline_ipom,Baseline IPoM identificado,1,DLA_GDP,1.99986829,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
+2029Q4,2029-10-01,baseline_ipom,Baseline IPoM identificado,1,DLA_GDP,1.99357455,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
 2000Q1,2000-01-01,baseline_ipom,Baseline IPoM identificado,1,FFR,5.67666667,Federal Funds Rate,% anual,Bloque externo
 2000Q2,2000-04-01,baseline_ipom,Baseline IPoM identificado,1,FFR,6.27333333,Federal Funds Rate,% anual,Bloque externo
 2000Q3,2000-07-01,baseline_ipom,Baseline IPoM identificado,1,FFR,6.52,Federal Funds Rate,% anual,Bloque externo
@@ -1551,14 +1551,14 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,L_GDP_GAP,-0.482,Brecha de actividad,%,Actividad
 2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,L_GDP_GAP,-0.425,Brecha de actividad,%,Actividad
 2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,L_GDP_GAP,-0.373,Brecha de actividad,%,Actividad
-2028Q1,2028-01-01,baseline_ipom,Baseline IPoM identificado,1,L_GDP_GAP,-0.347221478,Brecha de actividad,%,Actividad
-2028Q2,2028-04-01,baseline_ipom,Baseline IPoM identificado,1,L_GDP_GAP,-0.31502886,Brecha de actividad,%,Actividad
-2028Q3,2028-07-01,baseline_ipom,Baseline IPoM identificado,1,L_GDP_GAP,-0.278418084,Brecha de actividad,%,Actividad
-2028Q4,2028-10-01,baseline_ipom,Baseline IPoM identificado,1,L_GDP_GAP,-0.24338088,Brecha de actividad,%,Actividad
-2029Q1,2029-01-01,baseline_ipom,Baseline IPoM identificado,1,L_GDP_GAP,-0.211163877,Brecha de actividad,%,Actividad
-2029Q2,2029-04-01,baseline_ipom,Baseline IPoM identificado,1,L_GDP_GAP,-0.18008126,Brecha de actividad,%,Actividad
-2029Q3,2029-07-01,baseline_ipom,Baseline IPoM identificado,1,L_GDP_GAP,-0.15090698,Brecha de actividad,%,Actividad
-2029Q4,2029-10-01,baseline_ipom,Baseline IPoM identificado,1,L_GDP_GAP,-0.124721051,Brecha de actividad,%,Actividad
+2028Q1,2028-01-01,baseline_ipom,Baseline IPoM identificado,1,L_GDP_GAP,-0.351477507,Brecha de actividad,%,Actividad
+2028Q2,2028-04-01,baseline_ipom,Baseline IPoM identificado,1,L_GDP_GAP,-0.331827821,Brecha de actividad,%,Actividad
+2028Q3,2028-07-01,baseline_ipom,Baseline IPoM identificado,1,L_GDP_GAP,-0.303638849,Brecha de actividad,%,Actividad
+2028Q4,2028-10-01,baseline_ipom,Baseline IPoM identificado,1,L_GDP_GAP,-0.278151905,Brecha de actividad,%,Actividad
+2029Q1,2029-01-01,baseline_ipom,Baseline IPoM identificado,1,L_GDP_GAP,-0.257484963,Brecha de actividad,%,Actividad
+2029Q2,2029-04-01,baseline_ipom,Baseline IPoM identificado,1,L_GDP_GAP,-0.240337754,Brecha de actividad,%,Actividad
+2029Q3,2029-07-01,baseline_ipom,Baseline IPoM identificado,1,L_GDP_GAP,-0.22830568,Brecha de actividad,%,Actividad
+2029Q4,2029-10-01,baseline_ipom,Baseline IPoM identificado,1,L_GDP_GAP,-0.221466541,Brecha de actividad,%,Actividad
 2000Q1,2000-01-01,baseline_ipom,Baseline IPoM identificado,1,L_PCU,21.4045831,Cobre real,100*log,Bloque externo
 2000Q2,2000-04-01,baseline_ipom,Baseline IPoM identificado,1,L_PCU,17.4798928,Cobre real,100*log,Bloque externo
 2000Q3,2000-07-01,baseline_ipom,Baseline IPoM identificado,1,L_PCU,23.9225855,Cobre real,100*log,Bloque externo
@@ -2268,7 +2268,7 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2026Q3,2026-07-01,baseline_ipom,Baseline IPoM identificado,1,L_Z_GAP,0.975618672,Brecha de tipo de cambio real,%,Bloque externo
 2026Q4,2026-10-01,baseline_ipom,Baseline IPoM identificado,1,L_Z_GAP,0.671758672,Brecha de tipo de cambio real,%,Bloque externo
 2027Q1,2027-01-01,baseline_ipom,Baseline IPoM identificado,1,L_Z_GAP,0.244797672,Brecha de tipo de cambio real,%,Bloque externo
-2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,L_Z_GAP,1.86715729e-5,Brecha de tipo de cambio real,%,Bloque externo
+2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,L_Z_GAP,1.8671573e-5,Brecha de tipo de cambio real,%,Bloque externo
 2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,L_Z_GAP,-0.497281328,Brecha de tipo de cambio real,%,Bloque externo
 2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,L_Z_GAP,-0.497281328,Brecha de tipo de cambio real,%,Bloque externo
 2028Q1,2028-01-01,baseline_ipom,Baseline IPoM identificado,1,L_Z_GAP,-0.298368797,Brecha de tipo de cambio real,%,Bloque externo
@@ -2623,14 +2623,14 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2025Q2,2025-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPI,NA,Shock inflación total,desvío,Shocks
 2025Q3,2025-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPI,NA,Shock inflación total,desvío,Shocks
 2025Q4,2025-10-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPI,NA,Shock inflación total,desvío,Shocks
-2026Q1,2026-01-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPI,-2.00218222e-13,Shock inflación total,desvío,Shocks
-2026Q2,2026-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPI,-2.13992823e-13,Shock inflación total,desvío,Shocks
-2026Q3,2026-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPI,-7.4001863e-9,Shock inflación total,desvío,Shocks
-2026Q4,2026-10-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPI,-2.22406092e-13,Shock inflación total,desvío,Shocks
-2027Q1,2027-01-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPI,9.99982294e-9,Shock inflación total,desvío,Shocks
-2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPI,-1.9722056e-13,Shock inflación total,desvío,Shocks
-2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPI,2.99976216e-9,Shock inflación total,desvío,Shocks
-2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPI,-2.29654265e-13,Shock inflación total,desvío,Shocks
+2026Q1,2026-01-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPI,-1.36699353e-13,Shock inflación total,desvío,Shocks
+2026Q2,2026-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPI,-1.09365114e-13,Shock inflación total,desvío,Shocks
+2026Q3,2026-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPI,-7.40010655e-9,Shock inflación total,desvío,Shocks
+2026Q4,2026-10-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPI,-1.2155457e-13,Shock inflación total,desvío,Shocks
+2027Q1,2027-01-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPI,9.99983717e-9,Shock inflación total,desvío,Shocks
+2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPI,-1.01534946e-13,Shock inflación total,desvío,Shocks
+2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPI,2.9998537e-9,Shock inflación total,desvío,Shocks
+2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPI,-1.11402364e-13,Shock inflación total,desvío,Shocks
 2028Q1,2028-01-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPI,0,Shock inflación total,desvío,Shocks
 2028Q2,2028-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPI,0,Shock inflación total,desvío,Shocks
 2028Q3,2028-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPI,0,Shock inflación total,desvío,Shocks
@@ -2863,14 +2863,14 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2025Q2,2025-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPIXFE,NA,Shock inflación subyacente,desvío,Shocks
 2025Q3,2025-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPIXFE,NA,Shock inflación subyacente,desvío,Shocks
 2025Q4,2025-10-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPIXFE,NA,Shock inflación subyacente,desvío,Shocks
-2026Q1,2026-01-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPIXFE,0.435673291,Shock inflación subyacente,desvío,Shocks
-2026Q2,2026-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPIXFE,-0.032542734,Shock inflación subyacente,desvío,Shocks
-2026Q3,2026-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPIXFE,0.557926829,Shock inflación subyacente,desvío,Shocks
-2026Q4,2026-10-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPIXFE,-0.0287067007,Shock inflación subyacente,desvío,Shocks
-2027Q1,2027-01-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPIXFE,0.556183991,Shock inflación subyacente,desvío,Shocks
-2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPIXFE,-0.0240761967,Shock inflación subyacente,desvío,Shocks
-2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPIXFE,-0.226760687,Shock inflación subyacente,desvío,Shocks
-2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPIXFE,0.286135643,Shock inflación subyacente,desvío,Shocks
+2026Q1,2026-01-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPIXFE,0.186428742,Shock inflación subyacente,desvío,Shocks
+2026Q2,2026-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPIXFE,-0.259490874,Shock inflación subyacente,desvío,Shocks
+2026Q3,2026-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPIXFE,0.401071525,Shock inflación subyacente,desvío,Shocks
+2026Q4,2026-10-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPIXFE,-0.168549403,Shock inflación subyacente,desvío,Shocks
+2027Q1,2027-01-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPIXFE,0.414010146,Shock inflación subyacente,desvío,Shocks
+2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPIXFE,-0.153038958,Shock inflación subyacente,desvío,Shocks
+2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPIXFE,-0.304633323,Shock inflación subyacente,desvío,Shocks
+2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPIXFE,0.226797842,Shock inflación subyacente,desvío,Shocks
 2028Q1,2028-01-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPIXFE,0,Shock inflación subyacente,desvío,Shocks
 2028Q2,2028-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPIXFE,0,Shock inflación subyacente,desvío,Shocks
 2028Q3,2028-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_DLA_CPIXFE,0,Shock inflación subyacente,desvío,Shocks
@@ -3103,14 +3103,14 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2025Q2,2025-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_L_GDP_GAP,NA,Shock brecha de actividad,desvío,Shocks
 2025Q3,2025-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_L_GDP_GAP,NA,Shock brecha de actividad,desvío,Shocks
 2025Q4,2025-10-01,baseline_ipom,Baseline IPoM identificado,1,SHK_L_GDP_GAP,NA,Shock brecha de actividad,desvío,Shocks
-2026Q1,2026-01-01,baseline_ipom,Baseline IPoM identificado,1,SHK_L_GDP_GAP,0.038692334,Shock brecha de actividad,desvío,Shocks
-2026Q2,2026-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_L_GDP_GAP,0.151539983,Shock brecha de actividad,desvío,Shocks
-2026Q3,2026-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_L_GDP_GAP,0.100252633,Shock brecha de actividad,desvío,Shocks
-2026Q4,2026-10-01,baseline_ipom,Baseline IPoM identificado,1,SHK_L_GDP_GAP,0.158899134,Shock brecha de actividad,desvío,Shocks
-2027Q1,2027-01-01,baseline_ipom,Baseline IPoM identificado,1,SHK_L_GDP_GAP,0.153976528,Shock brecha de actividad,desvío,Shocks
-2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_L_GDP_GAP,0.125969824,Shock brecha de actividad,desvío,Shocks
-2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_L_GDP_GAP,0.0830706347,Shock brecha de actividad,desvío,Shocks
-2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,SHK_L_GDP_GAP,0.0263397625,Shock brecha de actividad,desvío,Shocks
+2026Q1,2026-01-01,baseline_ipom,Baseline IPoM identificado,1,SHK_L_GDP_GAP,-0.0917914716,Shock brecha de actividad,desvío,Shocks
+2026Q2,2026-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_L_GDP_GAP,-0.0951522752,Shock brecha de actividad,desvío,Shocks
+2026Q3,2026-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_L_GDP_GAP,-0.027202074,Shock brecha de actividad,desvío,Shocks
+2026Q4,2026-10-01,baseline_ipom,Baseline IPoM identificado,1,SHK_L_GDP_GAP,0.0580755381,Shock brecha de actividad,desvío,Shocks
+2027Q1,2027-01-01,baseline_ipom,Baseline IPoM identificado,1,SHK_L_GDP_GAP,0.0977800185,Shock brecha de actividad,desvío,Shocks
+2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_L_GDP_GAP,0.148328427,Shock brecha de actividad,desvío,Shocks
+2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_L_GDP_GAP,0.0929717938,Shock brecha de actividad,desvío,Shocks
+2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,SHK_L_GDP_GAP,0.0400413612,Shock brecha de actividad,desvío,Shocks
 2028Q1,2028-01-01,baseline_ipom,Baseline IPoM identificado,1,SHK_L_GDP_GAP,0,Shock brecha de actividad,desvío,Shocks
 2028Q2,2028-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_L_GDP_GAP,0,Shock brecha de actividad,desvío,Shocks
 2028Q3,2028-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_L_GDP_GAP,0,Shock brecha de actividad,desvío,Shocks
@@ -3583,14 +3583,14 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2025Q2,2025-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_TPM,NA,Shock TPM,desvío,Shocks
 2025Q3,2025-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_TPM,NA,Shock TPM,desvío,Shocks
 2025Q4,2025-10-01,baseline_ipom,Baseline IPoM identificado,1,SHK_TPM,NA,Shock TPM,desvío,Shocks
-2026Q1,2026-01-01,baseline_ipom,Baseline IPoM identificado,1,SHK_TPM,-0.040498932,Shock TPM,desvío,Shocks
-2026Q2,2026-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_TPM,0.185774938,Shock TPM,desvío,Shocks
-2026Q3,2026-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_TPM,0.209892131,Shock TPM,desvío,Shocks
-2026Q4,2026-10-01,baseline_ipom,Baseline IPoM identificado,1,SHK_TPM,0.00110370257,Shock TPM,desvío,Shocks
-2027Q1,2027-01-01,baseline_ipom,Baseline IPoM identificado,1,SHK_TPM,-0.0982812173,Shock TPM,desvío,Shocks
-2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_TPM,0.0588253496,Shock TPM,desvío,Shocks
-2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_TPM,0.115002516,Shock TPM,desvío,Shocks
-2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,SHK_TPM,0.0970326956,Shock TPM,desvío,Shocks
+2026Q1,2026-01-01,baseline_ipom,Baseline IPoM identificado,1,SHK_TPM,-0.0743220747,Shock TPM,desvío,Shocks
+2026Q2,2026-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_TPM,0.155860423,Shock TPM,desvío,Shocks
+2026Q3,2026-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_TPM,0.177560372,Shock TPM,desvío,Shocks
+2026Q4,2026-10-01,baseline_ipom,Baseline IPoM identificado,1,SHK_TPM,-0.036002185,Shock TPM,desvío,Shocks
+2027Q1,2027-01-01,baseline_ipom,Baseline IPoM identificado,1,SHK_TPM,-0.113763024,Shock TPM,desvío,Shocks
+2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_TPM,0.0454597104,Shock TPM,desvío,Shocks
+2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_TPM,0.0962655248,Shock TPM,desvío,Shocks
+2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,SHK_TPM,0.0741092973,Shock TPM,desvío,Shocks
 2028Q1,2028-01-01,baseline_ipom,Baseline IPoM identificado,1,SHK_TPM,0,Shock TPM,desvío,Shocks
 2028Q2,2028-04-01,baseline_ipom,Baseline IPoM identificado,1,SHK_TPM,0,Shock TPM,desvío,Shocks
 2028Q3,2028-07-01,baseline_ipom,Baseline IPoM identificado,1,SHK_TPM,0,Shock TPM,desvío,Shocks
@@ -3951,14 +3951,14 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,TPM,4.25,Tasa de Política Monetaria,% anual,Política monetaria
 2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,TPM,4.25,Tasa de Política Monetaria,% anual,Política monetaria
 2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,TPM,4.25,Tasa de Política Monetaria,% anual,Política monetaria
-2028Q1,2028-01-01,baseline_ipom,Baseline IPoM identificado,1,TPM,4.1855631,Tasa de Política Monetaria,% anual,Política monetaria
-2028Q2,2028-04-01,baseline_ipom,Baseline IPoM identificado,1,TPM,4.12093489,Tasa de Política Monetaria,% anual,Política monetaria
-2028Q3,2028-07-01,baseline_ipom,Baseline IPoM identificado,1,TPM,4.10119712,Tasa de Política Monetaria,% anual,Política monetaria
-2028Q4,2028-10-01,baseline_ipom,Baseline IPoM identificado,1,TPM,4.08094762,Tasa de Política Monetaria,% anual,Política monetaria
-2029Q1,2029-01-01,baseline_ipom,Baseline IPoM identificado,1,TPM,4.03921478,Tasa de Política Monetaria,% anual,Política monetaria
-2029Q2,2029-04-01,baseline_ipom,Baseline IPoM identificado,1,TPM,4.00572936,Tasa de Política Monetaria,% anual,Política monetaria
-2029Q3,2029-07-01,baseline_ipom,Baseline IPoM identificado,1,TPM,3.98650764,Tasa de Política Monetaria,% anual,Política monetaria
-2029Q4,2029-10-01,baseline_ipom,Baseline IPoM identificado,1,TPM,3.9494368,Tasa de Política Monetaria,% anual,Política monetaria
+2028Q1,2028-01-01,baseline_ipom,Baseline IPoM identificado,1,TPM,4.21679944,Tasa de Política Monetaria,% anual,Política monetaria
+2028Q2,2028-04-01,baseline_ipom,Baseline IPoM identificado,1,TPM,4.18914124,Tasa de Política Monetaria,% anual,Política monetaria
+2028Q3,2028-07-01,baseline_ipom,Baseline IPoM identificado,1,TPM,4.20782397,Tasa de Política Monetaria,% anual,Política monetaria
+2028Q4,2028-10-01,baseline_ipom,Baseline IPoM identificado,1,TPM,4.22360312,Tasa de Política Monetaria,% anual,Política monetaria
+2029Q1,2029-01-01,baseline_ipom,Baseline IPoM identificado,1,TPM,4.21543398,Tasa de Política Monetaria,% anual,Política monetaria
+2029Q2,2029-04-01,baseline_ipom,Baseline IPoM identificado,1,TPM,4.21701179,Tasa de Política Monetaria,% anual,Política monetaria
+2029Q3,2029-07-01,baseline_ipom,Baseline IPoM identificado,1,TPM,4.23109115,Tasa de Política Monetaria,% anual,Política monetaria
+2029Q4,2029-10-01,baseline_ipom,Baseline IPoM identificado,1,TPM,4.22241467,Tasa de Política Monetaria,% anual,Política monetaria
 2000Q1,2000-01-01,baseline_ipom,Baseline IPoM identificado,1,TPMN1,7.9758093,Tasa neutral nominal,% anual,Política monetaria
 2000Q2,2000-04-01,baseline_ipom,Baseline IPoM identificado,1,TPMN1,7.9758093,Tasa neutral nominal,% anual,Política monetaria
 2000Q3,2000-07-01,baseline_ipom,Baseline IPoM identificado,1,TPMN1,7.9758093,Tasa neutral nominal,% anual,Política monetaria
@@ -4191,14 +4191,14 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2027Q2,2027-04-01,baseline_ipom,Baseline IPoM identificado,1,T_COLOC,4.1,Tasa de colocación UF,% anual,Política monetaria
 2027Q3,2027-07-01,baseline_ipom,Baseline IPoM identificado,1,T_COLOC,4.1,Tasa de colocación UF,% anual,Política monetaria
 2027Q4,2027-10-01,baseline_ipom,Baseline IPoM identificado,1,T_COLOC,4.1,Tasa de colocación UF,% anual,Política monetaria
-2028Q1,2028-01-01,baseline_ipom,Baseline IPoM identificado,1,T_COLOC,4.17048441,Tasa de colocación UF,% anual,Política monetaria
-2028Q2,2028-04-01,baseline_ipom,Baseline IPoM identificado,1,T_COLOC,4.17021539,Tasa de colocación UF,% anual,Política monetaria
-2028Q3,2028-07-01,baseline_ipom,Baseline IPoM identificado,1,T_COLOC,4.12833582,Tasa de colocación UF,% anual,Política monetaria
-2028Q4,2028-10-01,baseline_ipom,Baseline IPoM identificado,1,T_COLOC,4.11945385,Tasa de colocación UF,% anual,Política monetaria
-2029Q1,2029-01-01,baseline_ipom,Baseline IPoM identificado,1,T_COLOC,4.09385345,Tasa de colocación UF,% anual,Política monetaria
-2029Q2,2029-04-01,baseline_ipom,Baseline IPoM identificado,1,T_COLOC,4.06973597,Tasa de colocación UF,% anual,Política monetaria
-2029Q3,2029-07-01,baseline_ipom,Baseline IPoM identificado,1,T_COLOC,4.05997728,Tasa de colocación UF,% anual,Política monetaria
-2029Q4,2029-10-01,baseline_ipom,Baseline IPoM identificado,1,T_COLOC,4.05840916,Tasa de colocación UF,% anual,Política monetaria
+2028Q1,2028-01-01,baseline_ipom,Baseline IPoM identificado,1,T_COLOC,4.10341318,Tasa de colocación UF,% anual,Política monetaria
+2028Q2,2028-04-01,baseline_ipom,Baseline IPoM identificado,1,T_COLOC,4.09572969,Tasa de colocación UF,% anual,Política monetaria
+2028Q3,2028-07-01,baseline_ipom,Baseline IPoM identificado,1,T_COLOC,4.08444896,Tasa de colocación UF,% anual,Política monetaria
+2028Q4,2028-10-01,baseline_ipom,Baseline IPoM identificado,1,T_COLOC,4.07011528,Tasa de colocación UF,% anual,Política monetaria
+2029Q1,2029-01-01,baseline_ipom,Baseline IPoM identificado,1,T_COLOC,4.05396924,Tasa de colocación UF,% anual,Política monetaria
+2029Q2,2029-04-01,baseline_ipom,Baseline IPoM identificado,1,T_COLOC,4.03665173,Tasa de colocación UF,% anual,Política monetaria
+2029Q3,2029-07-01,baseline_ipom,Baseline IPoM identificado,1,T_COLOC,4.01790614,Tasa de colocación UF,% anual,Política monetaria
+2029Q4,2029-10-01,baseline_ipom,Baseline IPoM identificado,1,T_COLOC,4.00083575,Tasa de colocación UF,% anual,Política monetaria
 2000Q1,2000-01-01,baseline_ipom,Baseline IPoM identificado,1,UST10,6.48,Treasury 10 años,% anual,Bloque externo
 2000Q2,2000-04-01,baseline_ipom,Baseline IPoM identificado,1,UST10,6.17666667,Treasury 10 años,% anual,Bloque externo
 2000Q3,2000-07-01,baseline_ipom,Baseline IPoM identificado,1,UST10,5.89333333,Treasury 10 años,% anual,Bloque externo
@@ -4663,22 +4663,22 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2025Q2,2025-04-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,4.26763127,Inflación total,% anual,Inflación
 2025Q3,2025-07-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,4.14283358,Inflación total,% anual,Inflación
 2025Q4,2025-10-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,3.38676573,Inflación total,% anual,Inflación
-2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,2.55608994,Inflación total,% anual,Inflación
-2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,3.89523252,Inflación total,% anual,Inflación
-2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,4.12685735,Inflación total,% anual,Inflación
-2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,4.18727581,Inflación total,% anual,Inflación
-2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,3.91793159,Inflación total,% anual,Inflación
-2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,2.83684458,Inflación total,% anual,Inflación
-2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,2.37607843,Inflación total,% anual,Inflación
-2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,2.71058426,Inflación total,% anual,Inflación
-2028Q1,2028-01-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,2.94633475,Inflación total,% anual,Inflación
-2028Q2,2028-04-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,2.69880758,Inflación total,% anual,Inflación
-2028Q3,2028-07-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,2.80900109,Inflación total,% anual,Inflación
-2028Q4,2028-10-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,2.50160405,Inflación total,% anual,Inflación
-2029Q1,2029-01-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,2.60343623,Inflación total,% anual,Inflación
-2029Q2,2029-04-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,2.8453455,Inflación total,% anual,Inflación
-2029Q3,2029-07-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,2.93715756,Inflación total,% anual,Inflación
-2029Q4,2029-10-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,3.00645954,Inflación total,% anual,Inflación
+2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,2.55457405,Inflación total,% anual,Inflación
+2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,3.89239093,Inflación total,% anual,Inflación
+2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,4.12390215,Inflación total,% anual,Inflación
+2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,4.18464573,Inflación total,% anual,Inflación
+2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,3.91742239,Inflación total,% anual,Inflación
+2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,2.83915676,Inflación total,% anual,Inflación
+2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,2.38172589,Inflación total,% anual,Inflación
+2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,2.72086203,Inflación total,% anual,Inflación
+2028Q1,2028-01-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,3.01088772,Inflación total,% anual,Inflación
+2028Q2,2028-04-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,2.83655189,Inflación total,% anual,Inflación
+2028Q3,2028-07-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,3.01206415,Inflación total,% anual,Inflación
+2028Q4,2028-10-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,2.76448494,Inflación total,% anual,Inflación
+2029Q1,2029-01-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,2.91450795,Inflación total,% anual,Inflación
+2029Q2,2029-04-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,3.20156839,Inflación total,% anual,Inflación
+2029Q3,2029-07-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,3.33440397,Inflación total,% anual,Inflación
+2029Q4,2029-10-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI,3.44046159,Inflación total,% anual,Inflación
 2000Q1,2000-01-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,NA,Inflación subyacente sin volátiles,% anual,Inflación
 2000Q2,2000-04-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,NA,Inflación subyacente sin volátiles,% anual,Inflación
 2000Q3,2000-07-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,NA,Inflación subyacente sin volátiles,% anual,Inflación
@@ -4783,22 +4783,22 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2025Q2,2025-04-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.56746339,Inflación subyacente sin volátiles,% anual,Inflación
 2025Q3,2025-07-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.86041501,Inflación subyacente sin volátiles,% anual,Inflación
 2025Q4,2025-10-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.3357516,Inflación subyacente sin volátiles,% anual,Inflación
-2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.32474096,Inflación subyacente sin volátiles,% anual,Inflación
-2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.3009337,Inflación subyacente sin volátiles,% anual,Inflación
-2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.20464279,Inflación subyacente sin volátiles,% anual,Inflación
-2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.18917804,Inflación subyacente sin volátiles,% anual,Inflación
-2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.21154182,Inflación subyacente sin volátiles,% anual,Inflación
-2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.20291144,Inflación subyacente sin volátiles,% anual,Inflación
-2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,2.93878645,Inflación subyacente sin volátiles,% anual,Inflación
-2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,2.94625236,Inflación subyacente sin volátiles,% anual,Inflación
-2028Q1,2028-01-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,2.77866306,Inflación subyacente sin volátiles,% anual,Inflación
-2028Q2,2028-04-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,2.80338662,Inflación subyacente sin volátiles,% anual,Inflación
-2028Q3,2028-07-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,2.95527823,Inflación subyacente sin volátiles,% anual,Inflación
-2028Q4,2028-10-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.02258361,Inflación subyacente sin volátiles,% anual,Inflación
-2029Q1,2029-01-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.08403834,Inflación subyacente sin volátiles,% anual,Inflación
-2029Q2,2029-04-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.09506907,Inflación subyacente sin volátiles,% anual,Inflación
-2029Q3,2029-07-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.0648159,Inflación subyacente sin volátiles,% anual,Inflación
-2029Q4,2029-10-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,2.98807255,Inflación subyacente sin volátiles,% anual,Inflación
+2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.32322507,Inflación subyacente sin volátiles,% anual,Inflación
+2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.29809212,Inflación subyacente sin volátiles,% anual,Inflación
+2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.20168759,Inflación subyacente sin volátiles,% anual,Inflación
+2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.18654797,Inflación subyacente sin volátiles,% anual,Inflación
+2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.21103262,Inflación subyacente sin volátiles,% anual,Inflación
+2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.20522361,Inflación subyacente sin volátiles,% anual,Inflación
+2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,2.94443391,Inflación subyacente sin volátiles,% anual,Inflación
+2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,2.95653013,Inflación subyacente sin volátiles,% anual,Inflación
+2028Q1,2028-01-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,2.84321603,Inflación subyacente sin volátiles,% anual,Inflación
+2028Q2,2028-04-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,2.94113093,Inflación subyacente sin volátiles,% anual,Inflación
+2028Q3,2028-07-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.15834129,Inflación subyacente sin volátiles,% anual,Inflación
+2028Q4,2028-10-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.2854645,Inflación subyacente sin volátiles,% anual,Inflación
+2029Q1,2029-01-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.39511006,Inflación subyacente sin volátiles,% anual,Inflación
+2029Q2,2029-04-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.45129196,Inflación subyacente sin volátiles,% anual,Inflación
+2029Q3,2029-07-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.46206231,Inflación subyacente sin volátiles,% anual,Inflación
+2029Q4,2029-10-01,escenario_alternativo,Escenario alternativo,4,D4L_CPIXFE,3.42207461,Inflación subyacente sin volátiles,% anual,Inflación
 2000Q1,2000-01-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI_GAP_XFE,NA,Brecha inflación total-subyacente,pp,Inflación
 2000Q2,2000-04-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI_GAP_XFE,NA,Brecha inflación total-subyacente,pp,Inflación
 2000Q3,2000-07-01,escenario_alternativo,Escenario alternativo,4,D4L_CPI_GAP_XFE,NA,Brecha inflación total-subyacente,pp,Inflación
@@ -5025,20 +5025,20 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2025Q4,2025-10-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,2.55545295,PIB: crecimiento anual,% anual,Actividad
 2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,0.873392087,PIB: crecimiento anual,% anual,Actividad
 2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,1.79134659,PIB: crecimiento anual,% anual,Actividad
-2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,2.22039354,PIB: crecimiento anual,% anual,Actividad
-2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,2.13576041,PIB: crecimiento anual,% anual,Actividad
-2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,2.54279892,PIB: crecimiento anual,% anual,Actividad
-2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,2.55234156,PIB: crecimiento anual,% anual,Actividad
-2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,2.06184381,PIB: crecimiento anual,% anual,Actividad
-2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,1.96822685,PIB: crecimiento anual,% anual,Actividad
-2028Q1,2028-01-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,2.09121334,PIB: crecimiento anual,% anual,Actividad
-2028Q2,2028-04-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,1.72207562,PIB: crecimiento anual,% anual,Actividad
-2028Q3,2028-07-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,1.78159549,PIB: crecimiento anual,% anual,Actividad
-2028Q4,2028-10-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,1.88085248,PIB: crecimiento anual,% anual,Actividad
-2029Q1,2029-01-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,1.9749432,PIB: crecimiento anual,% anual,Actividad
-2029Q2,2029-04-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,2.03861673,PIB: crecimiento anual,% anual,Actividad
-2029Q3,2029-07-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,2.07177855,PIB: crecimiento anual,% anual,Actividad
-2029Q4,2029-10-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,2.08571527,PIB: crecimiento anual,% anual,Actividad
+2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,2.27890828,PIB: crecimiento anual,% anual,Actividad
+2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,2.18349648,PIB: crecimiento anual,% anual,Actividad
+2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,2.53475785,PIB: crecimiento anual,% anual,Actividad
+2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,2.5660347,PIB: crecimiento anual,% anual,Actividad
+2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,2.03362697,PIB: crecimiento anual,% anual,Actividad
+2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,1.95689866,PIB: crecimiento anual,% anual,Actividad
+2028Q1,2028-01-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,2.13097235,PIB: crecimiento anual,% anual,Actividad
+2028Q2,2028-04-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,1.69985907,PIB: crecimiento anual,% anual,Actividad
+2028Q3,2028-07-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,1.72452879,PIB: crecimiento anual,% anual,Actividad
+2028Q4,2028-10-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,1.80860906,PIB: crecimiento anual,% anual,Actividad
+2029Q1,2029-01-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,1.90063134,PIB: crecimiento anual,% anual,Actividad
+2029Q2,2029-04-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,1.99675626,PIB: crecimiento anual,% anual,Actividad
+2029Q3,2029-07-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,2.03666024,PIB: crecimiento anual,% anual,Actividad
+2029Q4,2029-10-01,escenario_alternativo,Escenario alternativo,4,D4L_GDP,2.04468935,PIB: crecimiento anual,% anual,Actividad
 2000Q1,2000-01-01,escenario_alternativo,Escenario alternativo,4,D4L_PCU,NA,Cobre: variación anual,% anual,Bloque externo
 2000Q2,2000-04-01,escenario_alternativo,Escenario alternativo,4,D4L_PCU,NA,Cobre: variación anual,% anual,Bloque externo
 2000Q3,2000-07-01,escenario_alternativo,Escenario alternativo,4,D4L_PCU,NA,Cobre: variación anual,% anual,Bloque externo
@@ -5383,22 +5383,22 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2025Q2,2025-04-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,2.60270665,Inflación total trimestral anualizada,% t/t anualizado,Inflación
 2025Q3,2025-07-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,3.34593397,Inflación total trimestral anualizada,% t/t anualizado,Inflación
 2025Q4,2025-10-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,1.83108041,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,2.44463578,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,7.95927831,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,4.27243133,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,2.07275781,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,1.36725891,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,3.63493028,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,2.42936672,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,3.41078114,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2028Q1,2028-01-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,2.31026088,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2028Q2,2028-04-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,2.64482159,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2028Q3,2028-07-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,2.87014075,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2028Q4,2028-10-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,2.181193,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2029Q1,2029-01-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,2.71758957,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2029Q2,2029-04-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,3.6124587,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2029Q3,2029-07-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,3.23738896,Inflación total trimestral anualizada,% t/t anualizado,Inflación
-2029Q4,2029-10-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,2.45840094,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,2.43857222,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,7.95397552,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,4.27197688,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,2.07405831,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,1.36967885,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,3.64091298,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,2.44225343,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,3.43060285,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2028Q1,2028-01-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,2.52978162,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2028Q2,2028-04-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,2.94356967,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2028Q3,2028-07-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,3.14430244,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2028Q4,2028-10-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,2.44028605,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2029Q1,2029-01-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,3.12987363,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2029Q2,2029-04-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,4.09181145,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2029Q3,2029-07-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,3.67564477,Inflación total trimestral anualizada,% t/t anualizado,Inflación
+2029Q4,2029-10-01,escenario_alternativo,Escenario alternativo,4,DLA_CPI,2.86451653,Inflación total trimestral anualizada,% t/t anualizado,Inflación
 2000Q1,2000-01-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIRES,NA,Inflación residual trimestral anualizada,% t/t anualizado,Inflación
 2000Q2,2000-04-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIRES,-0.512166825,Inflación residual trimestral anualizada,% t/t anualizado,Inflación
 2000Q3,2000-07-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIRES,1.28368975,Inflación residual trimestral anualizada,% t/t anualizado,Inflación
@@ -5623,22 +5623,22 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2025Q2,2025-04-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,4.28390609,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
 2025Q3,2025-07-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,3.58553339,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
 2025Q4,2025-10-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,1.3185903,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,4.11093184,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,4.18867898,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,3.20036833,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,1.25673302,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,4.20038696,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,4.15415744,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,2.14386838,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,1.28659666,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2028Q1,2028-01-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,3.53002975,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2028Q2,2028-04-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,4.25305168,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2028Q3,2028-07-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,2.75143482,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2028Q4,2028-10-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,1.5558182,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2029Q1,2029-01-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,3.77584867,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2029Q2,2029-04-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,4.2971746,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2029Q3,2029-07-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,2.63042211,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
-2029Q4,2029-10-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,1.24884483,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,4.10486828,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,4.18337619,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,3.19991389,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,1.25803352,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,4.2028069,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,4.16014015,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,2.15675509,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,1.30641838,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2028Q1,2028-01-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,3.74955049,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2028Q2,2028-04-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,4.55179976,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2028Q3,2028-07-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,3.02559651,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2028Q4,2028-10-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,1.81491124,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2029Q1,2029-01-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,4.18813273,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2029Q2,2029-04-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,4.77652735,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2029Q3,2029-07-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,3.06867792,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
+2029Q4,2029-10-01,escenario_alternativo,Escenario alternativo,4,DLA_CPIXFE,1.65496042,Inflación subyacente trimestral anualizada,% t/t anualizado,Inflación
 2000Q1,2000-01-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,NA,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
 2000Q2,2000-04-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,1.18662668,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
 2000Q3,2000-07-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,6.05494918,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
@@ -5745,20 +5745,20 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2025Q4,2025-10-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,2.35027797,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
 2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,-0.428191651,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
 2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,3.27285801,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
-2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,3.68662779,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
-2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,2.01174748,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
-2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,1.19996239,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
-2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,3.3110286,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
-2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,1.72463677,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
-2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,1.63727965,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
-2028Q1,2028-01-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,1.69190834,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
-2028Q2,2028-04-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,1.83447771,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
-2028Q3,2028-07-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,1.96271624,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
-2028Q4,2028-10-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,2.03430762,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
-2029Q1,2029-01-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,2.06827124,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
-2029Q2,2029-04-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,2.08917181,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
-2029Q3,2029-07-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,2.09536352,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
-2029Q4,2029-10-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,2.09005453,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
+2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,3.92068678,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
+2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,1.96863279,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
+2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,0.976853827,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
+2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,3.39796542,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
+2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,1.79105585,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
+2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,1.66171955,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
+2028Q1,2028-01-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,1.67314858,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
+2028Q2,2028-04-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,1.67351231,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
+2028Q3,2028-07-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,1.88973471,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
+2028Q4,2028-10-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,1.99804064,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
+2029Q1,2029-01-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,2.04123772,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
+2029Q2,2029-04-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,2.05801197,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
+2029Q3,2029-07-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,2.04935061,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
+2029Q4,2029-10-01,escenario_alternativo,Escenario alternativo,4,DLA_GDP,2.03015709,PIB: crecimiento trimestral anualizado,% t/t anualizado,Actividad
 2000Q1,2000-01-01,escenario_alternativo,Escenario alternativo,4,FFR,5.67666667,Federal Funds Rate,% anual,Bloque externo
 2000Q2,2000-04-01,escenario_alternativo,Escenario alternativo,4,FFR,6.27333333,Federal Funds Rate,% anual,Bloque externo
 2000Q3,2000-07-01,escenario_alternativo,Escenario alternativo,4,FFR,6.52,Federal Funds Rate,% anual,Bloque externo
@@ -5985,20 +5985,20 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2025Q4,2025-10-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.297,Brecha de actividad,%,Actividad
 2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.5,Brecha de actividad,%,Actividad
 2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.5,Brecha de actividad,%,Actividad
-2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.538195293,Brecha de actividad,%,Actividad
-2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.580845503,Brecha de actividad,%,Actividad
-2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.590822624,Brecha de actividad,%,Actividad
-2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.539773333,Brecha de actividad,%,Actividad
-2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.471041544,Brecha de actividad,%,Actividad
-2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.415220457,Brecha de actividad,%,Actividad
-2028Q1,2028-01-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.38969255,Brecha de actividad,%,Actividad
-2028Q2,2028-04-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.359287545,Brecha de actividad,%,Actividad
-2028Q3,2028-07-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.318358581,Brecha de actividad,%,Actividad
-2028Q4,2028-10-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.274606744,Brecha de actividad,%,Actividad
-2029Q1,2029-01-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.232916482,Brecha de actividad,%,Actividad
-2029Q2,2029-04-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.193387812,Brecha de actividad,%,Actividad
-2029Q3,2029-07-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.157481931,Brecha de actividad,%,Actividad
-2029Q4,2029-10-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.126522797,Brecha de actividad,%,Actividad
+2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.479680548,Brecha de actividad,%,Actividad
+2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.533109428,Brecha de actividad,%,Actividad
+2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.598863688,Brecha de actividad,%,Actividad
+2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.526080194,Brecha de actividad,%,Actividad
+2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.440743635,Brecha de actividad,%,Actividad
+2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.378812571,Brecha de actividad,%,Actividad
+2028Q1,2028-01-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.357974603,Brecha de actividad,%,Actividad
+2028Q2,2028-04-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.367810951,Brecha de actividad,%,Actividad
+2028Q3,2028-07-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.345127369,Brecha de actividad,%,Actividad
+2028Q4,2028-10-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.310442277,Brecha de actividad,%,Actividad
+2029Q1,2029-01-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.275510395,Brecha de actividad,%,Actividad
+2029Q2,2029-04-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.243771685,Brecha de actividad,%,Actividad
+2029Q3,2029-07-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.219369031,Brecha de actividad,%,Actividad
+2029Q4,2029-10-01,escenario_alternativo,Escenario alternativo,4,L_GDP_GAP,-0.203384257,Brecha de actividad,%,Actividad
 2000Q1,2000-01-01,escenario_alternativo,Escenario alternativo,4,L_PCU,21.4045831,Cobre real,100*log,Bloque externo
 2000Q2,2000-04-01,escenario_alternativo,Escenario alternativo,4,L_PCU,17.4798928,Cobre real,100*log,Bloque externo
 2000Q3,2000-07-01,escenario_alternativo,Escenario alternativo,4,L_PCU,23.9225855,Cobre real,100*log,Bloque externo
@@ -7063,14 +7063,14 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2025Q2,2025-04-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPI,NA,Shock inflación total,desvío,Shocks
 2025Q3,2025-07-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPI,NA,Shock inflación total,desvío,Shocks
 2025Q4,2025-10-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPI,NA,Shock inflación total,desvío,Shocks
-2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPI,-2.00218222e-13,Shock inflación total,desvío,Shocks
-2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPI,-2.13992823e-13,Shock inflación total,desvío,Shocks
-2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPI,-7.4001863e-9,Shock inflación total,desvío,Shocks
-2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPI,-2.22406092e-13,Shock inflación total,desvío,Shocks
-2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPI,9.99982294e-9,Shock inflación total,desvío,Shocks
-2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPI,-1.9722056e-13,Shock inflación total,desvío,Shocks
-2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPI,2.99976216e-9,Shock inflación total,desvío,Shocks
-2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPI,-2.29654265e-13,Shock inflación total,desvío,Shocks
+2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPI,-1.36699353e-13,Shock inflación total,desvío,Shocks
+2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPI,-1.09365114e-13,Shock inflación total,desvío,Shocks
+2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPI,-7.40010655e-9,Shock inflación total,desvío,Shocks
+2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPI,-1.2155457e-13,Shock inflación total,desvío,Shocks
+2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPI,9.99983717e-9,Shock inflación total,desvío,Shocks
+2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPI,-1.01534946e-13,Shock inflación total,desvío,Shocks
+2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPI,2.9998537e-9,Shock inflación total,desvío,Shocks
+2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPI,-1.11402364e-13,Shock inflación total,desvío,Shocks
 2028Q1,2028-01-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPI,0,Shock inflación total,desvío,Shocks
 2028Q2,2028-04-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPI,0,Shock inflación total,desvío,Shocks
 2028Q3,2028-07-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPI,0,Shock inflación total,desvío,Shocks
@@ -7303,14 +7303,14 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2025Q2,2025-04-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPIXFE,NA,Shock inflación subyacente,desvío,Shocks
 2025Q3,2025-07-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPIXFE,NA,Shock inflación subyacente,desvío,Shocks
 2025Q4,2025-10-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPIXFE,NA,Shock inflación subyacente,desvío,Shocks
-2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPIXFE,0.435673291,Shock inflación subyacente,desvío,Shocks
-2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPIXFE,-0.032542734,Shock inflación subyacente,desvío,Shocks
-2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPIXFE,0.557926829,Shock inflación subyacente,desvío,Shocks
-2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPIXFE,-0.0287067007,Shock inflación subyacente,desvío,Shocks
-2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPIXFE,0.556183991,Shock inflación subyacente,desvío,Shocks
-2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPIXFE,-0.0240761967,Shock inflación subyacente,desvío,Shocks
-2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPIXFE,-0.226760687,Shock inflación subyacente,desvío,Shocks
-2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPIXFE,0.286135643,Shock inflación subyacente,desvío,Shocks
+2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPIXFE,0.186428742,Shock inflación subyacente,desvío,Shocks
+2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPIXFE,-0.259490874,Shock inflación subyacente,desvío,Shocks
+2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPIXFE,0.401071525,Shock inflación subyacente,desvío,Shocks
+2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPIXFE,-0.168549403,Shock inflación subyacente,desvío,Shocks
+2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPIXFE,0.414010146,Shock inflación subyacente,desvío,Shocks
+2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPIXFE,-0.153038958,Shock inflación subyacente,desvío,Shocks
+2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPIXFE,-0.304633323,Shock inflación subyacente,desvío,Shocks
+2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPIXFE,0.226797842,Shock inflación subyacente,desvío,Shocks
 2028Q1,2028-01-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPIXFE,0,Shock inflación subyacente,desvío,Shocks
 2028Q2,2028-04-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPIXFE,0,Shock inflación subyacente,desvío,Shocks
 2028Q3,2028-07-01,escenario_alternativo,Escenario alternativo,4,SHK_DLA_CPIXFE,0,Shock inflación subyacente,desvío,Shocks
@@ -7543,14 +7543,14 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2025Q2,2025-04-01,escenario_alternativo,Escenario alternativo,4,SHK_L_GDP_GAP,NA,Shock brecha de actividad,desvío,Shocks
 2025Q3,2025-07-01,escenario_alternativo,Escenario alternativo,4,SHK_L_GDP_GAP,NA,Shock brecha de actividad,desvío,Shocks
 2025Q4,2025-10-01,escenario_alternativo,Escenario alternativo,4,SHK_L_GDP_GAP,NA,Shock brecha de actividad,desvío,Shocks
-2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,SHK_L_GDP_GAP,-0.0762719773,Shock brecha de actividad,desvío,Shocks
-2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,SHK_L_GDP_GAP,0.0957908592,Shock brecha de actividad,desvío,Shocks
-2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,SHK_L_GDP_GAP,0.100252633,Shock brecha de actividad,desvío,Shocks
-2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,SHK_L_GDP_GAP,0.158899134,Shock brecha de actividad,desvío,Shocks
-2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,SHK_L_GDP_GAP,0.153976528,Shock brecha de actividad,desvío,Shocks
-2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,SHK_L_GDP_GAP,0.125969824,Shock brecha de actividad,desvío,Shocks
-2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,SHK_L_GDP_GAP,0.0830706347,Shock brecha de actividad,desvío,Shocks
-2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,SHK_L_GDP_GAP,0.0263397625,Shock brecha de actividad,desvío,Shocks
+2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,SHK_L_GDP_GAP,-0.206540864,Shock brecha de actividad,desvío,Shocks
+2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,SHK_L_GDP_GAP,-0.15193165,Shock brecha de actividad,desvío,Shocks
+2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,SHK_L_GDP_GAP,-0.027202074,Shock brecha de actividad,desvío,Shocks
+2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,SHK_L_GDP_GAP,0.0580755381,Shock brecha de actividad,desvío,Shocks
+2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,SHK_L_GDP_GAP,0.0977800185,Shock brecha de actividad,desvío,Shocks
+2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,SHK_L_GDP_GAP,0.148328427,Shock brecha de actividad,desvío,Shocks
+2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,SHK_L_GDP_GAP,0.0929717938,Shock brecha de actividad,desvío,Shocks
+2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,SHK_L_GDP_GAP,0.0400413612,Shock brecha de actividad,desvío,Shocks
 2028Q1,2028-01-01,escenario_alternativo,Escenario alternativo,4,SHK_L_GDP_GAP,0,Shock brecha de actividad,desvío,Shocks
 2028Q2,2028-04-01,escenario_alternativo,Escenario alternativo,4,SHK_L_GDP_GAP,0,Shock brecha de actividad,desvío,Shocks
 2028Q3,2028-07-01,escenario_alternativo,Escenario alternativo,4,SHK_L_GDP_GAP,0,Shock brecha de actividad,desvío,Shocks
@@ -8023,14 +8023,14 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2025Q2,2025-04-01,escenario_alternativo,Escenario alternativo,4,SHK_TPM,NA,Shock TPM,desvío,Shocks
 2025Q3,2025-07-01,escenario_alternativo,Escenario alternativo,4,SHK_TPM,NA,Shock TPM,desvío,Shocks
 2025Q4,2025-10-01,escenario_alternativo,Escenario alternativo,4,SHK_TPM,NA,Shock TPM,desvío,Shocks
-2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,SHK_TPM,-0.040498932,Shock TPM,desvío,Shocks
-2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,SHK_TPM,0.185774938,Shock TPM,desvío,Shocks
-2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,SHK_TPM,0.209892131,Shock TPM,desvío,Shocks
-2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,SHK_TPM,0.00110370257,Shock TPM,desvío,Shocks
-2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,SHK_TPM,-0.0982812173,Shock TPM,desvío,Shocks
-2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,SHK_TPM,0.0588253496,Shock TPM,desvío,Shocks
-2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,SHK_TPM,0.115002516,Shock TPM,desvío,Shocks
-2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,SHK_TPM,0.0970326956,Shock TPM,desvío,Shocks
+2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,SHK_TPM,-0.0743220747,Shock TPM,desvío,Shocks
+2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,SHK_TPM,0.155860423,Shock TPM,desvío,Shocks
+2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,SHK_TPM,0.177560372,Shock TPM,desvío,Shocks
+2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,SHK_TPM,-0.036002185,Shock TPM,desvío,Shocks
+2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,SHK_TPM,-0.113763024,Shock TPM,desvío,Shocks
+2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,SHK_TPM,0.0454597104,Shock TPM,desvío,Shocks
+2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,SHK_TPM,0.0962655248,Shock TPM,desvío,Shocks
+2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,SHK_TPM,0.0741092973,Shock TPM,desvío,Shocks
 2028Q1,2028-01-01,escenario_alternativo,Escenario alternativo,4,SHK_TPM,0,Shock TPM,desvío,Shocks
 2028Q2,2028-04-01,escenario_alternativo,Escenario alternativo,4,SHK_TPM,0,Shock TPM,desvío,Shocks
 2028Q3,2028-07-01,escenario_alternativo,Escenario alternativo,4,SHK_TPM,0,Shock TPM,desvío,Shocks
@@ -8383,22 +8383,22 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2025Q2,2025-04-01,escenario_alternativo,Escenario alternativo,4,TPM,5,Tasa de Política Monetaria,% anual,Política monetaria
 2025Q3,2025-07-01,escenario_alternativo,Escenario alternativo,4,TPM,4.82666667,Tasa de Política Monetaria,% anual,Política monetaria
 2025Q4,2025-10-01,escenario_alternativo,Escenario alternativo,4,TPM,4.71333333,Tasa de Política Monetaria,% anual,Política monetaria
-2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,TPM,4.48991663,Tasa de Política Monetaria,% anual,Política monetaria
-2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,TPM,4.50858973,Tasa de Política Monetaria,% anual,Política monetaria
-2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,TPM,4.72181414,Tasa de Política Monetaria,% anual,Política monetaria
-2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,TPM,4.55768528,Tasa de Política Monetaria,% anual,Política monetaria
-2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,TPM,4.3037844,Tasa de Política Monetaria,% anual,Política monetaria
-2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,TPM,4.20621664,Tasa de Política Monetaria,% anual,Política monetaria
-2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,TPM,4.22011709,Tasa de Política Monetaria,% anual,Política monetaria
-2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,TPM,4.22016378,Tasa de Política Monetaria,% anual,Política monetaria
-2028Q1,2028-01-01,escenario_alternativo,Escenario alternativo,4,TPM,4.15958043,Tasa de Política Monetaria,% anual,Política monetaria
-2028Q2,2028-04-01,escenario_alternativo,Escenario alternativo,4,TPM,4.09470913,Tasa de Política Monetaria,% anual,Política monetaria
-2028Q3,2028-07-01,escenario_alternativo,Escenario alternativo,4,TPM,4.05619365,Tasa de Política Monetaria,% anual,Política monetaria
-2028Q4,2028-10-01,escenario_alternativo,Escenario alternativo,4,TPM,4.03162324,Tasa de Política Monetaria,% anual,Política monetaria
-2029Q1,2029-01-01,escenario_alternativo,Escenario alternativo,4,TPM,3.98759357,Tasa de Política Monetaria,% anual,Política monetaria
-2029Q2,2029-04-01,escenario_alternativo,Escenario alternativo,4,TPM,3.95601314,Tasa de Política Monetaria,% anual,Política monetaria
-2029Q3,2029-07-01,escenario_alternativo,Escenario alternativo,4,TPM,3.94226478,Tasa de Política Monetaria,% anual,Política monetaria
-2029Q4,2029-10-01,escenario_alternativo,Escenario alternativo,4,TPM,3.90951245,Tasa de Política Monetaria,% anual,Política monetaria
+2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,TPM,4.48900485,Tasa de Política Monetaria,% anual,Política monetaria
+2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,TPM,4.50732545,Tasa de Política Monetaria,% anual,Política monetaria
+2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,TPM,4.72544706,Tasa de Política Monetaria,% anual,Política monetaria
+2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,TPM,4.56446081,Tasa de Política Monetaria,% anual,Política monetaria
+2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,TPM,4.30941453,Tasa de Política Monetaria,% anual,Política monetaria
+2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,TPM,4.21346283,Tasa de Política Monetaria,% anual,Política monetaria
+2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,TPM,4.23107227,Tasa de Política Monetaria,% anual,Política monetaria
+2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,TPM,4.23584544,Tasa de Política Monetaria,% anual,Política monetaria
+2028Q1,2028-01-01,escenario_alternativo,Escenario alternativo,4,TPM,4.21108571,Tasa de Política Monetaria,% anual,Política monetaria
+2028Q2,2028-04-01,escenario_alternativo,Escenario alternativo,4,TPM,4.185405,Tasa de Política Monetaria,% anual,Política monetaria
+2028Q3,2028-07-01,escenario_alternativo,Escenario alternativo,4,TPM,4.18692156,Tasa de Política Monetaria,% anual,Política monetaria
+2028Q4,2028-10-01,escenario_alternativo,Escenario alternativo,4,TPM,4.20028232,Tasa de Política Monetaria,% anual,Política monetaria
+2029Q1,2029-01-01,escenario_alternativo,Escenario alternativo,4,TPM,4.19228014,Tasa de Política Monetaria,% anual,Política monetaria
+2029Q2,2029-04-01,escenario_alternativo,Escenario alternativo,4,TPM,4.19874903,Tasa de Política Monetaria,% anual,Política monetaria
+2029Q3,2029-07-01,escenario_alternativo,Escenario alternativo,4,TPM,4.22161272,Tasa de Política Monetaria,% anual,Política monetaria
+2029Q4,2029-10-01,escenario_alternativo,Escenario alternativo,4,TPM,4.22065908,Tasa de Política Monetaria,% anual,Política monetaria
 2000Q1,2000-01-01,escenario_alternativo,Escenario alternativo,4,TPMN1,7.9758093,Tasa neutral nominal,% anual,Política monetaria
 2000Q2,2000-04-01,escenario_alternativo,Escenario alternativo,4,TPMN1,7.9758093,Tasa neutral nominal,% anual,Política monetaria
 2000Q3,2000-07-01,escenario_alternativo,Escenario alternativo,4,TPMN1,7.9758093,Tasa neutral nominal,% anual,Política monetaria
@@ -8623,22 +8623,22 @@ period,date,scenario_id,scenario,scenario_order,variable,value,label,unit,block
 2025Q2,2025-04-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.18333333,Tasa de colocación UF,% anual,Política monetaria
 2025Q3,2025-07-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.28,Tasa de colocación UF,% anual,Política monetaria
 2025Q4,2025-10-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.22333333,Tasa de colocación UF,% anual,Política monetaria
-2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.19859763,Tasa de colocación UF,% anual,Política monetaria
-2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.18918969,Tasa de colocación UF,% anual,Política monetaria
-2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.21194604,Tasa de colocación UF,% anual,Política monetaria
-2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.23855734,Tasa de colocación UF,% anual,Política monetaria
-2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.13175314,Tasa de colocación UF,% anual,Política monetaria
-2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.13158587,Tasa de colocación UF,% anual,Política monetaria
-2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.17987919,Tasa de colocación UF,% anual,Política monetaria
-2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.21328538,Tasa de colocación UF,% anual,Política monetaria
-2028Q1,2028-01-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.28528018,Tasa de colocación UF,% anual,Política monetaria
-2028Q2,2028-04-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.29322469,Tasa de colocación UF,% anual,Política monetaria
-2028Q3,2028-07-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.25020059,Tasa de colocación UF,% anual,Política monetaria
-2028Q4,2028-10-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.24211745,Tasa de colocación UF,% anual,Política monetaria
-2029Q1,2029-01-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.21663486,Tasa de colocación UF,% anual,Política monetaria
-2029Q2,2029-04-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.16992297,Tasa de colocación UF,% anual,Política monetaria
-2029Q3,2029-07-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.136554,Tasa de colocación UF,% anual,Política monetaria
-2029Q4,2029-10-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.11146551,Tasa de colocación UF,% anual,Política monetaria
+2026Q1,2026-01-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.19916464,Tasa de colocación UF,% anual,Política monetaria
+2026Q2,2026-04-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.19274288,Tasa de colocación UF,% anual,Política monetaria
+2026Q3,2026-07-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.19550966,Tasa de colocación UF,% anual,Política monetaria
+2026Q4,2026-10-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.20074137,Tasa de colocación UF,% anual,Política monetaria
+2027Q1,2027-01-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.09813945,Tasa de colocación UF,% anual,Política monetaria
+2027Q2,2027-04-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.10568577,Tasa de colocación UF,% anual,Política monetaria
+2027Q3,2027-07-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.11563975,Tasa de colocación UF,% anual,Política monetaria
+2027Q4,2027-10-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.12083025,Tasa de colocación UF,% anual,Política monetaria
+2028Q1,2028-01-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.13250732,Tasa de colocación UF,% anual,Política monetaria
+2028Q2,2028-04-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.13221191,Tasa de colocación UF,% anual,Política monetaria
+2028Q3,2028-07-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.129295,Tasa de colocación UF,% anual,Política monetaria
+2028Q4,2028-10-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.12344304,Tasa de colocación UF,% anual,Política monetaria
+2029Q1,2029-01-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.11152933,Tasa de colocación UF,% anual,Política monetaria
+2029Q2,2029-04-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.09473074,Tasa de colocación UF,% anual,Política monetaria
+2029Q3,2029-07-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.0741408,Tasa de colocación UF,% anual,Política monetaria
+2029Q4,2029-10-01,escenario_alternativo,Escenario alternativo,4,T_COLOC,4.05391922,Tasa de colocación UF,% anual,Política monetaria
 2000Q1,2000-01-01,escenario_alternativo,Escenario alternativo,4,UST10,6.48,Treasury 10 años,% anual,Bloque externo
 2000Q2,2000-04-01,escenario_alternativo,Escenario alternativo,4,UST10,6.17666667,Treasury 10 años,% anual,Bloque externo
 2000Q3,2000-07-01,escenario_alternativo,Escenario alternativo,4,UST10,5.89333333,Treasury 10 años,% anual,Bloque externo

@@ -21,3 +21,5 @@ data/raw/private/
 matlab/ipom/**/tp*/
 matlab/ipom/**/*.pdf
 matlab/ipom/**/*.log
+# Objetos pesados de modelos
+outputs/model_objects/transmision_tpm/*.rds

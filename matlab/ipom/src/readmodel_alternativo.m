@@ -18,22 +18,22 @@ p.filter = filter;
 %             b7*(L_PCU-ss_L_PCU) + b8*(L_WTI-ss_L_WTI) + b9*(T_COLOC-ss_T_COLOC) + ...
 %             SHK_L_GDP_GAP;
 % output persistence;
-p.b1 = 0.729069;
+p.b1 = 0.704405;
 
 % policy passthrough (the impact of monetary policy on real economy);
-p.b2 = 0.086;
+p.b2 = 0.087592;
 
 % the impact of external demand on domestic output;
-p.b3 = 0.054727;
+p.b3 = 0.105359;
 
-p.b4 =-0.211516;
-p.b5 =-0.004013;
-p.b6 = -0.382771;
-p.b7 = 0.004;   % 0.016
-p.b8 = -0.006;
-p.b8_b = 0.007679;
-p.b9 = 0.025449;
-p.b10 = 0.011629;
+p.b4 =0.168436;
+p.b5 =-0.010915 ;
+p.b6 = -0.3;
+p.b7 =  0.002304*1.5;   % 0.016
+p.b8 = -0.0077;
+p.b8_b = 0.0065;
+p.b9 = 0.3;
+p.b10 = 0.021206;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 2. Aggregate supply equation (the Phillips curve) (modelo4)
 % CHECK POINT ESTIMATES WITH PABLO GARCIA
@@ -55,12 +55,12 @@ p.a3 =0.075;
 
 p.a8 = 0.010801;
 
-lambda_seas = 1.05;
+lambda_seas = 1.1;
 % QUARTERLY DUMMYS;
 p.a4 = lambda_seas *0.76284;   % Q1
 p.a5 = lambda_seas *0.92907;   % Q2
 p.a7 = lambda_seas *-1.25604;   % Q3
-p.a6 = lambda_seas *-0.4359;   % Q4
+p.a6 = lambda_seas *-0.4358;   % Q4
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 4. Monetary policy reaction function

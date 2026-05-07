@@ -121,3 +121,49 @@ body {
 @media (max-width: 900px) {
   .mu-grid { grid-template-columns: 1fr; }
 }
+
+/* KPIs del proyecto de transmisión de TPM */
+.mu-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .9rem;
+  margin: 1.2rem 0 1.6rem 0;
+}
+
+.mu-kpi-card {
+  background: var(--mu-surface);
+  border: 1px solid var(--mu-border);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 8px 22px rgba(31,41,51,.045);
+}
+
+.mu-kpi-label {
+  color: var(--mu-muted);
+  font-size: .82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.mu-kpi-value {
+  color: var(--mu-accent);
+  font-size: 1.45rem;
+  font-weight: 800;
+  margin-top: .25rem;
+}
+
+.table caption {
+  caption-side: top;
+  color: var(--mu-muted);
+  font-weight: 650;
+  margin-bottom: .45rem;
+}
+
+@media (max-width: 900px) {
+  .mu-kpi-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 560px) {
+  .mu-kpi-grid { grid-template-columns: 1fr; }
+}
