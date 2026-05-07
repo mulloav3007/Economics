@@ -65,6 +65,10 @@ pt_cum <- read_csv_if_exists(file.path(table_dir, "pass_through_cumulative.csv")
 pt_asym <- read_csv_if_exists(file.path(table_dir, "pass_through_asymmetric.csv"))
 lp_tbl <- read_csv_if_exists(file.path(table_dir, "local_projections.csv"))
 rob_tbl <- read_csv_if_exists(file.path(table_dir, "robustness_samples.csv"))
+series_dict <- read_csv_if_exists(file.path(meta_dir, "series_dictionary.csv"))
+pt_cum_base <- read_csv_if_exists(file.path(table_dir, "pass_through_cumulative_base.csv"))
+pt_cum_curve <- read_csv_if_exists(file.path(table_dir, "pass_through_cumulative_curve_robustness.csv"))
+lp_tbl_base <- read_csv_if_exists(file.path(table_dir, "local_projections_base.csv"))
 
 has_outputs <- !is.null(monthly_panel) && !is.null(pt_summary) && !is.null(pt_cum) && !is.null(lp_tbl)
 
@@ -177,6 +181,86 @@ El monitor se organiza en cuatro salidas:
 
 La interpretación recomendada es **condicional y descriptiva**: los coeficientes resumen comovimientos dinámicos controlados, pero la TPM es endógena al escenario macroeconómico.
 
+
+## Qué modelo se estima actualmente
+
+La página trabaja con una base mensual. Para cada producto financiero \(j\), se observa una tasa \(r_{j,t}\). El objeto de interés no es el nivel de la tasa, sino su variación mensual:
+
+$$
+\Delta r_{j,t}=r_{j,t}-r_{j,t-1}
+$$
+
+y el cambio mensual de la TPM:
+
+$$
+\Delta TPM_t=TPM_t-TPM_{t-1}
+$$
+
+La especificación principal de la página es ahora la versión **macro** del modelo de rezagos distribuidos:
+
+$$
+\Delta r_{j,t} = \alpha_j
++ \sum_{k=0}^{6}\beta_{j,k}\Delta TPM_{t-k}
++ \rho_j\Delta r_{j,t-1}
++ \gamma_1\pi^{12m}_t
++ \gamma_2\Delta^{12m}\log(TC)_t
++ \gamma_3\Delta^{12m}\log(IMACEC)_t
++ \mu_m
++ \varepsilon_{j,t}
+$$
+
+donde \(\mu_m\) son efectos fijos de mes. En la práctica, los controles macro se incorporan solo si la serie fue descargada correctamente desde la BDE:
+
+- \(\pi^{12m}_t\): inflación anual del IPC.
+- \(\Delta^{12m}\log(TC)_t\): depreciación anual del dólar observado.
+- \(\Delta^{12m}\log(IMACEC)_t\): crecimiento anual del IMACEC.
+
+La decisión importante es que **BCP/BCU ya no se usan en el modelo principal**. La curva soberana se deja como robustez, porque también puede ser parte del canal de transmisión de la TPM. Controlar por ella en la especificación principal podría bloquear parte del efecto que justamente se quiere medir.
+
+El script exporta tres versiones:
+
+| Archivo | Especificación | Interpretación |
+|---|---|---|
+| `pass_through_cumulative.csv` | Macro | Modelo principal: TPM + inercia + controles macro mínimos |
+| `pass_through_cumulative_base.csv` | Base | TPM + inercia, sin controles macro ni curva |
+| `pass_through_cumulative_curve_robustness.csv` | Curva | Robustez agregando BCP/BCU cuando corresponde |
+
+:::{.mu-note}
+La palabra “principal” no significa “causal”. Esta especificación mejora el control por entorno macro, pero sigue midiendo pass-through condicional ante cambios observados de TPM, no shocks monetarios exógenos.
+:::
+
+## Datos usados
+
+El monitor combina tasas de colocación, tasas de captación, TPM, curva de mercado y controles macro. Las colocaciones son el lado activo del banco —tasas cobradas por créditos—; las captaciones son el lado pasivo —tasas pagadas por obtener fondos—.
+
+```{r series-table}
+if (!is.null(series_dict)) {
+  series_dict |>
+    filter(block %in% c("policy", "lending", "funding", "market", "macro")) |>
+    mutate(
+      Bloque = recode(block,
+        policy = "Política monetaria",
+        lending = "Colocaciones",
+        funding = "Captaciones",
+        market = "Curva/mercado",
+        macro = "Macro",
+        .default = block
+      ),
+      Uso = case_when(
+        block %in% c("policy", "lending", "funding") ~ "Modelo principal",
+        block == "macro" ~ "Control macro si descarga",
+        block == "market" ~ "Robustez / gráficos",
+        TRUE ~ "Complementario"
+      )
+    ) |>
+    select(Bloque, name, series_id, frequency, description, Uso) |>
+    knitr::kable(
+      col.names = c("Bloque", "Variable", "Código BDE", "Frecuencia", "Descripción", "Uso"),
+      caption = "Diccionario de series usadas por el proyecto."
+    )
+}
+```
+
 ## TPM y tasas seleccionadas
 
 Arrastra una zona del gráfico para hacer zoom. En esta figura, el eje vertical se reajusta automáticamente al rango temporal seleccionado.
@@ -245,11 +329,7 @@ if (has_outputs) {
 
 ## Pass-through acumulado
 
-El primer ejercicio estima, para cada producto financiero, una especificación de rezagos distribuidos:
-
-$$
-\Delta r_{j,t} = \alpha_j + \sum_{k=0}^{K}\beta_{j,k}\Delta TPM_{t-k} + \Gamma_j X_t + \varepsilon_{j,t}
-$$
+El primer ejercicio estima, para cada producto financiero, una especificación de rezagos distribuidos. En la versión actual, la especificación principal es la **macro** descrita arriba: incluye rezagos de la TPM, inercia de la tasa bancaria y controles macro mínimos, pero no controla por BCP/BCU en la versión central.
 
 El pass-through acumulado a horizonte \(h\) se define como:
 
@@ -270,6 +350,37 @@ if (has_outputs) {
     knitr::kable(
       col.names = c("Producto", "1 mes", "3 meses", "6 meses"),
       caption = "Pass-through acumulado estimado por producto. Coeficientes en puntos porcentuales por punto porcentual de TPM."
+    )
+}
+```
+
+### Comparación de especificaciones
+
+La siguiente tabla compara el pass-through acumulado a seis meses entre tres especificaciones. La columna **Macro** es la que se usa como resultado principal en esta página. La columna **Curva** agrega tasas BCP/BCU como robustez; si cambia mucho respecto de Macro, eso sugiere que la curva soberana está absorbiendo parte del mecanismo de transmisión.
+
+```{r spec-comparison-table}
+if (has_outputs && !is.null(pt_cum_base) && !is.null(pt_cum_curve)) {
+  spec_compare <- bind_rows(
+    pt_cum |>
+      filter(type == "total", horizon == 6) |>
+      transmute(product, spec = "Macro", cumulative),
+    pt_cum_base |>
+      filter(type == "total", horizon == 6) |>
+      transmute(product, spec = "Base", cumulative),
+    pt_cum_curve |>
+      filter(type == "total", horizon == 6) |>
+      transmute(product, spec = "Curva", cumulative)
+  ) |>
+    mutate(product_label = label_product(product)) |>
+    select(product_label, spec, cumulative) |>
+    mutate(cumulative = round(cumulative, 2)) |>
+    pivot_wider(names_from = spec, values_from = cumulative) |>
+    arrange(product_label)
+
+  spec_compare |>
+    knitr::kable(
+      col.names = c("Producto", "Base", "Curva", "Macro"),
+      caption = "Pass-through acumulado a seis meses según especificación."
     )
 }
 ```
@@ -477,13 +588,21 @@ if (has_outputs && !is.null(pt_asym)) {
 
 ## Local projections
 
-Como contraste, se estiman local projections para cada horizonte \(h\):
+Como contraste, se estiman local projections para cada horizonte \(h\). A diferencia del modelo de rezagos distribuidos, aquí se corre una regresión distinta para cada horizonte mensual:
 
 $$
-r_{j,t+h}-r_{j,t-1} = \alpha_{j,h}+\beta_{j,h}\Delta TPM_t+\Gamma_{j,h}X_t+u_{j,t+h}
+r_{j,t+h}-r_{j,t-1} =
+\alpha_{j,h}
++\beta_{j,h}\Delta TPM_t
++\delta_{1,h}\Delta r_{j,t-1}
++\delta_{2,h}\Delta TPM_{t-1}
++\delta_{3,h}\Delta TPM_{t-2}
++\Gamma_{j,h}X_t
++u_{j,t+h}
 $$
 
-```{r plot-lp}
+La variable dependiente \(r_{j,t+h}-r_{j,t-1}\) es el cambio acumulado de la tasa bancaria desde el mes anterior al movimiento de TPM hasta \(h\) meses después. Por eso la línea se interpreta como una respuesta dinámica acumulada. Las bandas muestran intervalos de confianza con errores tipo Newey-West.
+
 ```{r plot-lp}
 if (has_outputs) {
 
