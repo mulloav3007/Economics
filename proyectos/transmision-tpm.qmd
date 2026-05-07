@@ -363,39 +363,139 @@ r_{j,t+h}-r_{j,t-1} = \alpha_{j,h}+\beta_{j,h}\Delta TPM_t+\Gamma_{j,h}X_t+u_{j,
 $$
 
 ```{r plot-lp}
+```{r plot-lp}
 if (has_outputs) {
+
   lp_plot <- lp_tbl |>
+    filter(horizon <= 12) |>
     mutate(
-      product_label = label_product(product),
-      tooltip = paste0(
-        "Producto: ", product_label,
-        "<br>Horizonte: ", horizon, " meses",
-        "<br>Respuesta: ", number(estimate, accuracy = 0.01),
-        "<br>IC 95%: [", number(conf_low, accuracy = 0.01), ", ", number(conf_high, accuracy = 0.01), "]"
+      product_label = label_product(product)
+    ) |>
+    arrange(product_label, horizon)
+
+  productos_lp <- unique(lp_plot$product_label)
+
+  p_lp <- plotly::plot_ly()
+
+  for (i in seq_along(productos_lp)) {
+
+    prod_i <- productos_lp[i]
+
+    dat_i <- lp_plot |>
+      filter(product_label == prod_i) |>
+      arrange(horizon)
+
+    visible_i <- i == 1
+
+    ribbon_x <- c(dat_i$horizon, rev(dat_i$horizon))
+    ribbon_y <- c(dat_i$conf_high, rev(dat_i$conf_low))
+
+    p_lp <- p_lp |>
+      plotly::add_trace(
+        x = ribbon_x,
+        y = ribbon_y,
+        type = "scatter",
+        mode = "lines",
+        fill = "toself",
+        fillcolor = "rgba(83,119,163,0.22)",
+        line = list(color = "rgba(83,119,163,0)"),
+        hoverinfo = "skip",
+        name = "IC 95%",
+        showlegend = visible_i,
+        visible = visible_i
+      ) |>
+      plotly::add_trace(
+        x = dat_i$horizon,
+        y = dat_i$estimate,
+        type = "scatter",
+        mode = "lines+markers",
+        line = list(color = "#243B53", width = 3),
+        marker = list(color = "#243B53", size = 7),
+        name = "Respuesta estimada",
+        showlegend = visible_i,
+        visible = visible_i,
+        text = paste0(
+          "Producto: ", dat_i$product_label,
+          "<br>Horizonte: ", dat_i$horizon, " meses",
+          "<br>Respuesta: ", scales::number(dat_i$estimate, accuracy = 0.01),
+          "<br>IC 95%: [",
+          scales::number(dat_i$conf_low, accuracy = 0.01),
+          ", ",
+          scales::number(dat_i$conf_high, accuracy = 0.01),
+          "]"
+        ),
+        hovertemplate = "%{text}<extra></extra>"
+      )
+  }
+
+  botones_lp <- lapply(seq_along(productos_lp), function(i) {
+
+    visible_vec <- rep(FALSE, length(productos_lp) * 2)
+    visible_vec[(2 * i - 1):(2 * i)] <- TRUE
+
+    list(
+      method = "update",
+      label = productos_lp[i],
+      args = list(
+        list(visible = visible_vec),
+        list(
+          title = paste0(
+            "Respuesta dinámica a cambios de TPM: ",
+            productos_lp[i]
+          ),
+          yaxis = list(autorange = TRUE)
+        )
       )
     )
+  })
 
-  g_lp <- ggplot(lp_plot, aes(horizon, estimate, text = tooltip)) +
-    geom_hline(yintercept = 0, linewidth = 0.3, color = "grey55") +
-    geom_ribbon(aes(ymin = conf_low, ymax = conf_high), fill = "#6BAED6", alpha = 0.18) +
-    geom_line(color = "#243B53", linewidth = 0.85) +
-    facet_wrap(~ product_label, scales = "free_y") +
-    labs(
-      title = "Respuesta dinámica de tasas a cambios de TPM",
-      subtitle = "Local projections con intervalos aproximados de 95% usando errores Newey-West.",
-      x = "Horizonte mensual",
-      y = "Respuesta acumulada"
-    ) +
-    theme_minimal(base_size = 12) +
-    theme(
-      panel.grid.minor = element_blank(),
-      strip.text = element_text(face = "bold"),
-      plot.title = element_text(face = "bold", margin = margin(b = 6)),
-      plot.subtitle = element_text(margin = margin(b = 10))
-    )
-
-  plotly::ggplotly(g_lp, tooltip = "text") |>
-    plotly::layout(margin = list(t = 80, b = 70), dragmode = "zoom") |>
+  p_lp |>
+    plotly::layout(
+      title = paste0(
+        "Respuesta dinámica a cambios de TPM: ",
+        productos_lp[1]
+      ),
+      xaxis = list(
+        title = "Horizonte mensual",
+        dtick = 1,
+        zeroline = FALSE
+      ),
+      yaxis = list(
+        title = "Respuesta acumulada",
+        autorange = TRUE,
+        zeroline = FALSE
+      ),
+      shapes = list(
+        list(
+          type = "line",
+          x0 = 0,
+          x1 = 12,
+          y0 = 0,
+          y1 = 0,
+          line = list(color = "rgba(80,80,80,0.55)", width = 1)
+        )
+      ),
+      updatemenus = list(
+        list(
+          type = "dropdown",
+          active = 0,
+          x = 0,
+          y = 1.18,
+          xanchor = "left",
+          yanchor = "top",
+          buttons = botones_lp
+        )
+      ),
+      legend = list(
+        orientation = "h",
+        x = 0.5,
+        xanchor = "center",
+        y = -0.2
+      ),
+      margin = list(t = 115, b = 90, l = 70, r = 30),
+      hovermode = "x unified",
+      dragmode = "zoom"
+    ) |>
     plotly_common_config()
 }
 ```
