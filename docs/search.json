@@ -606,7 +606,7 @@
     "href": "README_CAMBIOS.html",
     "title": "Paquete de rediseño para la página GitHub Pages",
     "section": "",
-    "text": "Este paquete reemplaza la portada y mejora la presentación visual del sitio Quarto.\n\n\n\n_quarto.yml: configuración del sitio, navegación, footer, CSS y opciones de render.\nindex.qmd: nueva página principal profesional.\nproyectos.qmd: nueva página de proyectos con tarjetas sin títulos azules.\ncv.qmd: página CV más limpia.\ncontacto.qmd: página de contacto más limpia.\nassets/css/styles.css: tema visual completo del sitio.\n\n\n\n\n\nDescomprime este paquete.\nCopia los archivos en la raíz del repositorio Economics, respetando carpetas.\nAcepta reemplazar los archivos existentes.\nEn la terminal del proyecto ejecuta:\n\nquarto render\n\nRevisa localmente el sitio generado en docs/index.html.\nSi todo se ve bien:\n\ngit add _quarto.yml index.qmd proyectos.qmd cv.qmd contacto.qmd assets/css/styles.css docs/\ngit commit -m \"Rediseña portada y presentación del portafolio\"\ngit push\nGitHub Pages publicará el contenido desde docs/.\n\n\n\n\nCorrige el problema de archivos .qmd comprimidos en una sola línea.\nElimina el botón global de código de Quarto en la portada.\nSustituye títulos azules subrayados por tarjetas con llamadas a acción sobrias.\nUsa enlaces tipo chip con icono ↗.\nMejora jerarquía visual, espaciado, paleta, navbar, footer y responsividad móvil.\nMantiene compatibilidad con tus páginas de proyectos existentes."
+    "text": "Este paquete reemplaza la portada y mejora la presentación visual del sitio Quarto.\n\n\n\n_quarto.yml: configuración del sitio, navegación, footer, CSS y opciones de render.\nindex.qmd: nueva página principal profesional.\nproyectos.qmd: nueva página de proyectos con tarjetas sin títulos azules.\ncv.qmd: página CV más limpia.\ncontacto.qmd: página de contacto más limpia.\nassets/css/styles.css: tema visual completo del sitio.\n\n\n\n\n\nDescomprime este paquete.\nCopia los archivos en la raíz del repositorio Economics, respetando carpetas.\nAcepta reemplazar los archivos existentes.\nEn la terminal del proyecto ejecuta:\n\nquarto render\n\nRevisa localmente el sitio generado en docs/index.html.\nSi todo se ve bien:\n\ngit add _quarto.yml index.qmd proyectos.qmd cv.qmd contacto.qmd assets/css/styles.css docs/\ngit commit -m \"Rediseña portada y presentación del portafolio\"\ngit push\nGitHub Pages publicará el contenido desde docs/.\n\n\n\n\nCorrige el problema de archivos .qmd comprimidos en una sola línea.\nElimina el botón global de código de Quarto en la portada.\nSustituye títulos azules subrayados por tarjetas con llamadas a acción sobrias.\nUsa enlaces tipo chip con icono ↗.\nMejora jerarquía visual, espaciado, paleta, navbar, footer y responsividad móvil.\nMantiene compatibilidad con tus páginas de proyectos existentes.\n\n\n\n\nSe corrigió la estrechez de la portada. La clase .mu-home ahora expande la página principal a un ancho máximo de 1320px, centrado respecto del viewport, y el hero usa una columna izquierda más amplia. También se agregó overflow-x: hidden para evitar desplazamientos horizontales accidentales cuando el título es muy largo."
   },
   {
     "objectID": "README_CAMBIOS.html#archivos-incluidos",
@@ -628,5 +628,12 @@
     "title": "Paquete de rediseño para la página GitHub Pages",
     "section": "",
     "text": "Corrige el problema de archivos .qmd comprimidos en una sola línea.\nElimina el botón global de código de Quarto en la portada.\nSustituye títulos azules subrayados por tarjetas con llamadas a acción sobrias.\nUsa enlaces tipo chip con icono ↗.\nMejora jerarquía visual, espaciado, paleta, navbar, footer y responsividad móvil.\nMantiene compatibilidad con tus páginas de proyectos existentes."
+  },
+  {
+    "objectID": "README_CAMBIOS.html#ajuste-v2-portada-más-ancha",
+    "href": "README_CAMBIOS.html#ajuste-v2-portada-más-ancha",
+    "title": "Paquete de rediseño para la página GitHub Pages",
+    "section": "",
+    "text": "Se corrigió la estrechez de la portada. La clase .mu-home ahora expande la página principal a un ancho máximo de 1320px, centrado respecto del viewport, y el hero usa una columna izquierda más amplia. También se agregó overflow-x: hidden para evitar desplazamientos horizontales accidentales cuando el título es muy largo."
   }
 ]
