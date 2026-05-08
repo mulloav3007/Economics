@@ -25,20 +25,24 @@ estres_load_packages <- function(packages = estres_required_packages) {
   invisible(lapply(packages, library, character.only = TRUE))
 }
 
-estres_project_root <- function() {
-  wd <- normalizePath(getwd(), winslash = "/", mustWork = TRUE)
-  candidates <- unique(c(
-    wd,
-    normalizePath(file.path(wd, ".."), winslash = "/", mustWork = FALSE),
-    normalizePath(file.path(wd, "../.."), winslash = "/", mustWork = FALSE)
-  ))
+estres_project_root <- function(start = getwd()) {
+  path <- normalizePath(start, winslash = "/", mustWork = TRUE)
 
-  for (path in candidates) {
-    if (file.exists(file.path(path, "_quarto.yml"))) return(path)
+  repeat {
+    has_quarto <- file.exists(file.path(path, "_quarto.yml"))
+    has_estres_setup <- file.exists(file.path(path, "R", "estres_financiero", "00_setup.R"))
+    has_project_dirs <- dir.exists(file.path(path, "proyectos")) && dir.exists(file.path(path, "scripts"))
+
+    if (has_estres_setup || (has_quarto && has_project_dirs)) return(path)
+
+    parent <- dirname(path)
+    if (identical(parent, path)) break
+    path <- parent
   }
 
   stop(
-    "No pude identificar la raíz del proyecto. Ejecuta el script desde la carpeta del repositorio Economics.",
+    "No pude identificar la raíz del proyecto. ",
+    "Ejecuta desde la carpeta del repositorio Economics o verifica que exista R/estres_financiero/00_setup.R.",
     call. = FALSE
   )
 }

@@ -10,17 +10,45 @@ page-layout: full
 #| message: false
 #| warning: false
 
-source("R/estres_financiero/00_setup.R", encoding = "UTF-8")
+find_estres_project_root <- function(start = getwd()) {
+  path <- normalizePath(start, winslash = "/", mustWork = TRUE)
+
+  repeat {
+    setup_file <- file.path(path, "R", "estres_financiero", "00_setup.R")
+    quarto_file <- file.path(path, "_quarto.yml")
+
+    if (file.exists(setup_file)) return(path)
+    if (file.exists(quarto_file) && dir.exists(file.path(path, "proyectos"))) return(path)
+
+    parent <- dirname(path)
+    if (identical(parent, path)) break
+    path <- parent
+  }
+
+  stop(
+    "No pude identificar la raíz del repositorio Economics. ",
+    "Renderiza desde la raíz del repo o verifica que exista R/estres_financiero/00_setup.R.",
+    call. = FALSE
+  )
+}
+
+repo_root <- find_estres_project_root()
+
+# Fija la raíz de ejecución para que el QMD funcione tanto si se renderiza
+# desde la carpeta raíz como si Quarto ejecuta desde proyectos/.
+knitr::opts_knit$set(root.dir = repo_root)
+
+source(file.path(repo_root, "R", "estres_financiero", "00_setup.R"), encoding = "UTF-8")
 estres_load_packages(c(
   "readr", "dplyr", "tidyr", "ggplot2", "plotly",
   "scales", "zoo", "knitr", "tibble", "stringr"
 ))
 
-index_file <- "data/processed/estres_financiero/stress_index_chile.csv"
-diag_file  <- "data/processed/estres_financiero/model_diagnostics.csv"
-latest_file <- "data/processed/estres_financiero/latest_snapshot.csv"
-episodes_file <- "outputs/tables/estres_financiero/episodios_estres.csv"
-coefs_file <- "data/processed/estres_financiero/model_coefficients.csv"
+index_file <- estres_path("data", "processed", "estres_financiero", "stress_index_chile.csv", root = repo_root)
+diag_file  <- estres_path("data", "processed", "estres_financiero", "model_diagnostics.csv", root = repo_root)
+latest_file <- estres_path("data", "processed", "estres_financiero", "latest_snapshot.csv", root = repo_root)
+episodes_file <- estres_path("outputs", "tables", "estres_financiero", "episodios_estres.csv", root = repo_root)
+coefs_file <- estres_path("data", "processed", "estres_financiero", "model_coefficients.csv", root = repo_root)
 
 if (!file.exists(index_file) || !file.exists(diag_file) || !file.exists(latest_file)) {
   stop(
