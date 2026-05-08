@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>readme_transmision_tpm – Mauricio Ulloa</title>
+<title>instrucciones_instalacion – Mauricio Ulloa</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -166,12 +166,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">En esta página</h2>
    
   <ul>
-  <li><a href="#proyecto-transmisión-de-la-tpm-a-tasas-de-mercado" id="toc-proyecto-transmisión-de-la-tpm-a-tasas-de-mercado" class="nav-link active" data-scroll-target="#proyecto-transmisión-de-la-tpm-a-tasas-de-mercado">Proyecto: Transmisión de la TPM a tasas de mercado</a>
+  <li><a href="#instalación-del-parche-estrés-financiero-chile" id="toc-instalación-del-parche-estrés-financiero-chile" class="nav-link active" data-scroll-target="#instalación-del-parche-estrés-financiero-chile">Instalación del parche: estrés financiero Chile</a>
   <ul class="collapse">
-  <li><a href="#qué-agrega" id="toc-qué-agrega" class="nav-link" data-scroll-target="#qué-agrega">Qué agrega</a></li>
-  <li><a href="#cómo-actualizar" id="toc-cómo-actualizar" class="nav-link" data-scroll-target="#cómo-actualizar">Cómo actualizar</a></li>
-  <li><a href="#credenciales" id="toc-credenciales" class="nav-link" data-scroll-target="#credenciales">Credenciales</a></li>
-  <li><a href="#interpretación" id="toc-interpretación" class="nav-link" data-scroll-target="#interpretación">Interpretación</a></li>
+  <li><a href="#qué-cambia" id="toc-qué-cambia" class="nav-link" data-scroll-target="#qué-cambia">Qué cambia</a></li>
+  <li><a href="#dependencias-r" id="toc-dependencias-r" class="nav-link" data-scroll-target="#dependencias-r">Dependencias R</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -182,40 +180,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="proyecto-transmisión-de-la-tpm-a-tasas-de-mercado" class="level1">
-<h1>Proyecto: Transmisión de la TPM a tasas de mercado</h1>
-<p>Este parche integra al sitio Quarto <code>Economics</code> un proyecto de investigación en desarrollo sobre pass-through de política monetaria en Chile.</p>
-<section id="qué-agrega" class="level2">
-<h2 class="anchored" data-anchor-id="qué-agrega">Qué agrega</h2>
+<section id="instalación-del-parche-estrés-financiero-chile" class="level1">
+<h1>Instalación del parche: estrés financiero Chile</h1>
+<p>Este ZIP contiene solo archivos nuevos o modificados. Para aplicarlo:</p>
+<ol type="1">
+<li>Descomprime el ZIP dentro de la raíz de tu repositorio <code>Economics</code>.</li>
+<li>Acepta reemplazar <code>proyectos.qmd</code> y <code>proyectos/estres-externo.qmd</code>.</li>
+<li>En RStudio, desde la raíz del repositorio, ejecuta:</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"scripts/06_update_estres_financiero.R"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="4" type="1">
+<li>Renderiza el sitio:</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="5" type="1">
+<li>Sube los cambios a GitHub:</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Agrega índice de estrés financiero para Chile"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="qué-cambia" class="level2">
+<h2 class="anchored" data-anchor-id="qué-cambia">Qué cambia</h2>
 <ul>
-<li>Página Quarto: <code>proyectos/transmision-tpm.qmd</code>.</li>
-<li>Pipeline R: <code>R/transmision_tpm/</code>.</li>
-<li>Script de actualización: <code>scripts/05_update_transmision_tpm.R</code>.</li>
-<li>Datos procesados iniciales: <code>data/processed/transmision_tpm/</code>.</li>
-<li>Tablas: <code>outputs/tables/transmision_tpm/</code>.</li>
-<li>Figuras de respaldo: <code>assets/img/transmision_tpm/</code>.</li>
-<li>Metadatos de descarga: <code>data/metadata/transmision_tpm/</code>.</li>
+<li>La página <code>proyectos/estres-externo.qmd</code> deja de usar datos simulados.</li>
+<li>El proyecto pasa a llamarse <code>Índice de estrés financiero de mercado para Chile</code>.</li>
+<li>Se agregan scripts R completos y separados en <code>R/estres_financiero/</code>.</li>
+<li>Se agregan datos procesados y gráficos estáticos ya generados.</li>
+<li>No se incluyen credenciales ni claves API.</li>
 </ul>
 </section>
-<section id="cómo-actualizar" class="level2">
-<h2 class="anchored" data-anchor-id="cómo-actualizar">Cómo actualizar</h2>
-<p>Desde la raíz del repositorio <code>Economics</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&amp;</span> <span class="st">"C:\Program Files\R\R-4.3.2\bin\x64\Rscript.exe"</span> <span class="st">"scripts\05_update_transmision_tpm.R"</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>quarto render <span class="op">--</span>execute</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>git add <span class="op">.</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>git commit <span class="op">-</span>m <span class="st">"Actualiza proyecto transmision TPM"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>git push</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="credenciales" class="level2">
-<h2 class="anchored" data-anchor-id="credenciales">Credenciales</h2>
-<p>El script requiere la API BDE del BCCh. Debes tener en <code>.Renviron</code>:</p>
-<pre class="text"><code>BCCH_USER=tu_usuario
-BCCH_PASS=tu_password</code></pre>
-<p>No subas <code>.Renviron</code> a GitHub.</p>
-</section>
-<section id="interpretación" class="level2">
-<h2 class="anchored" data-anchor-id="interpretación">Interpretación</h2>
-<p>La versión actual es un monitor de pass-through dinámico. No debe presentarse como identificación causal plena de shocks monetarios. Para ese salto metodológico se recomienda incorporar sorpresas de política monetaria, expectativas de TPM, microdatos bancarios o una estrategia externa de identificación.</p>
+<section id="dependencias-r" class="level2">
+<h2 class="anchored" data-anchor-id="dependencias-r">Dependencias R</h2>
+<p>El pipeline requiere:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"readr"</span>, <span class="st">"dplyr"</span>, <span class="st">"tidyr"</span>, <span class="st">"ggplot2"</span>, <span class="st">"zoo"</span>, <span class="st">"scales"</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"broom"</span>, <span class="st">"purrr"</span>, <span class="st">"stringr"</span>, <span class="st">"tibble"</span>, <span class="st">"rlang"</span>, <span class="st">"plotly"</span>, <span class="st">"knitr"</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>readxl</code> solo es necesario si quieres volver a importar manualmente el Excel original de <code>ExchangeReg</code>.</p>
 
 
 </section>

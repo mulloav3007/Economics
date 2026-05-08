@@ -1,74 +1,421 @@
 ---
-title: "Índice de estrés externo para Chile"
-subtitle: "Indicador compuesto de condiciones externas relevantes para una economía pequeña y abierta"
+title: "Índice de estrés financiero de mercado para Chile"
+subtitle: "Desviaciones del tipo de cambio y la tasa soberana 10Y respecto de fundamentos externos"
+page-layout: full
 ---
+
+```{r}
+#| label: setup-estres
+#| include: false
+#| message: false
+#| warning: false
+
+source("R/estres_financiero/00_setup.R", encoding = "UTF-8")
+estres_load_packages(c(
+  "readr", "dplyr", "tidyr", "ggplot2", "plotly",
+  "scales", "zoo", "knitr", "tibble", "stringr"
+))
+
+index_file <- "data/processed/estres_financiero/stress_index_chile.csv"
+diag_file  <- "data/processed/estres_financiero/model_diagnostics.csv"
+latest_file <- "data/processed/estres_financiero/latest_snapshot.csv"
+episodes_file <- "outputs/tables/estres_financiero/episodios_estres.csv"
+coefs_file <- "data/processed/estres_financiero/model_coefficients.csv"
+
+if (!file.exists(index_file) || !file.exists(diag_file) || !file.exists(latest_file)) {
+  stop(
+    "No están los archivos procesados del proyecto. Ejecuta: source('scripts/06_update_estres_financiero.R')",
+    call. = FALSE
+  )
+}
+
+stress <- readr::read_csv(index_file, show_col_types = FALSE) |>
+  dplyr::mutate(date = as.Date(date))
+
+diagnostics <- readr::read_csv(diag_file, show_col_types = FALSE) |>
+  dplyr::mutate(
+    sample_start = as.Date(sample_start),
+    sample_end = as.Date(sample_end)
+  )
+
+latest <- readr::read_csv(latest_file, show_col_types = FALSE) |>
+  dplyr::mutate(date = as.Date(date)) |>
+  dplyr::slice_tail(n = 1)
+
+episodes <- readr::read_csv(episodes_file, show_col_types = FALSE) |>
+  dplyr::mutate(date = as.Date(date))
+
+coefs <- if (file.exists(coefs_file)) {
+  readr::read_csv(coefs_file, show_col_types = FALSE)
+} else {
+  tibble::tibble()
+}
+
+fmt_num <- function(x, digits = 2) {
+  scales::number(x, accuracy = 10^(-digits), big.mark = ".", decimal.mark = ",")
+}
+
+fmt_pct <- function(x, digits = 2) {
+  scales::number(x, accuracy = 10^(-digits), big.mark = ".", decimal.mark = ",", suffix = "%")
+}
+
+fmt_date <- function(x) format(as.Date(x), "%d-%m-%Y")
+
+plot_theme <- estres_theme()
+```
 
 ## Motivación
 
-Chile es una economía pequeña y abierta, expuesta a cambios en condiciones financieras globales, precios de commodities y apetito por riesgo internacional.
+Chile es una economía pequeña y abierta. El tipo de cambio, las tasas largas y las condiciones financieras locales reaccionan a movimientos del dólar global, tasas externas, apetito por riesgo, precios de commodities y mercados accionarios internacionales. Sin embargo, no todos los movimientos locales se explican completamente por esos fundamentos externos.
 
-Este proyecto construye un índice sintético de estrés externo a partir de variables como VIX, precio del cobre, petróleo, tasas de Estados Unidos y dólar global.
+Este proyecto construye un **índice de estrés financiero de mercado para Chile** a partir de dos precios clave:
+
+- **USD/CLP**, como precio financiero central para una economía abierta y exportadora de commodities.
+- **Tasa soberana chilena a 10 años**, como medida sintética de condiciones financieras de largo plazo, premio por riesgo y costo de financiamiento soberano.
+
+La idea no es estimar un modelo causal estructural. El objetivo es más acotado y operativo: construir un monitor que mida cuándo estos precios se alejan de lo que predicen fundamentos financieros externos observables.
 
 ::: {.mu-note}
-Esta versión inicial usa datos simulados solo para validar la arquitectura visual del sitio. La siguiente etapa es reemplazar el bloque de simulación por datos reales desde FRED, BCCh u otra fuente pública.
+El indicador debe leerse como un índice de **estrés financiero de mercado**, no como una medida completa de estrés sistémico. No incluye directamente crédito bancario, liquidez del mercado monetario, spreads corporativos, morosidad ni balances financieros. Es una primera capa de seguimiento macrofinanciero.
+:::
+
+## Lectura rápida
+
+::: {.mu-grid .mu-grid-areas}
+
+::: {.mu-area}
+### Última observación completa
+`r fmt_date(latest$date)`
+
+El indicador utiliza la última fecha en que existen ambos componentes: residuo cambiario y residuo de tasa 10Y.
+:::
+
+::: {.mu-area}
+### Índice 30 días
+`r fmt_num(latest$stress_market_30d, 2)`
+
+Valores positivos indican mayor presión de mercado que la explicada por fundamentos externos; valores negativos indican condiciones relativamente benignas.
+:::
+
+::: {.mu-area}
+### Régimen actual
+`r latest$regime`
+
+La clasificación se basa en umbrales descriptivos sobre la media móvil de 30 días del índice agregado.
+:::
+
+:::
+
+## Datos
+
+La base usada en esta versión proviene del proyecto original `ExchangeReg`, depurada para Chile y almacenada como archivo local reproducible. La cobertura efectiva del modelo comienza en octubre de 2012, porque desde esa fecha se dispone simultáneamente de cobre, USD/CLP, tasa 10Y chilena y variables financieras externas.
+
+::: {.mu-split}
+
+::: {.mu-text-block}
+### Variables locales
+
+- USD/CLP.
+- Tasa soberana chilena a 10 años.
+
+### Variables externas
+
+- Tasa Treasury 10Y de Estados Unidos.
+- VIX.
+- Dólar global multilateral.
+- Precio del cobre.
+- WTI.
+- Yuan por dólar.
+- Nasdaq.
+- Índice accionario de China.
+:::
+
+::: {.mu-list-card}
+### Salidas reproducibles
+
+- `data/processed/estres_financiero/stress_index_chile.csv`.
+- `data/processed/estres_financiero/model_diagnostics.csv`.
+- `outputs/tables/estres_financiero/episodios_estres.csv`.
+- `assets/img/estres_financiero/*.png`.
+
+Para regenerar todo:
+
+```r
+source("scripts/06_update_estres_financiero.R")
+```
+:::
+
 :::
 
 ## Metodología
 
-El índice se construye en cuatro pasos:
+El índice se construye en cuatro pasos.
 
-1. Transformación de series a frecuencia mensual.
-2. Estandarización mediante z-scores.
-3. Ajuste de signos según interpretación económica.
-4. Agregación mediante promedio simple o componentes principales.
+Primero, se estima un modelo de normalización para el tipo de cambio:
 
-## Visualización interactiva inicial
+$$
+\log(USDCLP_t) = \alpha + \beta_1 t + \beta_2 \log(Cobre_t) + \beta_3 \log(WTI_t) + \beta_4 \log(VIX_t) + \beta_5 \log(Dólar_t) + \beta_6 \log(CNY_t) + \beta_7 \log(Nasdaq_t) + \beta_8 \log(ChinaEq_t) + \varepsilon^{FX}_t
+$$
+
+El residuo estandarizado del modelo se interpreta como presión cambiaria local no explicada por esos fundamentos. Un residuo positivo indica que el peso está más depreciado que lo que predice el modelo.
+
+Segundo, se estima un modelo de normalización para la tasa soberana chilena a 10 años:
+
+$$
+10Y^{CLP}_t = \alpha + \gamma_1 t + \gamma_2 10Y^{US}_t + \gamma_3 \log(VIX_t) + \gamma_4 \log(Dólar_t) + \gamma_5 \log(CNY_t) + \gamma_6 \log(Nasdaq_t) + \varepsilon^{10Y}_t
+$$
+
+El residuo estandarizado de este modelo se interpreta como presión en tasas largas locales no explicada por condiciones financieras globales. Un residuo positivo indica que la tasa local está más alta que la predicha por el modelo.
+
+Tercero, ambos residuos se expresan como z-scores:
+
+$$
+z^{j}_t = \frac{\varepsilon^{j}_t - \bar{\varepsilon}^{j}}{sd(\varepsilon^{j})}, \quad j \in \{FX, 10Y\}
+$$
+
+Finalmente, el índice agregado corresponde al promedio simple de ambos componentes:
+
+$$
+Stress_t = \frac{z^{FX}_t + z^{10Y}_t}{2}
+$$
+
+Para la lectura visual se usa también una media móvil de 30 días. Los umbrales son descriptivos: sobre 0,75 se clasifica como estrés moderado y sobre 1,5 como estrés alto.
+
+## Índice agregado
 
 ```{r}
+#| label: fig-stress-index
 #| echo: false
-#| message: false
-#| warning: false
+#| fig-width: 11
+#| fig-height: 5.7
 
-library(tidyverse)
-library(lubridate)
-library(plotly)
-
-set.seed(123)
-
-fechas <- seq.Date(as.Date("2010-01-01"), as.Date("2026-05-01"), by = "month")
-n <- length(fechas)
-
-datos <- tibble(
-  fecha = fechas,
-  VIX = as.numeric(scale(arima.sim(list(ar = 0.75), n = n, sd = 0.7))),
-  Dolar_global = as.numeric(scale(arima.sim(list(ar = 0.65), n = n, sd = 0.5))),
-  UST10 = as.numeric(scale(arima.sim(list(ar = 0.80), n = n, sd = 0.45))),
-  Cobre = -as.numeric(scale(arima.sim(list(ar = 0.55), n = n, sd = 0.6))),
-  Petroleo = as.numeric(scale(arima.sim(list(ar = 0.50), n = n, sd = 0.6)))
-) |> 
-  mutate(indice = rowMeans(across(-fecha)))
-
-p <- ggplot(datos, aes(x = fecha, y = indice)) +
-  geom_line(linewidth = 0.9) +
-  geom_hline(yintercept = 0, linetype = "dashed") +
-  labs(
-    title = "Índice de estrés externo para Chile",
-    subtitle = "Versión demo con datos simulados",
-    x = NULL,
-    y = "Índice estandarizado"
+p_index <- ggplot2::ggplot(stress, ggplot2::aes(x = date)) +
+  ggplot2::geom_line(
+    ggplot2::aes(y = stress_market, colour = "Índice diario"),
+    linewidth = 0.45,
+    alpha = 0.45,
+    na.rm = TRUE
   ) +
-  theme_minimal()
+  ggplot2::geom_line(
+    ggplot2::aes(y = stress_market_30d, colour = "Media móvil 30 días"),
+    linewidth = 1.05,
+    na.rm = TRUE
+  ) +
+  ggplot2::geom_hline(yintercept = 0, colour = "#c8c0b3", linewidth = 0.45) +
+  ggplot2::geom_hline(yintercept = 0.75, colour = "#c8c0b3", linewidth = 0.35, linetype = "dashed") +
+  ggplot2::geom_hline(yintercept = 1.50, colour = "#c8c0b3", linewidth = 0.35, linetype = "dotted") +
+  ggplot2::geom_hline(yintercept = -0.75, colour = "#c8c0b3", linewidth = 0.35, linetype = "dashed") +
+  ggplot2::scale_colour_manual(values = c(
+    "Media móvil 30 días" = "#27384a",
+    "Índice diario" = "#8a94a3"
+  )) +
+  ggplot2::scale_x_date(date_breaks = "2 years", date_labels = "%Y") +
+  ggplot2::labs(
+    title = "Índice de estrés financiero de mercado para Chile",
+    subtitle = "Promedio de residuos estandarizados de USD/CLP y tasa soberana 10Y",
+    x = NULL,
+    y = "Z-score agregado"
+  ) +
+  plot_theme
 
-ggplotly(p)
+plotly::ggplotly(p_index, tooltip = c("x", "y", "colour")) |>
+  plotly::layout(legend = list(orientation = "h", x = 0, y = 1.08))
 ```
 
-## Interpretación
+## Componentes
 
-Valores positivos indican un entorno externo más restrictivo o adverso para Chile. Valores negativos indican condiciones externas más favorables.
+```{r}
+#| label: fig-components
+#| echo: false
+#| fig-width: 11
+#| fig-height: 5.7
 
-## Próximas mejoras
+components <- stress |>
+  dplyr::select(date, stress_fx_30d, stress_y10_30d) |>
+  tidyr::pivot_longer(
+    cols = c(stress_fx_30d, stress_y10_30d),
+    names_to = "component",
+    values_to = "z_score"
+  ) |>
+  dplyr::mutate(
+    component = dplyr::recode(
+      component,
+      stress_fx_30d = "Estrés cambiario",
+      stress_y10_30d = "Estrés tasa 10Y"
+    )
+  )
 
-- Reemplazar datos simulados por series reales.
-- Agregar gráfico de contribuciones por componente.
-- Comparar índice simple versus índice por componentes principales.
-- Marcar episodios históricos: crisis financiera global, pandemia, ciclo de alzas de la Fed y episodios geopolíticos.
+p_components <- ggplot2::ggplot(components, ggplot2::aes(x = date, y = z_score, colour = component)) +
+  ggplot2::geom_line(linewidth = 0.95, na.rm = TRUE) +
+  ggplot2::geom_hline(yintercept = 0, colour = "#c8c0b3", linewidth = 0.45) +
+  ggplot2::geom_hline(yintercept = 1.5, colour = "#c8c0b3", linewidth = 0.35, linetype = "dotted") +
+  ggplot2::scale_colour_manual(values = c(
+    "Estrés cambiario" = "#7b5e42",
+    "Estrés tasa 10Y" = "#4d6277"
+  )) +
+  ggplot2::scale_x_date(date_breaks = "2 years", date_labels = "%Y") +
+  ggplot2::labs(
+    title = "Componentes del estrés financiero",
+    subtitle = "Cada componente corresponde a un residuo de modelo expresado como z-score",
+    x = NULL,
+    y = "Z-score, media móvil 30 días"
+  ) +
+  plot_theme
+
+plotly::ggplotly(p_components, tooltip = c("x", "y", "colour")) |>
+  plotly::layout(legend = list(orientation = "h", x = 0, y = 1.08))
+```
+
+## Tipo de cambio: observado versus ajustado
+
+```{r}
+#| label: fig-fx-fit
+#| echo: false
+#| fig-width: 11
+#| fig-height: 5.7
+
+fx_plot_data <- stress |>
+  dplyr::select(date, clp, fitted_clp) |>
+  tidyr::pivot_longer(
+    cols = c(clp, fitted_clp),
+    names_to = "series",
+    values_to = "value"
+  ) |>
+  dplyr::mutate(
+    series = dplyr::recode(
+      series,
+      clp = "USD/CLP observado",
+      fitted_clp = "USD/CLP ajustado por fundamentos"
+    )
+  )
+
+p_fx <- ggplot2::ggplot(fx_plot_data, ggplot2::aes(x = date, y = value, colour = series)) +
+  ggplot2::geom_line(linewidth = 0.85, na.rm = TRUE) +
+  ggplot2::scale_colour_manual(values = c(
+    "USD/CLP observado" = "#27384a",
+    "USD/CLP ajustado por fundamentos" = "#7b5e42"
+  )) +
+  ggplot2::scale_x_date(date_breaks = "2 years", date_labels = "%Y") +
+  ggplot2::scale_y_continuous(labels = scales::label_number(big.mark = ".", decimal.mark = ",")) +
+  ggplot2::labs(
+    title = "Tipo de cambio: observado versus ajustado",
+    subtitle = "El residuo positivo indica un CLP más depreciado que lo explicado por fundamentos externos",
+    x = NULL,
+    y = "Pesos por dólar"
+  ) +
+  plot_theme
+
+plotly::ggplotly(p_fx, tooltip = c("x", "y", "colour")) |>
+  plotly::layout(legend = list(orientation = "h", x = 0, y = 1.08))
+```
+
+## Tasa 10Y: observada versus ajustada
+
+```{r}
+#| label: fig-y10-fit
+#| echo: false
+#| fig-width: 11
+#| fig-height: 5.7
+
+y10_plot_data <- stress |>
+  dplyr::select(date, y10_clp, fitted_y10_clp) |>
+  tidyr::pivot_longer(
+    cols = c(y10_clp, fitted_y10_clp),
+    names_to = "series",
+    values_to = "value"
+  ) |>
+  dplyr::mutate(
+    series = dplyr::recode(
+      series,
+      y10_clp = "Tasa 10Y observada",
+      fitted_y10_clp = "Tasa 10Y ajustada"
+    )
+  )
+
+p_y10 <- ggplot2::ggplot(y10_plot_data, ggplot2::aes(x = date, y = value, colour = series)) +
+  ggplot2::geom_line(linewidth = 0.85, na.rm = TRUE) +
+  ggplot2::scale_colour_manual(values = c(
+    "Tasa 10Y observada" = "#27384a",
+    "Tasa 10Y ajustada" = "#7b5e42"
+  )) +
+  ggplot2::scale_x_date(date_breaks = "2 years", date_labels = "%Y") +
+  ggplot2::scale_y_continuous(labels = scales::label_number(decimal.mark = ",", suffix = "%")) +
+  ggplot2::labs(
+    title = "Tasa soberana 10Y: observada versus ajustada",
+    subtitle = "El residuo positivo indica una tasa local más alta que la predicha por condiciones globales",
+    x = NULL,
+    y = "Porcentaje"
+  ) +
+  plot_theme
+
+plotly::ggplotly(p_y10, tooltip = c("x", "y", "colour")) |>
+  plotly::layout(legend = list(orientation = "h", x = 0, y = 1.08))
+```
+
+## Episodios de mayor estrés
+
+La tabla muestra fechas locales del indicador suavizado. Para evitar seleccionar varios días del mismo episodio, se impone una distancia mínima de 30 días entre observaciones seleccionadas.
+
+```{r}
+#| label: tbl-episodes
+#| echo: false
+
+episodes |>
+  dplyr::mutate(
+    date = fmt_date(date),
+    stress_market_30d = fmt_num(stress_market_30d, 2),
+    stress_market = fmt_num(stress_market, 2),
+    z_fx = fmt_num(z_fx, 2),
+    z_y10 = fmt_num(z_y10, 2)
+  ) |>
+  dplyr::rename(
+    Fecha = date,
+    `Índice 30d` = stress_market_30d,
+    `Índice diario` = stress_market,
+    `Z FX` = z_fx,
+    `Z 10Y` = z_y10,
+    Régimen = regime
+  ) |>
+  knitr::kable(align = "lrrrrl")
+```
+
+## Diagnóstico de modelos
+
+```{r}
+#| label: tbl-diagnostics
+#| echo: false
+
+diagnostics |>
+  dplyr::mutate(
+    sample_start = fmt_date(sample_start),
+    sample_end = fmt_date(sample_end),
+    r_squared = fmt_num(r_squared, 3),
+    adj_r_squared = fmt_num(adj_r_squared, 3),
+    residual_sd = fmt_num(residual_sd, 3)
+  ) |>
+  dplyr::rename(
+    Modelo = model,
+    `Variable dependiente` = dependent_variable,
+    Observaciones = n_obs,
+    `R²` = r_squared,
+    `R² ajustado` = adj_r_squared,
+    `Inicio muestra` = sample_start,
+    `Fin muestra` = sample_end,
+    `Desv. est. residuo` = residual_sd
+  ) |>
+  knitr::kable(align = "llrrrrrr")
+```
+
+## Interpretación económica
+
+Una lectura alta del índice puede venir por dos canales. El primero es cambiario: el peso se deprecia más que lo explicado por cobre, petróleo, dólar global, VIX, yuan y bolsas externas. El segundo es soberano: la tasa 10Y chilena sube más que lo que predicen el Treasury 10Y y otras variables financieras globales. Cuando ambos residuos se mueven en la misma dirección, el indicador agregado aumenta con más fuerza.
+
+La ventaja de esta aproximación es que evita confundir todo movimiento del USD/CLP o de la tasa 10Y con estrés local. Si el dólar global sube, el cobre cae o el VIX aumenta, parte del movimiento chileno es esperable. El residuo intenta aislar la porción que queda fuera de esos fundamentos observables.
+
+## Limitaciones y extensiones
+
+::: {.mu-note}
+Este índice no debe interpretarse como evidencia causal ni como estimación estructural del premio por riesgo chileno. Es una herramienta de seguimiento descriptivo basada en residuos de modelos lineales estimados en muestra completa.
+:::
+
+Las principales extensiones naturales son: incorporar spreads corporativos, mercado monetario, IPSA/volatilidad local, CDS soberano, liquidez bancaria y variables de crédito. El bloque de retrocompra/retroventa de CMF del proyecto original puede agregarse como un segundo módulo de liquidez bancaria, pero conviene mantenerlo separado inicialmente porque la muestra es más corta y el concepto económico es distinto.
