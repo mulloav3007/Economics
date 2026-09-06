@@ -22,11 +22,7 @@ Por eso, despedir por despedir no constituye una política de eficiencia. Una re
 
 ## Funciones antes que dotaciones
 
-El empleo público debería entenderse como un insumo utilizado para producir determinados servicios.
-
-El Estado contrata personas porque queremos hospitales funcionando, delitos investigados, impuestos fiscalizados, permisos procesados, colegios abiertos, estadísticas confiables, infraestructura administrada y prestaciones sociales entregadas. Esas actividades requieren una combinación de trabajo, infraestructura, tecnología, compras y servicios contratados a terceros.
-
-Por eso el orden lógico importa.
+El empleo público debería entenderse como un insumo utilizado para producir determinados servicios. El Estado contrata personas porque queremos hospitales funcionando, delitos investigados, impuestos fiscalizados, permisos procesados, colegios abiertos, estadísticas confiables, infraestructura administrada y prestaciones sociales entregadas. Esas actividades requieren una combinación de trabajo, infraestructura, tecnología, compras y servicios contratados a terceros. Por eso el orden lógico importa.
 
 Primero deberíamos preguntarnos qué funciones corresponde realizar al Estado. Luego, qué resultados esperamos de ellas y cuál es la forma más eficiente de producirlos. Sólo entonces podemos determinar cuántos trabajadores, qué tipo de profesionales y qué otros recursos son necesarios.
 
@@ -54,11 +50,7 @@ El salario de un funcionario aparece explícitamente como gasto. El valor produc
 
 Pensemos en un ejemplo puramente ilustrativo. Si un fiscalizador cuesta al Estado $40 millones anuales, suprimir ese cargo reduce el gasto anual en $40 millones, antes de considerar los costos de salida. Pero si su trabajo permitía recuperar o evitar pérdidas fiscales superiores a esa cantidad, el efecto neto sobre las finanzas públicas puede ser negativo.
 
-La misma lógica puede aplicarse a un especialista en compras públicas que obtiene mejores precios, un ingeniero que detecta sobrecostos en una obra, un profesional que reduce los tiempos de evaluación de proyectos o un abogado que evita pérdidas patrimoniales para el Estado.
-
-No se trata de afirmar que todos los funcionarios generan beneficios superiores a sus remuneraciones. Evidentemente no podemos presumirlo.
-
-El punto es que costo presupuestario y costo económico no son necesariamente lo mismo.
+La misma lógica puede aplicarse a un especialista en compras públicas que obtiene mejores precios, un ingeniero que detecta sobrecostos en una obra, un profesional que reduce los tiempos de evaluación de proyectos o un abogado que evita pérdidas patrimoniales para el Estado. Esto no significa que todos los funcionarios generen beneficios superiores a sus remuneraciones; evidentemente no podemos presumirlo. El punto es que costo presupuestario y costo económico no son necesariamente lo mismo.
 
 Una política pública que cuesta $1.000 millones y genera beneficios muy inferiores a esa cantidad probablemente merece ser rediseñada o eliminada. Otra que cuesta exactamente lo mismo pero produce beneficios sociales considerablemente mayores puede representar un buen uso de recursos.
 
@@ -70,15 +62,7 @@ Chile ya posee instrumentos diseñados precisamente para ese propósito. En el m
 
 Y esa información tiene consecuencias presupuestarias. Para la Ley de Presupuestos 2026, 157 programas que presentaban debilidades en su diseño y/o desempeño recibieron reducciones promedio de 15% en sus recursos, mientras 150 iniciativas sin esas debilidades registraron incrementos promedio de 2%. En total, el sistema permitió reasignar más de $156.000 millones.
 
-Es una señal importante: sí existen espacios para reasignar recursos y corregir programas deficientes.
-
-Pero hay que evitar una segunda simplificación.
-
-Un programa mal evaluado no implica automáticamente que las personas que trabajan en él sean innecesarias. El problema puede estar en su diseño, en la población objetivo, en la coordinación con otros organismos, en sus incentivos o incluso en que la política pública que justificó su creación dejó de ser prioritaria.
-
-La respuesta puede ser modificar el programa, fusionarlo con otro, trasladar funciones, digitalizar procesos o cerrarlo completamente.
-
-La unidad relevante de análisis no siempre es el trabajador.
+Es una señal importante: sí existen espacios para reasignar recursos y corregir programas deficientes. Pero conviene evitar otra simplificación: que un programa esté mal evaluado no significa automáticamente que quienes trabajan en él sean innecesarios. El problema puede estar en su diseño, en la población objetivo, en la coordinación con otros organismos, en sus incentivos o incluso en que la política pública que justificó su creación dejó de ser prioritaria. Dependiendo del diagnóstico, la respuesta puede ser modificar el programa, fusionarlo con otro, trasladar funciones, digitalizar procesos o cerrarlo completamente. La unidad relevante de análisis, por tanto, no siempre es el trabajador.
 
 ## A veces el problema está en el proceso
 
@@ -94,19 +78,11 @@ eliminar trabajo innecesario antes que asumir que el trabajador es innecesario.
 
 Esta distinción es especialmente relevante frente a la digitalización y la inteligencia artificial. Es razonable esperar que nuevas tecnologías permitan automatizar tareas administrativas repetitivas. Pero también pueden aumentar la necesidad de perfiles distintos: especialistas en datos, ingeniería, ciberseguridad, regulación tecnológica o gestión de sistemas.
 
-Un Estado más digital puede necesitar menos personas realizando algunas tareas y más especialistas en otras.
-
-Lo que importa no es que la dotación necesariamente disminuya, sino que caiga el costo de producir un servicio de determinada calidad o aumente la calidad que puede producirse con los mismos recursos.
-
-Ése es un estándar de productividad bastante más exigente que contar puestos eliminados.
+Un Estado más digital puede necesitar menos personas realizando algunas tareas y más especialistas en otras. Lo relevante no es asegurar que la dotación disminuya, sino reducir el costo de producir un servicio de determinada calidad o mejorar la calidad que puede obtenerse con los mismos recursos. Ese es un estándar de productividad bastante más exigente que contar puestos eliminados.
 
 ## El problema de los recortes transversales
 
-También importa distinguir entre trabajadores.
-
-No todos tienen la misma productividad marginal, las mismas competencias ni el mismo costo de reemplazo. Tampoco todas las unidades del Estado presentan el mismo grado de sobredotación.
-
-Por eso los recortes lineales tienen una virtud administrativa y un defecto económico: son simples, pero distinguen poco.
+También importa distinguir entre trabajadores, porque no todos tienen la misma productividad marginal, las mismas competencias ni el mismo costo de reemplazo. Tampoco todas las unidades del Estado presentan el mismo grado de sobredotación. Por eso los recortes lineales tienen una virtud administrativa y un defecto económico: son simples, pero distinguen poco.
 
 Una reducción uniforme puede afectar tanto a una unidad redundante como a otra que enfrenta un cuello de botella. Puede eliminar cargos de escaso valor o dificultar el funcionamiento de una institución que ya carecía de determinadas capacidades.
 
