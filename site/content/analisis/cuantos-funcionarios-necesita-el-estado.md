@@ -8,6 +8,18 @@ Ese objetivo abre una discusión necesaria sobre el tamaño y funcionamiento del
 
 La cantidad de funcionarios es un dato. No es, por sí sola, una medida de productividad.
 
+## Entre “parásitos” y “amarres”
+
+La discusión llegó a enero precedida por una retórica especialmente dura. En octubre de 2025, una columna de Cristián Valenzuela utilizó la expresión “parásitos” para describir a quienes se instalarían en el Estado por conexiones políticas y no por mérito. El problema señalado —captura de cargos, abuso o contratación sin una función justificable— merece control. Pero extender esa etiqueta al empleo público en general impide distinguir precisamente aquello que una reforma seria necesita separar: operadores políticos, funciones redundantes, trabajadores con bajo desempeño y capacidades técnicas difíciles de reemplazar no son categorías equivalentes.
+
+Durante la tramitación del reajuste del sector público apareció otra simplificación. Se llamó “normas de amarre” a disposiciones que buscaban permitir que funcionarios a contrata con determinada antigüedad reclamaran ante la Contraloría cuando consideraran injustificada su desvinculación. La Cámara rechazó inicialmente una versión con dos años de antigüedad; el Ejecutivo anunció que intentaría reponerla elevando el requisito a cinco años. Esas disposiciones finalmente quedaron fuera de la ley aprobada.
+
+La controversia contenía una tensión real. Una protección mal diseñada puede dificultar que una nueva administración reorganice equipos, remueva cargos de confianza o corrija contrataciones improcedentes. Pero la ausencia de estándares también puede convertir cada cambio de gobierno en una rotación discrecional de personal que debilita la continuidad, expulsa conocimiento institucional y vuelve a abrir espacio para nuevos nombramientos políticos.
+
+No es necesario escoger entre inmovilidad y despidos indiscriminados. La respuesta debería separar con claridad los cargos de exclusiva confianza de las funciones permanentes; utilizar concursos y perfiles verificables; evaluar desempeño; documentar las razones de una no renovación; y preservar la capacidad de terminar vínculos cuando la función desaparece, existe bajo desempeño acreditado o la contratación carece de justificación.
+
+Por eso, despedir por despedir no constituye una política de eficiencia. Una reducción de dotación puede ser necesaria y correcta, pero debería resultar de revisar qué hace cada institución, qué resultados obtiene y qué capacidades necesita conservar. El objetivo no es blindar a toda persona que trabaja para el Estado ni asumir que toda desvinculación es arbitraria. Es reemplazar las etiquetas y las cuotas generales por decisiones que puedan justificarse.
+
 ## Funciones antes que dotaciones
 
 El empleo público debería entenderse como un insumo utilizado para producir determinados servicios.

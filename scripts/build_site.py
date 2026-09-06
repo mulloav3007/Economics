@@ -388,6 +388,9 @@ def build_pages(contexts: dict[str, Any]) -> None:
         article["toc"] = toc
         article["date_label"] = fmt_date(article["date"])
         article["reading_minutes"] = max(1, math.ceil(len(BeautifulSoup(content, "html.parser").get_text(" ").split()) / 220))
+        article["media"] = article.get("media")
+        media_items = article["media"].get("items", []) if article["media"] else []
+        article["media_has_instagram"] = any(item.get("type") == "instagram" for item in media_items)
     analysis_common = dict(active_nav="analisis", og_image_url=SITE_URL + "assets/img/og-cover.png")
     write_text(DOCS / "analisis.html", env.get_template("analysis_index.html").render(
         **analysis_common, title="Análisis", description="Columnas de Mauricio Ulloa sobre economía, instituciones, energía y política pública.",
