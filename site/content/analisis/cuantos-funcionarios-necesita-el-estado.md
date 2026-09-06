@@ -44,9 +44,7 @@ La conclusión no debería ser que Chile tiene “muchos” o “pocos” funcio
 
 ## El costo es fácil de observar; el valor, bastante menos
 
-Existe además una asimetría importante en la discusión pública.
-
-El salario de un funcionario aparece explícitamente como gasto. El valor producido por su trabajo muchas veces no aparece con la misma claridad.
+Existe además una asimetría importante en la discusión pública: el salario de un funcionario aparece explícitamente como gasto, mientras el valor producido por su trabajo muchas veces no se observa con la misma claridad.
 
 Pensemos en un ejemplo puramente ilustrativo. Si un fiscalizador cuesta al Estado $40 millones anuales, suprimir ese cargo reduce el gasto anual en $40 millones, antes de considerar los costos de salida. Pero si su trabajo permitía recuperar o evitar pérdidas fiscales superiores a esa cantidad, el efecto neto sobre las finanzas públicas puede ser negativo.
 
@@ -54,9 +52,7 @@ La misma lógica puede aplicarse a un especialista en compras públicas que obti
 
 Una política pública que cuesta $1.000 millones y genera beneficios muy inferiores a esa cantidad probablemente merece ser rediseñada o eliminada. Otra que cuesta exactamente lo mismo pero produce beneficios sociales considerablemente mayores puede representar un buen uso de recursos.
 
-En términos económicos, la eficiencia no consiste simplemente en minimizar insumos. Consiste en obtener determinados resultados al menor costo posible o, para un nivel de recursos dado, obtener mejores resultados.
-
-Eso obliga a mirar desempeño, no solamente gasto.
+En términos económicos, la eficiencia no consiste simplemente en minimizar insumos. Consiste en obtener determinados resultados al menor costo posible o, para un nivel de recursos dado, obtener mejores resultados. Eso obliga a mirar desempeño, no solamente gasto.
 
 Chile ya posee instrumentos diseñados precisamente para ese propósito. En el monitoreo correspondiente a 2024, Dipres y la Subsecretaría de Evaluación Social examinaron 706 programas públicos, examinando dimensiones como eficacia, eficiencia y focalización.
 
@@ -70,15 +66,9 @@ Imaginemos una institución en la que un trámite exige siete formularios, múlt
 
 Los funcionarios encargados de procesarlo pueden trabajar de manera perfectamente diligente. El problema sigue existiendo: están ejecutando un proceso innecesariamente costoso.
 
-En ese caso, una reforma bien diseñada debería comenzar simplificando el procedimiento. Una vez hecho eso, probablemente disminuya la cantidad de horas de trabajo necesarias y aparezca espacio para reasignar o reducir personal.
+En ese caso, una reforma bien diseñada debería comenzar simplificando el procedimiento. Una vez hecho eso, probablemente disminuya la cantidad de horas de trabajo necesarias y aparezca espacio para reasignar o reducir personal. El orden vuelve a importar: primero hay que eliminar el trabajo innecesario y sólo después determinar si también existen trabajadores innecesarios.
 
-El orden vuelve a importar:
-
-eliminar trabajo innecesario antes que asumir que el trabajador es innecesario.
-
-Esta distinción es especialmente relevante frente a la digitalización y la inteligencia artificial. Es razonable esperar que nuevas tecnologías permitan automatizar tareas administrativas repetitivas. Pero también pueden aumentar la necesidad de perfiles distintos: especialistas en datos, ingeniería, ciberseguridad, regulación tecnológica o gestión de sistemas.
-
-Un Estado más digital puede necesitar menos personas realizando algunas tareas y más especialistas en otras. Lo relevante no es asegurar que la dotación disminuya, sino reducir el costo de producir un servicio de determinada calidad o mejorar la calidad que puede obtenerse con los mismos recursos. Ese es un estándar de productividad bastante más exigente que contar puestos eliminados.
+Esta distinción es especialmente relevante frente a la digitalización y la inteligencia artificial. Es razonable esperar que nuevas tecnologías permitan automatizar tareas administrativas repetitivas, pero también pueden aumentar la necesidad de perfiles distintos: especialistas en datos, ingeniería, ciberseguridad, regulación tecnológica o gestión de sistemas. Un Estado más digital puede necesitar menos personas realizando algunas tareas y más especialistas en otras. Lo relevante no es asegurar que la dotación disminuya, sino reducir el costo de producir un servicio de determinada calidad o mejorar la calidad que puede obtenerse con los mismos recursos. Ese es un estándar de productividad bastante más exigente que contar puestos eliminados.
 
 ## El problema de los recortes transversales
 
@@ -106,9 +96,7 @@ La discusión fiscal, entonces, no debería evitar la pregunta por el tamaño de
 
 Puede haber organismos cuyas funciones se superponen. Programas que no justifican sus costos. Procedimientos que deberían desaparecer. Cargos creados para necesidades que ya no existen. Espacios para automatización y servicios que podrían producirse de manera mucho más simple.
 
-No existe ninguna razón económica para preservar una función pública únicamente porque actualmente emplea personas.
-
-Pero tampoco existe una razón económica para eliminarla simplemente porque cuesta dinero.
+No existe ninguna razón económica para preservar una función pública únicamente porque actualmente emplea personas, pero tampoco existe una razón económica para eliminarla simplemente porque cuesta dinero.
 
 Desde abril de 2025, Dipres mantiene un sistema permanente de revisiones del gasto orientado precisamente a identificar ganancias de eficiencia y oportunidades de reasignar gasto de baja prioridad. Las revisiones de gasto son una práctica utilizada internacionalmente para analizar con mayor profundidad la composición del gasto y no sólo su nivel agregado.
 
@@ -136,10 +124,6 @@ Dado aquello que hemos decidido que el Estado debe hacer, ¿lo estamos producien
 
 Un Estado puede ser grande e ineficiente. También puede ser pequeño e ineficiente. Puede gastar demasiado en áreas de escaso valor y demasiado poco en otras donde un peso adicional tendría un retorno elevado.
 
-Por eso reducir la dotación puede perfectamente formar parte de una reforma seria del Estado. Lo que no debería hacer es sustituirla.
-
-La pregunta difícil no es cuántos funcionarios podemos eliminar.
-
-Es cuántos necesitamos, para hacer qué, con qué productividad y a qué costo.
+Por eso reducir la dotación puede perfectamente formar parte de una reforma seria del Estado, pero no debería sustituirla. La pregunta difícil no es cuántos funcionarios podemos eliminar, sino cuántos necesitamos, para hacer qué, con qué productividad y a qué costo.
 
 Sólo después de responderla podremos distinguir entre el gasto que conviene reducir y las capacidades públicas que sería costoso perder.
