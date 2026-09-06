@@ -4,6 +4,13 @@
   category: Instituciones y capital humano
   deck: Remuneraciones públicas, capital humano y el caso del Banco Central.
   description: "¿Debe la remuneración presidencial ser un techo salarial? Una mirada al costo de oportunidad, la selección de talento y la independencia técnica."
+  media:
+    heading: El debate que abre esta columna
+    intro: Este clip plantea, de forma directa, la intuición de que nadie debería ganar más que el Presidente. La columna examina qué factores económicos quedan fuera de esa comparación.
+    items:
+      - type: instagram
+        url: https://www.instagram.com/p/Dc3_FuCFZUt/
+        label: Clip de UChile TV sobre remuneraciones públicas. Se reproduce desde la publicación original.
   sources:
     - label: 'Ley Orgánica Constitucional del Banco Central: artículos 1, 7, 10 y 14–17.'
       url: https://www.bcn.cl/leychile/navegar?idNorma=30216
@@ -17,7 +24,20 @@
   category: Energía y desarrollo productivo
   deck: Una ventaja natural no es todavía una ventaja competitiva.
   description: "Costos, demanda, infraestructura y valor local: las condiciones para transformar el potencial renovable de Chile en una industria competitiva."
+  media:
+    heading: Del potencial a la implementación
+    intro: En mayo de 2026, Corfo reconocía que el desarrollo de la industria avanzaba más lentamente de lo esperado. El diagnóstico resume el cambio de etapa que analiza esta columna, desde los anuncios hacia costos, demanda y proyectos ejecutables.
+    items:
+      - type: article
+        source: TVU
+        date: 3 de mayo de 2026
+        title: 'Hidrógeno verde en Biobío: Corfo reconoce lento avance'
+        summary: El reportaje recoge miradas del sector público, la academia y la industria sobre la maduración del mercado y las condiciones necesarias para sostener capacidades.
+        url: https://www.tvu.cl/prensa/2026/05/03/hidrogeno-verde-en-biobio-corfo-reconoce-lento-avance-apostando-por-sostener-la-industria-a-largo-plazo.html
+        label: Publicación de contexto. TVU ofrece en esa página su señal en vivo, no un video bajo demanda del reportaje.
   sources:
+    - label: 'TVU: Corfo reconoce un avance más lento del hidrógeno verde y plantea sostener capacidades, 3 de mayo de 2026.'
+      url: https://www.tvu.cl/prensa/2026/05/03/hidrogeno-verde-en-biobio-corfo-reconoce-lento-avance-apostando-por-sostener-la-industria-a-largo-plazo.html
     - label: 'CAF: Reporte de Economía y Desarrollo, capítulo sobre la respuesta al cambio climático.'
       url: https://scioteca.caf.com/bitstream/handle/123456789/2108/Cap%C3%ADtulo5.pdf?isAllowed=y&sequence=5
     - label: 'IEA: Global Hydrogen Review 2025. Demanda, producción, acuerdos de compra y comercio.'
@@ -38,7 +58,29 @@
   category: Gasto público y productividad
   deck: Una discusión sobre ajuste fiscal, funciones públicas y eficiencia.
   description: "Contar funcionarios no basta para medir la eficiencia. La pregunta es qué servicios queremos, con qué productividad y a qué costo."
+  media:
+    heading: Dos intervenciones que enmarcaron la discusión
+    intro: La primera muestra la retórica sobre los “parásitos” del Estado; la segunda, la controversia de enero de 2026 por las llamadas normas de “amarre”. Ambas convierten un problema real de gestión pública en una discusión sobre personas. La columna propone evaluar funciones, desempeño y capacidades antes de decidir salidas.
+    items:
+      - type: instagram
+        url: https://www.instagram.com/reel/DPy1k4mDo3l/
+        label: Cristián Valenzuela responde por su columna “Parásitos”. El clip se reproduce desde Instagram.
+      - type: youtube
+        video_id: psy7ZDb2-Xg
+        url: https://www.youtube.com/watch?v=psy7ZDb2-Xg
+        title: Kast pide rechazar el reajuste del sector público por los amarres
+        label: Intervención sobre las llamadas normas de “amarre”, publicada por Diario Financiero TV.
   sources:
+    - label: 'Instagram: Cristián Valenzuela se refiere a la polémica por su columna “Parásitos”, octubre de 2025.'
+      url: https://www.instagram.com/reel/DPy1k4mDo3l/
+    - label: 'Diario Financiero TV: Kast pide rechazar el reajuste del sector público por los “amarres”, 8 de enero de 2026.'
+      url: https://www.youtube.com/watch?v=psy7ZDb2-Xg
+    - label: 'Cámara de Diputadas y Diputados: tramitación oficial del proyecto de reajuste del sector público, boletín 18036-05.'
+      url: https://www.camara.cl/legislacion/proyectosdeley/tramitacion.aspx?prmBOLETIN=18036-05&prmID=18696
+    - label: 'Senado: alcance de las disposiciones sobre contratas discutidas como “normas de amarre”, 15 de enero de 2026.'
+      url: https://www.senado.cl/comunicaciones/noticias/comision-de-hacienda-da-primera-mirada-al-proyecto-de-reajuste-del-sector
+    - label: 'Ley 21.806: reajuste general de remuneraciones del sector público, texto finalmente promulgado.'
+      url: https://www.bcn.cl/leychile/navegar?idNorma=1221118
     - label: 'Dipres: empleo público al tercer trimestre de 2025, publicado el 28 de noviembre de 2025.'
       url: https://www.dipres.gob.cl/598/w3-article-396910.html
     - label: 'OCDE: Government at a Glance 2025, empleo en el gobierno general.'
