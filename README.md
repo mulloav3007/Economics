@@ -11,7 +11,7 @@ Repositorio y sitio público de **Mauricio Andrés Ulloa Valdivia**. Reúne proy
 | Proyecto | Pregunta principal | Pipeline |
 |---|---|---|
 | Nowcasting IMACEC | ¿Cómo evoluciona la señal para el IMACEC total y no minero desde la EEE hasta los cortes M4/M8P y el dato efectivo? | R |
-| Escenarios tipo IPoM | ¿Cómo cambian inflación, TPM y brecha bajo trayectorias condicionales? | Matlab · IRIS · R |
+| Escenarios tipo IPoM | ¿Cómo cambian inflación, TPM y brecha bajo trayectorias condicionales? | Matlab · IRIS (ejecución local) |
 | Transmisión de la TPM | ¿Con qué velocidad y heterogeneidad se transmite la TPM a tasas bancarias? | R |
 | FX, tasas 10Y y riesgo LatAm | ¿Qué parte de los movimientos financieros excede lo explicado por factores globales? | R |
 | Sostenibilidad fiscal | ¿Qué combinación de crecimiento, tasas, balance primario y ajustes stock-flujo mantiene la deuda bajo el nivel prudente? | R · JavaScript |
@@ -22,10 +22,10 @@ Repositorio y sitio público de **Mauricio Andrés Ulloa Valdivia**. Reúne proy
 El repositorio separa explícitamente cuatro capas:
 
 ```text
-R/ y matlab/       código analítico
+R/                 código analítico publicado
 scripts/           actualización, construcción y validación
 site/              fuente editorial y visual del sitio
- data/processed/   salidas estables consumidas por la publicación
+data/processed/    salidas estables consumidas por la publicación
 outputs/           tablas y objetos derivados de los modelos
 docs/              sitio estático final que publica GitHub Pages
 archive/           material histórico fuera del flujo activo
@@ -86,16 +86,12 @@ python scripts/validate_site.py
 
 ### IPoM / IRIS
 
-En Matlab, desde `matlab/ipom/`:
-
-```matlab
-run_tpm45_2026
-```
-
-Luego, desde la raíz:
+La página publica una corrida cerrada del modelo mediante los CSV de
+`data/processed/ipom/`. La ejecución en Matlab/IRIS se realiza localmente y no
+forma parte de la automatización de GitHub. Si se sustituyen esas salidas por una
+nueva corrida validada, la presentación pública se reconstruye con:
 
 ```bash
-Rscript scripts/03_build_ipom_outputs.R
 python scripts/build_site.py
 python scripts/validate_site.py
 ```
@@ -145,4 +141,4 @@ Las instrucciones exactas están en [DEPLOY.md](DEPLOY.md).
 
 ## Estado de la reconstrucción
 
-La reorganización conserva los pipelines analíticos y sus salidas, reemplaza la antigua capa pública Quarto por un constructor estático determinista y archiva los hotfixes anteriores. La revisión estructural no equivale a reestimar todos los modelos: las corridas de R, Matlab e IRIS requieren sus dependencias y credenciales locales.
+La reorganización conserva los pipelines analíticos activos y las salidas publicadas, reemplaza la antigua capa pública Quarto por un constructor estático determinista y archiva los hotfixes anteriores. La revisión estructural no equivale a reestimar todos los modelos: las corridas de R requieren sus dependencias y credenciales locales, mientras que el ejercicio IPoM se publica como una corrida cerrada procesada fuera de GitHub.

@@ -2,4 +2,4 @@ source_project: IPOM_IRIS_MATLAB_tpm45_2026_return_ipom_gapfix
 baseline_file: fcast_ipom_exact.csv
 main_alternative_file: fcast_alt_tpm45_2026.csv
 main_alternative: TPM 4.5 during 2026 with return to IPoM path from 2027Q1
-notes: Processed from uploaded IPOM/IRIS MATLAB zip; output/raw copied into matlab/ipom/output/raw.
+notes: Closed IPOM/IRIS run processed for static publication; not updated automatically by GitHub.

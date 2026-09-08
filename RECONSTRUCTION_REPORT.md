@@ -12,7 +12,7 @@ La intervención reconstruyó el repositorio como un portafolio profesional inte
 - `site/` pasó a ser la única fuente editorial activa y `docs/` el único artefacto publicable.
 - `docs/` se limpia completamente en cada build para impedir páginas fantasma.
 - Los hotfixes, notas transitorias, la antigua fuente Quarto y los launchers obsoletos quedaron fuera del flujo activo en `archive/`.
-- El pipeline IPoM activo quedó separado de la disposición previa, conservada en `matlab/ipom/archive_legacy/`.
+- La página IPoM quedó desacoplada de la ejecución local y pasó a consumir únicamente CSV consolidados.
 - Se corrigieron funciones de búsqueda de raíz y rutas que dependían de `_quarto.yml` o de carpetas antiguas.
 
 ## Sistema visual
@@ -92,4 +92,4 @@ La intervención reconstruyó el repositorio como un portafolio profesional inte
 
 ## Limitación explícita
 
-No se reestimaron los pipelines R, Matlab e IRIS dentro de este entorno porque esas herramientas, credenciales y dependencias locales no estaban disponibles. La reconstrucción conserva y ordena el código, corrige rutas visibles y construye el sitio a partir de las salidas procesadas incluidas. Antes de sustituir una serie con datos nuevos, debe ejecutarse el pipeline analítico correspondiente y luego reconstruirse el sitio.
+No se reestimaron los pipelines analíticos durante esta reconstrucción. El sitio se construye a partir de las salidas procesadas incluidas; en el caso del ejercicio IPoM/IRIS, cualquier nueva estimación debe realizarse localmente y sus resultados deben validarse antes de sustituir la corrida publicada.

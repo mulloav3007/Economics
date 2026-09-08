@@ -9,6 +9,8 @@
   <strong>Naturaleza del ejercicio.</strong> Se trata de una simulación condicional en un modelo semi-estructural. No es una predicción oficial ni una recomendación de política. El escenario alternativo se impone y el modelo calcula los shocks compatibles con esa trayectoria.
 </div>
 
+La publicación conserva una corrida cerrada del modelo. La ejecución en Matlab/IRIS se realiza fuera de GitHub y el sitio utiliza únicamente las salidas procesadas y validadas de ese ejercicio; por ello, esta página no se actualiza automáticamente.
+
 ## Pregunta económica
 
 ¿Cómo cambian la inflación y la brecha de actividad cuando la TPM se mantiene en **4,5% durante 2026**, en lugar de seguir la trayectoria del escenario base identificado, y luego retorna al escenario base desde 2027?

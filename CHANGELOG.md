@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-09-08 — Ajuste de formato y limpieza del proyecto
+
+- Se simplificó la estructura del repositorio y se retiraron componentes que no participan en la publicación automática.
+- La página del ejercicio IPoM conserva sus resultados procesados, gráficos y documentos públicos.
+
 ## 2026-09 — Sostenibilidad de la deuda pública
 
 - El proyecto de estrés financiero fue reemplazado por una DSA de la deuda bruta del Gobierno Central.
@@ -48,5 +53,5 @@
 
 - Hotfixes y notas transitorias se movieron a `archive/legacy-notes/`.
 - La antigua fuente Quarto se movió a `archive/legacy-site-source/`.
-- El pipeline IPoM anterior quedó fuera del path activo en `matlab/ipom/archive_legacy/`.
+- El pipeline IPoM anterior quedó fuera del flujo de publicación.
 - Se eliminó del proyecto publicable el CV original con datos personales innecesarios.

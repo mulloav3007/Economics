@@ -8,11 +8,6 @@ Economics/
 ├─ R/                            código analítico reutilizable
 │  ├─ sostenibilidad_deuda/
 │  └─ transmision_tpm/
-├─ matlab/ipom/                  modelo y escenarios Matlab/IRIS
-│  ├─ data/                      entradas del flujo auditado
-│  ├─ src/matlab/                modelo y pasos activos
-│  ├─ output/                    salidas crudas y reportes
-│  └─ archive_legacy/            pipeline anterior fuera del path
 ├─ modelos/exchange/             documentación y Rmd del modelo regional
 ├─ scripts/                      actualización, build y validación
 ├─ data/
@@ -34,7 +29,7 @@ Economics/
 
 ### Código analítico
 
-`R/`, `matlab/` y `modelos/` pueden descargar, transformar y estimar. No escriben directamente HTML público.
+`R/` y `modelos/` pueden descargar, transformar y estimar. No escriben directamente HTML público. El ejercicio IPoM/IRIS se ejecuta localmente fuera del repositorio y su página consume una corrida cerrada guardada en `data/processed/ipom/`.
 
 ### Datos procesados
 
@@ -54,4 +49,4 @@ Los paneles autocontenidos de mayor complejidad se guardan en `site/assets/dashb
 
 ### Archivo histórico
 
-`archive/` y `matlab/ipom/archive_legacy/` no participan en builds ni estimaciones. Se conservan para trazabilidad, no como documentación operativa.
+`archive/` no participa en builds ni estimaciones. Se conserva para trazabilidad, no como documentación operativa.
