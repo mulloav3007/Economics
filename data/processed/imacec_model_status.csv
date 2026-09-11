@@ -1,5 +1,5 @@
 model_key,target_key,Periodo,run_timestamp,fit_available,forecast_available,missing_variables,ine_fallback
-m4,total,2026-08-01,2026-09-10 17:08:43 UTC,FALSE,FALSE,"venta_minorista, monto_credito, cantidad_credito",
-m4,no_minero,2026-08-01,2026-09-10 17:08:43 UTC,FALSE,FALSE,"venta_minorista, monto_credito, cantidad_credito",
-m8p,total,2026-08-01,2026-09-10 17:08:43 UTC,FALSE,FALSE,"cantidad_credito, mineria, manufactura, comercio, electricidad, factor_ivs_real, monto_credito_real",
-m8p,no_minero,2026-08-01,2026-09-10 17:08:43 UTC,FALSE,FALSE,"cantidad_credito, mineria, manufactura, comercio, electricidad, factor_ivs_real, monto_credito_real",
+m4,total,2026-08-01,2026-09-11 17:07:49 UTC,FALSE,FALSE,"venta_minorista, monto_credito, cantidad_credito",
+m4,no_minero,2026-08-01,2026-09-11 17:07:49 UTC,FALSE,FALSE,"venta_minorista, monto_credito, cantidad_credito",
+m8p,total,2026-08-01,2026-09-11 17:07:49 UTC,FALSE,FALSE,"cantidad_credito, mineria, manufactura, comercio, electricidad, factor_ivs_real, monto_credito_real",
+m8p,no_minero,2026-08-01,2026-09-11 17:07:49 UTC,FALSE,FALSE,"cantidad_credito, mineria, manufactura, comercio, electricidad, factor_ivs_real, monto_credito_real",
