@@ -1,543 +1,727 @@
-Periodo,target_key,variable,observed,fitted,model_key,modelo,corte,tipo
-2019-01-01,no_minero,IMACEC no minero,2.7341152560787396,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-02-01,no_minero,IMACEC no minero,1.6595585372416455,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-03-01,no_minero,IMACEC no minero,2.0466527540109025,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-04-01,no_minero,IMACEC no minero,1.854854981195575,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-05-01,no_minero,IMACEC no minero,2.3594432769310947,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-06-01,no_minero,IMACEC no minero,1.1635809008067488,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-07-01,no_minero,IMACEC no minero,3.699210497436334,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-08-01,no_minero,IMACEC no minero,3.367958748266986,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-09-01,no_minero,IMACEC no minero,3.484051165327595,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-10-01,no_minero,IMACEC no minero,-4.712059303855154,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-11-01,no_minero,IMACEC no minero,-4.351675091891083,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-12-01,no_minero,IMACEC no minero,1.228133832481304,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-01-01,no_minero,IMACEC no minero,1.0520356730939318,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-02-01,no_minero,IMACEC no minero,2.332493148386061,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-03-01,no_minero,IMACEC no minero,-4.6573727980858575,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-04-01,no_minero,IMACEC no minero,-16.253706219075205,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-05-01,no_minero,IMACEC no minero,-17.51663250266762,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-06-01,no_minero,IMACEC no minero,-15.45518696546634,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-07-01,no_minero,IMACEC no minero,-13.156314088362864,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-08-01,no_minero,IMACEC no minero,-12.018710106610374,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-09-01,no_minero,IMACEC no minero,-5.4415880935850485,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-10-01,no_minero,IMACEC no minero,-1.7617207822021141,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-11-01,no_minero,IMACEC no minero,1.0157142703611788,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-12-01,no_minero,IMACEC no minero,1.3347235420328785,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-01-01,no_minero,IMACEC no minero,-3.350273769976153,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-02-01,no_minero,IMACEC no minero,-1.3854611211324586,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-03-01,no_minero,IMACEC no minero,7.68507855505729,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-04-01,no_minero,IMACEC no minero,16.734270191563038,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-05-01,no_minero,IMACEC no minero,22.13975263630448,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-06-01,no_minero,IMACEC no minero,23.407318658335143,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-07-01,no_minero,IMACEC no minero,20.76463937480795,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-08-01,no_minero,IMACEC no minero,21.657203493350764,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-09-01,no_minero,IMACEC no minero,16.849040783117687,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-10-01,no_minero,IMACEC no minero,15.655913827209456,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-11-01,no_minero,IMACEC no minero,15.7452903795817,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-12-01,no_minero,IMACEC no minero,10.477766339800976,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-01-01,no_minero,IMACEC no minero,10.22222540329465,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-02-01,no_minero,IMACEC no minero,7.808978207744599,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-03-01,no_minero,IMACEC no minero,7.994692106551549,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-04-01,no_minero,IMACEC no minero,9.085282350398138,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-05-01,no_minero,IMACEC no minero,7.123730100359338,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-06-01,no_minero,IMACEC no minero,4.404975133900391,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-07-01,no_minero,IMACEC no minero,1.2528044069725075,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-08-01,no_minero,IMACEC no minero,2.5916980923111455,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-09-01,no_minero,IMACEC no minero,1.1620904191933956,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-10-01,no_minero,IMACEC no minero,-2.3643191172496913,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-11-01,no_minero,IMACEC no minero,-2.537906042892557,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-12-01,no_minero,IMACEC no minero,-1.3300179238098009,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-01-01,no_minero,IMACEC no minero,0.5845919328884674,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-02-01,no_minero,IMACEC no minero,0.5722515823792129,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-03-01,no_minero,IMACEC no minero,-0.06153635370935717,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-04-01,no_minero,IMACEC no minero,-0.628578866738827,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-05-01,no_minero,IMACEC no minero,0.765823394874432,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-06-01,no_minero,IMACEC no minero,-0.15502564733940183,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-07-01,no_minero,IMACEC no minero,2.330988389425115,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-08-01,no_minero,IMACEC no minero,-0.48439612663464526,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-09-01,no_minero,IMACEC no minero,-0.9565011146409841,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-10-01,no_minero,IMACEC no minero,3.136077145990246,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-11-01,no_minero,IMACEC no minero,2.167097326798406,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-12-01,no_minero,IMACEC no minero,0.7938512913761464,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-01-01,no_minero,IMACEC no minero,4.1128471186122395,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-02-01,no_minero,IMACEC no minero,4.628470622877567,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-03-01,no_minero,IMACEC no minero,-0.2650223798154494,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-04-01,no_minero,IMACEC no minero,4.2313298983302605,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-05-01,no_minero,IMACEC no minero,-0.21752102603829204,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-06-01,no_minero,IMACEC no minero,-1.2529263884246133,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-07-01,no_minero,IMACEC no minero,4.6495518840197425,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-08-01,no_minero,IMACEC no minero,1.5667466901213345,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-09-01,no_minero,IMACEC no minero,0.8477262615004033,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-10-01,no_minero,IMACEC no minero,2.9737865888798565,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-11-01,no_minero,IMACEC no minero,2.4453500701363318,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-12-01,no_minero,IMACEC no minero,5.8056759175583394,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-01-01,no_minero,IMACEC no minero,3.7667226031889323,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-02-01,no_minero,IMACEC no minero,1.2705337021299723,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-03-01,no_minero,IMACEC no minero,4.880608001916276,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-04-01,no_minero,IMACEC no minero,2.692860351031956,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-05-01,no_minero,IMACEC no minero,2.506905661515213,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-06-01,no_minero,IMACEC no minero,4.9721635080541615,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-07-01,no_minero,IMACEC no minero,2.240705074317506,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-08-01,no_minero,IMACEC no minero,1.3299898699509427,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-09-01,no_minero,IMACEC no minero,4.257546154405323,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-10-01,no_minero,IMACEC no minero,2.838327035510746,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-11-01,no_minero,IMACEC no minero,2.2056769858848746,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-12-01,no_minero,IMACEC no minero,2.6444701441954432,NA,actual,IMACEC efectivo,oficial,Efectivo
-2026-01-01,no_minero,IMACEC no minero,-0.7596509074593527,NA,actual,IMACEC efectivo,oficial,Efectivo
-2026-02-01,no_minero,IMACEC no minero,-0.14106910741275014,NA,actual,IMACEC efectivo,oficial,Efectivo
-2026-03-01,no_minero,IMACEC no minero,1.2533594134531256,NA,actual,IMACEC efectivo,oficial,Efectivo
-2026-04-01,no_minero,IMACEC no minero,0.6898526641451186,NA,actual,IMACEC efectivo,oficial,Efectivo
-2026-05-01,no_minero,IMACEC no minero,0.30523196607576963,NA,actual,IMACEC efectivo,oficial,Efectivo
-2026-06-01,no_minero,IMACEC no minero,1.199968515136729,NA,actual,IMACEC efectivo,oficial,Efectivo
-2026-07-01,no_minero,IMACEC no minero,-0.30982965559617215,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-02-01,no_minero,IMACEC no minero,1.6595585372416455,2.672572326333705,ar1,AR(1) de referencia,proxy,Ajuste
-2019-03-01,no_minero,IMACEC no minero,2.0466527540109025,1.7073379593827824,ar1,AR(1) de referencia,proxy,Ajuste
-2019-04-01,no_minero,IMACEC no minero,1.854854981195575,2.055050308785794,ar1,AR(1) de referencia,proxy,Ajuste
-2019-05-01,no_minero,IMACEC no minero,2.3594432769310947,1.8827654972159116,ar1,AR(1) de referencia,proxy,Ajuste
-2019-06-01,no_minero,IMACEC no minero,1.1635809008067488,2.336018411340547,ar1,AR(1) de referencia,proxy,Ajuste
-2019-07-01,no_minero,IMACEC no minero,3.699210497436334,1.2618196805113344,ar1,AR(1) de referencia,proxy,Ajuste
-2019-08-01,no_minero,IMACEC no minero,3.367958748266986,3.5394815159642716,ar1,AR(1) de referencia,proxy,Ajuste
-2019-09-01,no_minero,IMACEC no minero,3.484051165327595,3.241930379941517,ar1,AR(1) de referencia,proxy,Ajuste
-2019-10-01,no_minero,IMACEC no minero,-4.712059303855154,3.346211883863031,ar1,AR(1) de referencia,proxy,Ajuste
-2019-11-01,no_minero,IMACEC no minero,-4.351675091891083,-4.0160495598540225,ar1,AR(1) de referencia,proxy,Ajuste
-2019-12-01,no_minero,IMACEC no minero,1.228133832481304,-3.692329815147849,ar1,AR(1) de referencia,proxy,Ajuste
-2020-01-01,no_minero,IMACEC no minero,1.0520356730939318,1.3198051800642543,ar1,AR(1) de referencia,proxy,Ajuste
-2020-02-01,no_minero,IMACEC no minero,2.332493148386061,1.1616227477944676,ar1,AR(1) de referencia,proxy,Ajuste
-2020-03-01,no_minero,IMACEC no minero,-4.6573727980858575,2.311810112411884,ar1,AR(1) de referencia,proxy,Ajuste
-2020-04-01,no_minero,IMACEC no minero,-16.253706219075205,-3.9669267040273795,ar1,AR(1) de referencia,proxy,Ajuste
-2020-05-01,no_minero,IMACEC no minero,-17.51663250266762,-14.383482063407532,ar1,AR(1) de referencia,proxy,Ajuste
-2020-06-01,no_minero,IMACEC no minero,-15.45518696546634,-15.517921810029984,ar1,AR(1) de referencia,proxy,Ajuste
-2020-07-01,no_minero,IMACEC no minero,-13.156314088362864,-13.666201893134708,ar1,AR(1) de referencia,proxy,Ajuste
-2020-08-01,no_minero,IMACEC no minero,-12.018710106610374,-11.601209820279763,ar1,AR(1) de referencia,proxy,Ajuste
-2020-09-01,no_minero,IMACEC no minero,-5.4415880935850485,-10.579342440067345,ar1,AR(1) de referencia,proxy,Ajuste
-2020-10-01,no_minero,IMACEC no minero,-1.7617207822021141,-4.671358160306002,ar1,AR(1) de referencia,proxy,Ajuste
-2020-11-01,no_minero,IMACEC no minero,1.0157142703611788,-1.3658701088143381,ar1,AR(1) de referencia,proxy,Ajuste
-2020-12-01,no_minero,IMACEC no minero,1.3347235420328785,1.1289965815261485,ar1,AR(1) de referencia,proxy,Ajuste
-2021-01-01,no_minero,IMACEC no minero,-3.350273769976153,1.4155507549780104,ar1,AR(1) de referencia,proxy,Ajuste
-2021-02-01,no_minero,IMACEC no minero,-1.3854611211324586,-2.7928082225897253,ar1,AR(1) de referencia,proxy,Ajuste
-2021-03-01,no_minero,IMACEC no minero,7.68507855505729,-1.0278900381534082,ar1,AR(1) de referencia,proxy,Ajuste
-2021-04-01,no_minero,IMACEC no minero,16.734270191563038,7.119838665944486,ar1,AR(1) de referencia,proxy,Ajuste
-2021-05-01,no_minero,IMACEC no minero,22.13975263630448,15.248391219348047,ar1,AR(1) de referencia,proxy,Ajuste
-2021-06-01,no_minero,IMACEC no minero,23.407318658335143,20.103935216374907,ar1,AR(1) de referencia,proxy,Ajuste
-2021-07-01,no_minero,IMACEC no minero,20.76463937480795,21.24254266761058,ar1,AR(1) de referencia,proxy,Ajuste
-2021-08-01,no_minero,IMACEC no minero,21.657203493350764,18.868722076688005,ar1,AR(1) de referencia,proxy,Ajuste
-2021-09-01,no_minero,IMACEC no minero,16.849040783117687,19.67047925415664,ar1,AR(1) de referencia,proxy,Ajuste
-2021-10-01,no_minero,IMACEC no minero,15.655913827209456,15.351485376540348,ar1,AR(1) de referencia,proxy,Ajuste
-2021-11-01,no_minero,IMACEC no minero,15.7452903795817,14.279743772035285,ar1,AR(1) de referencia,proxy,Ajuste
-2021-12-01,no_minero,IMACEC no minero,10.477766339800976,14.36002740754467,ar1,AR(1) de referencia,proxy,Ajuste
-2022-01-01,no_minero,IMACEC no minero,10.22222540329465,9.628406318767759,ar1,AR(1) de referencia,proxy,Ajuste
-2022-02-01,no_minero,IMACEC no minero,7.808978207744599,9.398863392131307,ar1,AR(1) de referencia,proxy,Ajuste
-2022-03-01,no_minero,IMACEC no minero,7.994692106551549,7.231133119490409,ar1,AR(1) de referencia,proxy,Ajuste
-2022-04-01,no_minero,IMACEC no minero,9.085282350398138,7.397953013132607,ar1,AR(1) de referencia,proxy,Ajuste
-2022-05-01,no_minero,IMACEC no minero,7.123730100359338,8.37758969974822,ar1,AR(1) de referencia,proxy,Ajuste
-2022-06-01,no_minero,IMACEC no minero,4.404975133900391,6.615600210392658,ar1,AR(1) de referencia,proxy,Ajuste
-2022-07-01,no_minero,IMACEC no minero,1.2528044069725075,4.173443660680999,ar1,AR(1) de referencia,proxy,Ajuste
-2022-08-01,no_minero,IMACEC no minero,2.5916980923111455,1.3419658403010666,ar1,AR(1) de referencia,proxy,Ajuste
-2022-09-01,no_minero,IMACEC no minero,1.1620904191933956,2.544644280747682,ar1,AR(1) de referencia,proxy,Ajuste
-2022-10-01,no_minero,IMACEC no minero,-2.3643191172496913,1.2604808362685902,ar1,AR(1) de referencia,proxy,Ajuste
-2022-11-01,no_minero,IMACEC no minero,-2.537906042892557,-1.907161798921492,ar1,AR(1) de referencia,proxy,Ajuste
-2022-12-01,no_minero,IMACEC no minero,-1.3300179238098009,-2.0630884832431686,ar1,AR(1) de referencia,proxy,Ajuste
-2023-01-01,no_minero,IMACEC no minero,0.5845919328884674,-0.978087474425189,ar1,AR(1) de referencia,proxy,Ajuste
-2023-02-01,no_minero,IMACEC no minero,0.5722515823792129,0.7417354075052713,ar1,AR(1) de referencia,proxy,Ajuste
-2023-03-01,no_minero,IMACEC no minero,-0.06153635370935717,0.7306505292452913,ar1,AR(1) de referencia,proxy,Ajuste
-2023-04-01,no_minero,IMACEC no minero,-0.628578866738827,0.16134237961719644,ar1,AR(1) de referencia,proxy,Ajuste
-2023-05-01,no_minero,IMACEC no minero,0.765823394874432,-0.3480108369264503,ar1,AR(1) de referencia,proxy,Ajuste
-2023-06-01,no_minero,IMACEC no minero,-0.15502564733940183,0.9045288947312655,ar1,AR(1) de referencia,proxy,Ajuste
-2023-07-01,no_minero,IMACEC no minero,2.330988389425115,0.07736442147707742,ar1,AR(1) de referencia,proxy,Ajuste
-2023-08-01,no_minero,IMACEC no minero,-0.48439612663464526,2.310458443358384,ar1,AR(1) de referencia,proxy,Ajuste
-2023-09-01,no_minero,IMACEC no minero,-0.9565011146409841,-0.21849683973110262,ar1,AR(1) de referencia,proxy,Ajuste
-2023-10-01,no_minero,IMACEC no minero,3.136077145990246,-0.6425712056946138,ar1,AR(1) de referencia,proxy,Ajuste
-2023-11-01,no_minero,IMACEC no minero,2.167097326798406,3.033639753995427,ar1,AR(1) de referencia,proxy,Ajuste
-2023-12-01,no_minero,IMACEC no minero,0.7938512913761464,2.163241192458306,ar1,AR(1) de referencia,proxy,Ajuste
-2024-01-01,no_minero,IMACEC no minero,4.1128471186122395,0.9297053125624957,ar1,AR(1) de referencia,proxy,Ajuste
-2024-02-01,no_minero,IMACEC no minero,4.628470622877567,3.9110359208546224,ar1,AR(1) de referencia,proxy,Ajuste
-2024-03-01,no_minero,IMACEC no minero,-0.2650223798154494,4.374201352701885,ar1,AR(1) de referencia,proxy,Ajuste
-2024-04-01,no_minero,IMACEC no minero,4.2313298983302605,-0.021441555515081617,ar1,AR(1) de referencia,proxy,Ajuste
-2024-05-01,no_minero,IMACEC no minero,-0.21752102603829204,4.017464598718623,ar1,AR(1) de referencia,proxy,Ajuste
-2024-06-01,no_minero,IMACEC no minero,-1.2529263884246133,0.021227145297683325,ar1,AR(1) de referencia,proxy,Ajuste
-2024-07-01,no_minero,IMACEC no minero,4.6495518840197425,-0.9088390131291434,ar1,AR(1) de referencia,proxy,Ajuste
-2024-08-01,no_minero,IMACEC no minero,1.5667466901213345,4.393137866146346,ar1,AR(1) de referencia,proxy,Ajuste
-2024-09-01,no_minero,IMACEC no minero,0.8477262615004033,1.6239685262665202,ar1,AR(1) de referencia,proxy,Ajuste
-2024-10-01,no_minero,IMACEC no minero,2.9737865888798565,0.9780991960781695,ar1,AR(1) de referencia,proxy,Ajuste
-2024-11-01,no_minero,IMACEC no minero,2.4453500701363318,2.8878601777213264,ar1,AR(1) de referencia,proxy,Ajuste
-2024-12-01,no_minero,IMACEC no minero,5.8056759175583394,2.4131852911363185,ar1,AR(1) de referencia,proxy,Ajuste
-2025-01-01,no_minero,IMACEC no minero,3.7667226031889323,5.431641120620486,ar1,AR(1) de referencia,proxy,Ajuste
-2025-02-01,no_minero,IMACEC no minero,1.2705337021299723,3.6001251316201826,ar1,AR(1) de referencia,proxy,Ajuste
-2025-03-01,no_minero,IMACEC no minero,4.880608001916276,1.3578914072700408,ar1,AR(1) de referencia,proxy,Ajuste
-2025-04-01,no_minero,IMACEC no minero,2.692860351031956,4.600686990151041,ar1,AR(1) de referencia,proxy,Ajuste
-2025-05-01,no_minero,IMACEC no minero,2.506905661515213,2.6355145782796545,ar1,AR(1) de referencia,proxy,Ajuste
-2025-06-01,no_minero,IMACEC no minero,4.9721635080541615,2.4684783912913155,ar1,AR(1) de referencia,proxy,Ajuste
-2025-07-01,no_minero,IMACEC no minero,2.240705074317506,4.6829278988519905,ar1,AR(1) de referencia,proxy,Ajuste
-2025-08-01,no_minero,IMACEC no minero,1.3299898699509427,2.2293602965816994,ar1,AR(1) de referencia,proxy,Ajuste
-2025-09-01,no_minero,IMACEC no minero,4.257546154405323,1.4112986732635102,ar1,AR(1) de referencia,proxy,Ajuste
-2025-10-01,no_minero,IMACEC no minero,2.838327035510746,4.041013687280296,ar1,AR(1) de referencia,proxy,Ajuste
-2025-11-01,no_minero,IMACEC no minero,2.2056769858848746,2.766181894991692,ar1,AR(1) de referencia,proxy,Ajuste
-2025-12-01,no_minero,IMACEC no minero,2.6444701441954432,2.197895866485946,ar1,AR(1) de referencia,proxy,Ajuste
-2026-01-01,no_minero,IMACEC no minero,-0.7596509074593527,2.5920474537959755,ar1,AR(1) de referencia,proxy,Ajuste
-2026-02-01,no_minero,IMACEC no minero,-0.14106910741275014,-0.4657479800962956,ar1,AR(1) de referencia,proxy,Ajuste
-2026-03-01,no_minero,IMACEC no minero,1.2533594134531256,0.08990106262851508,ar1,AR(1) de referencia,proxy,Ajuste
-2026-04-01,no_minero,IMACEC no minero,0.6898526641451186,1.342464381996988,ar1,AR(1) de referencia,proxy,Ajuste
-2026-05-01,no_minero,IMACEC no minero,0.30523196607576963,0.8362872106053066,ar1,AR(1) de referencia,proxy,Ajuste
-2026-06-01,no_minero,IMACEC no minero,1.199968515136729,0.49079673112744054,ar1,AR(1) de referencia,proxy,Ajuste
-2026-07-01,no_minero,IMACEC no minero,-0.30982965559617215,1.2945053221968315,ar1,AR(1) de referencia,proxy,Ajuste
-2026-08-01,no_minero,IMACEC no minero,NA,-0.061690266183241416,ar1,AR(1) de referencia,proxy,Nowcast
-2019-04-01,no_minero,IMACEC no minero,1.854854981195575,2.146775515777096,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2019-05-01,no_minero,IMACEC no minero,2.3594432769310947,1.8536887574827077,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2019-06-01,no_minero,IMACEC no minero,1.1635809008067488,2.086983670712524,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2019-07-01,no_minero,IMACEC no minero,3.699210497436334,1.7926263863111396,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2019-08-01,no_minero,IMACEC no minero,3.367958748266986,2.4074115583913924,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2019-09-01,no_minero,IMACEC no minero,3.484051165327595,2.743583382170023,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2019-10-01,no_minero,IMACEC no minero,-4.712059303855154,3.517073470343638,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2019-11-01,no_minero,IMACEC no minero,-4.351675091891083,0.7133168699131422,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2019-12-01,no_minero,IMACEC no minero,1.228133832481304,-1.8598944101395476,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-01-01,no_minero,IMACEC no minero,1.0520356730939318,-2.6118668544216446,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-02-01,no_minero,IMACEC no minero,2.332493148386061,-0.6905018621052825,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-03-01,no_minero,IMACEC no minero,-4.6573727980858575,1.537554217987099,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-04-01,no_minero,IMACEC no minero,-16.253706219075205,-0.4242813255352882,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-05-01,no_minero,IMACEC no minero,-17.51663250266762,-6.1928619562583345,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-06-01,no_minero,IMACEC no minero,-15.45518696546634,-12.809237173276228,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-07-01,no_minero,IMACEC no minero,-13.156314088362864,-16.408508562403053,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-08-01,no_minero,IMACEC no minero,-12.018710106610374,-15.376044518832273,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-09-01,no_minero,IMACEC no minero,-5.4415880935850485,-13.543403720146527,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-10-01,no_minero,IMACEC no minero,-1.7617207822021141,-10.20553742951943,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-11-01,no_minero,IMACEC no minero,1.0157142703611788,-6.407339660799178,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-12-01,no_minero,IMACEC no minero,1.3347235420328785,-2.0625315351419946,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-01-01,no_minero,IMACEC no minero,-3.350273769976153,0.19623901006398103,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-02-01,no_minero,IMACEC no minero,-1.3854611211324586,-0.33327865252736527,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-03-01,no_minero,IMACEC no minero,7.68507855505729,-1.133670449691911,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-04-01,no_minero,IMACEC no minero,16.734270191563038,0.9831145546495595,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-05-01,no_minero,IMACEC no minero,22.13975263630448,7.677962541829291,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-06-01,no_minero,IMACEC no minero,23.407318658335143,15.519700460974937,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-07-01,no_minero,IMACEC no minero,20.76463937480795,20.760447162067553,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-08-01,no_minero,IMACEC no minero,21.657203493350764,22.10390355648252,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-09-01,no_minero,IMACEC no minero,16.849040783117687,21.94305384216462,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-10-01,no_minero,IMACEC no minero,15.655913827209456,19.756961217092133,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-11-01,no_minero,IMACEC no minero,15.7452903795817,18.05405270122597,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-12-01,no_minero,IMACEC no minero,10.477766339800976,16.083414996636282,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-01-01,no_minero,IMACEC no minero,10.22222540329465,13.959656848864043,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-02-01,no_minero,IMACEC no minero,7.808978207744599,12.148427374225776,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-03-01,no_minero,IMACEC no minero,7.994692106551549,9.502989983613409,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-04-01,no_minero,IMACEC no minero,9.085282350398138,8.675298572530266,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-05-01,no_minero,IMACEC no minero,7.123730100359338,8.296317554898094,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-06-01,no_minero,IMACEC no minero,4.404975133900391,8.067901519103009,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-07-01,no_minero,IMACEC no minero,1.2528044069725075,6.871329194885956,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-08-01,no_minero,IMACEC no minero,2.5916980923111455,4.260503213744079,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-09-01,no_minero,IMACEC no minero,1.1620904191933956,2.7498258777280142,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-10-01,no_minero,IMACEC no minero,-2.3643191172496913,1.6688643061590163,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-11-01,no_minero,IMACEC no minero,-2.537906042892557,0.4631564647516166,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-12-01,no_minero,IMACEC no minero,-1.3300179238098009,-1.2467115803162843,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-01-01,no_minero,IMACEC no minero,0.5845919328884674,-2.07741436131735,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-02-01,no_minero,IMACEC no minero,0.5722515823792129,-1.0944440112712968,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-03-01,no_minero,IMACEC no minero,-0.06153635370935717,-0.0577248028473735,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-04-01,no_minero,IMACEC no minero,-0.628578866738827,0.3651023871861077,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-05-01,no_minero,IMACEC no minero,0.765823394874432,-0.03928787935632375,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-06-01,no_minero,IMACEC no minero,-0.15502564733940183,0.02523605814208259,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-07-01,no_minero,IMACEC no minero,2.330988389425115,-0.00592703973459896,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-08-01,no_minero,IMACEC no minero,-0.48439612663464526,0.980595378986715,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-09-01,no_minero,IMACEC no minero,-0.9565011146409841,0.5638555384836893,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-10-01,no_minero,IMACEC no minero,3.136077145990246,0.2966970493831618,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-11-01,no_minero,IMACEC no minero,2.167097326798406,0.5650599682382055,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-12-01,no_minero,IMACEC no minero,0.7938512913761464,1.448891119382556,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-01-01,no_minero,IMACEC no minero,4.1128471186122395,2.0323419213882663,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-02-01,no_minero,IMACEC no minero,4.628470622877567,2.357931912262264,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-03-01,no_minero,IMACEC no minero,-0.2650223798154494,3.1783896776219844,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-04-01,no_minero,IMACEC no minero,4.2313298983302605,2.8254317872247854,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-05-01,no_minero,IMACEC no minero,-0.21752102603829204,2.8649260471307927,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-06-01,no_minero,IMACEC no minero,-1.2529263884246133,1.249595497492173,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-07-01,no_minero,IMACEC no minero,4.6495518840197425,0.9202941612891183,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-08-01,no_minero,IMACEC no minero,1.5667466901213345,1.059701489852279,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-09-01,no_minero,IMACEC no minero,0.8477262615004033,1.6544573952388213,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-10-01,no_minero,IMACEC no minero,2.9737865888798565,2.354674945213827,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-11-01,no_minero,IMACEC no minero,2.4453500701363318,1.7960865135005315,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-12-01,no_minero,IMACEC no minero,5.8056759175583394,2.088954306838864,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-01-01,no_minero,IMACEC no minero,3.7667226031889323,3.7416041921915095,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-02-01,no_minero,IMACEC no minero,1.2705337021299723,4.005916196961201,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-03-01,no_minero,IMACEC no minero,4.880608001916276,3.614310740959082,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-04-01,no_minero,IMACEC no minero,2.692860351031956,3.3059547690783937,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-05-01,no_minero,IMACEC no minero,2.506905661515213,2.948000685026068,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-06-01,no_minero,IMACEC no minero,4.9721635080541615,3.360124671487815,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-07-01,no_minero,IMACEC no minero,2.240705074317506,3.390643173533777,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-08-01,no_minero,IMACEC no minero,1.3299898699509427,3.2399247479622937,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-09-01,no_minero,IMACEC no minero,4.257546154405323,2.8476194841075366,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-10-01,no_minero,IMACEC no minero,2.838327035510746,2.609413699557924,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-11-01,no_minero,IMACEC no minero,2.2056769858848746,2.808621019955671,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-12-01,no_minero,IMACEC no minero,2.6444701441954432,3.1005167252669814,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2026-01-01,no_minero,IMACEC no minero,-0.7596509074593527,2.562824721863688,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2026-02-01,no_minero,IMACEC no minero,-0.14106910741275014,1.363498740873655,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2026-03-01,no_minero,IMACEC no minero,1.2533594134531256,0.5812500431077802,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2026-04-01,no_minero,IMACEC no minero,0.6898526641451186,0.11754646619367426,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2026-05-01,no_minero,IMACEC no minero,0.30523196607576963,0.6007143233951647,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2026-06-01,no_minero,IMACEC no minero,1.199968515136729,0.7494813478913379,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2026-07-01,no_minero,IMACEC no minero,-0.30982965559617215,0.7316843817858724,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2026-08-01,no_minero,IMACEC no minero,NA,0.39845694187210884,ma3,Promedio móvil 3 meses,proxy,Nowcast
-2019-01-01,total,IMACEC total,1.9659919484973587,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-02-01,total,IMACEC total,0.4024410183006255,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-03-01,total,IMACEC total,1.347042473024107,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-04-01,total,IMACEC total,1.7820940125048201,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-05-01,total,IMACEC total,1.8589031828119662,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-06-01,total,IMACEC total,0.880313809166644,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-07-01,total,IMACEC total,2.7653306128001987,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-08-01,total,IMACEC total,3.1909427561596093,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-09-01,total,IMACEC total,2.7842901635932282,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-10-01,total,IMACEC total,-4.534436503098838,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-11-01,total,IMACEC total,-4.988669054665129,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-12-01,total,IMACEC total,0.9258849701172522,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-01-01,total,IMACEC total,0.9300521010913165,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-02-01,total,IMACEC total,2.7210597729153907,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-03-01,total,IMACEC total,-4.349724855185732,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-04-01,total,IMACEC total,-15.088301570672291,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-05-01,total,IMACEC total,-15.97711767892427,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-06-01,total,IMACEC total,-13.962357751796306,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-07-01,total,IMACEC total,-11.717591602160715,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-08-01,total,IMACEC total,-11.011337841146728,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-09-01,total,IMACEC total,-4.9506576054560885,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-10-01,total,IMACEC total,-1.3585290872647038,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-11-01,total,IMACEC total,1.012732990849563,NA,actual,IMACEC efectivo,oficial,Efectivo
-2020-12-01,total,IMACEC total,0.5689922284684901,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-01-01,total,IMACEC total,-3.4287687132994904,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-02-01,total,IMACEC total,-2.1666510508181247,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-03-01,total,IMACEC total,6.6327425250128025,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-04-01,total,IMACEC total,15.285035960989358,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-05-01,total,IMACEC total,19.551829417289813,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-06-01,total,IMACEC total,20.382431879961494,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-07-01,total,IMACEC total,17.42490393209195,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-08-01,total,IMACEC total,17.966595780594965,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-09-01,total,IMACEC total,13.463442930231295,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-10-01,total,IMACEC total,13.261557495479682,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-11-01,total,IMACEC total,13.33203729920507,NA,actual,IMACEC efectivo,oficial,Efectivo
-2021-12-01,total,IMACEC total,8.751161872273826,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-01-01,total,IMACEC total,7.209596697608389,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-02-01,total,IMACEC total,5.005438687016195,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-03-01,total,IMACEC total,5.669655027882148,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-04-01,total,IMACEC total,5.904856300445971,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-05-01,total,IMACEC total,5.588591818479638,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-06-01,total,IMACEC total,2.7970632563766307,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-07-01,total,IMACEC total,-0.43808421788794627,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-08-01,total,IMACEC total,0.6349071225385083,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-09-01,total,IMACEC total,0.17856372039597446,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-10-01,total,IMACEC total,-1.8790917978623423,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-11-01,total,IMACEC total,-2.866486420366976,NA,actual,IMACEC efectivo,oficial,Efectivo
-2022-12-01,total,IMACEC total,-1.2635246838221925,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-01-01,total,IMACEC total,1.359126237823327,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-02-01,total,IMACEC total,0.16342433643201648,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-03-01,total,IMACEC total,-1.4905514158231825,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-04-01,total,IMACEC total,-0.497119351657882,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-05-01,total,IMACEC total,-0.599359494821039,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-06-01,total,IMACEC total,0.02746104306026176,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-07-01,total,IMACEC total,2.915341321974929,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-08-01,total,IMACEC total,0.418336336923697,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-09-01,total,IMACEC total,0.9023618496374564,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-10-01,total,IMACEC total,2.3886867770460896,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-11-01,total,IMACEC total,2.281348596189936,NA,actual,IMACEC efectivo,oficial,Efectivo
-2023-12-01,total,IMACEC total,0.5421059316974342,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-01-01,total,IMACEC total,3.744961609875319,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-02-01,total,IMACEC total,5.836527826096916,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-03-01,total,IMACEC total,1.184659965776258,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-04-01,total,IMACEC total,3.8954766293294307,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-05-01,total,IMACEC total,0.3278935451245246,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-06-01,total,IMACEC total,-0.7129540412657787,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-07-01,total,IMACEC total,4.491494430948828,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-08-01,total,IMACEC total,2.2341186703822347,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-09-01,total,IMACEC total,0.5088925620504003,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-10-01,total,IMACEC total,2.893919855317506,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-11-01,total,IMACEC total,2.431240856349004,NA,actual,IMACEC efectivo,oficial,Efectivo
-2024-12-01,total,IMACEC total,6.790041427242954,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-01-01,total,IMACEC total,3.3277451570978167,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-02-01,total,IMACEC total,0.31195371691388196,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-03-01,total,IMACEC total,4.927883606216077,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-04-01,total,IMACEC total,3.8776905480138346,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-05-01,total,IMACEC total,3.933046812718355,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-06-01,total,IMACEC total,3.375601478984036,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-07-01,total,IMACEC total,1.5968501075468655,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-08-01,total,IMACEC total,0.2696093831863422,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-09-01,total,IMACEC total,3.2961209339912534,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-10-01,total,IMACEC total,2.0572659006846905,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-11-01,total,IMACEC total,1.3711953861016202,NA,actual,IMACEC efectivo,oficial,Efectivo
-2025-12-01,total,IMACEC total,1.2666989233431902,NA,actual,IMACEC efectivo,oficial,Efectivo
-2026-01-01,total,IMACEC total,-0.8658742743165249,NA,actual,IMACEC efectivo,oficial,Efectivo
-2026-02-01,total,IMACEC total,-0.220585400383988,NA,actual,IMACEC efectivo,oficial,Efectivo
-2026-03-01,total,IMACEC total,0.09162416465238188,NA,actual,IMACEC efectivo,oficial,Efectivo
-2026-04-01,total,IMACEC total,-1.070155907885062,NA,actual,IMACEC efectivo,oficial,Efectivo
-2026-05-01,total,IMACEC total,-1.387178647812548,NA,actual,IMACEC efectivo,oficial,Efectivo
-2026-06-01,total,IMACEC total,2.015280488360527,NA,actual,IMACEC efectivo,oficial,Efectivo
-2026-07-01,total,IMACEC total,-1.487117150040529,NA,actual,IMACEC efectivo,oficial,Efectivo
-2019-02-01,total,IMACEC total,0.4024410183006255,1.9217154094696043,ar1,AR(1) de referencia,proxy,Ajuste
-2019-03-01,total,IMACEC total,1.347042473024107,0.5416331350084116,ar1,AR(1) de referencia,proxy,Ajuste
-2019-04-01,total,IMACEC total,1.7820940125048201,1.3753940947042402,ar1,AR(1) de referencia,proxy,Ajuste
-2019-05-01,total,IMACEC total,1.8589031828119662,1.7593962442465259,ar1,AR(1) de referencia,proxy,Ajuste
-2019-06-01,total,IMACEC total,0.880313809166644,1.8271925484216802,ar1,AR(1) de referencia,proxy,Ajuste
-2019-07-01,total,IMACEC total,2.7653306128001987,0.9634318467641656,ar1,AR(1) de referencia,proxy,Ajuste
-2019-08-01,total,IMACEC total,3.1909427561596093,2.62725886225437,ar1,AR(1) de referencia,proxy,Ajuste
-2019-09-01,total,IMACEC total,2.7842901635932282,3.0029292440128024,ar1,AR(1) de referencia,proxy,Ajuste
-2019-10-01,total,IMACEC total,-4.534436503098838,2.6439936800820916,ar1,AR(1) de referencia,proxy,Ajuste
-2019-11-01,total,IMACEC total,-4.988669054665129,-3.8159461589465518,ar1,AR(1) de referencia,proxy,Ajuste
-2019-12-01,total,IMACEC total,0.9258849701172522,-4.216878601115891,ar1,AR(1) de referencia,proxy,Ajuste
-2020-01-01,total,IMACEC total,0.9300521010913165,1.0036556413588444,ar1,AR(1) de referencia,proxy,Ajuste
-2020-02-01,total,IMACEC total,2.7210597729153907,1.0073337969478924,ar1,AR(1) de referencia,proxy,Ajuste
-2020-03-01,total,IMACEC total,-4.349724855185732,2.588182807729657,ar1,AR(1) de referencia,proxy,Ajuste
-2020-04-01,total,IMACEC total,-15.088301570672291,-3.652908763586927,ar1,AR(1) de referencia,proxy,Ajuste
-2020-05-01,total,IMACEC total,-15.97711767892427,-13.131409969889146,ar1,AR(1) de referencia,proxy,Ajuste
-2020-06-01,total,IMACEC total,-13.962357751796306,-13.91593149238269,ar1,AR(1) de referencia,proxy,Ajuste
-2020-07-01,total,IMACEC total,-11.717591602160715,-12.13758554341244,ar1,AR(1) de referencia,proxy,Ajuste
-2020-08-01,total,IMACEC total,-11.011337841146728,-10.156222535919758,ar1,AR(1) de referencia,proxy,Ajuste
-2020-09-01,total,IMACEC total,-4.9506576054560885,-9.532841309237034,ar1,AR(1) de referencia,proxy,Ajuste
-2020-10-01,total,IMACEC total,-1.3585290872647038,-4.183327454001432,ar1,AR(1) de referencia,proxy,Ajuste
-2020-11-01,total,IMACEC total,1.012732990849563,-1.0127029480771434,ar1,AR(1) de referencia,proxy,Ajuste
-2020-12-01,total,IMACEC total,0.5689922284684901,1.0803128270442632,ar1,AR(1) de referencia,proxy,Ajuste
-2021-01-01,total,IMACEC total,-3.4287687132994904,0.6886410568506565,ar1,AR(1) de referencia,proxy,Ajuste
-2021-02-01,total,IMACEC total,-2.1666510508181247,-2.840018551680976,ar1,AR(1) de referencia,proxy,Ajuste
-2021-03-01,total,IMACEC total,6.6327425250128025,-1.7259990588488732,ar1,AR(1) de referencia,proxy,Ajuste
-2021-04-01,total,IMACEC total,15.285035960989358,6.040864728878178,ar1,AR(1) de referencia,proxy,Ajuste
-2021-05-01,total,IMACEC total,19.551829417289813,13.677889256710936,ar1,AR(1) de referencia,proxy,Ajuste
-2021-06-01,total,IMACEC total,20.382431879961494,17.444012831007516,ar1,AR(1) de referencia,proxy,Ajuste
-2021-07-01,total,IMACEC total,17.42490393209195,18.177151556276137,ar1,AR(1) de referencia,proxy,Ajuste
-2021-08-01,total,IMACEC total,17.966595780594965,15.566662944584563,ar1,AR(1) de referencia,proxy,Ajuste
-2021-09-01,total,IMACEC total,13.463442930231295,16.04479212087245,ar1,AR(1) de referencia,proxy,Ajuste
-2021-10-01,total,IMACEC total,13.261557495479682,12.070043804107144,ar1,AR(1) de referencia,proxy,Ajuste
-2021-11-01,total,IMACEC total,13.33203729920507,11.891847811516396,ar1,AR(1) de referencia,proxy,Ajuste
-2021-12-01,total,IMACEC total,8.751161872273826,11.954057443419256,ar1,AR(1) de referencia,proxy,Ajuste
-2022-01-01,total,IMACEC total,7.209596697608389,7.91070659623758,ar1,AR(1) de referencia,proxy,Ajuste
-2022-02-01,total,IMACEC total,5.005438687016195,6.550030246401792,ar1,AR(1) de referencia,proxy,Ajuste
-2022-03-01,total,IMACEC total,5.669655027882148,4.604510377632832,ar1,AR(1) de referencia,proxy,Ajuste
-2022-04-01,total,IMACEC total,5.904856300445971,5.190786897785095,ar1,AR(1) de referencia,proxy,Ajuste
-2022-05-01,total,IMACEC total,5.588591818479638,5.398389413908575,ar1,AR(1) de referencia,proxy,Ajuste
-2022-06-01,total,IMACEC total,2.7970632563766307,5.1192357277869025,ar1,AR(1) de referencia,proxy,Ajuste
-2022-07-01,total,IMACEC total,-0.43808421788794627,2.6552679651725066,ar1,AR(1) de referencia,proxy,Ajuste
-2022-08-01,total,IMACEC total,0.6349071225385083,-0.20026401544462769,ar1,AR(1) de referencia,proxy,Ajuste
-2022-09-01,total,IMACEC total,0.17856372039597446,0.7468214302380289,ar1,AR(1) de referencia,proxy,Ajuste
-2022-10-01,total,IMACEC total,-1.8790917978623423,0.34402582684506267,ar1,AR(1) de referencia,proxy,Ajuste
-2022-11-01,total,IMACEC total,-2.866486420366976,-1.472182300982442,ar1,AR(1) de referencia,proxy,Ajuste
-2022-12-01,total,IMACEC total,-1.2635246838221925,-2.343715034646248,ar1,AR(1) de referencia,proxy,Ajuste
-2023-01-01,total,IMACEC total,1.359126237823327,-0.928846457920937,ar1,AR(1) de referencia,proxy,Ajuste
-2023-02-01,total,IMACEC total,0.16342433643201648,1.3860599382569432,ar1,AR(1) de referencia,proxy,Ajuste
-2023-03-01,total,IMACEC total,-1.4905514158231825,0.3306629135869116,ar1,AR(1) de referencia,proxy,Ajuste
-2023-04-01,total,IMACEC total,-0.497119351657882,-1.1292336423818838,ar1,AR(1) de referencia,proxy,Ajuste
-2023-05-01,total,IMACEC total,-0.599359494821039,-0.25237190659984726,ar1,AR(1) de referencia,proxy,Ajuste
-2023-06-01,total,IMACEC total,0.02746104306026176,-0.34261508742165386,ar1,AR(1) de referencia,proxy,Ajuste
-2023-07-01,total,IMACEC total,2.915341321974929,0.21065369128667227,ar1,AR(1) de referencia,proxy,Ajuste
-2023-08-01,total,IMACEC total,0.418336336923697,2.759667162305939,ar1,AR(1) de referencia,proxy,Ajuste
-2023-09-01,total,IMACEC total,0.9023618496374564,0.5556632807842539,ar1,AR(1) de referencia,proxy,Ajuste
-2023-10-01,total,IMACEC total,2.3886867770460896,0.9828927477509612,ar1,AR(1) de referencia,proxy,Ajuste
-2023-11-01,total,IMACEC total,2.281348596189936,2.294810797103134,ar1,AR(1) de referencia,proxy,Ajuste
-2023-12-01,total,IMACEC total,0.5421059316974342,2.2000677875141545,ar1,AR(1) de referencia,proxy,Ajuste
-2024-01-01,total,IMACEC total,3.744961609875319,0.6649096254767078,ar1,AR(1) de referencia,proxy,Ajuste
-2024-02-01,total,IMACEC total,5.836527826096916,3.4919389621894625,ar1,AR(1) de referencia,proxy,Ajuste
-2024-03-01,total,IMACEC total,1.184659965776258,5.338078672205877,ar1,AR(1) de referencia,proxy,Ajuste
-2024-04-01,total,IMACEC total,3.8954766293294307,1.2320657159432584,ar1,AR(1) de referencia,proxy,Ajuste
-2024-05-01,total,IMACEC total,0.3278935451245246,3.6247923962395223,ar1,AR(1) de referencia,proxy,Ajuste
-2024-06-01,total,IMACEC total,-0.7129540412657787,0.4758331381235881,ar1,AR(1) de referencia,proxy,Ajuste
-2024-07-01,total,IMACEC total,4.491494430948828,-0.44288033430051205,ar1,AR(1) de referencia,proxy,Ajuste
-2024-08-01,total,IMACEC total,2.2341186703822347,4.150872863074562,ar1,AR(1) de referencia,proxy,Ajuste
-2024-09-01,total,IMACEC total,0.5088925620504003,2.1583798692170997,ar1,AR(1) de referencia,proxy,Ajuste
-2024-10-01,total,IMACEC total,2.893919855317506,0.635593546390476,ar1,AR(1) de referencia,proxy,Ajuste
-2024-11-01,total,IMACEC total,2.431240856349004,2.7407593123242617,ar1,AR(1) de referencia,proxy,Ajuste
-2024-12-01,total,IMACEC total,6.790041427242954,2.33237153747798,ar1,AR(1) de referencia,proxy,Ajuste
-2025-01-01,total,IMACEC total,3.3277451570978167,6.179706018002494,ar1,AR(1) de referencia,proxy,Ajuste
-2025-02-01,total,IMACEC total,0.31195371691388196,3.1236791121445666,ar1,AR(1) de referencia,proxy,Ajuste
-2025-03-01,total,IMACEC total,4.927883606216077,0.461763705560431,ar1,AR(1) de referencia,proxy,Ajuste
-2025-04-01,total,IMACEC total,3.8776905480138346,4.536055688860282,ar1,AR(1) de referencia,proxy,Ajuste
-2025-05-01,total,IMACEC total,3.933046812718355,3.6090933517877426,ar1,AR(1) de referencia,proxy,Ajuste
-2025-06-01,total,IMACEC total,3.375601478984036,3.65795405611381,ar1,AR(1) de referencia,proxy,Ajuste
-2025-07-01,total,IMACEC total,1.5968501075468655,3.16591992456746,ar1,AR(1) de referencia,proxy,Ajuste
-2025-08-01,total,IMACEC total,0.2696093831863422,1.5958890474248146,ar1,AR(1) de referencia,proxy,Ajuste
-2025-09-01,total,IMACEC total,3.2961209339912534,0.4243880990019073,ar1,AR(1) de referencia,proxy,Ajuste
-2025-10-01,total,IMACEC total,2.0572659006846905,3.0957657075281384,ar1,AR(1) de referencia,proxy,Ajuste
-2025-11-01,total,IMACEC total,1.3711953861016202,2.0022791833134828,ar1,AR(1) de referencia,proxy,Ajuste
-2025-12-01,total,IMACEC total,1.2666989233431902,1.3967128804061448,ar1,AR(1) de referencia,proxy,Ajuste
-2026-01-01,total,IMACEC total,-0.8658742743165249,1.3044781388242652,ar1,AR(1) de referencia,proxy,Ajuste
-2026-02-01,total,IMACEC total,-0.220585400383988,-0.5778567517385134,ar1,AR(1) de referencia,proxy,Ajuste
-2026-03-01,total,IMACEC total,0.09162416465238188,-0.008286730307063062,ar1,AR(1) de referencia,proxy,Ajuste
-2026-04-01,total,IMACEC total,-1.070155907885062,0.267287846959645,ar1,AR(1) de referencia,proxy,Ajuste
-2026-05-01,total,IMACEC total,-1.387178647812548,-0.7581677707409078,ar1,AR(1) de referencia,proxy,Ajuste
-2026-06-01,total,IMACEC total,2.015280488360527,-1.0379907400636876,ar1,AR(1) de referencia,proxy,Ajuste
-2026-07-01,total,IMACEC total,-1.487117150040529,1.9652203819559648,ar1,AR(1) de referencia,proxy,Ajuste
-2026-08-01,total,IMACEC total,NA,-1.126202356837618,ar1,AR(1) de referencia,proxy,Nowcast
-2019-04-01,total,IMACEC total,1.7820940125048201,1.2384918132740304,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2019-05-01,total,IMACEC total,1.8589031828119662,1.1771925012765176,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2019-06-01,total,IMACEC total,0.880313809166644,1.6626798894469645,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2019-07-01,total,IMACEC total,2.7653306128001987,1.5071036681611434,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2019-08-01,total,IMACEC total,3.1909427561596093,1.8348492015929363,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2019-09-01,total,IMACEC total,2.7842901635932282,2.278862392708817,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2019-10-01,total,IMACEC total,-4.534436503098838,2.9135211775176786,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2019-11-01,total,IMACEC total,-4.988669054665129,0.480265472218,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2019-12-01,total,IMACEC total,0.9258849701172522,-2.2462717980569127,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-01-01,total,IMACEC total,0.9300521010913165,-2.8657401958822377,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-02-01,total,IMACEC total,2.7210597729153907,-1.0442439944855202,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-03-01,total,IMACEC total,-4.349724855185732,1.5256656147079866,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-04-01,total,IMACEC total,-15.088301570672291,-0.23287099372634165,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-05-01,total,IMACEC total,-15.97711767892427,-5.572322217647543,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-06-01,total,IMACEC total,-13.962357751796306,-11.805048034927431,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-07-01,total,IMACEC total,-11.717591602160715,-15.00925900046429,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-08-01,total,IMACEC total,-11.011337841146728,-13.885689010960428,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-09-01,total,IMACEC total,-4.9506576054560885,-12.230429065034583,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-10-01,total,IMACEC total,-1.3585290872647038,-9.22652901625451,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-11-01,total,IMACEC total,1.012732990849563,-5.77350817795584,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2020-12-01,total,IMACEC total,0.5689922284684901,-1.7654845672904098,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-01-01,total,IMACEC total,-3.4287687132994904,0.07439871068444977,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-02-01,total,IMACEC total,-2.1666510508181247,-0.6156811646604791,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-03-01,total,IMACEC total,6.6327425250128025,-1.675475845216375,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-04-01,total,IMACEC total,15.285035960989358,0.34577425363172914,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-05-01,total,IMACEC total,19.551829417289813,6.583709145061345,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-06-01,total,IMACEC total,20.382431879961494,13.823202634430658,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-07-01,total,IMACEC total,17.42490393209195,18.40643241941356,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-08-01,total,IMACEC total,17.966595780594965,19.11972174311442,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-09-01,total,IMACEC total,13.463442930231295,18.591310530882804,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-10-01,total,IMACEC total,13.261557495479682,16.284980880972736,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-11-01,total,IMACEC total,13.33203729920507,14.897198735435316,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2021-12-01,total,IMACEC total,8.751161872273826,13.352345908305347,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-01-01,total,IMACEC total,7.209596697608389,11.781585555652859,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-02-01,total,IMACEC total,5.005438687016195,9.764265289695762,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-03-01,total,IMACEC total,5.669655027882148,6.988732418966137,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-04-01,total,IMACEC total,5.904856300445971,5.961563470835578,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-05-01,total,IMACEC total,5.588591818479638,5.526650005114771,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-06-01,total,IMACEC total,2.7970632563766307,5.721034382269252,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-07-01,total,IMACEC total,-0.43808421788794627,4.7635037917674135,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-08-01,total,IMACEC total,0.6349071225385083,2.6491902856561076,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-09-01,total,IMACEC total,0.17856372039597446,0.9979620536757309,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-10-01,total,IMACEC total,-1.8790917978623423,0.12512887501551218,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-11-01,total,IMACEC total,-2.866486420366976,-0.35520698497595316,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2022-12-01,total,IMACEC total,-1.2635246838221925,-1.522338165944448,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-01-01,total,IMACEC total,1.359126237823327,-2.003034300683837,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-02-01,total,IMACEC total,0.16342433643201648,-0.9236282887886138,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-03-01,total,IMACEC total,-1.4905514158231825,0.08634196347771701,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-04-01,total,IMACEC total,-0.497119351657882,0.010666386144053686,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-05-01,total,IMACEC total,-0.599359494821039,-0.608082143683016,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-06-01,total,IMACEC total,0.02746104306026176,-0.8623434207673678,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-07-01,total,IMACEC total,2.915341321974929,-0.3563392678062198,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-08-01,total,IMACEC total,0.418336336923697,0.7811476234047173,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-09-01,total,IMACEC total,0.9023618496374564,1.1203795673196293,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-10-01,total,IMACEC total,2.3886867770460896,1.4120131695120275,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-11-01,total,IMACEC total,2.281348596189936,1.2364616545357476,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2023-12-01,total,IMACEC total,0.5421059316974342,1.8574657409578272,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-01-01,total,IMACEC total,3.744961609875319,1.73738043497782,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-02-01,total,IMACEC total,5.836527826096916,2.1894720459208963,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-03-01,total,IMACEC total,1.184659965776258,3.374531789223223,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-04-01,total,IMACEC total,3.8954766293294307,3.5887164672494976,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-05-01,total,IMACEC total,0.3278935451245246,3.638888140400868,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-06-01,total,IMACEC total,-0.7129540412657787,1.8026767134100712,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-07-01,total,IMACEC total,4.491494430948828,1.1701387110627255,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-08-01,total,IMACEC total,2.2341186703822347,1.368811311602525,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-09-01,total,IMACEC total,0.5088925620504003,2.004219686688428,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-10-01,total,IMACEC total,2.893919855317506,2.411501887793821,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-11-01,total,IMACEC total,2.431240856349004,1.878977029250047,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2024-12-01,total,IMACEC total,6.790041427242954,1.9446844245723034,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-01-01,total,IMACEC total,3.3277451570978167,4.038400712969821,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-02-01,total,IMACEC total,0.31195371691388196,4.183009146896591,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-03-01,total,IMACEC total,4.927883606216077,3.476580100418218,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-04-01,total,IMACEC total,3.8776905480138346,2.855860826742592,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-05-01,total,IMACEC total,3.933046812718355,3.0391759570479313,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-06-01,total,IMACEC total,3.375601478984036,4.246206988982755,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-07-01,total,IMACEC total,1.5968501075468655,3.7287796132387414,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-08-01,total,IMACEC total,0.2696093831863422,2.9684994664164193,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-09-01,total,IMACEC total,3.2961209339912534,1.7473536565724146,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-10-01,total,IMACEC total,2.0572659006846905,1.7208601415748204,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-11-01,total,IMACEC total,1.3711953861016202,1.874332072620762,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2025-12-01,total,IMACEC total,1.2666989233431902,2.241527406925855,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2026-01-01,total,IMACEC total,-0.8658742743165249,1.5650534033765002,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2026-02-01,total,IMACEC total,-0.220585400383988,0.5906733450427618,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2026-03-01,total,IMACEC total,0.09162416465238188,0.060079749547559125,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2026-04-01,total,IMACEC total,-1.070155907885062,-0.3316118366827103,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2026-05-01,total,IMACEC total,-1.387178647812548,-0.39970571453888937,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2026-06-01,total,IMACEC total,2.015280488360527,-0.7885701303484094,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2026-07-01,total,IMACEC total,-1.487117150040529,-0.14735135577902772,ma3,Promedio móvil 3 meses,proxy,Ajuste
-2026-08-01,total,IMACEC total,NA,-0.2863384364975167,ma3,Promedio móvil 3 meses,proxy,Nowcast
+Periodo,target_key,variable,observed,fitted,model_key,modelo,corte,tipo,fit_timestamp,estimation_end
+2019-01-01,no_minero,IMACEC no minero,2.7341152560787396,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-02-01,no_minero,IMACEC no minero,1.6595585372416455,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-03-01,no_minero,IMACEC no minero,2.0466527540109025,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-04-01,no_minero,IMACEC no minero,1.854854981195575,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-05-01,no_minero,IMACEC no minero,2.3594432769310947,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-06-01,no_minero,IMACEC no minero,1.1635809008067488,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-07-01,no_minero,IMACEC no minero,3.699210497436334,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-08-01,no_minero,IMACEC no minero,3.367958748266986,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-09-01,no_minero,IMACEC no minero,3.484051165327595,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-10-01,no_minero,IMACEC no minero,-4.712059303855154,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-11-01,no_minero,IMACEC no minero,-4.351675091891083,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-12-01,no_minero,IMACEC no minero,1.228133832481304,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-01-01,no_minero,IMACEC no minero,1.0520356730939318,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-02-01,no_minero,IMACEC no minero,2.332493148386061,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-03-01,no_minero,IMACEC no minero,-4.6573727980858575,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-04-01,no_minero,IMACEC no minero,-16.253706219075205,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-05-01,no_minero,IMACEC no minero,-17.51663250266762,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-06-01,no_minero,IMACEC no minero,-15.45518696546634,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-07-01,no_minero,IMACEC no minero,-13.156314088362864,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-08-01,no_minero,IMACEC no minero,-12.018710106610374,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-09-01,no_minero,IMACEC no minero,-5.4415880935850485,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-10-01,no_minero,IMACEC no minero,-1.7617207822021141,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-11-01,no_minero,IMACEC no minero,1.0157142703611788,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-12-01,no_minero,IMACEC no minero,1.3347235420328785,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-01-01,no_minero,IMACEC no minero,-3.350273769976153,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-02-01,no_minero,IMACEC no minero,-1.3854611211324586,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-03-01,no_minero,IMACEC no minero,7.68507855505729,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-04-01,no_minero,IMACEC no minero,16.734270191563038,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-05-01,no_minero,IMACEC no minero,22.13975263630448,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-06-01,no_minero,IMACEC no minero,23.407318658335143,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-07-01,no_minero,IMACEC no minero,20.76463937480795,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-08-01,no_minero,IMACEC no minero,21.657203493350764,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-09-01,no_minero,IMACEC no minero,16.849040783117687,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-10-01,no_minero,IMACEC no minero,15.655913827209456,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-11-01,no_minero,IMACEC no minero,15.7452903795817,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-12-01,no_minero,IMACEC no minero,10.477766339800976,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-01-01,no_minero,IMACEC no minero,10.22222540329465,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-02-01,no_minero,IMACEC no minero,7.808978207744599,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-03-01,no_minero,IMACEC no minero,7.994692106551549,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-04-01,no_minero,IMACEC no minero,9.085282350398138,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-05-01,no_minero,IMACEC no minero,7.123730100359338,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-06-01,no_minero,IMACEC no minero,4.404975133900391,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-07-01,no_minero,IMACEC no minero,1.2528044069725075,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-08-01,no_minero,IMACEC no minero,2.5916980923111455,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-09-01,no_minero,IMACEC no minero,1.1620904191933956,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-10-01,no_minero,IMACEC no minero,-2.3643191172496913,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-11-01,no_minero,IMACEC no minero,-2.537906042892557,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-12-01,no_minero,IMACEC no minero,-1.3300179238098009,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-01-01,no_minero,IMACEC no minero,0.5845919328884674,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-02-01,no_minero,IMACEC no minero,0.5722515823792129,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-03-01,no_minero,IMACEC no minero,-0.06153635370935717,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-04-01,no_minero,IMACEC no minero,-0.628578866738827,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-05-01,no_minero,IMACEC no minero,0.765823394874432,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-06-01,no_minero,IMACEC no minero,-0.15502564733940183,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-07-01,no_minero,IMACEC no minero,2.330988389425115,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-08-01,no_minero,IMACEC no minero,-0.48439612663464526,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-09-01,no_minero,IMACEC no minero,-0.9565011146409841,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-10-01,no_minero,IMACEC no minero,3.136077145990246,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-11-01,no_minero,IMACEC no minero,2.167097326798406,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-12-01,no_minero,IMACEC no minero,0.7938512913761464,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-01-01,no_minero,IMACEC no minero,4.1128471186122395,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-02-01,no_minero,IMACEC no minero,4.628470622877567,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-03-01,no_minero,IMACEC no minero,-0.2650223798154494,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-04-01,no_minero,IMACEC no minero,4.2313298983302605,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-05-01,no_minero,IMACEC no minero,-0.21752102603829204,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-06-01,no_minero,IMACEC no minero,-1.2529263884246133,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-07-01,no_minero,IMACEC no minero,4.6495518840197425,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-08-01,no_minero,IMACEC no minero,1.5667466901213345,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-09-01,no_minero,IMACEC no minero,0.8477262615004033,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-10-01,no_minero,IMACEC no minero,2.9737865888798565,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-11-01,no_minero,IMACEC no minero,2.4453500701363318,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-12-01,no_minero,IMACEC no minero,5.8056759175583394,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-01-01,no_minero,IMACEC no minero,3.7667226031889323,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-02-01,no_minero,IMACEC no minero,1.2705337021299723,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-03-01,no_minero,IMACEC no minero,4.880608001916276,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-04-01,no_minero,IMACEC no minero,2.692860351031956,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-05-01,no_minero,IMACEC no minero,2.506905661515213,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-06-01,no_minero,IMACEC no minero,4.9721635080541615,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-07-01,no_minero,IMACEC no minero,2.240705074317506,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-08-01,no_minero,IMACEC no minero,1.3299898699509427,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-09-01,no_minero,IMACEC no minero,4.257546154405323,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-10-01,no_minero,IMACEC no minero,2.838327035510746,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-11-01,no_minero,IMACEC no minero,2.2056769858848746,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-12-01,no_minero,IMACEC no minero,2.6444701441954432,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2026-01-01,no_minero,IMACEC no minero,-0.7596509074593527,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2026-02-01,no_minero,IMACEC no minero,-0.14106910741275014,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2026-03-01,no_minero,IMACEC no minero,1.2533594134531256,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2026-04-01,no_minero,IMACEC no minero,0.6898526641451186,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2026-05-01,no_minero,IMACEC no minero,0.30523196607576963,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2026-06-01,no_minero,IMACEC no minero,1.199968515136729,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2026-07-01,no_minero,IMACEC no minero,-0.30982965559617215,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-02-01,no_minero,IMACEC no minero,1.6595585372416455,2.672572326333705,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-03-01,no_minero,IMACEC no minero,2.0466527540109025,1.7073379593827824,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-04-01,no_minero,IMACEC no minero,1.854854981195575,2.055050308785794,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-05-01,no_minero,IMACEC no minero,2.3594432769310947,1.8827654972159116,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-06-01,no_minero,IMACEC no minero,1.1635809008067488,2.336018411340547,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-07-01,no_minero,IMACEC no minero,3.699210497436334,1.2618196805113344,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-08-01,no_minero,IMACEC no minero,3.367958748266986,3.5394815159642716,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-09-01,no_minero,IMACEC no minero,3.484051165327595,3.241930379941517,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-10-01,no_minero,IMACEC no minero,-4.712059303855154,3.346211883863031,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-11-01,no_minero,IMACEC no minero,-4.351675091891083,-4.0160495598540225,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-12-01,no_minero,IMACEC no minero,1.228133832481304,-3.692329815147849,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-01-01,no_minero,IMACEC no minero,1.0520356730939318,1.3198051800642543,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-02-01,no_minero,IMACEC no minero,2.332493148386061,1.1616227477944676,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-03-01,no_minero,IMACEC no minero,-4.6573727980858575,2.311810112411884,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-04-01,no_minero,IMACEC no minero,-16.253706219075205,-3.9669267040273795,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-05-01,no_minero,IMACEC no minero,-17.51663250266762,-14.383482063407532,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-06-01,no_minero,IMACEC no minero,-15.45518696546634,-15.517921810029984,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-07-01,no_minero,IMACEC no minero,-13.156314088362864,-13.666201893134708,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-08-01,no_minero,IMACEC no minero,-12.018710106610374,-11.601209820279763,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-09-01,no_minero,IMACEC no minero,-5.4415880935850485,-10.579342440067345,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-10-01,no_minero,IMACEC no minero,-1.7617207822021141,-4.671358160306002,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-11-01,no_minero,IMACEC no minero,1.0157142703611788,-1.3658701088143381,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-12-01,no_minero,IMACEC no minero,1.3347235420328785,1.1289965815261485,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-01-01,no_minero,IMACEC no minero,-3.350273769976153,1.4155507549780104,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-02-01,no_minero,IMACEC no minero,-1.3854611211324586,-2.7928082225897253,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-03-01,no_minero,IMACEC no minero,7.68507855505729,-1.0278900381534082,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-04-01,no_minero,IMACEC no minero,16.734270191563038,7.119838665944486,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-05-01,no_minero,IMACEC no minero,22.13975263630448,15.248391219348047,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-06-01,no_minero,IMACEC no minero,23.407318658335143,20.103935216374907,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-07-01,no_minero,IMACEC no minero,20.76463937480795,21.24254266761058,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-08-01,no_minero,IMACEC no minero,21.657203493350764,18.868722076688005,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-09-01,no_minero,IMACEC no minero,16.849040783117687,19.67047925415664,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-10-01,no_minero,IMACEC no minero,15.655913827209456,15.351485376540348,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-11-01,no_minero,IMACEC no minero,15.7452903795817,14.279743772035285,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-12-01,no_minero,IMACEC no minero,10.477766339800976,14.36002740754467,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-01-01,no_minero,IMACEC no minero,10.22222540329465,9.628406318767759,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-02-01,no_minero,IMACEC no minero,7.808978207744599,9.398863392131307,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-03-01,no_minero,IMACEC no minero,7.994692106551549,7.231133119490409,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-04-01,no_minero,IMACEC no minero,9.085282350398138,7.397953013132607,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-05-01,no_minero,IMACEC no minero,7.123730100359338,8.37758969974822,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-06-01,no_minero,IMACEC no minero,4.404975133900391,6.615600210392658,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-07-01,no_minero,IMACEC no minero,1.2528044069725075,4.173443660680999,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-08-01,no_minero,IMACEC no minero,2.5916980923111455,1.3419658403010666,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-09-01,no_minero,IMACEC no minero,1.1620904191933956,2.544644280747682,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-10-01,no_minero,IMACEC no minero,-2.3643191172496913,1.2604808362685902,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-11-01,no_minero,IMACEC no minero,-2.537906042892557,-1.907161798921492,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-12-01,no_minero,IMACEC no minero,-1.3300179238098009,-2.0630884832431686,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-01-01,no_minero,IMACEC no minero,0.5845919328884674,-0.978087474425189,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-02-01,no_minero,IMACEC no minero,0.5722515823792129,0.7417354075052713,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-03-01,no_minero,IMACEC no minero,-0.06153635370935717,0.7306505292452913,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-04-01,no_minero,IMACEC no minero,-0.628578866738827,0.16134237961719644,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-05-01,no_minero,IMACEC no minero,0.765823394874432,-0.3480108369264503,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-06-01,no_minero,IMACEC no minero,-0.15502564733940183,0.9045288947312655,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-07-01,no_minero,IMACEC no minero,2.330988389425115,0.07736442147707742,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-08-01,no_minero,IMACEC no minero,-0.48439612663464526,2.310458443358384,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-09-01,no_minero,IMACEC no minero,-0.9565011146409841,-0.21849683973110262,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-10-01,no_minero,IMACEC no minero,3.136077145990246,-0.6425712056946138,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-11-01,no_minero,IMACEC no minero,2.167097326798406,3.033639753995427,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-12-01,no_minero,IMACEC no minero,0.7938512913761464,2.163241192458306,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-01-01,no_minero,IMACEC no minero,4.1128471186122395,0.9297053125624957,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-02-01,no_minero,IMACEC no minero,4.628470622877567,3.9110359208546224,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-03-01,no_minero,IMACEC no minero,-0.2650223798154494,4.374201352701885,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-04-01,no_minero,IMACEC no minero,4.2313298983302605,-0.021441555515081617,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-05-01,no_minero,IMACEC no minero,-0.21752102603829204,4.017464598718623,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-06-01,no_minero,IMACEC no minero,-1.2529263884246133,0.021227145297683325,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-07-01,no_minero,IMACEC no minero,4.6495518840197425,-0.9088390131291434,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-08-01,no_minero,IMACEC no minero,1.5667466901213345,4.393137866146346,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-09-01,no_minero,IMACEC no minero,0.8477262615004033,1.6239685262665202,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-10-01,no_minero,IMACEC no minero,2.9737865888798565,0.9780991960781695,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-11-01,no_minero,IMACEC no minero,2.4453500701363318,2.8878601777213264,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-12-01,no_minero,IMACEC no minero,5.8056759175583394,2.4131852911363185,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-01-01,no_minero,IMACEC no minero,3.7667226031889323,5.431641120620486,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-02-01,no_minero,IMACEC no minero,1.2705337021299723,3.6001251316201826,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-03-01,no_minero,IMACEC no minero,4.880608001916276,1.3578914072700408,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-04-01,no_minero,IMACEC no minero,2.692860351031956,4.600686990151041,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-05-01,no_minero,IMACEC no minero,2.506905661515213,2.6355145782796545,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-06-01,no_minero,IMACEC no minero,4.9721635080541615,2.4684783912913155,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-07-01,no_minero,IMACEC no minero,2.240705074317506,4.6829278988519905,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-08-01,no_minero,IMACEC no minero,1.3299898699509427,2.2293602965816994,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-09-01,no_minero,IMACEC no minero,4.257546154405323,1.4112986732635102,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-10-01,no_minero,IMACEC no minero,2.838327035510746,4.041013687280296,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-11-01,no_minero,IMACEC no minero,2.2056769858848746,2.766181894991692,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-12-01,no_minero,IMACEC no minero,2.6444701441954432,2.197895866485946,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2026-01-01,no_minero,IMACEC no minero,-0.7596509074593527,2.5920474537959755,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2026-02-01,no_minero,IMACEC no minero,-0.14106910741275014,-0.4657479800962956,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2026-03-01,no_minero,IMACEC no minero,1.2533594134531256,0.08990106262851508,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2026-04-01,no_minero,IMACEC no minero,0.6898526641451186,1.342464381996988,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2026-05-01,no_minero,IMACEC no minero,0.30523196607576963,0.8362872106053066,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2026-06-01,no_minero,IMACEC no minero,1.199968515136729,0.49079673112744054,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2026-07-01,no_minero,IMACEC no minero,-0.30982965559617215,1.2945053221968315,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2026-08-01,no_minero,IMACEC no minero,NA,-0.061690266183241416,ar1,AR(1) de referencia,proxy,Nowcast,NA,NA
+2019-01-01,no_minero,IMACEC no minero,2.7341152560787396,2.415932817572494,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2019-02-01,no_minero,IMACEC no minero,1.6595585372416455,1.6836451031729358,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2019-03-01,no_minero,IMACEC no minero,2.0466527540109025,1.496186834883978,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2019-04-01,no_minero,IMACEC no minero,1.854854981195575,1.5967929707870616,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2019-05-01,no_minero,IMACEC no minero,2.3594432769310947,1.1640175158274837,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2019-06-01,no_minero,IMACEC no minero,1.1635809008067488,-0.35977742988427114,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2019-07-01,no_minero,IMACEC no minero,3.699210497436334,4.16808772745053,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2019-08-01,no_minero,IMACEC no minero,3.367958748266986,1.925090163127912,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2019-09-01,no_minero,IMACEC no minero,3.484051165327595,3.0721951622578176,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2019-10-01,no_minero,IMACEC no minero,-4.712059303855154,-2.770713183655851,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2019-11-01,no_minero,IMACEC no minero,-4.351675091891083,-3.999744906967188,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2019-12-01,no_minero,IMACEC no minero,1.228133832481304,0.8563450953554461,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-01-01,no_minero,IMACEC no minero,1.0520356730939318,2.226726561065409,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-02-01,no_minero,IMACEC no minero,2.332493148386061,2.4533407632357354,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-03-01,no_minero,IMACEC no minero,-4.6573727980858575,-2.507440435069165,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-04-01,no_minero,IMACEC no minero,-16.253706219075205,-14.106252245806091,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-05-01,no_minero,IMACEC no minero,-17.51663250266762,-17.785230083495193,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-06-01,no_minero,IMACEC no minero,-15.45518696546634,-15.60011270328251,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-07-01,no_minero,IMACEC no minero,-13.156314088362864,-13.938149184238899,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-08-01,no_minero,IMACEC no minero,-12.018710106610374,-11.575870534299932,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-09-01,no_minero,IMACEC no minero,-5.4415880935850485,-4.47651932221263,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-10-01,no_minero,IMACEC no minero,-1.7617207822021141,-2.011807854895104,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-11-01,no_minero,IMACEC no minero,1.0157142703611788,1.667197146127603,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-12-01,no_minero,IMACEC no minero,1.3347235420328785,0.26798854504009517,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-01-01,no_minero,IMACEC no minero,-3.350273769976153,-2.9004447692778488,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-02-01,no_minero,IMACEC no minero,-1.3854611211324586,-1.406732901622195,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-03-01,no_minero,IMACEC no minero,7.68507855505729,5.67347771797288,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-04-01,no_minero,IMACEC no minero,16.734270191563038,12.748370389585501,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-05-01,no_minero,IMACEC no minero,22.13975263630448,21.625544698977535,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-06-01,no_minero,IMACEC no minero,23.407318658335143,25.190875867597754,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-07-01,no_minero,IMACEC no minero,20.76463937480795,24.671238230871978,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-08-01,no_minero,IMACEC no minero,21.657203493350764,21.692254119718783,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-09-01,no_minero,IMACEC no minero,16.849040783117687,17.005333206464858,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-10-01,no_minero,IMACEC no minero,15.655913827209456,12.749279383555283,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-11-01,no_minero,IMACEC no minero,15.7452903795817,13.292243719050099,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-12-01,no_minero,IMACEC no minero,10.477766339800976,12.194502613595743,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-01-01,no_minero,IMACEC no minero,10.22222540329465,7.476437221704691,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-02-01,no_minero,IMACEC no minero,7.808978207744599,5.269531355898558,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-03-01,no_minero,IMACEC no minero,7.994692106551549,8.231438219291705,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-04-01,no_minero,IMACEC no minero,9.085282350398138,11.287072687108362,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-05-01,no_minero,IMACEC no minero,7.123730100359338,9.036830909527673,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-06-01,no_minero,IMACEC no minero,4.404975133900391,3.188760286612067,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-07-01,no_minero,IMACEC no minero,1.2528044069725075,-0.21558653525678584,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-08-01,no_minero,IMACEC no minero,2.5916980923111455,1.5277884788416172,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-09-01,no_minero,IMACEC no minero,1.1620904191933956,0.38417024343119655,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-10-01,no_minero,IMACEC no minero,-2.3643191172496913,-0.5316382248282201,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-11-01,no_minero,IMACEC no minero,-2.537906042892557,-0.7257241784081256,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-12-01,no_minero,IMACEC no minero,-1.3300179238098009,-1.7797320954753748,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-01-01,no_minero,IMACEC no minero,0.5845919328884674,0.7148058848666095,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-02-01,no_minero,IMACEC no minero,0.5722515823792129,2.43372090126738,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-03-01,no_minero,IMACEC no minero,-0.06153635370935717,1.2608410537992534,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-04-01,no_minero,IMACEC no minero,-0.628578866738827,-0.5186356615980149,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-05-01,no_minero,IMACEC no minero,0.765823394874432,0.9736003323116872,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-06-01,no_minero,IMACEC no minero,-0.15502564733940183,0.9472322127423889,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-07-01,no_minero,IMACEC no minero,2.330988389425115,1.1795723346489169,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-08-01,no_minero,IMACEC no minero,-0.48439612663464526,0.9915438227306785,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-09-01,no_minero,IMACEC no minero,-0.9565011146409841,-1.3434098525772118,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-10-01,no_minero,IMACEC no minero,3.136077145990246,1.8715402269294963,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-11-01,no_minero,IMACEC no minero,2.167097326798406,2.0978884165941416,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-12-01,no_minero,IMACEC no minero,0.7938512913761464,2.2210929038991085,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-01-01,no_minero,IMACEC no minero,4.1128471186122395,3.1332208574121947,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-02-01,no_minero,IMACEC no minero,4.628470622877567,4.072098506234996,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-03-01,no_minero,IMACEC no minero,-0.2650223798154494,-1.2815644887171735,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-04-01,no_minero,IMACEC no minero,4.2313298983302605,4.672792105961246,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-05-01,no_minero,IMACEC no minero,-0.21752102603829204,0.6380267780881176,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-06-01,no_minero,IMACEC no minero,-1.2529263884246133,-1.8403201030371028,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-07-01,no_minero,IMACEC no minero,4.6495518840197425,2.9868603309315933,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-08-01,no_minero,IMACEC no minero,1.5667466901213345,2.1827155648721788,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-09-01,no_minero,IMACEC no minero,0.8477262615004033,0.40025935557242087,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-10-01,no_minero,IMACEC no minero,2.9737865888798565,3.179379415515226,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-11-01,no_minero,IMACEC no minero,2.4453500701363318,2.337308025970512,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-12-01,no_minero,IMACEC no minero,5.8056759175583394,4.194951377500484,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-01-01,no_minero,IMACEC no minero,3.7667226031889323,3.7814630477178497,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-02-01,no_minero,IMACEC no minero,1.2705337021299723,0.8562809808268113,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-03-01,no_minero,IMACEC no minero,4.880608001916276,3.47696590966911,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-04-01,no_minero,IMACEC no minero,2.692860351031956,1.6254980799005323,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-05-01,no_minero,IMACEC no minero,2.506905661515213,1.8439071241159501,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-06-01,no_minero,IMACEC no minero,4.9721635080541615,4.78815711256536,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-07-01,no_minero,IMACEC no minero,2.240705074317506,3.2882359065184383,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-08-01,no_minero,IMACEC no minero,1.3299898699509427,1.266969045764919,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-09-01,no_minero,IMACEC no minero,4.257546154405323,5.1603367823819255,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-10-01,no_minero,IMACEC no minero,2.838327035510746,3.2799656316625225,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-11-01,no_minero,IMACEC no minero,2.2056769858848746,2.020379675611815,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-12-01,no_minero,IMACEC no minero,2.6444701441954432,2.999454703719789,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2026-01-01,no_minero,IMACEC no minero,-0.7596509074593527,1.5144716886600627,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2026-02-01,no_minero,IMACEC no minero,-0.14106910741275014,1.3838708631996106,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2026-03-01,no_minero,IMACEC no minero,1.2533594134531256,2.5265544875478936,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2026-04-01,no_minero,IMACEC no minero,0.6898526641451186,1.1005270249114618,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2026-05-01,no_minero,IMACEC no minero,0.30523196607576963,-0.029963767998824248,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2026-06-01,no_minero,IMACEC no minero,1.199968515136729,1.9700524716891374,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2026-07-01,no_minero,IMACEC no minero,-0.30982965559617215,-0.6685029279056489,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2026-08-01,no_minero,IMACEC no minero,NA,1.284754811390036,m4,M4 · Dinámico,experimental,Nowcast,NA,NA
+2019-04-01,no_minero,IMACEC no minero,1.854854981195575,2.146775515777096,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2019-05-01,no_minero,IMACEC no minero,2.3594432769310947,1.8536887574827077,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2019-06-01,no_minero,IMACEC no minero,1.1635809008067488,2.086983670712524,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2019-07-01,no_minero,IMACEC no minero,3.699210497436334,1.7926263863111396,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2019-08-01,no_minero,IMACEC no minero,3.367958748266986,2.4074115583913924,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2019-09-01,no_minero,IMACEC no minero,3.484051165327595,2.743583382170023,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2019-10-01,no_minero,IMACEC no minero,-4.712059303855154,3.517073470343638,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2019-11-01,no_minero,IMACEC no minero,-4.351675091891083,0.7133168699131422,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2019-12-01,no_minero,IMACEC no minero,1.228133832481304,-1.8598944101395476,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-01-01,no_minero,IMACEC no minero,1.0520356730939318,-2.6118668544216446,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-02-01,no_minero,IMACEC no minero,2.332493148386061,-0.6905018621052825,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-03-01,no_minero,IMACEC no minero,-4.6573727980858575,1.537554217987099,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-04-01,no_minero,IMACEC no minero,-16.253706219075205,-0.4242813255352882,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-05-01,no_minero,IMACEC no minero,-17.51663250266762,-6.1928619562583345,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-06-01,no_minero,IMACEC no minero,-15.45518696546634,-12.809237173276228,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-07-01,no_minero,IMACEC no minero,-13.156314088362864,-16.408508562403053,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-08-01,no_minero,IMACEC no minero,-12.018710106610374,-15.376044518832273,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-09-01,no_minero,IMACEC no minero,-5.4415880935850485,-13.543403720146527,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-10-01,no_minero,IMACEC no minero,-1.7617207822021141,-10.20553742951943,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-11-01,no_minero,IMACEC no minero,1.0157142703611788,-6.407339660799178,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-12-01,no_minero,IMACEC no minero,1.3347235420328785,-2.0625315351419946,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-01-01,no_minero,IMACEC no minero,-3.350273769976153,0.19623901006398103,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-02-01,no_minero,IMACEC no minero,-1.3854611211324586,-0.33327865252736527,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-03-01,no_minero,IMACEC no minero,7.68507855505729,-1.133670449691911,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-04-01,no_minero,IMACEC no minero,16.734270191563038,0.9831145546495595,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-05-01,no_minero,IMACEC no minero,22.13975263630448,7.677962541829291,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-06-01,no_minero,IMACEC no minero,23.407318658335143,15.519700460974937,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-07-01,no_minero,IMACEC no minero,20.76463937480795,20.760447162067553,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-08-01,no_minero,IMACEC no minero,21.657203493350764,22.10390355648252,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-09-01,no_minero,IMACEC no minero,16.849040783117687,21.94305384216462,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-10-01,no_minero,IMACEC no minero,15.655913827209456,19.756961217092133,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-11-01,no_minero,IMACEC no minero,15.7452903795817,18.05405270122597,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-12-01,no_minero,IMACEC no minero,10.477766339800976,16.083414996636282,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-01-01,no_minero,IMACEC no minero,10.22222540329465,13.959656848864043,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-02-01,no_minero,IMACEC no minero,7.808978207744599,12.148427374225776,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-03-01,no_minero,IMACEC no minero,7.994692106551549,9.502989983613409,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-04-01,no_minero,IMACEC no minero,9.085282350398138,8.675298572530266,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-05-01,no_minero,IMACEC no minero,7.123730100359338,8.296317554898094,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-06-01,no_minero,IMACEC no minero,4.404975133900391,8.067901519103009,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-07-01,no_minero,IMACEC no minero,1.2528044069725075,6.871329194885956,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-08-01,no_minero,IMACEC no minero,2.5916980923111455,4.260503213744079,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-09-01,no_minero,IMACEC no minero,1.1620904191933956,2.7498258777280142,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-10-01,no_minero,IMACEC no minero,-2.3643191172496913,1.6688643061590163,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-11-01,no_minero,IMACEC no minero,-2.537906042892557,0.4631564647516166,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-12-01,no_minero,IMACEC no minero,-1.3300179238098009,-1.2467115803162843,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-01-01,no_minero,IMACEC no minero,0.5845919328884674,-2.07741436131735,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-02-01,no_minero,IMACEC no minero,0.5722515823792129,-1.0944440112712968,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-03-01,no_minero,IMACEC no minero,-0.06153635370935717,-0.0577248028473735,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-04-01,no_minero,IMACEC no minero,-0.628578866738827,0.3651023871861077,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-05-01,no_minero,IMACEC no minero,0.765823394874432,-0.03928787935632375,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-06-01,no_minero,IMACEC no minero,-0.15502564733940183,0.02523605814208259,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-07-01,no_minero,IMACEC no minero,2.330988389425115,-0.00592703973459896,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-08-01,no_minero,IMACEC no minero,-0.48439612663464526,0.980595378986715,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-09-01,no_minero,IMACEC no minero,-0.9565011146409841,0.5638555384836893,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-10-01,no_minero,IMACEC no minero,3.136077145990246,0.2966970493831618,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-11-01,no_minero,IMACEC no minero,2.167097326798406,0.5650599682382055,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-12-01,no_minero,IMACEC no minero,0.7938512913761464,1.448891119382556,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-01-01,no_minero,IMACEC no minero,4.1128471186122395,2.0323419213882663,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-02-01,no_minero,IMACEC no minero,4.628470622877567,2.357931912262264,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-03-01,no_minero,IMACEC no minero,-0.2650223798154494,3.1783896776219844,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-04-01,no_minero,IMACEC no minero,4.2313298983302605,2.8254317872247854,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-05-01,no_minero,IMACEC no minero,-0.21752102603829204,2.8649260471307927,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-06-01,no_minero,IMACEC no minero,-1.2529263884246133,1.249595497492173,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-07-01,no_minero,IMACEC no minero,4.6495518840197425,0.9202941612891183,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-08-01,no_minero,IMACEC no minero,1.5667466901213345,1.059701489852279,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-09-01,no_minero,IMACEC no minero,0.8477262615004033,1.6544573952388213,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-10-01,no_minero,IMACEC no minero,2.9737865888798565,2.354674945213827,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-11-01,no_minero,IMACEC no minero,2.4453500701363318,1.7960865135005315,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-12-01,no_minero,IMACEC no minero,5.8056759175583394,2.088954306838864,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-01-01,no_minero,IMACEC no minero,3.7667226031889323,3.7416041921915095,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-02-01,no_minero,IMACEC no minero,1.2705337021299723,4.005916196961201,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-03-01,no_minero,IMACEC no minero,4.880608001916276,3.614310740959082,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-04-01,no_minero,IMACEC no minero,2.692860351031956,3.3059547690783937,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-05-01,no_minero,IMACEC no minero,2.506905661515213,2.948000685026068,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-06-01,no_minero,IMACEC no minero,4.9721635080541615,3.360124671487815,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-07-01,no_minero,IMACEC no minero,2.240705074317506,3.390643173533777,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-08-01,no_minero,IMACEC no minero,1.3299898699509427,3.2399247479622937,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-09-01,no_minero,IMACEC no minero,4.257546154405323,2.8476194841075366,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-10-01,no_minero,IMACEC no minero,2.838327035510746,2.609413699557924,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-11-01,no_minero,IMACEC no minero,2.2056769858848746,2.808621019955671,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-12-01,no_minero,IMACEC no minero,2.6444701441954432,3.1005167252669814,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2026-01-01,no_minero,IMACEC no minero,-0.7596509074593527,2.562824721863688,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2026-02-01,no_minero,IMACEC no minero,-0.14106910741275014,1.363498740873655,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2026-03-01,no_minero,IMACEC no minero,1.2533594134531256,0.5812500431077802,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2026-04-01,no_minero,IMACEC no minero,0.6898526641451186,0.11754646619367426,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2026-05-01,no_minero,IMACEC no minero,0.30523196607576963,0.6007143233951647,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2026-06-01,no_minero,IMACEC no minero,1.199968515136729,0.7494813478913379,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2026-07-01,no_minero,IMACEC no minero,-0.30982965559617215,0.7316843817858724,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2026-08-01,no_minero,IMACEC no minero,NA,0.39845694187210884,ma3,Promedio móvil 3 meses,proxy,Nowcast,NA,NA
+2019-01-01,total,IMACEC total,1.9659919484973587,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-02-01,total,IMACEC total,0.4024410183006255,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-03-01,total,IMACEC total,1.347042473024107,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-04-01,total,IMACEC total,1.7820940125048201,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-05-01,total,IMACEC total,1.8589031828119662,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-06-01,total,IMACEC total,0.880313809166644,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-07-01,total,IMACEC total,2.7653306128001987,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-08-01,total,IMACEC total,3.1909427561596093,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-09-01,total,IMACEC total,2.7842901635932282,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-10-01,total,IMACEC total,-4.534436503098838,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-11-01,total,IMACEC total,-4.988669054665129,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-12-01,total,IMACEC total,0.9258849701172522,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-01-01,total,IMACEC total,0.9300521010913165,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-02-01,total,IMACEC total,2.7210597729153907,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-03-01,total,IMACEC total,-4.349724855185732,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-04-01,total,IMACEC total,-15.088301570672291,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-05-01,total,IMACEC total,-15.97711767892427,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-06-01,total,IMACEC total,-13.962357751796306,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-07-01,total,IMACEC total,-11.717591602160715,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-08-01,total,IMACEC total,-11.011337841146728,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-09-01,total,IMACEC total,-4.9506576054560885,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-10-01,total,IMACEC total,-1.3585290872647038,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-11-01,total,IMACEC total,1.012732990849563,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2020-12-01,total,IMACEC total,0.5689922284684901,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-01-01,total,IMACEC total,-3.4287687132994904,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-02-01,total,IMACEC total,-2.1666510508181247,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-03-01,total,IMACEC total,6.6327425250128025,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-04-01,total,IMACEC total,15.285035960989358,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-05-01,total,IMACEC total,19.551829417289813,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-06-01,total,IMACEC total,20.382431879961494,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-07-01,total,IMACEC total,17.42490393209195,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-08-01,total,IMACEC total,17.966595780594965,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-09-01,total,IMACEC total,13.463442930231295,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-10-01,total,IMACEC total,13.261557495479682,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-11-01,total,IMACEC total,13.33203729920507,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2021-12-01,total,IMACEC total,8.751161872273826,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-01-01,total,IMACEC total,7.209596697608389,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-02-01,total,IMACEC total,5.005438687016195,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-03-01,total,IMACEC total,5.669655027882148,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-04-01,total,IMACEC total,5.904856300445971,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-05-01,total,IMACEC total,5.588591818479638,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-06-01,total,IMACEC total,2.7970632563766307,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-07-01,total,IMACEC total,-0.43808421788794627,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-08-01,total,IMACEC total,0.6349071225385083,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-09-01,total,IMACEC total,0.17856372039597446,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-10-01,total,IMACEC total,-1.8790917978623423,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-11-01,total,IMACEC total,-2.866486420366976,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2022-12-01,total,IMACEC total,-1.2635246838221925,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-01-01,total,IMACEC total,1.359126237823327,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-02-01,total,IMACEC total,0.16342433643201648,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-03-01,total,IMACEC total,-1.4905514158231825,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-04-01,total,IMACEC total,-0.497119351657882,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-05-01,total,IMACEC total,-0.599359494821039,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-06-01,total,IMACEC total,0.02746104306026176,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-07-01,total,IMACEC total,2.915341321974929,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-08-01,total,IMACEC total,0.418336336923697,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-09-01,total,IMACEC total,0.9023618496374564,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-10-01,total,IMACEC total,2.3886867770460896,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-11-01,total,IMACEC total,2.281348596189936,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2023-12-01,total,IMACEC total,0.5421059316974342,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-01-01,total,IMACEC total,3.744961609875319,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-02-01,total,IMACEC total,5.836527826096916,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-03-01,total,IMACEC total,1.184659965776258,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-04-01,total,IMACEC total,3.8954766293294307,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-05-01,total,IMACEC total,0.3278935451245246,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-06-01,total,IMACEC total,-0.7129540412657787,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-07-01,total,IMACEC total,4.491494430948828,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-08-01,total,IMACEC total,2.2341186703822347,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-09-01,total,IMACEC total,0.5088925620504003,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-10-01,total,IMACEC total,2.893919855317506,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-11-01,total,IMACEC total,2.431240856349004,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2024-12-01,total,IMACEC total,6.790041427242954,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-01-01,total,IMACEC total,3.3277451570978167,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-02-01,total,IMACEC total,0.31195371691388196,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-03-01,total,IMACEC total,4.927883606216077,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-04-01,total,IMACEC total,3.8776905480138346,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-05-01,total,IMACEC total,3.933046812718355,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-06-01,total,IMACEC total,3.375601478984036,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-07-01,total,IMACEC total,1.5968501075468655,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-08-01,total,IMACEC total,0.2696093831863422,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-09-01,total,IMACEC total,3.2961209339912534,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-10-01,total,IMACEC total,2.0572659006846905,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-11-01,total,IMACEC total,1.3711953861016202,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2025-12-01,total,IMACEC total,1.2666989233431902,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2026-01-01,total,IMACEC total,-0.8658742743165249,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2026-02-01,total,IMACEC total,-0.220585400383988,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2026-03-01,total,IMACEC total,0.09162416465238188,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2026-04-01,total,IMACEC total,-1.070155907885062,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2026-05-01,total,IMACEC total,-1.387178647812548,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2026-06-01,total,IMACEC total,2.015280488360527,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2026-07-01,total,IMACEC total,-1.487117150040529,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
+2019-02-01,total,IMACEC total,0.4024410183006255,1.9217154094696043,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-03-01,total,IMACEC total,1.347042473024107,0.5416331350084116,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-04-01,total,IMACEC total,1.7820940125048201,1.3753940947042402,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-05-01,total,IMACEC total,1.8589031828119662,1.7593962442465259,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-06-01,total,IMACEC total,0.880313809166644,1.8271925484216802,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-07-01,total,IMACEC total,2.7653306128001987,0.9634318467641656,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-08-01,total,IMACEC total,3.1909427561596093,2.62725886225437,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-09-01,total,IMACEC total,2.7842901635932282,3.0029292440128024,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-10-01,total,IMACEC total,-4.534436503098838,2.6439936800820916,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-11-01,total,IMACEC total,-4.988669054665129,-3.8159461589465518,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-12-01,total,IMACEC total,0.9258849701172522,-4.216878601115891,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-01-01,total,IMACEC total,0.9300521010913165,1.0036556413588444,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-02-01,total,IMACEC total,2.7210597729153907,1.0073337969478924,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-03-01,total,IMACEC total,-4.349724855185732,2.588182807729657,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-04-01,total,IMACEC total,-15.088301570672291,-3.652908763586927,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-05-01,total,IMACEC total,-15.97711767892427,-13.131409969889146,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-06-01,total,IMACEC total,-13.962357751796306,-13.91593149238269,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-07-01,total,IMACEC total,-11.717591602160715,-12.13758554341244,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-08-01,total,IMACEC total,-11.011337841146728,-10.156222535919758,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-09-01,total,IMACEC total,-4.9506576054560885,-9.532841309237034,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-10-01,total,IMACEC total,-1.3585290872647038,-4.183327454001432,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-11-01,total,IMACEC total,1.012732990849563,-1.0127029480771434,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-12-01,total,IMACEC total,0.5689922284684901,1.0803128270442632,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-01-01,total,IMACEC total,-3.4287687132994904,0.6886410568506565,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-02-01,total,IMACEC total,-2.1666510508181247,-2.840018551680976,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-03-01,total,IMACEC total,6.6327425250128025,-1.7259990588488732,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-04-01,total,IMACEC total,15.285035960989358,6.040864728878178,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-05-01,total,IMACEC total,19.551829417289813,13.677889256710936,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-06-01,total,IMACEC total,20.382431879961494,17.444012831007516,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-07-01,total,IMACEC total,17.42490393209195,18.177151556276137,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-08-01,total,IMACEC total,17.966595780594965,15.566662944584563,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-09-01,total,IMACEC total,13.463442930231295,16.04479212087245,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-10-01,total,IMACEC total,13.261557495479682,12.070043804107144,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-11-01,total,IMACEC total,13.33203729920507,11.891847811516396,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-12-01,total,IMACEC total,8.751161872273826,11.954057443419256,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-01-01,total,IMACEC total,7.209596697608389,7.91070659623758,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-02-01,total,IMACEC total,5.005438687016195,6.550030246401792,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-03-01,total,IMACEC total,5.669655027882148,4.604510377632832,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-04-01,total,IMACEC total,5.904856300445971,5.190786897785095,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-05-01,total,IMACEC total,5.588591818479638,5.398389413908575,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-06-01,total,IMACEC total,2.7970632563766307,5.1192357277869025,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-07-01,total,IMACEC total,-0.43808421788794627,2.6552679651725066,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-08-01,total,IMACEC total,0.6349071225385083,-0.20026401544462769,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-09-01,total,IMACEC total,0.17856372039597446,0.7468214302380289,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-10-01,total,IMACEC total,-1.8790917978623423,0.34402582684506267,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-11-01,total,IMACEC total,-2.866486420366976,-1.472182300982442,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-12-01,total,IMACEC total,-1.2635246838221925,-2.343715034646248,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-01-01,total,IMACEC total,1.359126237823327,-0.928846457920937,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-02-01,total,IMACEC total,0.16342433643201648,1.3860599382569432,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-03-01,total,IMACEC total,-1.4905514158231825,0.3306629135869116,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-04-01,total,IMACEC total,-0.497119351657882,-1.1292336423818838,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-05-01,total,IMACEC total,-0.599359494821039,-0.25237190659984726,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-06-01,total,IMACEC total,0.02746104306026176,-0.34261508742165386,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-07-01,total,IMACEC total,2.915341321974929,0.21065369128667227,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-08-01,total,IMACEC total,0.418336336923697,2.759667162305939,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-09-01,total,IMACEC total,0.9023618496374564,0.5556632807842539,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-10-01,total,IMACEC total,2.3886867770460896,0.9828927477509612,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-11-01,total,IMACEC total,2.281348596189936,2.294810797103134,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-12-01,total,IMACEC total,0.5421059316974342,2.2000677875141545,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-01-01,total,IMACEC total,3.744961609875319,0.6649096254767078,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-02-01,total,IMACEC total,5.836527826096916,3.4919389621894625,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-03-01,total,IMACEC total,1.184659965776258,5.338078672205877,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-04-01,total,IMACEC total,3.8954766293294307,1.2320657159432584,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-05-01,total,IMACEC total,0.3278935451245246,3.6247923962395223,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-06-01,total,IMACEC total,-0.7129540412657787,0.4758331381235881,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-07-01,total,IMACEC total,4.491494430948828,-0.44288033430051205,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-08-01,total,IMACEC total,2.2341186703822347,4.150872863074562,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-09-01,total,IMACEC total,0.5088925620504003,2.1583798692170997,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-10-01,total,IMACEC total,2.893919855317506,0.635593546390476,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-11-01,total,IMACEC total,2.431240856349004,2.7407593123242617,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-12-01,total,IMACEC total,6.790041427242954,2.33237153747798,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-01-01,total,IMACEC total,3.3277451570978167,6.179706018002494,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-02-01,total,IMACEC total,0.31195371691388196,3.1236791121445666,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-03-01,total,IMACEC total,4.927883606216077,0.461763705560431,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-04-01,total,IMACEC total,3.8776905480138346,4.536055688860282,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-05-01,total,IMACEC total,3.933046812718355,3.6090933517877426,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-06-01,total,IMACEC total,3.375601478984036,3.65795405611381,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-07-01,total,IMACEC total,1.5968501075468655,3.16591992456746,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-08-01,total,IMACEC total,0.2696093831863422,1.5958890474248146,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-09-01,total,IMACEC total,3.2961209339912534,0.4243880990019073,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-10-01,total,IMACEC total,2.0572659006846905,3.0957657075281384,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-11-01,total,IMACEC total,1.3711953861016202,2.0022791833134828,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-12-01,total,IMACEC total,1.2666989233431902,1.3967128804061448,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2026-01-01,total,IMACEC total,-0.8658742743165249,1.3044781388242652,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2026-02-01,total,IMACEC total,-0.220585400383988,-0.5778567517385134,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2026-03-01,total,IMACEC total,0.09162416465238188,-0.008286730307063062,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2026-04-01,total,IMACEC total,-1.070155907885062,0.267287846959645,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2026-05-01,total,IMACEC total,-1.387178647812548,-0.7581677707409078,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2026-06-01,total,IMACEC total,2.015280488360527,-1.0379907400636876,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2026-07-01,total,IMACEC total,-1.487117150040529,1.9652203819559648,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2026-08-01,total,IMACEC total,NA,-1.126202356837618,ar1,AR(1) de referencia,proxy,Nowcast,NA,NA
+2019-01-01,total,IMACEC total,1.9659919484973587,2.188213419710886,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2019-02-01,total,IMACEC total,0.4024410183006255,1.1100857071721841,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2019-03-01,total,IMACEC total,1.347042473024107,0.8208247231041296,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2019-04-01,total,IMACEC total,1.7820940125048201,1.1712983709762592,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2019-05-01,total,IMACEC total,1.8589031828119662,0.9823109219633481,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2019-06-01,total,IMACEC total,0.880313809166644,-0.3968138270139251,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2019-07-01,total,IMACEC total,2.7653306128001987,3.41891395156855,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2019-08-01,total,IMACEC total,3.1909427561596093,1.4793919439190342,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2019-09-01,total,IMACEC total,2.7842901635932282,2.7545660505835405,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2019-10-01,total,IMACEC total,-4.534436503098838,-2.5705644498596603,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2019-11-01,total,IMACEC total,-4.988669054665129,-3.9098222230347903,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2019-12-01,total,IMACEC total,0.9258849701172522,0.26844821818796205,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-01-01,total,IMACEC total,0.9300521010913165,1.731705686467362,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-02-01,total,IMACEC total,2.7210597729153907,2.9988897630505744,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-03-01,total,IMACEC total,-4.349724855185732,-2.402432401016556,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-04-01,total,IMACEC total,-15.088301570672291,-12.888381316728342,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-05-01,total,IMACEC total,-15.97711767892427,-15.982688453540863,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-06-01,total,IMACEC total,-13.962357751796306,-13.961929618137114,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-07-01,total,IMACEC total,-11.717591602160715,-12.700089849589691,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-08-01,total,IMACEC total,-11.011337841146728,-10.487249291450377,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-09-01,total,IMACEC total,-4.9506576054560885,-4.238243167670241,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-10-01,total,IMACEC total,-1.3585290872647038,-1.8022204743357493,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-11-01,total,IMACEC total,1.012732990849563,1.4556649586157782,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2020-12-01,total,IMACEC total,0.5689922284684901,0.44691912365475683,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-01-01,total,IMACEC total,-3.4287687132994904,-2.8798760418624507,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-02-01,total,IMACEC total,-2.1666510508181247,-2.6781389399747573,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-03-01,total,IMACEC total,6.6327425250128025,4.7411432127437205,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-04-01,total,IMACEC total,15.285035960989358,11.4151455547195,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-05-01,total,IMACEC total,19.551829417289813,19.035519240835715,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-06-01,total,IMACEC total,20.382431879961494,22.113953887119134,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-07-01,total,IMACEC total,17.42490393209195,21.014587071053974,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-08-01,total,IMACEC total,17.966595780594965,18.31334736768759,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-09-01,total,IMACEC total,13.463442930231295,14.134447781044061,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-10-01,total,IMACEC total,13.261557495479682,10.35954281313346,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-11-01,total,IMACEC total,13.33203729920507,10.700234117901363,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2021-12-01,total,IMACEC total,8.751161872273826,9.91317098152093,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-01-01,total,IMACEC total,7.209596697608389,5.407134186980725,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-02-01,total,IMACEC total,5.005438687016195,3.048725739764273,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-03-01,total,IMACEC total,5.669655027882148,5.671194715132946,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-04-01,total,IMACEC total,5.904856300445971,8.593968117794745,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-05-01,total,IMACEC total,5.588591818479638,6.230928980415234,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-06-01,total,IMACEC total,2.7970632563766307,1.8381470874439234,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-07-01,total,IMACEC total,-0.43808421788794627,-1.6262508774680329,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-08-01,total,IMACEC total,0.6349071225385083,0.15357322713924287,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-09-01,total,IMACEC total,0.17856372039597446,-0.6642673767200209,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-10-01,total,IMACEC total,-1.8790917978623423,-1.1448079655591923,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-11-01,total,IMACEC total,-2.866486420366976,-1.160320223118591,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2022-12-01,total,IMACEC total,-1.2635246838221925,-1.9673596931008213,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-01-01,total,IMACEC total,1.359126237823327,0.33543787509391243,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-02-01,total,IMACEC total,0.16342433643201648,2.1169010167279287,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-03-01,total,IMACEC total,-1.4905514158231825,0.8143992035786505,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-04-01,total,IMACEC total,-0.497119351657882,-0.882566508705275,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-05-01,total,IMACEC total,-0.599359494821039,1.0434984730179486,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-06-01,total,IMACEC total,0.02746104306026176,0.6815536605923547,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-07-01,total,IMACEC total,2.915341321974929,1.1956690401891168,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-08-01,total,IMACEC total,0.418336336923697,1.2838250378339646,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-09-01,total,IMACEC total,0.9023618496374564,-0.7070171718060178,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-10-01,total,IMACEC total,2.3886867770460896,2.4175684518629232,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-11-01,total,IMACEC total,2.281348596189936,1.8983726446804488,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2023-12-01,total,IMACEC total,0.5421059316974342,2.5425493637960064,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-01-01,total,IMACEC total,3.744961609875319,2.598438284119936,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-02-01,total,IMACEC total,5.836527826096916,4.46447551971962,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-03-01,total,IMACEC total,1.184659965776258,-0.4502028245994239,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-04-01,total,IMACEC total,3.8954766293294307,4.458191647184363,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-05-01,total,IMACEC total,0.3278935451245246,0.4739432612539769,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-06-01,total,IMACEC total,-0.7129540412657787,-1.516519653701396,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-07-01,total,IMACEC total,4.491494430948828,2.485794034552797,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-08-01,total,IMACEC total,2.2341186703822347,1.972891923489211,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-09-01,total,IMACEC total,0.5088925620504003,0.726088145566894,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-10-01,total,IMACEC total,2.893919855317506,2.7819659027104597,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-11-01,total,IMACEC total,2.431240856349004,2.043210286288102,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2024-12-01,total,IMACEC total,6.790041427242954,3.7383346601461662,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-01-01,total,IMACEC total,3.3277451570978167,3.7425417560885315,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-02-01,total,IMACEC total,0.31195371691388196,-0.270780710171598,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-03-01,total,IMACEC total,4.927883606216077,2.739232568252776,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-04-01,total,IMACEC total,3.8776905480138346,1.6397119028463716,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-05-01,total,IMACEC total,3.933046812718355,2.17987488584602,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-06-01,total,IMACEC total,3.375601478984036,4.865502129993672,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-07-01,total,IMACEC total,1.5968501075468655,2.3508253948346924,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-08-01,total,IMACEC total,0.2696093831863422,0.9873920000199603,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-09-01,total,IMACEC total,3.2961209339912534,4.177440293445305,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-10-01,total,IMACEC total,2.0572659006846905,2.787888362349842,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-11-01,total,IMACEC total,1.3711953861016202,1.546060092330776,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2025-12-01,total,IMACEC total,1.2666989233431902,2.6392980151159544,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2026-01-01,total,IMACEC total,-0.8658742743165249,1.1192355977786113,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2026-02-01,total,IMACEC total,-0.220585400383988,1.2634508101846833,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2026-03-01,total,IMACEC total,0.09162416465238188,2.07917229435861,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2026-04-01,total,IMACEC total,-1.070155907885062,0.5822088529805637,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2026-05-01,total,IMACEC total,-1.387178647812548,-0.6667783549249386,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2026-06-01,total,IMACEC total,2.015280488360527,1.1789464965508583,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2026-07-01,total,IMACEC total,-1.487117150040529,-0.5883213298678257,m4,M4 · Dinámico,experimental,Ajuste,2026-09-23 17:56:45 UTC,2026-07-01
+2026-08-01,total,IMACEC total,NA,0.4989344586683313,m4,M4 · Dinámico,experimental,Nowcast,NA,NA
+2019-04-01,total,IMACEC total,1.7820940125048201,1.2384918132740304,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2019-05-01,total,IMACEC total,1.8589031828119662,1.1771925012765176,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2019-06-01,total,IMACEC total,0.880313809166644,1.6626798894469645,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2019-07-01,total,IMACEC total,2.7653306128001987,1.5071036681611434,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2019-08-01,total,IMACEC total,3.1909427561596093,1.8348492015929363,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2019-09-01,total,IMACEC total,2.7842901635932282,2.278862392708817,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2019-10-01,total,IMACEC total,-4.534436503098838,2.9135211775176786,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2019-11-01,total,IMACEC total,-4.988669054665129,0.480265472218,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2019-12-01,total,IMACEC total,0.9258849701172522,-2.2462717980569127,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-01-01,total,IMACEC total,0.9300521010913165,-2.8657401958822377,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-02-01,total,IMACEC total,2.7210597729153907,-1.0442439944855202,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-03-01,total,IMACEC total,-4.349724855185732,1.5256656147079866,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-04-01,total,IMACEC total,-15.088301570672291,-0.23287099372634165,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-05-01,total,IMACEC total,-15.97711767892427,-5.572322217647543,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-06-01,total,IMACEC total,-13.962357751796306,-11.805048034927431,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-07-01,total,IMACEC total,-11.717591602160715,-15.00925900046429,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-08-01,total,IMACEC total,-11.011337841146728,-13.885689010960428,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-09-01,total,IMACEC total,-4.9506576054560885,-12.230429065034583,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-10-01,total,IMACEC total,-1.3585290872647038,-9.22652901625451,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-11-01,total,IMACEC total,1.012732990849563,-5.77350817795584,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2020-12-01,total,IMACEC total,0.5689922284684901,-1.7654845672904098,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-01-01,total,IMACEC total,-3.4287687132994904,0.07439871068444977,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-02-01,total,IMACEC total,-2.1666510508181247,-0.6156811646604791,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-03-01,total,IMACEC total,6.6327425250128025,-1.675475845216375,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-04-01,total,IMACEC total,15.285035960989358,0.34577425363172914,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-05-01,total,IMACEC total,19.551829417289813,6.583709145061345,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-06-01,total,IMACEC total,20.382431879961494,13.823202634430658,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-07-01,total,IMACEC total,17.42490393209195,18.40643241941356,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-08-01,total,IMACEC total,17.966595780594965,19.11972174311442,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-09-01,total,IMACEC total,13.463442930231295,18.591310530882804,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-10-01,total,IMACEC total,13.261557495479682,16.284980880972736,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-11-01,total,IMACEC total,13.33203729920507,14.897198735435316,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2021-12-01,total,IMACEC total,8.751161872273826,13.352345908305347,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-01-01,total,IMACEC total,7.209596697608389,11.781585555652859,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-02-01,total,IMACEC total,5.005438687016195,9.764265289695762,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-03-01,total,IMACEC total,5.669655027882148,6.988732418966137,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-04-01,total,IMACEC total,5.904856300445971,5.961563470835578,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-05-01,total,IMACEC total,5.588591818479638,5.526650005114771,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-06-01,total,IMACEC total,2.7970632563766307,5.721034382269252,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-07-01,total,IMACEC total,-0.43808421788794627,4.7635037917674135,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-08-01,total,IMACEC total,0.6349071225385083,2.6491902856561076,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-09-01,total,IMACEC total,0.17856372039597446,0.9979620536757309,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-10-01,total,IMACEC total,-1.8790917978623423,0.12512887501551218,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-11-01,total,IMACEC total,-2.866486420366976,-0.35520698497595316,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2022-12-01,total,IMACEC total,-1.2635246838221925,-1.522338165944448,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-01-01,total,IMACEC total,1.359126237823327,-2.003034300683837,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-02-01,total,IMACEC total,0.16342433643201648,-0.9236282887886138,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-03-01,total,IMACEC total,-1.4905514158231825,0.08634196347771701,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-04-01,total,IMACEC total,-0.497119351657882,0.010666386144053686,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-05-01,total,IMACEC total,-0.599359494821039,-0.608082143683016,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-06-01,total,IMACEC total,0.02746104306026176,-0.8623434207673678,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-07-01,total,IMACEC total,2.915341321974929,-0.3563392678062198,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-08-01,total,IMACEC total,0.418336336923697,0.7811476234047173,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-09-01,total,IMACEC total,0.9023618496374564,1.1203795673196293,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-10-01,total,IMACEC total,2.3886867770460896,1.4120131695120275,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-11-01,total,IMACEC total,2.281348596189936,1.2364616545357476,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2023-12-01,total,IMACEC total,0.5421059316974342,1.8574657409578272,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-01-01,total,IMACEC total,3.744961609875319,1.73738043497782,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-02-01,total,IMACEC total,5.836527826096916,2.1894720459208963,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-03-01,total,IMACEC total,1.184659965776258,3.374531789223223,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-04-01,total,IMACEC total,3.8954766293294307,3.5887164672494976,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-05-01,total,IMACEC total,0.3278935451245246,3.638888140400868,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-06-01,total,IMACEC total,-0.7129540412657787,1.8026767134100712,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-07-01,total,IMACEC total,4.491494430948828,1.1701387110627255,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-08-01,total,IMACEC total,2.2341186703822347,1.368811311602525,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-09-01,total,IMACEC total,0.5088925620504003,2.004219686688428,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-10-01,total,IMACEC total,2.893919855317506,2.411501887793821,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-11-01,total,IMACEC total,2.431240856349004,1.878977029250047,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2024-12-01,total,IMACEC total,6.790041427242954,1.9446844245723034,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-01-01,total,IMACEC total,3.3277451570978167,4.038400712969821,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-02-01,total,IMACEC total,0.31195371691388196,4.183009146896591,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-03-01,total,IMACEC total,4.927883606216077,3.476580100418218,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-04-01,total,IMACEC total,3.8776905480138346,2.855860826742592,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-05-01,total,IMACEC total,3.933046812718355,3.0391759570479313,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-06-01,total,IMACEC total,3.375601478984036,4.246206988982755,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-07-01,total,IMACEC total,1.5968501075468655,3.7287796132387414,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-08-01,total,IMACEC total,0.2696093831863422,2.9684994664164193,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-09-01,total,IMACEC total,3.2961209339912534,1.7473536565724146,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-10-01,total,IMACEC total,2.0572659006846905,1.7208601415748204,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-11-01,total,IMACEC total,1.3711953861016202,1.874332072620762,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2025-12-01,total,IMACEC total,1.2666989233431902,2.241527406925855,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2026-01-01,total,IMACEC total,-0.8658742743165249,1.5650534033765002,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2026-02-01,total,IMACEC total,-0.220585400383988,0.5906733450427618,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2026-03-01,total,IMACEC total,0.09162416465238188,0.060079749547559125,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2026-04-01,total,IMACEC total,-1.070155907885062,-0.3316118366827103,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2026-05-01,total,IMACEC total,-1.387178647812548,-0.39970571453888937,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2026-06-01,total,IMACEC total,2.015280488360527,-0.7885701303484094,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2026-07-01,total,IMACEC total,-1.487117150040529,-0.14735135577902772,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
+2026-08-01,total,IMACEC total,NA,-0.2863384364975167,ma3,Promedio móvil 3 meses,proxy,Nowcast,NA,NA
