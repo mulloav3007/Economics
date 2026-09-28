@@ -17,6 +17,7 @@ import shutil
 import subprocess
 import sys
 import unicodedata
+import zipfile
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
@@ -135,6 +136,8 @@ def build_contexts() -> dict[str, Any]:
             {"variable": "Serie", "modelo": "Especificación", "N": "N", "RMSE": "RMSE", "MAE": "MAE", "Periodo": "Ventana"},
             {"N": lambda x: str(int(x)), "RMSE": lambda x: fmt_num(x, 2), "MAE": lambda x: fmt_num(x, 2)},
         )
+        target_dt = pd.to_datetime(row["periodo_objetivo"])
+        target_slug = f"{MONTHS_ES[target_dt.month]}-{target_dt.year}"
         imacec = {
             "ready": True,
             "stage": stage,
@@ -148,6 +151,10 @@ def build_contexts() -> dict[str, Any]:
             "has_m8p": as_bool(row["tiene_ine"]),
             "updated": fmt_date(row["fecha_actualizacion"]),
             "oos_table": oos_table,
+            "model_key": default_key,
+            "target_slug": target_slug,
+            "download_graphs_file": f"imacec-graficos-{target_slug}.zip",
+            "download_table_file": f"imacec-historico-proyeccion-{target_slug}.csv",
         }
     else:
         imacec = {
@@ -334,7 +341,7 @@ def copy_public_assets(contexts: dict[str, Any]) -> None:
             raise FileNotFoundError(f"Falta un archivo público requerido: {src}")
         shutil.copy2(src, dst)
 
-    # Public download: IMACEC no minero, historia efectiva + proyecciones vigentes.
+    # Public downloads: IMACEC total/no minero, historia observada y proyección vigente.
     imacec_hist = pd.read_csv(
         ROOT / "data/processed/imacec_nowcast_history_all_models.csv",
         parse_dates=["Periodo"],
@@ -343,92 +350,111 @@ def copy_public_assets(contexts: dict[str, Any]) -> None:
         ROOT / "data/processed/imacec_projection_all_models.csv",
         parse_dates=["Periodo"],
     )
+    imacec_status = pd.read_csv(
+        ROOT / "data/processed/imacec_update_status.csv",
+        parse_dates=["periodo_objetivo"],
+    )
+    status_row = imacec_status.iloc[-1]
+    target_period = pd.to_datetime(status_row["periodo_objetivo"])
+    preferred_model = str(status_row["modelo_principal"])
 
-    if {"target_key", "tipo", "observed"}.issubset(imacec_hist.columns):
-        nonmining_actual = (
-            imacec_hist[
-                imacec_hist["target_key"].eq("no_minero")
-                & imacec_hist["tipo"].eq("Efectivo")
-            ][["Periodo", "observed"]]
-            .dropna(subset=["observed"])
-            .drop_duplicates("Periodo", keep="last")
-            .rename(columns={"observed": "imacec_no_minero_efectivo"})
-        )
-    elif "imacec_nm" in imacec_hist.columns:
-        nonmining_actual = (
-            imacec_hist[["Periodo", "imacec_nm"]]
-            .dropna(subset=["imacec_nm"])
-            .drop_duplicates("Periodo", keep="last")
-            .rename(columns={"imacec_nm": "imacec_no_minero_efectivo"})
-        )
-    else:
-        nonmining_actual = pd.DataFrame(
-            columns=["Periodo", "imacec_no_minero_efectivo"]
-        )
+    model_order = []
+    if preferred_model in {"m4", "m8p", "ar1", "ma3"}:
+        model_order.append(preferred_model)
+    for key in ["m8p", "m4", "ar1", "ma3"]:
+        if key not in model_order:
+            model_order.append(key)
 
-    model_columns = {
-        "ar1": "proyeccion_ar1",
-        "ma3": "proyeccion_media_movil_3m",
-        "m4": "proyeccion_m4",
-        "m8p": "proyeccion_m8p",
-    }
-    if {"target_key", "model_key", "forecast"}.issubset(imacec_proj.columns):
-        nonmining_proj = imacec_proj[
-            imacec_proj["target_key"].eq("no_minero")
-            & imacec_proj["model_key"].isin(model_columns)
+    def latest_projection(target_key: str, model_key: str) -> pd.DataFrame:
+        if not {"target_key", "model_key", "forecast", "Periodo"}.issubset(imacec_proj.columns):
+            return pd.DataFrame()
+        rows = imacec_proj[
+            imacec_proj["target_key"].eq(target_key)
+            & imacec_proj["model_key"].eq(model_key)
+            & pd.to_datetime(imacec_proj["Periodo"]).eq(target_period)
         ].copy()
-        if "run_timestamp" in nonmining_proj.columns:
-            nonmining_proj = nonmining_proj.sort_values("run_timestamp")
-        nonmining_proj = nonmining_proj.drop_duplicates(
-            ["Periodo", "model_key"], keep="last"
-        )
-        projection_wide = (
-            nonmining_proj.pivot(
-                index="Periodo", columns="model_key", values="forecast"
-            )
-            .rename(columns=model_columns)
-            .reset_index()
-        )
-        if "eee_value" in nonmining_proj.columns:
-            eee = nonmining_proj.dropna(subset=["eee_value"]).copy()
-            if "run_timestamp" in eee.columns:
-                eee = eee.sort_values("run_timestamp")
-            eee = (
-                eee.drop_duplicates("Periodo", keep="last")
-                [["Periodo", "eee_value"]]
-                .rename(columns={"eee_value": "eee_comparable"})
-            )
-        else:
-            eee = pd.DataFrame(columns=["Periodo", "eee_comparable"])
-    else:
-        projection_wide = pd.DataFrame(columns=["Periodo", *model_columns.values()])
-        eee = pd.DataFrame(columns=["Periodo", "eee_comparable"])
+        if "run_timestamp" in rows.columns and not rows.empty:
+            rows = rows.sort_values("run_timestamp")
+        return rows.tail(1)
 
-    nonmining_download = (
-        nonmining_actual.merge(projection_wide, on="Periodo", how="outer")
-        .merge(eee, on="Periodo", how="outer")
+    selected_model = None
+    for key in model_order:
+        if not latest_projection("total", key).empty and not latest_projection("no_minero", key).empty:
+            selected_model = key
+            break
+
+    def observed_series(target_key: str, column_name: str) -> pd.DataFrame:
+        if {"target_key", "tipo", "observed"}.issubset(imacec_hist.columns):
+            return (
+                imacec_hist[
+                    imacec_hist["target_key"].eq(target_key)
+                    & imacec_hist["tipo"].eq("Efectivo")
+                ][["Periodo", "observed"]]
+                .dropna(subset=["observed"])
+                .drop_duplicates("Periodo", keep="last")
+                .rename(columns={"observed": column_name})
+            )
+        legacy = "imacec" if target_key == "total" else "imacec_nm"
+        if legacy in imacec_hist.columns:
+            return (
+                imacec_hist[["Periodo", legacy]]
+                .dropna(subset=[legacy])
+                .drop_duplicates("Periodo", keep="last")
+                .rename(columns={legacy: column_name})
+            )
+        return pd.DataFrame(columns=["Periodo", column_name])
+
+    table_download = (
+        observed_series("total", "IMACEC")
+        .merge(
+            observed_series("no_minero", "IMACEC_no_minero"),
+            on="Periodo",
+            how="outer",
+        )
         .sort_values("Periodo")
     )
-    download_columns = [
-        "Periodo",
-        "imacec_no_minero_efectivo",
-        "proyeccion_ar1",
-        "proyeccion_media_movil_3m",
-        "proyeccion_m4",
-        "proyeccion_m8p",
-        "eee_comparable",
-    ]
-    for column in download_columns:
-        if column not in nonmining_download.columns:
-            nonmining_download[column] = pd.NA
-    nonmining_download = nonmining_download[download_columns]
-    nonmining_download["Periodo"] = pd.to_datetime(
-        nonmining_download["Periodo"]
-    ).dt.strftime("%Y-%m-%d")
-    nonmining_download.to_csv(
-        files_out / "imacec-no-minero-historico-proyecciones.csv",
-        index=False,
+    table_download["Tipo"] = "Observado"
+
+    if selected_model is not None:
+        total_point = latest_projection("total", selected_model)
+        nonmining_point = latest_projection("no_minero", selected_model)
+        projection_row = pd.DataFrame([{
+            "Periodo": target_period,
+            "IMACEC": float(total_point.iloc[-1]["forecast"]),
+            "IMACEC_no_minero": float(nonmining_point.iloc[-1]["forecast"]),
+            "Tipo": "Proyeccion",
+        }])
+        table_download = pd.concat([table_download, projection_row], ignore_index=True)
+
+    table_download = (
+        table_download
+        .drop_duplicates(["Periodo", "Tipo"], keep="last")
+        .sort_values(["Periodo", "Tipo"])
     )
+    table_download["Periodo"] = pd.to_datetime(table_download["Periodo"]).dt.strftime("%Y-%m-%d")
+    table_download.to_csv(
+        files_out / contexts["imacec"]["download_table_file"],
+        index=False,
+        float_format="%.2f",
+    )
+
+    chart_dir = SITE / "assets/img/charts"
+    chart_sources = [
+        (chart_dir / "imacec_total_history.png",
+         f"imacec-total-{contexts['imacec']['target_slug']}.png"),
+        (chart_dir / "imacec_nonmining_history.png",
+         f"imacec-no-minero-{contexts['imacec']['target_slug']}.png"),
+    ]
+    for src, _ in chart_sources:
+        if not src.exists():
+            raise FileNotFoundError(f"Falta un gráfico IMACEC requerido: {src}")
+    with zipfile.ZipFile(
+        files_out / contexts["imacec"]["download_graphs_file"],
+        "w",
+        compression=zipfile.ZIP_DEFLATED,
+    ) as bundle:
+        for src, archive_name in chart_sources:
+            bundle.write(src, arcname=archive_name)
 
     ipom_src = ROOT / "assets/files/ipom"
     if ipom_src.exists():
