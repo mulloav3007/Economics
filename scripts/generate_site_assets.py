@@ -368,42 +368,157 @@ def interactive_assets() -> None:
 
 
 def imacec_assets() -> None:
-    hist = pd.read_csv(ROOT / "data/processed/imacec_nowcast_history_all_models.csv", parse_dates=["Periodo"])
-    projections = pd.read_csv(ROOT / "data/processed/imacec_projection_all_models.csv", parse_dates=["Periodo"])
-    new_schema = {"target_key", "observed", "fitted", "model_key"}.issubset(hist.columns)
+    """Generate presentation-ready IMACEC charts for the current information cut."""
+    hist = pd.read_csv(
+        ROOT / "data/processed/imacec_nowcast_history_all_models.csv",
+        parse_dates=["Periodo"],
+    )
+    projections = pd.read_csv(
+        ROOT / "data/processed/imacec_projection_all_models.csv",
+        parse_dates=["Periodo"],
+    )
+    status = pd.read_csv(
+        ROOT / "data/processed/imacec_update_status.csv",
+        parse_dates=["periodo_objetivo"],
+    )
+    row = status.iloc[-1]
+    target_period = pd.to_datetime(row["periodo_objetivo"])
+    preferred_model = str(row["modelo_principal"])
 
-    for target_key, legacy_col, stem, title in [
-        ("total", "imacec", "imacec_total_history", "IMACEC total: efectivo y proyección vigente"),
-        ("no_minero", "imacec_nm", "imacec_nonmining_history", "IMACEC no minero: efectivo y proyección vigente"),
+    model_order = []
+    if preferred_model in {"m4", "m8p", "ar1", "ma3"}:
+        model_order.append(preferred_model)
+    for key in ["m8p", "m4", "ar1", "ma3"]:
+        if key not in model_order:
+            model_order.append(key)
+
+    def latest_projection(target_key: str, model_key: str) -> pd.DataFrame:
+        if not {"target_key", "model_key", "forecast", "Periodo"}.issubset(projections.columns):
+            return pd.DataFrame()
+        point = projections[
+            projections["target_key"].eq(target_key)
+            & projections["model_key"].eq(model_key)
+            & projections["Periodo"].eq(target_period)
+        ].copy()
+        if "run_timestamp" in point.columns and not point.empty:
+            point = point.sort_values("run_timestamp")
+        return point.tail(1)
+
+    selected_model = None
+    for key in model_order:
+        if not latest_projection("total", key).empty and not latest_projection("no_minero", key).empty:
+            selected_model = key
+            break
+    if selected_model is None:
+        selected_model = preferred_model if preferred_model in {"m4", "m8p", "ar1", "ma3"} else "m4"
+
+    cut_labels = {
+        "m4": "corte experimental",
+        "m8p": "corte INE",
+        "ar1": "referencia AR(1)",
+        "ma3": "media móvil 3 meses",
+    }
+    model_labels = {
+        "m4": "M4",
+        "m8p": "M8P",
+        "ar1": "AR(1)",
+        "ma3": "Media móvil 3m",
+    }
+    months_es = {
+        1: "Enero", 2: "Febrero", 3: "Marzo", 4: "Abril",
+        5: "Mayo", 6: "Junio", 7: "Julio", 8: "Agosto",
+        9: "Septiembre", 10: "Octubre", 11: "Noviembre", 12: "Diciembre",
+    }
+    target_label = f"{months_es[target_period.month]} {target_period.year}"
+    cut_label = cut_labels.get(selected_model, selected_model)
+    model_label = model_labels.get(selected_model, selected_model.upper())
+    new_schema = {"target_key", "observed", "fitted", "model_key", "tipo"}.issubset(hist.columns)
+
+    for target_key, legacy_col, stem, series_title in [
+        ("total", "imacec", "imacec_total_history", "IMACEC"),
+        ("no_minero", "imacec_nm", "imacec_nonmining_history", "IMACEC no minero"),
     ]:
         if new_schema:
-            actual = (hist[(hist["target_key"] == target_key) & (hist["tipo"] == "Efectivo")]
-                      [["Periodo", "observed"]].dropna().drop_duplicates("Periodo").sort_values("Periodo"))
+            actual = (
+                hist[
+                    hist["target_key"].eq(target_key)
+                    & hist["tipo"].eq("Efectivo")
+                ][["Periodo", "observed"]]
+                .dropna(subset=["observed"])
+                .drop_duplicates("Periodo", keep="last")
+                .sort_values("Periodo")
+            )
+            fit = (
+                hist[
+                    hist["target_key"].eq(target_key)
+                    & hist["model_key"].eq(selected_model)
+                    & hist["tipo"].eq("Ajuste")
+                ][["Periodo", "fitted"]]
+                .dropna(subset=["fitted"])
+                .drop_duplicates("Periodo", keep="last")
+                .sort_values("Periodo")
+            )
         elif legacy_col in hist.columns:
-            actual = (hist[["Periodo", legacy_col]].dropna().drop_duplicates("Periodo")
-                      .rename(columns={legacy_col: "observed"}).sort_values("Periodo"))
+            actual = (
+                hist[["Periodo", legacy_col]]
+                .dropna(subset=[legacy_col])
+                .drop_duplicates("Periodo", keep="last")
+                .rename(columns={legacy_col: "observed"})
+                .sort_values("Periodo")
+            )
+            fit = pd.DataFrame(columns=["Periodo", "fitted"])
         else:
             actual = pd.DataFrame(columns=["Periodo", "observed"])
+            fit = pd.DataFrame(columns=["Periodo", "fitted"])
 
-        fig, ax = plt.subplots(figsize=(12.6, 6.0))
+        point = latest_projection(target_key, selected_model)
+
+        fig, ax = plt.subplots(figsize=(12.8, 6.9))
+        if not fit.empty:
+            ax.plot(
+                fit["Periodo"], fit["fitted"],
+                color=COLORS["terracotta"], linewidth=2.0,
+                linestyle=(0, (4, 4)), label="Ajuste", zorder=2,
+            )
         if not actual.empty:
-            ax.plot(actual["Periodo"], actual["observed"], color=COLORS["navy"],
-                    linewidth=2.35, label="IMACEC efectivo")
-        if {"target_key", "forecast", "model_key"}.issubset(projections.columns):
-            points = projections[projections["target_key"] == target_key]
-            for key, color, marker in [("m4", COLORS["terracotta"], "o"), ("m8p", COLORS["teal"], "D")]:
-                point = points[points["model_key"] == key]
-                if not point.empty:
-                    ax.scatter(point["Periodo"], point["forecast"], color=color, marker=marker,
-                               s=72, zorder=6, edgecolor="white", linewidth=1.2, label=key.upper())
-        ax.axhline(0, color=COLORS["slate"], linewidth=0.9)
-        ax.set_ylabel("Variación anual, %")
-        if not actual.empty:
-            ax.set_xlim(pd.Timestamp("2019-01-01"), actual["Periodo"].max() + pd.offsets.MonthBegin(2))
-        ax.xaxis.set_major_locator(mdates.YearLocator(1))
+            ax.plot(
+                actual["Periodo"], actual["observed"],
+                color=COLORS["blue"], linewidth=2.25,
+                label="Observado", zorder=3,
+            )
+        if not point.empty:
+            ax.scatter(
+                point["Periodo"], point["forecast"],
+                color="#9B1C18", s=78, zorder=6,
+                edgecolor="white", linewidth=1.0,
+                label="Proyección",
+            )
+
+        ax.axhline(0, color=COLORS["grid"], linewidth=1.0, linestyle=(0, (4, 4)))
+        ax.set_xlabel("Periodo", fontsize=12)
+        ax.set_ylabel(f"{series_title} (var. 12m, %)", fontsize=12)
+        start_date = pd.Timestamp("2019-01-01")
+        end_date = target_period + pd.offsets.MonthBegin(2)
+        ax.set_xlim(start_date, end_date)
+        ax.xaxis.set_major_locator(mdates.YearLocator(2))
         ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
-        style_ax(ax, title, "El sitio interactivo conserva por separado efectivo, ajuste, nowcast y EEE.")
-        ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.13), ncol=3, fontsize=9.2)
+        style_ax(
+            ax,
+            f"Proyección {series_title} — {cut_label}: {target_label}",
+        )
+        ax.legend(
+            loc="upper center",
+            bbox_to_anchor=(0.5, 1.09),
+            ncol=3,
+            fontsize=10.2,
+        )
+        ax.text(
+            0.995, 0.01,
+            f"Modelo vigente: {model_label}",
+            transform=ax.transAxes,
+            ha="right", va="bottom",
+            fontsize=8.8, color=COLORS["muted"],
+        )
         add_source(fig, "Fuente: Banco Central de Chile, INE y elaboración propia.")
         save(fig, stem)
 
