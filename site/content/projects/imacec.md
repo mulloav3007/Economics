@@ -15,6 +15,13 @@
 </div>
 {% endif %}
 
+{% if imacec.ready %}
+<div class="download-grid imacec-downloads imacec-downloads-top">
+  <a class="download" href="../assets/files/{{ imacec.download_graphs_file }}" download="{{ imacec.download_graphs_file }}"><div><strong>Descargar gráficos</strong><span>ZIP · IMACEC total e IMACEC no minero · {{ imacec.target }}</span></div><span>↓</span></a>
+  <a class="download" href="../assets/files/{{ imacec.download_table_file }}" download="{{ imacec.download_table_file }}"><div><strong>Descargar tabla</strong><span>CSV · historia observada y proyección vigente · {{ imacec.target }}</span></div><span>↓</span></a>
+</div>
+{% endif %}
+
 ## Seguimiento mensual
 
 Los dos paneles responden al mismo calendario de publicación. Antes de la nueva EEE, el resumen conserva el último dato efectivo y compara los puntos de M4, M8P, AR(1), media móvil y EEE disponibles. Después, el selector deja por defecto el corte más informativo que ya esté completo.
@@ -45,11 +52,6 @@ Los dos paneles responden al mismo calendario de publicación. Antes de la nueva
   <p class="chart-note" data-chart-note></p>
   <div data-chart-table></div>
   <p class="chart-help">La serie no minera se estima de forma independiente, manteniendo el conjunto fijo de predictores de M4 o M8P.</p>
-</div>
-
-<div class="download-grid imacec-downloads">
-  <a class="download" href="../assets/img/charts/imacec_nonmining_history.png" download="imacec-no-minero.png"><div><strong>Descargar gráfico IMACEC no minero</strong><span>PNG · efectivo y proyecciones vigentes</span></div><span>↓</span></a>
-  <a class="download" href="../assets/files/imacec-no-minero-historico-proyecciones.csv" download><div><strong>Descargar datos del gráfico</strong><span>CSV · historia efectiva, proyecciones vigentes y EEE comparable</span></div><span>↓</span></a>
 </div>
 
 ## Cómo se actualiza
