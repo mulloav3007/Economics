@@ -47,6 +47,11 @@ Los dos paneles responden al mismo calendario de publicación. Antes de la nueva
   <p class="chart-help">La serie no minera se estima de forma independiente, manteniendo el conjunto fijo de predictores de M4 o M8P.</p>
 </div>
 
+<div class="download-grid imacec-downloads">
+  <a class="download" href="../assets/img/charts/imacec_nonmining_history.png" download="imacec-no-minero.png"><div><strong>Descargar gráfico IMACEC no minero</strong><span>PNG · efectivo y proyecciones vigentes</span></div><span>↓</span></a>
+  <a class="download" href="../assets/files/imacec-no-minero-historico-proyecciones.csv" download><div><strong>Descargar datos del gráfico</strong><span>CSV · historia efectiva, proyecciones vigentes y EEE comparable</span></div><span>↓</span></a>
+</div>
+
 ## Cómo se actualiza
 
 | Momento del mes | Publicación visible | Opción predeterminada |
