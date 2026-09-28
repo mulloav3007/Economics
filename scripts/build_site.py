@@ -334,6 +334,102 @@ def copy_public_assets(contexts: dict[str, Any]) -> None:
             raise FileNotFoundError(f"Falta un archivo público requerido: {src}")
         shutil.copy2(src, dst)
 
+    # Public download: IMACEC no minero, historia efectiva + proyecciones vigentes.
+    imacec_hist = pd.read_csv(
+        ROOT / "data/processed/imacec_nowcast_history_all_models.csv",
+        parse_dates=["Periodo"],
+    )
+    imacec_proj = pd.read_csv(
+        ROOT / "data/processed/imacec_projection_all_models.csv",
+        parse_dates=["Periodo"],
+    )
+
+    if {"target_key", "tipo", "observed"}.issubset(imacec_hist.columns):
+        nonmining_actual = (
+            imacec_hist[
+                imacec_hist["target_key"].eq("no_minero")
+                & imacec_hist["tipo"].eq("Efectivo")
+            ][["Periodo", "observed"]]
+            .dropna(subset=["observed"])
+            .drop_duplicates("Periodo", keep="last")
+            .rename(columns={"observed": "imacec_no_minero_efectivo"})
+        )
+    elif "imacec_nm" in imacec_hist.columns:
+        nonmining_actual = (
+            imacec_hist[["Periodo", "imacec_nm"]]
+            .dropna(subset=["imacec_nm"])
+            .drop_duplicates("Periodo", keep="last")
+            .rename(columns={"imacec_nm": "imacec_no_minero_efectivo"})
+        )
+    else:
+        nonmining_actual = pd.DataFrame(
+            columns=["Periodo", "imacec_no_minero_efectivo"]
+        )
+
+    model_columns = {
+        "ar1": "proyeccion_ar1",
+        "ma3": "proyeccion_media_movil_3m",
+        "m4": "proyeccion_m4",
+        "m8p": "proyeccion_m8p",
+    }
+    if {"target_key", "model_key", "forecast"}.issubset(imacec_proj.columns):
+        nonmining_proj = imacec_proj[
+            imacec_proj["target_key"].eq("no_minero")
+            & imacec_proj["model_key"].isin(model_columns)
+        ].copy()
+        if "run_timestamp" in nonmining_proj.columns:
+            nonmining_proj = nonmining_proj.sort_values("run_timestamp")
+        nonmining_proj = nonmining_proj.drop_duplicates(
+            ["Periodo", "model_key"], keep="last"
+        )
+        projection_wide = (
+            nonmining_proj.pivot(
+                index="Periodo", columns="model_key", values="forecast"
+            )
+            .rename(columns=model_columns)
+            .reset_index()
+        )
+        if "eee_value" in nonmining_proj.columns:
+            eee = nonmining_proj.dropna(subset=["eee_value"]).copy()
+            if "run_timestamp" in eee.columns:
+                eee = eee.sort_values("run_timestamp")
+            eee = (
+                eee.drop_duplicates("Periodo", keep="last")
+                [["Periodo", "eee_value"]]
+                .rename(columns={"eee_value": "eee_comparable"})
+            )
+        else:
+            eee = pd.DataFrame(columns=["Periodo", "eee_comparable"])
+    else:
+        projection_wide = pd.DataFrame(columns=["Periodo", *model_columns.values()])
+        eee = pd.DataFrame(columns=["Periodo", "eee_comparable"])
+
+    nonmining_download = (
+        nonmining_actual.merge(projection_wide, on="Periodo", how="outer")
+        .merge(eee, on="Periodo", how="outer")
+        .sort_values("Periodo")
+    )
+    download_columns = [
+        "Periodo",
+        "imacec_no_minero_efectivo",
+        "proyeccion_ar1",
+        "proyeccion_media_movil_3m",
+        "proyeccion_m4",
+        "proyeccion_m8p",
+        "eee_comparable",
+    ]
+    for column in download_columns:
+        if column not in nonmining_download.columns:
+            nonmining_download[column] = pd.NA
+    nonmining_download = nonmining_download[download_columns]
+    nonmining_download["Periodo"] = pd.to_datetime(
+        nonmining_download["Periodo"]
+    ).dt.strftime("%Y-%m-%d")
+    nonmining_download.to_csv(
+        files_out / "imacec-no-minero-historico-proyecciones.csv",
+        index=False,
+    )
+
     ipom_src = ROOT / "assets/files/ipom"
     if ipom_src.exists():
         shutil.copytree(ipom_src, files_out / "ipom", dirs_exist_ok=True)
