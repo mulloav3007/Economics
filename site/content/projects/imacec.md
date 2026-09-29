@@ -17,7 +17,7 @@
 
 {% if imacec.ready %}
 <div class="download-grid imacec-downloads imacec-downloads-top">
-  <a class="download" href="../assets/files/{{ imacec.download_graphs_file }}" download="{{ imacec.download_graphs_file }}"><div><strong>Descargar gráficos</strong><span>ZIP · IMACEC total e IMACEC no minero · {{ imacec.target }}</span></div><span>↓</span></a>
+  <a class="download" href="../assets/files/{{ imacec.download_graphs_file }}" download="{{ imacec.download_graphs_file }}"><div><strong>Descargar gráficos</strong><span>3 PNG · IMACEC total, no minero y tabla · {{ imacec.target }}</span></div><span>↓</span></a>
   <a class="download" href="../assets/files/{{ imacec.download_table_file }}" download="{{ imacec.download_table_file }}"><div><strong>Descargar tabla</strong><span>CSV · historia observada y proyección vigente · {{ imacec.target }}</span></div><span>↓</span></a>
 </div>
 {% endif %}
