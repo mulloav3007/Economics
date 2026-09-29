@@ -1,5 +1,5 @@
 variable,modelo,model_key,N,RMSE,MAE,Periodo,nota
-IMACEC no minero,M4 · Dinámico,m4,43,1.1808042289366412,0.9406511355228944,2023-01 a 2026-07,Pseudo-OOS recursivo con información final; no reconstruye revisiones históricas.
-IMACEC no minero,M8P · INE + IVS real parsimonioso,m8p,43,0.9878243922287624,0.8089864022327483,2023-01 a 2026-07,Pseudo-OOS recursivo con información final; no reconstruye revisiones históricas.
-IMACEC total,M4 · Dinámico,m4,43,1.6116512390520408,1.3535138779354496,2023-01 a 2026-07,Pseudo-OOS recursivo con información final; no reconstruye revisiones históricas.
-IMACEC total,M8P · INE + IVS real parsimonioso,m8p,43,1.0534844663097847,0.7909758394063889,2023-01 a 2026-07,Pseudo-OOS recursivo con información final; no reconstruye revisiones históricas.
+IMACEC no minero,M4 · Dinámico,m4,43,1.1808042289366414,0.9406511355228945,2023-01 a 2026-07,Pseudo-OOS recursivo con información final; no reconstruye revisiones históricas.
+IMACEC no minero,M8P · INE + IVS real parsimonioso,m8p,43,0.9878243922287627,0.8089864022327485,2023-01 a 2026-07,Pseudo-OOS recursivo con información final; no reconstruye revisiones históricas.
+IMACEC total,M4 · Dinámico,m4,43,1.611651239052041,1.3535138779354496,2023-01 a 2026-07,Pseudo-OOS recursivo con información final; no reconstruye revisiones históricas.
+IMACEC total,M8P · INE + IVS real parsimonioso,m8p,43,1.0534844663097849,0.7909758394063889,2023-01 a 2026-07,Pseudo-OOS recursivo con información final; no reconstruye revisiones históricas.
