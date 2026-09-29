@@ -393,9 +393,38 @@
     window.addEventListener('resize', syncHeight, { passive: true });
   }
 
+
+  function initMultiDownloads() {
+    $('[data-multi-download]').forEach((control) => {
+      control.addEventListener('click', (event) => {
+        const spec = control.dataset.multiDownload || '';
+        const files = spec.split('|').map((item) => {
+          const [url, filename] = item.split('::');
+          return { url, filename };
+        }).filter((item) => item.url && item.filename);
+
+        if (!files.length) return;
+        event.preventDefault();
+
+        files.forEach((file, index) => {
+          window.setTimeout(() => {
+            const link = document.createElement('a');
+            link.href = file.url;
+            link.download = file.filename;
+            link.style.display = 'none';
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+          }, index * 180);
+        });
+      });
+    });
+  }
+
   initExchangeDashboard();
   initYieldCurve();
   initProjectCharts();
+  initMultiDownloads();
   initDebtSimulator();
   enhanceStaticFigures();
   initAtlasEmbed();
