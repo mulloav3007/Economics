@@ -418,12 +418,6 @@ def imacec_assets() -> None:
         "ar1": "referencia AR(1)",
         "ma3": "media móvil 3 meses",
     }
-    model_labels = {
-        "m4": "M4",
-        "m8p": "M8P",
-        "ar1": "AR(1)",
-        "ma3": "Media móvil 3m",
-    }
     months_es = {
         1: "Enero", 2: "Febrero", 3: "Marzo", 4: "Abril",
         5: "Mayo", 6: "Junio", 7: "Julio", 8: "Agosto",
@@ -431,15 +425,11 @@ def imacec_assets() -> None:
     }
     target_label = f"{months_es[target_period.month]} {target_period.year}"
     cut_label = cut_labels.get(selected_model, selected_model)
-    model_label = model_labels.get(selected_model, selected_model.upper())
     new_schema = {"target_key", "observed", "fitted", "model_key", "tipo"}.issubset(hist.columns)
 
-    for target_key, legacy_col, stem, series_title in [
-        ("total", "imacec", "imacec_total_history", "IMACEC"),
-        ("no_minero", "imacec_nm", "imacec_nonmining_history", "IMACEC no minero"),
-    ]:
+    def observed_series(target_key: str, legacy_col: str) -> pd.DataFrame:
         if new_schema:
-            actual = (
+            return (
                 hist[
                     hist["target_key"].eq(target_key)
                     & hist["tipo"].eq("Efectivo")
@@ -448,6 +438,26 @@ def imacec_assets() -> None:
                 .drop_duplicates("Periodo", keep="last")
                 .sort_values("Periodo")
             )
+        if legacy_col in hist.columns:
+            return (
+                hist[["Periodo", legacy_col]]
+                .dropna(subset=[legacy_col])
+                .drop_duplicates("Periodo", keep="last")
+                .rename(columns={legacy_col: "observed"})
+                .sort_values("Periodo")
+            )
+        return pd.DataFrame(columns=["Periodo", "observed"])
+
+    chart_actuals = {}
+
+    for target_key, legacy_col, stem, series_title in [
+        ("total", "imacec", "imacec_total_history", "IMACEC"),
+        ("no_minero", "imacec_nm", "imacec_nonmining_history", "IMACEC no minero"),
+    ]:
+        actual = observed_series(target_key, legacy_col)
+        chart_actuals[target_key] = actual.copy()
+
+        if new_schema:
             fit = (
                 hist[
                     hist["target_key"].eq(target_key)
@@ -458,25 +468,27 @@ def imacec_assets() -> None:
                 .drop_duplicates("Periodo", keep="last")
                 .sort_values("Periodo")
             )
-        elif legacy_col in hist.columns:
-            actual = (
-                hist[["Periodo", legacy_col]]
-                .dropna(subset=[legacy_col])
-                .drop_duplicates("Periodo", keep="last")
-                .rename(columns={legacy_col: "observed"})
-                .sort_values("Periodo")
-            )
-            fit = pd.DataFrame(columns=["Periodo", "fitted"])
         else:
-            actual = pd.DataFrame(columns=["Periodo", "observed"])
             fit = pd.DataFrame(columns=["Periodo", "fitted"])
 
         point = latest_projection(target_key, selected_model)
+        fit_extended = fit.copy()
+        if not point.empty:
+            forecast_date = pd.to_datetime(point.iloc[-1]["Periodo"])
+            forecast_value = float(point.iloc[-1]["forecast"])
+            fit_extended = fit_extended[fit_extended["Periodo"] < forecast_date]
+            fit_extended = pd.concat(
+                [
+                    fit_extended,
+                    pd.DataFrame({"Periodo": [forecast_date], "fitted": [forecast_value]}),
+                ],
+                ignore_index=True,
+            ).sort_values("Periodo")
 
         fig, ax = plt.subplots(figsize=(12.8, 6.9))
-        if not fit.empty:
+        if not fit_extended.empty:
             ax.plot(
-                fit["Periodo"], fit["fitted"],
+                fit_extended["Periodo"], fit_extended["fitted"],
                 color=COLORS["terracotta"], linewidth=2.0,
                 linestyle=(0, (4, 4)), label="Ajuste", zorder=2,
             )
@@ -487,40 +499,142 @@ def imacec_assets() -> None:
                 label="Observado", zorder=3,
             )
         if not point.empty:
+            forecast_date = pd.to_datetime(point.iloc[-1]["Periodo"])
+            forecast_value = float(point.iloc[-1]["forecast"])
             ax.scatter(
-                point["Periodo"], point["forecast"],
-                color="#9B1C18", s=78, zorder=6,
+                [forecast_date], [forecast_value],
+                color="#9B1C18", s=82, zorder=6,
                 edgecolor="white", linewidth=1.0,
                 label="Proyección",
+            )
+            forecast_text = f"Proyección: {forecast_value:+.2f}%".replace(".", ",")
+            ax.annotate(
+                forecast_text,
+                xy=(forecast_date, forecast_value),
+                xytext=(-12, 22),
+                textcoords="offset points",
+                ha="right", va="bottom",
+                fontsize=10.4, fontweight="bold",
+                color="#7F1815",
+                bbox=dict(
+                    boxstyle="round,pad=0.35",
+                    facecolor="white",
+                    edgecolor="#9B1C18",
+                    linewidth=0.9,
+                    alpha=0.96,
+                ),
+                arrowprops=dict(
+                    arrowstyle="-",
+                    color="#9B1C18",
+                    linewidth=0.9,
+                ),
+                zorder=7,
             )
 
         ax.axhline(0, color=COLORS["grid"], linewidth=1.0, linestyle=(0, (4, 4)))
         ax.set_xlabel("Periodo", fontsize=12)
         ax.set_ylabel(f"{series_title} (var. 12m, %)", fontsize=12)
-        start_date = pd.Timestamp("2019-01-01")
-        end_date = target_period + pd.offsets.MonthBegin(2)
-        ax.set_xlim(start_date, end_date)
+        ax.set_xlim(pd.Timestamp("2019-01-01"), target_period + pd.offsets.MonthBegin(2))
         ax.xaxis.set_major_locator(mdates.YearLocator(2))
         ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
+        ax.yaxis.set_major_locator(plt.MaxNLocator(nbins=14))
         style_ax(
             ax,
             f"Proyección {series_title} — {cut_label}: {target_label}",
         )
+        # La leyenda queda dentro del panel, separada del título.
         ax.legend(
-            loc="upper center",
-            bbox_to_anchor=(0.5, 1.09),
+            loc="upper left",
+            bbox_to_anchor=(0.0, 0.995),
             ncol=3,
             fontsize=10.2,
-        )
-        ax.text(
-            0.995, 0.01,
-            f"Modelo vigente: {model_label}",
-            transform=ax.transAxes,
-            ha="right", va="bottom",
-            fontsize=8.8, color=COLORS["muted"],
+            borderaxespad=0.0,
         )
         add_source(fig, "Fuente: Banco Central de Chile, INE y elaboración propia.")
         save(fig, stem)
+
+    # Tercer PNG: tabla compacta con los últimos observados y la proyección vigente.
+    total_actual = chart_actuals.get("total", pd.DataFrame(columns=["Periodo", "observed"]))
+    nm_actual = chart_actuals.get("no_minero", pd.DataFrame(columns=["Periodo", "observed"]))
+    recent = (
+        total_actual.rename(columns={"observed": "IMACEC"})
+        .merge(
+            nm_actual.rename(columns={"observed": "IMACEC_no_minero"}),
+            on="Periodo",
+            how="outer",
+        )
+        .sort_values("Periodo")
+        .tail(5)
+    )
+
+    table_rows = []
+    for rec in recent.itertuples(index=False):
+        total_value = "—" if pd.isna(rec.IMACEC) else f"{float(rec.IMACEC):.2f}".replace(".", ",")
+        nm_value = "—" if pd.isna(rec.IMACEC_no_minero) else f"{float(rec.IMACEC_no_minero):.2f}".replace(".", ",")
+        table_rows.append([
+            pd.Timestamp(rec.Periodo).strftime("%Y-%m-%d"),
+            total_value,
+            nm_value,
+            "Observado",
+        ])
+
+    total_point = latest_projection("total", selected_model)
+    nm_point = latest_projection("no_minero", selected_model)
+    if not total_point.empty and not nm_point.empty:
+        table_rows.append([
+            target_period.strftime("%Y-%m-%d"),
+            f"{float(total_point.iloc[-1]['forecast']):.2f}".replace(".", ","),
+            f"{float(nm_point.iloc[-1]['forecast']):.2f}".replace(".", ","),
+            "Proyección",
+        ])
+
+    fig, ax = plt.subplots(figsize=(10.8, 5.2))
+    ax.axis("off")
+    fig.suptitle(
+        f"IMACEC — histórico reciente y proyección: {target_label}",
+        x=0.06, y=0.96, ha="left",
+        fontsize=18, fontweight="bold", color=COLORS["ink"],
+    )
+    ax.text(
+        0.06, 0.88,
+        "Variación anual, %. La última fila corresponde a la proyección vigente.",
+        transform=fig.transFigure,
+        ha="left", va="top", fontsize=10.5, color=COLORS["muted"],
+    )
+    table = ax.table(
+        cellText=table_rows,
+        colLabels=["Periodo", "IMACEC", "IMACEC no minero", "Tipo"],
+        cellLoc="right",
+        colLoc="center",
+        loc="center",
+        colWidths=[0.22, 0.18, 0.27, 0.20],
+    )
+    table.auto_set_font_size(False)
+    table.set_fontsize(11.2)
+    table.scale(1, 1.65)
+    for (r, c), cell in table.get_celld().items():
+        cell.set_edgecolor(COLORS["grid"])
+        cell.set_linewidth(0.8)
+        if r == 0:
+            cell.set_facecolor(COLORS["soft"])
+            cell.set_text_props(weight="bold", color=COLORS["ink"], ha="center")
+        else:
+            cell.set_facecolor("white")
+            cell.set_text_props(color=COLORS["ink"])
+    if table_rows:
+        last_row = len(table_rows)
+        for c in range(4):
+            table[(last_row, c)].set_facecolor("#F6EDEA")
+            table[(last_row, c)].set_text_props(weight="bold", color=COLORS["ink"])
+    fig.text(
+        0.06, 0.045,
+        "Fuente: Banco Central de Chile, INE y elaboración propia.",
+        ha="left", va="bottom", fontsize=8.5, color=COLORS["muted"],
+    )
+    fig.tight_layout(rect=[0.04, 0.08, 0.98, 0.86])
+    fig.savefig(OUT / "imacec_projection_table.png", dpi=180, bbox_inches="tight")
+    fig.savefig(OUT / "imacec_projection_table.svg", bbox_inches="tight")
+    plt.close(fig)
 
 
 def ipom_assets() -> None:
