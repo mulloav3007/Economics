@@ -22,7 +22,6 @@ on:
       - 'scripts/test_imacec.R'
       - 'scripts/generate_site_assets.py'
       - 'scripts/build_site.py'
-      - 'site/content/projects/imacec.md'
       - 'data/raw/imacec_ine_yoy_fallback.csv'
       - '.github/workflows/update-imacec.yml'
   pull_request:
