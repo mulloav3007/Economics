@@ -11,6 +11,7 @@ from pathlib import Path
 
 import matplotlib.dates as mdates
 import matplotlib.pyplot as plt
+import matplotlib.ticker as mticker
 import numpy as np
 import pandas as pd
 
@@ -537,7 +538,7 @@ def imacec_assets() -> None:
         ax.set_xlim(pd.Timestamp("2019-01-01"), target_period + pd.offsets.MonthBegin(2))
         ax.xaxis.set_major_locator(mdates.YearLocator(2))
         ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
-        ax.yaxis.set_major_locator(plt.MaxNLocator(nbins=14))
+        ax.yaxis.set_major_locator(mticker.MaxNLocator(nbins=14))
         style_ax(
             ax,
             f"Proyección {series_title} — {cut_label}: {target_label}",
