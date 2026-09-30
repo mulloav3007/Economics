@@ -30,7 +30,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: imacec-update
+  # Grupo versionado para no quedar bloqueado por una ejecución antigua/atascada.
+  group: imacec-update-v2
   cancel-in-progress: true
 
 env:
