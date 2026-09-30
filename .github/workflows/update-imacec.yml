@@ -141,6 +141,10 @@ jobs:
             echo "No hay cambios analíticos para publicar."
           else
             git commit -m "Actualiza ciclo mensual IMACEC"
+            # Los Excel INE descargados son insumos temporales y no se versionan.
+            # Limpia cualquier modificación/no-trackeado restante antes del rebase.
+            git reset --hard HEAD
+            git clean -fd
             # Si main avanzó mientras corría el job, reaplica la salida analítica
             # sobre el estado remoto más reciente antes de publicar.
             git fetch origin main
