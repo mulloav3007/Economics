@@ -9,6 +9,10 @@
   <strong>Estado del ciclo:</strong> {{ imacec.stage_label }}.
 </div>
 
+<div class="callout">
+  <strong>Fuentes de alta frecuencia:</strong> IPMin, IPMan, IPEGA, comercio al por menor e IVS se leen directamente desde los Excel oficiales del INE. La BDE se conserva únicamente como respaldo de continuidad si una descarga oficial falla.
+</div>
+
 {% if not imacec.ready %}
 <div class="callout callout-warning">
   <strong>Transición segura pendiente.</strong> La interfaz conserva únicamente el IMACEC efectivo hasta que GitHub Actions genere por primera vez el nuevo archivo de estados; ninguna cifra antigua se presenta como M4 o M8P.
@@ -76,7 +80,7 @@ La estimación histórica utiliza exclusivamente períodos anteriores al mes obj
 
 Las dos fórmulas se reestiman por separado para **IMACEC total** e **IMACEC no minero**. El factor IVS real promedia seis índices de ventas de servicios deflactados por el IPC de Servicios y M8P solo se habilita con cobertura contemporánea completa.
 
-La fuente principal de los sectores es la BDE. Para julio de 2026 existe un respaldo de las variaciones oficiales del INE publicadas el 31 de agosto: minería −7,2%, manufactura −4,9% y electricidad, gas y agua +0,3%. Solo cubre valores ausentes en la BDE, utiliza el redondeo oficial a un decimal y se reemplaza automáticamente cuando la BDE dispone del dato. [Fuente: INE, Índice de Producción Industrial](https://www.ine.gob.cl/estadisticas-por-tema/industria-energia-y-construccion/indice-de-produccion-industrial).
+Los predictores sectoriales de M8P se descargan desde las páginas oficiales del INE en cada ejecución. El pipeline descubre dinámicamente el Excel vigente de **Índice de Producción Industrial** —sin fijar el mes en el nombre del archivo— y extrae las series originales de **IPMin, IPMan e IPEGA**. Para comercio utiliza el **Índice de Actividad del Comercio al por Menor**, manteniendo la misma definición histórica del predictor. Los IVS también se refrescan desde su Excel oficial y se deflactan con IPC Servicios. La BDE queda como respaldo técnico, no como fuente primaria. [IPI · INE](https://www.ine.gob.cl/estadisticas-por-tema/industria-energia-y-construccion/indice-de-produccion-industrial) · [Comercio · INE](https://www.ine.gob.cl/estadisticas-por-tema/comercio-y-servicios/actividad-mensual-del-comercio).
 
 ## Evaluación pseudo out-of-sample
 
@@ -90,7 +94,7 @@ La evaluación es recursiva y mantiene fijas M4 y M8P, pero usa la base final di
 - La EEE publicada en **M** se asigna al IMACEC de **M−1**.
 - AR(1) y media móvil de tres meses son referencias transparentes; nunca sustituyen a M4 o M8P.
 - El modelo principal cambia por disponibilidad verificable, no por cuál arroje la cifra más conveniente.
-- La tarea programada revisa datos cada día hábil y solo versiona salidas cuando existe un cambio.
+- La tarea programada lanza sondeos redundantes cada 30 minutos durante una ventana amplia de días hábiles para amortiguar retrasos de GitHub Actions; cada ejecución vuelve a consultar las fuentes oficiales y publica el nuevo corte cuando la cobertura requerida está completa.
 
 Última ejecución publicada: **{{ imacec.updated }}**.
 
