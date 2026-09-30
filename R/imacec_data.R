@@ -113,21 +113,21 @@ parse_ivs_period <- function(x) {
   lubridate::floor_date(out, "month")
 }
 
-download_ivs_file <- function(url, destination = ivs_path) {
+download_ine_excel <- function(url, destination, label = "INE") {
   dir.create(dirname(destination), recursive = TRUE, showWarnings = FALSE)
   response <- httr::RETRY(
     "GET", url, times = 4, pause_base = 1, pause_cap = 8,
     terminate_on = c(400, 401, 403, 404),
-    httr::timeout(120), httr::user_agent("Economics-IMACEC/2.0")
+    httr::timeout(120), httr::user_agent("Economics-IMACEC/3.0")
   )
   httr::stop_for_status(response)
   content <- httr::content(response, as = "raw")
-  if (length(content) < 10000L) stop("El archivo IVS descargado no parece un Excel válido.")
+  if (length(content) < 5000L) stop("El archivo ", label, " descargado no parece un Excel válido.")
 
   is_xlsx <- length(content) >= 2L && rawToChar(content[1:2]) == "PK"
   ole_signature <- as.raw(c(0xD0, 0xCF, 0x11, 0xE0, 0xA1, 0xB1, 0x1A, 0xE1))
   is_xls <- length(content) >= 8L && identical(content[1:8], ole_signature)
-  if (!is_xlsx && !is_xls) stop("La descarga IVS no devolvió un Excel .xls o .xlsx válido.")
+  if (!is_xlsx && !is_xls) stop("La descarga ", label, " no devolvió un Excel .xls o .xlsx válido.")
 
   extension <- if (is_xlsx) ".xlsx" else ".xls"
   stem <- sub("[.](xlsx|xls)$", "", destination, ignore.case = TRUE)
@@ -136,7 +136,7 @@ download_ivs_file <- function(url, destination = ivs_path) {
   resolved_destination
 }
 
-extract_ivs_urls <- function(page) {
+extract_excel_urls <- function(page) {
   page <- gsub("\\\\/", "/", page)
   page <- gsub("&amp;", "&", page, fixed = TRUE)
   page <- gsub("\\\\u0026", "&", page, fixed = TRUE)
@@ -153,45 +153,164 @@ extract_ivs_urls <- function(page) {
   hits
 }
 
-find_ivs_urls <- function() {
-  if (nzchar(ivs_url)) return(ivs_url)
-  response <- httr::RETRY(
-    "GET", ivs_page, times = 3, pause_base = 1,
-    httr::timeout(60), httr::user_agent("Economics-IMACEC/2.0")
-  )
-  httr::stop_for_status(response)
-  page <- httr::content(response, as = "text", encoding = "UTF-8")
-  links <- extract_ivs_urls(page)
-  relevant <- links[grepl("ventas|servicios|ivs|serie", normalize_ivs_text(links))]
-  if (length(relevant)) links <- relevant
+discover_ine_excel_urls <- function(page_url, include_patterns, fallback_url, override = "") {
+  if (nzchar(override)) return(unique(c(override, fallback_url)))
+
+  links <- tryCatch({
+    response <- httr::RETRY(
+      "GET", page_url, times = 3, pause_base = 1,
+      httr::timeout(60), httr::user_agent("Economics-IMACEC/3.0")
+    )
+    httr::stop_for_status(response)
+    page <- httr::content(response, as = "text", encoding = "UTF-8")
+    extract_excel_urls(page)
+  }, error = function(e) {
+    warning("No se pudo descubrir Excel desde ", page_url, ": ", conditionMessage(e), call. = FALSE)
+    character()
+  })
+
   if (length(links)) {
-    priority <- 10L * grepl("cuadro|serie|histor|base", normalize_ivs_text(links)) +
-      5L * grepl("xlsx", tolower(links), fixed = TRUE)
-    return(links[order(priority, decreasing = TRUE)])
+    normalized <- normalize_ivs_text(URLdecode(links))
+    keep <- vapply(seq_along(links), function(i) {
+      all(vapply(include_patterns, function(p) grepl(p, normalized[i], perl = TRUE), logical(1)))
+    }, logical(1))
+    selected <- links[keep]
+    if (length(selected)) {
+      score <- 10L * grepl("2018", normalized[keep]) +
+        6L * grepl("serie", normalized[keep]) +
+        3L * grepl("xlsx", tolower(selected), fixed = TRUE)
+      links <- selected[order(score, decreasing = TRUE)]
+    }
   }
-  stop(
-    "No se encontró automáticamente el Excel histórico IVS. Define IMACEC_IVS_URL ",
-    "o IMACEC_IVS_FILE con el archivo oficial del INE."
+
+  unique(c(links, fallback_url))
+}
+
+resolve_ine_product_file <- function(urls, destination, label) {
+  # Siempre intenta primero la publicación remota: un archivo cacheado del mes
+  # anterior no debe impedir que M8P detecte el nuevo corte.
+  for (url in urls) {
+    downloaded <- tryCatch(
+      download_ine_excel(url, destination, label),
+      error = function(e) {
+        warning("Falló descarga ", label, " desde ", url, ": ", conditionMessage(e), call. = FALSE)
+        NULL
+      }
+    )
+    if (!is.null(downloaded)) return(downloaded)
+  }
+
+  candidates <- unique(c(
+    destination,
+    sub("[.]xls$", ".xlsx", destination, ignore.case = TRUE),
+    sub("[.]xlsx$", ".xls", destination, ignore.case = TRUE)
+  ))
+  local <- candidates[file.exists(candidates)]
+  if (length(local)) {
+    warning("Se usa copia local de respaldo para ", label, ": ", local[1], call. = FALSE)
+    return(local[1])
+  }
+  stop("No fue posible obtener el Excel oficial ", label, " ni existe copia local.")
+}
+
+read_index_series_from_excel <- function(path, target_patterns, label) {
+  sheets <- readxl::excel_sheets(path)
+  candidates <- list()
+
+  for (sheet in sheets) {
+    raw <- tryCatch(
+      suppressMessages(readxl::read_excel(
+        path, sheet = sheet, col_names = FALSE, .name_repair = "minimal"
+      )),
+      error = function(e) NULL
+    )
+    if (is.null(raw) || nrow(raw) < 20 || ncol(raw) < 2) next
+
+    top_n <- min(16L, nrow(raw))
+    sheet_text <- normalize_ivs_text(paste(c(sheet, unlist(raw[seq_len(top_n), , drop = FALSE])), collapse = " "))
+    target_hits <- sum(vapply(
+      target_patterns, function(p) grepl(p, sheet_text, perl = TRUE), logical(1)
+    ))
+    if (target_hits == 0L) next
+
+    periods_by_col <- lapply(raw, parse_ivs_period)
+    period_counts <- vapply(periods_by_col, function(x) {
+      sum(!is.na(x) & x >= as.Date("2000-01-01") & x <= (Sys.Date() %m+% lubridate::years(2)))
+    }, integer(1))
+    period_col <- which.max(period_counts)
+    if (!length(period_col) || period_counts[period_col] < 24L) next
+
+    periods <- periods_by_col[[period_col]]
+    valid_period <- !is.na(periods) & periods >= as.Date("2000-01-01")
+    headers <- vapply(seq_len(ncol(raw)), function(j) {
+      normalize_ivs_text(paste(raw[[j]][seq_len(top_n)], collapse = " "))
+    }, character(1))
+
+    value_scores <- rep(-Inf, ncol(raw))
+    value_counts <- integer(ncol(raw))
+    for (j in seq_len(ncol(raw))) {
+      if (j == period_col) next
+      values <- parse_ivs_number(raw[[j]])
+      value_counts[j] <- sum(valid_period & is.finite(values))
+      if (value_counts[j] < 24L) next
+
+      header <- headers[j]
+      target_header_hits <- sum(vapply(
+        target_patterns, function(p) grepl(p, header, perl = TRUE), logical(1)
+      ))
+      penalty <- 0
+      if (grepl("variacion|acumulad|12 meses|porcent", header, perl = TRUE)) penalty <- penalty + 120
+      if (grepl("desestacional|tendencia ciclo", header, perl = TRUE)) penalty <- penalty + 80
+      adjacency <- if (j == period_col + 1L) 35 else max(0, 10 - 2 * abs(j - period_col))
+      value_scores[j] <- 120 * target_header_hits + 20 * grepl("indice", header) +
+        15 * target_hits + adjacency + min(value_counts[j], 120L) / 10 - penalty
+    }
+
+    value_col <- which.max(value_scores)
+    if (!length(value_col) || !is.finite(value_scores[value_col])) next
+    values <- parse_ivs_number(raw[[value_col]])
+
+    out <- tibble::tibble(Periodo = periods, value = values) |>
+      dplyr::filter(
+        !is.na(Periodo), is.finite(value),
+        Periodo >= as.Date("2017-01-01"),
+        Periodo <= (Sys.Date() %m+% lubridate::years(1))
+      ) |>
+      dplyr::distinct(Periodo, .keep_all = TRUE) |>
+      dplyr::arrange(Periodo)
+    if (nrow(out) < 24L) next
+
+    candidates[[length(candidates) + 1L]] <- list(
+      data = out,
+      score = value_scores[value_col] + as.numeric(max(out$Periodo)) / 1e5,
+      sheet = sheet,
+      period_col = period_col,
+      value_col = value_col
+    )
+  }
+
+  if (!length(candidates)) {
+    stop("No se encontró de forma robusta la serie '", label, "' en ", basename(path), ".")
+  }
+  best <- candidates[[which.max(vapply(candidates, function(x) x$score, numeric(1)))]]
+  message(
+    "INE directo · ", label, " · hoja '", best$sheet,
+    "' · última observación ", format(max(best$data$Periodo), "%Y-%m")
+  )
+  best$data
+}
+
+find_ivs_urls <- function() {
+  discover_ine_excel_urls(
+    page_url = ivs_page,
+    include_patterns = c("ventas", "servicios", "serie"),
+    fallback_url = official_ivs_url,
+    override = ivs_url
   )
 }
 
 resolve_ivs_file <- function() {
-  if (file.exists(ivs_path)) return(ivs_path)
-  alternate <- if (grepl("[.]xlsx$", ivs_path, ignore.case = TRUE)) {
-    sub("[.]xlsx$", ".xls", ivs_path, ignore.case = TRUE)
-  } else {
-    sub("[.]xls$", ".xlsx", ivs_path, ignore.case = TRUE)
-  }
-  if (file.exists(alternate)) return(alternate)
-  urls <- find_ivs_urls()
-  for (url in urls) {
-    downloaded <- tryCatch(
-      download_ivs_file(url, ivs_path),
-      error = function(e) NULL
-    )
-    if (!is.null(downloaded)) return(downloaded)
-  }
-  stop("El INE publicó enlaces de IVS, pero ninguno devolvió el Excel histórico esperado.")
+  resolve_ine_product_file(find_ivs_urls(), ivs_path, "IVS")
 }
 
 read_ivs_official <- function(path = resolve_ivs_file()) {
@@ -246,9 +365,86 @@ get_base_levels <- function() {
     dplyr::arrange(Periodo)
 }
 
-get_ine_levels <- function() {
+get_ine_levels_direct <- function() {
+  ipi_urls <- discover_ine_excel_urls(
+    page_url = ipi_page,
+    include_patterns = c("indice de produccion industrial|indice-de-produccion-industrial", "serie"),
+    fallback_url = official_ipi_url,
+    override = ipi_url_override
+  )
+  commerce_urls <- discover_ine_excel_urls(
+    page_url = commerce_page,
+    include_patterns = c("actividad mensual del comercio|actividad-mensual-del-comercio", "serie"),
+    fallback_url = official_commerce_url,
+    override = commerce_url_override
+  )
+
+  ipi_file <- resolve_ine_product_file(ipi_urls, ipi_path, "IPI")
+  commerce_file <- resolve_ine_product_file(commerce_urls, commerce_path, "comercio")
+
+  mineria <- read_index_series_from_excel(
+    ipi_file, c("indice de produccion minera", "produccion minera", "ipmin"), "Índice de Producción Minera"
+  ) |>
+    dplyr::rename(mineria = value)
+  manufactura <- read_index_series_from_excel(
+    ipi_file, c("indice de produccion manufacturera", "produccion manufacturera", "ipman"),
+    "Índice de Producción Manufacturera"
+  ) |>
+    dplyr::rename(manufactura = value)
+  electricidad <- read_index_series_from_excel(
+    ipi_file,
+    c("indice de produccion de electricidad gas y agua", "electricidad gas y agua", "ipega"),
+    "Índice de Producción de Electricidad, Gas y Agua"
+  ) |>
+    dplyr::rename(electricidad = value)
+  comercio <- read_index_series_from_excel(
+    commerce_file,
+    c("indice de actividad del comercio al por menor", "actividad del comercio al por menor"),
+    "Índice de Actividad del Comercio al por Menor"
+  ) |>
+    dplyr::rename(comercio = value)
+
+  purrr::reduce(
+    list(mineria, manufactura, comercio, electricidad),
+    dplyr::full_join, by = "Periodo"
+  ) |>
+    dplyr::arrange(Periodo)
+}
+
+get_ine_levels_bde <- function() {
   purrr::imap(codes_ine, monthly_series) |>
     purrr::reduce(dplyr::full_join, by = "Periodo") |>
+    dplyr::arrange(Periodo)
+}
+
+get_ine_levels <- function() {
+  direct <- tryCatch(
+    get_ine_levels_direct(),
+    error = function(e) {
+      warning("INE directo no disponible: ", conditionMessage(e), call. = FALSE)
+      NULL
+    }
+  )
+  bde <- tryCatch(
+    get_ine_levels_bde(),
+    error = function(e) {
+      warning("Respaldo BDE no disponible para sectores INE: ", conditionMessage(e), call. = FALSE)
+      NULL
+    }
+  )
+
+  if (is.null(direct) && is.null(bde)) {
+    stop("No existe ninguna fuente disponible para los indicadores sectoriales de M8P.")
+  }
+  if (is.null(direct)) return(bde)
+  if (is.null(bde)) return(direct)
+
+  joined <- dplyr::full_join(direct, bde, by = "Periodo", suffix = c("_ine", "_bde"))
+  for (name in names(codes_ine)) {
+    joined[[name]] <- dplyr::coalesce(joined[[paste0(name, "_ine")]], joined[[paste0(name, "_bde")]])
+  }
+  joined |>
+    dplyr::select(Periodo, dplyr::all_of(names(codes_ine))) |>
     dplyr::arrange(Periodo)
 }
 
