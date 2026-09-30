@@ -11,20 +11,50 @@ PASS_BCCH <- Sys.getenv("BCCH_PASS")
 first_date <- Sys.getenv("IMACEC_FIRST_DATE", unset = "2017-01-01")
 last_date  <- Sys.getenv("IMACEC_LAST_DATE", unset = format(Sys.Date(), "%Y-%m-%d"))
 cal_path   <- Sys.getenv("IMACEC_CAL_PATH", unset = "data/raw/cal_1985_2030.xlsx")
-ivs_path   <- Sys.getenv(
+
+# Fuentes primarias INE. Las páginas son estables; los nombres/versiones de los
+# Excel pueden cambiar en cada publicación, por lo que se descubren en runtime.
+ipi_page <- paste0(
+  "https://www.ine.gob.cl/estadisticas-por-tema/",
+  "industria-energia-y-construccion/indice-de-produccion-industrial"
+)
+commerce_page <- paste0(
+  "https://www.ine.gob.cl/estadisticas-por-tema/",
+  "comercio-y-servicios/actividad-mensual-del-comercio"
+)
+ivs_page <- paste0(
+  "https://www.ine.gob.cl/estadisticas-por-tema/",
+  "comercio-y-servicios/ventas-mensuales-de-servicios"
+)
+
+ipi_path <- Sys.getenv("IMACEC_IPI_FILE", unset = "data/raw/ine_ipi_current.xls")
+commerce_path <- Sys.getenv("IMACEC_COMMERCE_FILE", unset = "data/raw/ine_commerce_current.xls")
+ivs_path <- Sys.getenv(
   "IMACEC_IVS_FILE",
   unset = "data/raw/series_mensuales_desde_enero_2018_a_la_fecha.xls"
+)
+
+# Overrides opcionales. Vacíos por defecto para que el descubrimiento desde la
+# página oficial sea la ruta primaria.
+ipi_url_override <- trimws(Sys.getenv("IMACEC_IPI_URL", unset = ""))
+commerce_url_override <- trimws(Sys.getenv("IMACEC_COMMERCE_URL", unset = ""))
+ivs_url <- trimws(Sys.getenv("IMACEC_IVS_URL", unset = ""))
+
+# URLs conocidas únicamente como respaldo si el HTML del INE cambia.
+official_ipi_url <- paste0(
+  "https://www.ine.gob.cl/docs/default-source/indice-de-produccion-industrial/",
+  "cuadros-estadisticos/base-promedio-2018-100/",
+  "series-empalmadas-y-mensuales-a-agosto-2026.xls?sfvrsn=e7cb61a3_6"
+)
+official_commerce_url <- paste0(
+  "https://www.ine.gob.cl/docs/default-source/actividad-mensual-del-comercio/",
+  "cuadros-estadisticos/base-promedio-a%C3%B1o-2018-100/",
+  "series-mensuales-desde-enero-de-2018-a-la-fecha.xls?sfvrsn=15bec33d_83"
 )
 official_ivs_url <- paste0(
   "https://www.ine.gob.cl/docs/default-source/ventas-de-servicios/",
   "cuadro-estadisticos/base-promedio-a%C3%B1o-2018-100/",
   "series_mensuales_desde_enero_2018_a_la_fecha.xls?sfvrsn=1ff3a838_74"
-)
-ivs_url <- trimws(Sys.getenv("IMACEC_IVS_URL", unset = ""))
-if (!nzchar(ivs_url)) ivs_url <- official_ivs_url
-ivs_page <- paste0(
-  "https://www.ine.gob.cl/estadisticas-por-tema/",
-  "comercio-y-servicios/ventas-mensuales-de-servicios"
 )
 
 model_start_date <- as.Date(Sys.getenv("IMACEC_MODEL_START_DATE", unset = "2019-01-01"))
@@ -46,7 +76,8 @@ codes <- list(
   eee_imacec_nm    = "F089.IMCNM.V12.10.M"
 )
 
-# M8P usa indicadores originales (sufijo 0.M), no desestacionalizados.
+# Respaldo BDE para M8P. La fuente primaria pasa a ser el Excel oficial del INE.
+# Se conservan las series originales (sufijo 0.M), no desestacionalizadas.
 codes_ine <- list(
   mineria      = "F034.PMI.IND.INE.2018.0.M",
   manufactura  = "F034.PRM.IND.INE.2018.0.M",
