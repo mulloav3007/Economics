@@ -141,5 +141,9 @@ jobs:
             echo "No hay cambios analíticos para publicar."
           else
             git commit -m "Actualiza ciclo mensual IMACEC"
-            git push
+            # Si main avanzó mientras corría el job, reaplica la salida analítica
+            # sobre el estado remoto más reciente antes de publicar.
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
           fi
