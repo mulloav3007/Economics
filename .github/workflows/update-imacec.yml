@@ -3,16 +3,9 @@ name: Update IMACEC nowcasts
 on:
   workflow_dispatch:
   schedule:
-    # GitHub cron usa UTC. Se programan los candidatos de UTC-3/UTC-4 y
-    # el primer paso filtra exactamente 09:00, 10:00, 10:30, 11:00 y 11:30
-    # en America/Santiago.
-    - cron: '0 12 * * 1-5'
-    - cron: '0 13 * * 1-5'
-    - cron: '30 13 * * 1-5'
-    - cron: '0 14 * * 1-5'
-    - cron: '30 14 * * 1-5'
-    - cron: '0 15 * * 1-5'
-    - cron: '30 15 * * 1-5'
+    # Ventana redundante para absorber retrasos de GitHub Actions.
+    # 07:00-16:30 UTC cubre la mañana chilena incluso con varias horas de cola.
+    - cron: '0,30 7-16 * * 1-5'
   push:
     branches: [main]
     paths:
@@ -50,36 +43,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Check Santiago monitoring window
+      - name: Register scheduled poll
         id: schedule_window
-        env:
-          SCHEDULE_EXPR: ${{ github.event.schedule }}
         shell: bash
         run: |
-          if [ "$GITHUB_EVENT_NAME" != "schedule" ]; then
-            echo "should_run=true" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          offset="$(TZ=America/Santiago date +%z)"
-          should_run=false
-
-          if [ "$offset" = "-0300" ]; then
-            case "$SCHEDULE_EXPR" in
-              "0 12 * * 1-5"|"0 13 * * 1-5"|"30 13 * * 1-5"|"0 14 * * 1-5"|"30 14 * * 1-5")
-                should_run=true
-                ;;
-            esac
-          elif [ "$offset" = "-0400" ]; then
-            case "$SCHEDULE_EXPR" in
-              "0 13 * * 1-5"|"0 14 * * 1-5"|"30 14 * * 1-5"|"0 15 * * 1-5"|"30 15 * * 1-5")
-                should_run=true
-                ;;
-            esac
-          fi
-
-          echo "should_run=$should_run" >> "$GITHUB_OUTPUT"
-          echo "America/Santiago offset=$offset · schedule=$SCHEDULE_EXPR · run=$should_run"
+          echo "should_run=true" >> "$GITHUB_OUTPUT"
+          echo "Poll IMACEC · UTC=$(date -u +%H:%M) · Santiago=$(TZ=America/Santiago date +%H:%M)"
 
       - name: Check BCCh credentials
         if: steps.schedule_window.outputs.should_run == 'true'
@@ -148,7 +117,6 @@ jobs:
         env:
           BCCH_USER: ${{ secrets.BCCH_USER }}
           BCCH_PASS: ${{ secrets.BCCH_PASS }}
-          IMACEC_IVS_URL: ${{ vars.IMACEC_IVS_URL }}
         run: Rscript scripts/01_update_imacec.R
 
       - name: Build and validate site
