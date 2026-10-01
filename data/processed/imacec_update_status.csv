@@ -1,2 +1,2 @@
 fecha_actualizacion,fecha_hora_actualizacion,ultima_observacion_imacec,periodo_objetivo,siguiente_periodo_imacec,ciclo_estado,ciclo_estado_label,modelo_principal,tiene_eee,tiene_experimentales,tiene_ine
-2026-09-30,2026-09-30 15:16:35 UTC,2026-07-01,2026-08-01,2026-08-01,ine,Corte INE completo · M8P es la estimación principal,m8p,TRUE,TRUE,TRUE
+2026-10-01,2026-10-01 14:25:37 UTC,2026-08-01,2026-08-01,2026-09-01,official_review,Dato efectivo publicado · esperando la EEE del siguiente período,summary,FALSE,FALSE,FALSE
