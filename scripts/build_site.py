@@ -664,12 +664,11 @@ def build_pages(contexts: dict[str, Any]) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--skip-assets", action="store_true", help="Do not regenerate charts and CV before building.")
+    parser.add_argument("--skip-assets", action="store_true", help="Do not regenerate chart assets before building.")
     args = parser.parse_args()
 
     if not args.skip_assets:
         run_script(ROOT / "scripts/generate_site_assets.py")
-        run_script(ROOT / "scripts/build_public_cv.py")
     make_brand_assets()
     contexts = build_contexts()
     clean_docs()
