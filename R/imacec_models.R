@@ -1,6 +1,6 @@
 # ============================================================
 # imacec_models.R
-# Ciclo mensual y especificaciones fijas M4/M8P
+# Ciclo mensual y especificaciones fijas por corte informativo
 # ============================================================
 
 target_specs <- list(
@@ -10,12 +10,12 @@ target_specs <- list(
 
 model_specs <- list(
   m4 = list(
-    corte = "experimental", label = "M4 · Dinámico",
+    corte = "experimental", label = "Corte experimental",
     rhs = c("venta_minorista", "monto_credito", "cantidad_credito", "{lag1}",
             "dias_habiles", "efecto_bisiesto_yoy", "mes_factor", "dummy_covid")
   ),
   m8p = list(
-    corte = "ine", label = "M8P · INE + IVS real parsimonioso",
+    corte = "ine", label = "Corte INE + IVS real",
     rhs = c("cantidad_credito", "{lag1}", "avisos_laborales_lag1", "mineria",
             "manufactura", "comercio", "electricidad", "factor_ivs_real",
             "dias_habiles", "efecto_bisiesto_yoy", "monto_credito_real", "dummy_covid")
@@ -107,11 +107,11 @@ build_cycle_state <- function(data, eee) {
     default_model <- "summary"
   } else if (has_m8p) {
     stage <- "ine"
-    label <- "Corte INE completo · M8P es la estimación principal"
+    label <- "Corte INE completo · señal principal basada en indicadores INE e IVS"
     default_model <- "m8p"
   } else if (has_m4) {
     stage <- "experimental"
-    label <- "Corte experimental completo · M4 es la estimación principal"
+    label <- "Corte experimental completo · señal principal del corte experimental"
     default_model <- "m4"
   } else {
     stage <- "eee_proxy"
@@ -345,16 +345,69 @@ fit_for_oos <- function(data, model_key, target_key, period) {
   }, error = function(e) NULL)
 }
 
+fit_proxy_for_oos <- function(data, model_key, target_key, period) {
+  response <- target_specs[[target_key]]$response
+  target <- data |>
+    dplyr::filter(Periodo == as.Date(period), !is.na(.data[[response]])) |>
+    dplyr::slice_head(n = 1)
+  if (!nrow(target)) return(NULL)
+
+  raw <- data |>
+    dplyr::filter(Periodo < as.Date(period), !is.na(.data[[response]])) |>
+    dplyr::arrange(Periodo) |>
+    dplyr::transmute(Periodo, value = .data[[response]])
+  if (nrow(raw) < 24L) return(NULL)
+
+  tryCatch({
+    if (model_key == "ar1") {
+      estimation <- raw |>
+        dplyr::mutate(lag1 = dplyr::lag(value)) |>
+        tidyr::drop_na(lag1)
+      fit <- stats::lm(value ~ lag1, data = estimation)
+      pred <- as.numeric(stats::predict(
+        fit, newdata = data.frame(lag1 = as.numeric(dplyr::last(raw$value)))
+      ))
+    } else if (model_key == "ma3") {
+      if (nrow(raw) < 3L) return(NULL)
+      pred <- mean(utils::tail(raw$value, 3))
+    } else {
+      return(NULL)
+    }
+    if (!is.finite(pred) || abs(pred) > 50) return(NULL)
+    tibble::tibble(
+      Periodo = as.Date(period), variable = target_specs[[target_key]]$label,
+      modelo = proxy_specs[[model_key]]$label, model_key = model_key,
+      observado = target[[response]][1], predicho = pred
+    )
+  }, error = function(e) NULL)
+}
+
 compute_pseudo_oos <- function(data, start = oos_start_date) {
   periods <- data |>
     dplyr::filter(Periodo >= start, !is.na(imacec_total), !is.na(imacec_no_minero)) |>
     dplyr::pull(Periodo)
-  predictions <- purrr::map_dfr(names(model_specs), function(model_key) {
+
+  model_keys <- c(names(model_specs), names(proxy_specs))
+  predictions <- purrr::map_dfr(model_keys, function(model_key) {
     purrr::map_dfr(names(target_specs), function(target_key) {
-      purrr::map_dfr(periods, ~ fit_for_oos(data, model_key, target_key, .x))
+      purrr::map_dfr(periods, function(period) {
+        if (model_key %in% names(proxy_specs)) {
+          fit_proxy_for_oos(data, model_key, target_key, period)
+        } else {
+          fit_for_oos(data, model_key, target_key, period)
+        }
+      })
     })
   })
-  metrics <- predictions |>
+
+  # Compara las cuatro especificaciones sobre exactamente los mismos períodos.
+  # Así AR(1) y media móvil funcionan como benchmarks limpios de los dos cortes.
+  comparison <- predictions |>
+    dplyr::group_by(variable, Periodo) |>
+    dplyr::filter(dplyr::n_distinct(model_key) == length(model_keys)) |>
+    dplyr::ungroup()
+
+  metrics <- comparison |>
     dplyr::group_by(variable, modelo, model_key) |>
     dplyr::summarise(
       N = dplyr::n(), RMSE = sqrt(mean((observado - predicho)^2)),
@@ -363,8 +416,9 @@ compute_pseudo_oos <- function(data, start = oos_start_date) {
     ) |>
     dplyr::mutate(
       Periodo = paste0(format(periodo_inicio, "%Y-%m"), " a ", format(periodo_fin, "%Y-%m")),
-      nota = "Pseudo-OOS recursivo con información final; no reconstruye revisiones históricas."
+      nota = "Pseudo-OOS recursivo sobre ventana común; información final y sin reconstruir revisiones históricas."
     ) |>
     dplyr::select(variable, modelo, model_key, N, RMSE, MAE, Periodo, nota)
-  list(predictions = predictions, metrics = metrics)
+
+  list(predictions = comparison, metrics = metrics)
 }
