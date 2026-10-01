@@ -115,10 +115,10 @@ def interactive_assets() -> None:
     default_key = str(status.iloc[-1]["modelo_principal"]) if cycle_schema else "summary"
     target_period = pd.to_datetime(status.iloc[-1]["periodo_objetivo"]) if cycle_schema else None
     model_meta = {
-        "ar1": ("Proxy · AR(1)", "AR(1) de referencia", COLORS["gold"], "circle"),
+        "ar1": ("Proxy · AR(1)", "AR(1)", COLORS["gold"], "circle"),
         "ma3": ("Proxy · media móvil 3m", "Media móvil 3 meses", COLORS["sage"], "diamond"),
-        "m4": ("Corte experimental · M4", "M4 · Dinámico", COLORS["terracotta"], "circle"),
-        "m8p": ("Corte INE · M8P", "M8P · INE + IVS real", COLORS["teal"], "diamond"),
+        "m4": ("Corte experimental", "Corte experimental", COLORS["terracotta"], "circle"),
+        "m8p": ("Corte INE", "Corte INE", COLORS["teal"], "diamond"),
     }
 
     def actual_series(target_key: str) -> pd.DataFrame:
@@ -197,7 +197,7 @@ def interactive_assets() -> None:
             return None
         _, model_label, _, _ = model_meta[model_key]
         source = str(point.iloc[-1].get("provenance", point.iloc[-1].get("estado", "")))
-        return row_table(f"Proyección {model_label}", point, "forecast", source=source)
+        return row_table(f"Proyección · {model_label}", point, "forecast", source=source)
 
     def compact_rows(rows: list[dict | None]) -> list[dict]:
         return [row for row in rows if row is not None]
@@ -213,9 +213,13 @@ def interactive_assets() -> None:
         series = [web_series("IMACEC efectivo", COLORS["navy"], actual, "Periodo", "observed", width=2.7)]
         fit = block[block["tipo"] == "Ajuste"]
         if not fit.empty:
-            series.append(web_series("Ajuste histórico reestimado", color, fit, "Periodo", "fitted", "7 5", width=2.0))
+            fit_label = "Ajuste histórico del corte INE" if model_key == "m8p" else "Ajuste histórico reestimado"
+            fit_color = COLORS["terracotta"] if model_key == "m8p" else color
+            fit_dash = "3 3" if model_key == "m8p" else "7 5"
+            fit_width = 2.8 if model_key == "m8p" else 2.0
+            series.append(web_series(fit_label, fit_color, fit, "Periodo", "fitted", fit_dash, width=fit_width))
         if not point.empty:
-            series.append(web_series(f"Proyección {model_label}", color, point, "Periodo", "forecast",
+            series.append(web_series(f"Proyección · {model_label}", color, point, "Periodo", "forecast",
                                      line=False, marker=marker, width=0))
             series.append(web_series("EEE comparable", COLORS["purple"], point, "Periodo", "eee_value",
                                      line=False, marker="triangle", width=0))
@@ -247,16 +251,12 @@ def interactive_assets() -> None:
 
     def summary_dataset(target_key: str, actual: pd.DataFrame) -> dict:
         series = [web_series("IMACEC efectivo", COLORS["navy"], actual, "Periodo", "observed", width=2.7)]
-        effective = actual_target_row(actual)
-        if not effective.empty:
-            series.append(web_series("Dato efectivo del período", COLORS["navy"], effective,
-                                     "Periodo", "observed", line=False, marker="circle", width=0))
         points = {key: best_point(target_key, key) for key in ["m8p", "m4", "ar1", "ma3"]}
         for key, point in points.items():
             if point.empty:
                 continue
             _, model_label, color, marker = model_meta[key]
-            series.append(web_series(f"Proyección {model_label}", color, point, "Periodo", "forecast",
+            series.append(web_series(f"Proyección · {model_label}", color, point, "Periodo", "forecast",
                                      line=False, marker=marker, width=0))
         eee = next((point for point in points.values()
                     if not point.empty and "eee_value" in point and point["eee_value"].notna().any()), pd.DataFrame())
