@@ -281,8 +281,8 @@
       const renderTable = (rows = []) => {
         if (!table) return;
         if (!rows.length) { table.innerHTML = ''; table.hidden = true; return; }
-        const headers = ['Dato', 'Período', 'Valor (%)', 'Intervalo', 'Vintage', 'Procedencia'];
-        const cells = ['concept', 'period', 'value', 'interval', 'vintage', 'status'];
+        const headers = ['Dato', 'Período', 'Valor (%)', 'Intervalo', 'Vintage'];
+        const cells = ['concept', 'period', 'value', 'interval', 'vintage'];
         table.hidden = false;
         table.innerHTML = `<div class="table-wrap chart-data-table"><table><thead><tr>${headers.map((label) => `<th>${label}</th>`).join('')}</tr></thead><tbody>${rows.map((row) => `<tr>${cells.map((key) => `<td>${key === 'value' && Number.isFinite(row[key]) ? Number(row[key]).toFixed(2) : escapeHTML(row[key] ?? '—')}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
       };

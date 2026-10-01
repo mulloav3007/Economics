@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nowcasting IMACEC · Mauricio Ulloa</title>
-  <meta name="description" content="Monitor mensual del IMACEC total y no minero que avanza desde la EEE y un AR(1) provisional hacia M4 experimental, M8P INE y la evaluación con el dato efectivo.">
+  <meta name="description" content="Monitor mensual del IMACEC total y no minero que avanza desde la EEE y referencias simples hacia el corte experimental, el corte INE y la evaluación con el dato efectivo.">
   <meta name="author" content="Mauricio Andrés Ulloa Valdivia">
   <meta name="theme-color" content="#f4f1eb">
   <link rel="canonical" href="https://mulloav3007.github.io/Economics/proyectos/imacec.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Nowcasting IMACEC · Mauricio Ulloa">
-  <meta property="og:description" content="Monitor mensual del IMACEC total y no minero que avanza desde la EEE y un AR(1) provisional hacia M4 experimental, M8P INE y la evaluación con el dato efectivo.">
+  <meta property="og:description" content="Monitor mensual del IMACEC total y no minero que avanza desde la EEE y referencias simples hacia el corte experimental, el corte INE y la evaluación con el dato efectivo.">
   <meta property="og:url" content="https://mulloav3007.github.io/Economics/proyectos/imacec.html">
   <meta property="og:image" content="https://mulloav3007.github.io/Economics/assets/img/projects/imacec.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../assets/css/site.css?v=e91b5b536c9a">
+  <link rel="stylesheet" href="../assets/css/site.css?v=aeab94cba63a">
 </head>
 <body class="project project-imacec">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -42,7 +42,7 @@
     <div>
       <p class="eyebrow">Actividad económica</p>
       <h1 class="project-title">Nowcasting de actividad económica en Chile</h1>
-      <p class="project-deck">Monitor mensual del IMACEC total y no minero que avanza desde la EEE y un AR(1) provisional hacia M4 experimental, M8P INE y la evaluación con el dato efectivo.</p>
+      <p class="project-deck">Monitor mensual del IMACEC total y no minero que avanza desde la EEE y referencias simples hacia el corte experimental, el corte INE y la evaluación con el dato efectivo.</p>
       <div class="tag-row">
 <span class="tag">R</span><span class="tag">IMACEC</span><span class="tag">Nowcasting</span><span class="tag">Series de tiempo</span>      </div>
     </div>
@@ -61,20 +61,17 @@
 <div class="kpi"><div class="kpi-label">Último dato efectivo</div><div class="kpi-value">agosto de 2026</div><div class="kpi-note">Total y no minero publicados por el BCCh</div></div>
 <div class="kpi"><div class="kpi-label">Período en seguimiento</div><div class="kpi-value">agosto de 2026</div><div class="kpi-note">La EEE de M corresponde al IMACEC de M−1</div></div>
 <div class="kpi"><div class="kpi-label">Señal principal</div><div class="kpi-value">Resumen del ciclo cerrado</div><div class="kpi-note">Cambia solo cuando el corte informativo está completo</div></div>
-<div class="kpi"><div class="kpi-label">Nowcast total vigente</div><div class="kpi-value">—</div><div class="kpi-note">No se muestra una proyección si todavía no corresponde</div></div>
+<div class="kpi"><div class="kpi-label">Última actualización</div><div class="kpi-value">1 de octubre de 2026</div><div class="kpi-note">Última ejecución publicada del ciclo</div></div>
 </div>
 <div class="callout imacec-status" data-cycle-stage="official_review">
 <strong>Estado del ciclo:</strong> Dato efectivo publicado · esperando la EEE del siguiente período.
-</div>
-<div class="callout">
-<strong>Fuentes de alta frecuencia:</strong> IPMin, IPMan, IPEGA, comercio al por menor e IVS se leen directamente desde los Excel oficiales del INE. La BDE se conserva únicamente como respaldo de continuidad si una descarga oficial falla.
 </div>
 <div class="download-grid imacec-downloads imacec-downloads-top">
 <a class="download" data-multi-download="../assets/img/charts/imacec_total_history.png::imacec-total-agosto-2026.png|../assets/img/charts/imacec_nonmining_history.png::imacec-no-minero-agosto-2026.png|../assets/img/charts/imacec_projection_table.png::imacec-tabla-proyecciones-agosto-2026.png" href="../assets/files/imacec-graficos-agosto-2026.zip"><div><strong>Descargar gráficos</strong><span>3 PNG directos · IMACEC total, no minero y tabla · agosto de 2026</span></div><span>↓</span></a>
 <a class="download" download="imacec-historico-proyeccion-agosto-2026.csv" href="../assets/files/imacec-historico-proyeccion-agosto-2026.csv"><div><strong>Descargar tabla</strong><span>CSV · historia observada y proyección vigente · agosto de 2026</span></div><span>↓</span></a>
 </div>
 <h2 id="seguimiento-mensual">Seguimiento mensual</h2>
-<p>Los dos paneles responden al mismo calendario de publicación. Antes de la nueva EEE, el resumen conserva el último dato efectivo y compara los puntos de M4, M8P, AR(1), media móvil y EEE disponibles. Después, el selector deja por defecto el corte más informativo que ya esté completo.</p>
+<p>Los dos paneles responden al mismo calendario de publicación. Antes de la nueva EEE, el resumen conserva el último dato efectivo y compara los puntos del corte experimental, corte INE, AR(1), media móvil y EEE disponibles. Después, el selector deja por defecto el corte más informativo que ya esté completo.</p>
 <h3>IMACEC total</h3>
 <div class="interactive-card imacec-panel" data-project-chart="imacec-total" data-url="../assets/data/project_charts.json">
 <div class="chart-controls">
@@ -97,7 +94,7 @@
 <div class="chart-legend" data-chart-legend=""></div>
 <p class="chart-note" data-chart-note=""></p>
 <div data-chart-table=""></div>
-<p class="chart-help">La serie no minera se estima de forma independiente, manteniendo el conjunto fijo de predictores de M4 o M8P.</p>
+<p class="chart-help">La serie no minera se estima de forma independiente, manteniendo el conjunto fijo de predictores del corte experimental o del corte INE.</p>
 </div>
 <h2 id="como-se-actualiza">Cómo se actualiza</h2>
 <table>
@@ -111,7 +108,7 @@
 <tbody>
 <tr>
 <td>Dato efectivo recién publicado, antes de la nueva EEE</td>
-<td>Historia, efectivo del último mes, M4, M8P, AR(1), media móvil y EEE comparables</td>
+<td>Historia, efectivo del último mes, corte experimental, corte INE, AR(1), media móvil y EEE comparables</td>
 <td>Resumen del período</td>
 </tr>
 <tr>
@@ -121,13 +118,13 @@
 </tr>
 <tr>
 <td>Estadísticas experimentales completas</td>
-<td>Efectivo, ajuste M4, nowcast M4, proxies y punto EEE</td>
-<td>M4 · Dinámico</td>
+<td>Efectivo, ajuste del corte experimental, proyección, proxies y punto EEE</td>
+<td>Corte experimental</td>
 </tr>
 <tr>
 <td>Indicadores INE e IVS completos</td>
-<td>M4 y proxies siguen elegibles y se añade M8P</td>
-<td>M8P · INE + IVS real</td>
+<td>El corte experimental y los proxies siguen visibles y se añade el corte INE</td>
+<td>Corte INE</td>
 </tr>
 <tr>
 <td>Publicación del IMACEC objetivo</td>
@@ -136,28 +133,30 @@
 </tr>
 </tbody>
 </table>
-<p>El archivo de vintages conserva las proyecciones disponibles con su fecha y procedencia. Para julio de 2026, el punto M8P corresponde a la salida operativa aportada por el autor el 31 de agosto. La curva de ajuste histórico se reestima con la base disponible en cada ejecución: es un ajuste dentro de muestra y no reconstruye el historial de pronósticos emitidos en tiempo real.</p>
+<p>El archivo de vintages conserva las proyecciones disponibles con su fecha. Para julio de 2026, el punto del corte INE corresponde a la salida operativa aportada por el autor el 31 de agosto. La curva de ajuste histórico se reestima con la base disponible en cada ejecución: es un ajuste dentro de muestra y no reconstruye el historial de pronósticos emitidos en tiempo real.</p>
 <p>La estimación histórica utiliza exclusivamente períodos anteriores al mes objetivo. Si faltan indicadores contemporáneos, puede mostrarse ese ajuste aunque no exista una nueva proyección automática. La nota del gráfico identifica la disponibilidad de ambos resultados.</p>
 <h2 id="especificaciones-publicadas">Especificaciones publicadas</h2>
-<div class="equation"><span class="equation-label">M4 · Dinámico — corte experimental</span>IMACEC<sub>t</sub> = f(ventas<sub>t</sub>, crédito monto<sub>t</sub>, crédito cantidad<sub>t</sub>, IMACEC<sub>t−1</sub>, calendario)</div>
-<div class="equation"><span class="equation-label">M8P · INE + IVS real parsimonioso</span>IMACEC<sub>t</sub> = f(crédito cantidad<sub>t</sub>, IMACEC<sub>t−1</sub>, avisos<sub>t−1</sub>, sectores INE<sub>t</sub>, IVS real<sub>t</sub>, crédito real<sub>t</sub>, calendario)</div>
-<p>Las dos fórmulas se reestiman por separado para <strong>IMACEC total</strong> e <strong>IMACEC no minero</strong>. El factor IVS real promedia seis índices de ventas de servicios deflactados por el IPC de Servicios y M8P solo se habilita con cobertura contemporánea completa.</p>
-<p>Los predictores sectoriales de M8P se descargan desde las páginas oficiales del INE en cada ejecución. El pipeline descubre dinámicamente el Excel vigente de <strong>Índice de Producción Industrial</strong> —sin fijar el mes en el nombre del archivo— y extrae las series originales de <strong>IPMin, IPMan e IPEGA</strong>. Para comercio utiliza el <strong>Índice de Actividad del Comercio al por Menor</strong>, manteniendo la misma definición histórica del predictor. Los IVS también se refrescan desde su Excel oficial y se deflactan con IPC Servicios. La BDE queda como respaldo técnico, no como fuente primaria. <a href="https://www.ine.gob.cl/estadisticas-por-tema/industria-energia-y-construccion/indice-de-produccion-industrial">IPI · INE</a> · <a href="https://www.ine.gob.cl/estadisticas-por-tema/comercio-y-servicios/actividad-mensual-del-comercio">Comercio · INE</a>.</p>
+<div class="equation"><span class="equation-label">Corte experimental</span>IMACEC<sub>t</sub> = f(ventas<sub>t</sub>, crédito monto<sub>t</sub>, crédito cantidad<sub>t</sub>, IMACEC<sub>t−1</sub>, calendario)</div>
+<div class="equation"><span class="equation-label">Corte INE + IVS real</span>IMACEC<sub>t</sub> = f(crédito cantidad<sub>t</sub>, IMACEC<sub>t−1</sub>, avisos<sub>t−1</sub>, sectores INE<sub>t</sub>, IVS real<sub>t</sub>, crédito real<sub>t</sub>, calendario)</div>
+<p>Las dos fórmulas se reestiman por separado para <strong>IMACEC total</strong> e <strong>IMACEC no minero</strong>. El factor IVS real promedia seis índices de ventas de servicios deflactados por el IPC de Servicios y el corte INE solo se habilita con cobertura contemporánea completa.</p>
+<p>Los predictores sectoriales del corte INE se descargan desde las páginas oficiales del INE en cada ejecución. El pipeline descubre dinámicamente el Excel vigente de <strong>Índice de Producción Industrial</strong> —sin fijar el mes en el nombre del archivo— y extrae las series originales de <strong>IPMin, IPMan e IPEGA</strong>. Para comercio utiliza el <strong>Índice de Actividad del Comercio al por Menor</strong>, manteniendo la misma definición histórica del predictor. Los IVS también se refrescan desde su Excel oficial y se deflactan con IPC Servicios. La BDE queda como respaldo técnico, no como fuente primaria. <a href="https://www.ine.gob.cl/estadisticas-por-tema/industria-energia-y-construccion/indice-de-produccion-industrial">IPI · INE</a> · <a href="https://www.ine.gob.cl/estadisticas-por-tema/comercio-y-servicios/actividad-mensual-del-comercio">Comercio · INE</a>.</p>
 <h2 id="evaluacion-pseudo-out-of-sample">Evaluación pseudo out-of-sample</h2>
-<div class="table-wrap"><table><thead><tr><th>Serie</th><th>Especificación</th><th>N</th><th>RMSE</th><th>MAE</th><th>Ventana</th></tr></thead><tbody><tr><td>IMACEC no minero</td><td>M4 · Dinámico</td><td>44</td><td>1,17</td><td>0,92</td><td>2023-01 a 2026-08</td></tr><tr><td>IMACEC no minero</td><td>M8P · INE + IVS real parsimonioso</td><td>44</td><td>0,97</td><td>0,79</td><td>2023-01 a 2026-08</td></tr><tr><td>IMACEC total</td><td>M4 · Dinámico</td><td>44</td><td>1,61</td><td>1,36</td><td>2023-01 a 2026-08</td></tr><tr><td>IMACEC total</td><td>M8P · INE + IVS real parsimonioso</td><td>44</td><td>1,03</td><td>0,77</td><td>2023-01 a 2026-08</td></tr></tbody></table></div>
-<p>La evaluación es recursiva y mantiene fijas M4 y M8P, pero usa la base final disponible; por ello mide capacidad predictiva comparable, no reproduce todas las revisiones de cada vintage histórico.</p>
+<div class="table-wrap"><table><thead><tr><th>Serie</th><th>Especificación</th><th>N</th><th>RMSE</th><th>MAE</th><th>Ventana</th></tr></thead><tbody><tr><td>IMACEC no minero</td><td>Corte experimental</td><td>44</td><td>1,17</td><td>0,92</td><td>2023-01 a 2026-08</td></tr><tr><td>IMACEC no minero</td><td>Corte INE</td><td>44</td><td>0,97</td><td>0,79</td><td>2023-01 a 2026-08</td></tr><tr><td>IMACEC no minero</td><td>AR(1)</td><td>44</td><td>2,31</td><td>1,86</td><td>2023-01 a 2026-08</td></tr><tr><td>IMACEC no minero</td><td>Media móvil 3 meses</td><td>44</td><td>1,77</td><td>1,43</td><td>2023-01 a 2026-08</td></tr><tr><td>IMACEC total</td><td>Corte experimental</td><td>44</td><td>1,61</td><td>1,36</td><td>2023-01 a 2026-08</td></tr><tr><td>IMACEC total</td><td>Corte INE</td><td>44</td><td>1,03</td><td>0,77</td><td>2023-01 a 2026-08</td></tr><tr><td>IMACEC total</td><td>AR(1)</td><td>44</td><td>2,24</td><td>1,80</td><td>2023-01 a 2026-08</td></tr><tr><td>IMACEC total</td><td>Media móvil 3 meses</td><td>44</td><td>1,92</td><td>1,52</td><td>2023-01 a 2026-08</td></tr></tbody></table></div>
+<p>La evaluación es recursiva y mantiene fijas las dos especificaciones principales. También incluye AR(1) y media móvil de tres meses como benchmarks simples, todos evaluados sobre la misma ventana común. Usa la base final disponible; por ello mide capacidad predictiva comparable, no reproduce todas las revisiones de cada vintage histórico.</p>
 <h2 id="reproducibilidad-y-publicacion">Reproducibilidad y publicación</h2>
 <ul>
-<li>Las credenciales del BCCh se leen exclusivamente desde GitHub Actions Secrets.</li>
 <li>La EEE publicada en <strong>M</strong> se asigna al IMACEC de <strong>M−1</strong>.</li>
-<li>AR(1) y media móvil de tres meses son referencias transparentes; nunca sustituyen a M4 o M8P.</li>
+<li>AR(1) y media móvil de tres meses son referencias transparentes; no sustituyen a los cortes experimental o INE.</li>
 <li>El modelo principal cambia por disponibilidad verificable, no por cuál arroje la cifra más conveniente.</li>
 <li>La tarea programada lanza sondeos redundantes cada 30 minutos durante una ventana amplia de días hábiles para amortiguar retrasos de GitHub Actions; cada ejecución vuelve a consultar las fuentes oficiales y publica el nuevo corte cuando la cobertura requerida está completa.</li>
 </ul>
+<div class="callout">
+<strong>Fuentes de alta frecuencia:</strong> IPMin, IPMan, IPEGA, comercio al por menor e IVS se leen directamente desde los Excel oficiales del INE. La BDE se conserva únicamente como respaldo de continuidad si una descarga oficial falla.
+</div>
 <p>Última ejecución publicada: <strong>1 de octubre de 2026</strong>.</p>
 <h2 id="archivos-principales">Archivos principales</h2>
 <div class="download-grid">
-<a class="download" href="../assets/files/imacec-nowcast-summary.csv"><div><strong>Estado y proyecciones vigentes</strong><span>CSV · total, no minero, M4, M8P y EEE</span></div><span>↓</span></a>
+<a class="download" href="../assets/files/imacec-nowcast-summary.csv"><div><strong>Estado y proyecciones vigentes</strong><span>CSV · total, no minero, corte experimental, corte INE y EEE</span></div><span>↓</span></a>
 <a class="download" href="../assets/files/imacec-oos-metrics.csv"><div><strong>Métricas pseudo OOS</strong><span>CSV · dos series y dos especificaciones</span></div><span>↓</span></a>
 </div>
 
@@ -178,6 +177,6 @@
     </div>
   </footer>
   <button class="back-to-top" type="button" aria-label="Volver arriba">↑</button>
-  <script src="../assets/js/site.js?v=e91b5b536c9a" defer></script>
+  <script src="../assets/js/site.js?v=aeab94cba63a" defer></script>
 </body>
 </html>
