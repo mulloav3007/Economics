@@ -119,21 +119,28 @@ def build_contexts() -> dict[str, Any]:
         default_labels = {
             "summary": "Resumen del ciclo cerrado", "ar1": "AR(1) de referencia",
             "ma3": "Media móvil 3 meses",
-            "m4": "M4 · Dinámico", "m8p": "M8P · INE + IVS real",
+            "m4": "Corte experimental", "m8p": "Corte INE",
         }
         as_bool = lambda value: str(value).strip().lower() in {"true", "1", "yes"}
         current = projections[
             projections["target_key"].eq("total") & projections["model_key"].eq(default_key)
         ]
         principal = "—" if current.empty else f"{fmt_pct(current.iloc[-1]['forecast'], 2, True)}%"
-        preferred = ["M4 · Dinámico", "M8P · INE + IVS real parsimonioso"]
-        oos_view = oos[oos["modelo"].isin(preferred)].copy()
-        oos_view["orden"] = pd.Categorical(oos_view["modelo"], categories=preferred, ordered=True)
+        oos_order = ["m4", "m8p", "ar1", "ma3"]
+        oos_labels = {
+            "m4": "Corte experimental",
+            "m8p": "Corte INE",
+            "ar1": "AR(1)",
+            "ma3": "Media móvil 3 meses",
+        }
+        oos_view = oos[oos["model_key"].isin(oos_order)].copy()
+        oos_view["modelo_publico"] = oos_view["model_key"].map(oos_labels)
+        oos_view["orden"] = pd.Categorical(oos_view["model_key"], categories=oos_order, ordered=True)
         oos_view = oos_view.sort_values(["variable", "orden"])
         oos_table = table_html(
             oos_view,
-            ["variable", "modelo", "N", "RMSE", "MAE", "Periodo"],
-            {"variable": "Serie", "modelo": "Especificación", "N": "N", "RMSE": "RMSE", "MAE": "MAE", "Periodo": "Ventana"},
+            ["variable", "modelo_publico", "N", "RMSE", "MAE", "Periodo"],
+            {"variable": "Serie", "modelo_publico": "Especificación", "N": "N", "RMSE": "RMSE", "MAE": "MAE", "Periodo": "Ventana"},
             {"N": lambda x: str(int(x)), "RMSE": lambda x: fmt_num(x, 2), "MAE": lambda x: fmt_num(x, 2)},
         )
         target_dt = pd.to_datetime(row["periodo_objetivo"])
