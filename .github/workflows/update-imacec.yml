@@ -131,7 +131,7 @@ jobs:
         if: steps.credentials.outputs.configured == 'true' && github.event_name != 'pull_request'
         run: python -m pip install -r requirements-site.txt
 
-      - name: Run EEE, M4, M8P and official-data cycle
+      - name: Run EEE, experimental, INE and official-data cycle
         if: steps.credentials.outputs.configured == 'true' && github.event_name != 'pull_request'
         env:
           BCCH_USER: ${{ secrets.BCCH_USER }}
