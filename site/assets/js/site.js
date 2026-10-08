@@ -425,7 +425,7 @@
   initYieldCurve();
   initProjectCharts();
   initAtlasEmbed();
-  initMultiDownloads();
   initDebtSimulator();
   enhanceStaticFigures();
+  initMultiDownloads();
 })();
