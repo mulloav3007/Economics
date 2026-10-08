@@ -424,8 +424,8 @@
   initExchangeDashboard();
   initYieldCurve();
   initProjectCharts();
+  initAtlasEmbed();
   initMultiDownloads();
   initDebtSimulator();
   enhanceStaticFigures();
-  initAtlasEmbed();
 })();
