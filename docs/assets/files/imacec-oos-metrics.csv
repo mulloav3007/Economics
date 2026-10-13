@@ -1,9 +1,9 @@
 variable,modelo,model_key,N,RMSE,MAE,Periodo,nota
-IMACEC no minero,AR(1) de referencia,ar1,44,2.30640574653422,1.8633085611955544,2023-01 a 2026-08,Pseudo-OOS recursivo sobre ventana común; información final y sin reconstruir revisiones históricas.
+IMACEC no minero,AR(1) de referencia,ar1,44,2.30640574653422,1.8633085611955542,2023-01 a 2026-08,Pseudo-OOS recursivo sobre ventana común; información final y sin reconstruir revisiones históricas.
 IMACEC no minero,Corte INE + IVS real,m8p,44,0.9696073890030065,0.7918764558781833,2023-01 a 2026-08,Pseudo-OOS recursivo sobre ventana común; información final y sin reconstruir revisiones históricas.
-IMACEC no minero,Corte experimental,m4,44,1.1674999379913489,0.9224567635520725,2023-01 a 2026-08,Pseudo-OOS recursivo sobre ventana común; información final y sin reconstruir revisiones históricas.
+IMACEC no minero,Corte experimental,m4,44,1.167499937991349,0.9224567635520727,2023-01 a 2026-08,Pseudo-OOS recursivo sobre ventana común; información final y sin reconstruir revisiones históricas.
 IMACEC no minero,Promedio móvil 3 meses,ma3,44,1.7669468001146824,1.429086630372049,2023-01 a 2026-08,Pseudo-OOS recursivo sobre ventana común; información final y sin reconstruir revisiones históricas.
 IMACEC total,AR(1) de referencia,ar1,44,2.2418076186925244,1.7995150648330833,2023-01 a 2026-08,Pseudo-OOS recursivo sobre ventana común; información final y sin reconstruir revisiones históricas.
-IMACEC total,Corte INE + IVS real,m8p,44,1.0321468958721527,0.7749475978702585,2023-01 a 2026-08,Pseudo-OOS recursivo sobre ventana común; información final y sin reconstruir revisiones históricas.
-IMACEC total,Corte experimental,m4,44,1.6094668071873213,1.357128443787988,2023-01 a 2026-08,Pseudo-OOS recursivo sobre ventana común; información final y sin reconstruir revisiones históricas.
+IMACEC total,Corte INE + IVS real,m8p,44,1.0321468958721531,0.7749475978702586,2023-01 a 2026-08,Pseudo-OOS recursivo sobre ventana común; información final y sin reconstruir revisiones históricas.
+IMACEC total,Corte experimental,m4,44,1.6094668071873215,1.357128443787988,2023-01 a 2026-08,Pseudo-OOS recursivo sobre ventana común; información final y sin reconstruir revisiones históricas.
 IMACEC total,Promedio móvil 3 meses,ma3,44,1.9202329172214612,1.5237658442536528,2023-01 a 2026-08,Pseudo-OOS recursivo sobre ventana común; información final y sin reconstruir revisiones históricas.
