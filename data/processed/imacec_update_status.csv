@@ -1,2 +1,2 @@
 fecha_actualizacion,fecha_hora_actualizacion,ultima_observacion_imacec,periodo_objetivo,siguiente_periodo_imacec,ciclo_estado,ciclo_estado_label,modelo_principal,tiene_eee,tiene_experimentales,tiene_ine
-2026-10-13,2026-10-13 20:38:12 UTC,2026-08-01,2026-09-01,2026-09-01,eee_proxy,EEE publicada · proxies AR(1) y media móvil hasta el corte experimental,ar1,TRUE,FALSE,FALSE
+2026-10-15,2026-10-15 17:45:42 UTC,2026-08-01,2026-09-01,2026-09-01,eee_proxy,EEE publicada · proxies AR(1) y media móvil hasta el corte experimental,ar1,TRUE,FALSE,FALSE
