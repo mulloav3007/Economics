@@ -171,6 +171,13 @@ extract_href_urls <- function(page) {
   hits <- sub(pattern, "\\1", matches, perl = TRUE, ignore.case = TRUE)
   hits <- unique(hits)
   hits <- gsub("^//", "https://", hits)
+  # Los enlaces de Noticias relacionadas pueden comenzar por ../../.
+  # Sin normalizarlos, curl intenta resolver literalmente el host '..'.
+  parents <- grepl("^([.][.]/)+", hits)
+  hits[parents] <- paste0(
+    "https://www.ine.gob.cl/",
+    sub("^([.][.]/)+", "", hits[parents])
+  )
   relative <- startsWith(hits, "/")
   hits[relative] <- paste0("https://www.ine.gob.cl", hits[relative])
   hits
