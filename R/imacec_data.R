@@ -505,24 +505,114 @@ get_base_levels <- function() {
     dplyr::arrange(Periodo)
 }
 
-get_ine_levels_direct <- function() {
-  sector_urls <- discover_ipi_sector_urls()
+# Excel IPI combinado: contiene IPMin, IPMan e IPEGA en un solo tabulado.
+# La URL del período se calcula dinámicamente; la URL verificada para
+# septiembre de 2026 se usa solo como respaldo para esa publicación.
+combined_ipi_urls <- function(as_of = as.Date(last_date)) {
+  period <- lubridate::floor_date(as.Date(as_of), "month") %m-%
+    lubridate::period(months = 1)
+  months_es <- c(
+    "enero", "febrero", "marzo", "abril", "mayo", "junio",
+    "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"
+  )
+  base <- paste0(
+    "https://www.ine.gob.cl/docs/default-source/indice-de-produccion-industrial/",
+    "cuadros-estadisticos/base-promedio-2018-100/",
+    "series-empalmadas-y-mensuales-a-",
+    months_es[lubridate::month(period)], "-", lubridate::year(period), ".xls"
+  )
+  links <- c(base)
+  if (identical(format(period, "%Y-%m"), "2026-09")) {
+    links <- c(links, paste0(base, "?sfvrsn=d32cfee4_6"))
+  }
+  # Los enlaces hallados en la página complementan el patrón mensual.
+  page_links <- tryCatch(
+    extract_excel_urls(fetch_ine_page(ipi_page)),
+    error = function(e) character()
+  )
+  if (length(page_links)) {
+    normalized <- normalize_ivs_text(URLdecode(page_links))
+    keep <- grepl("indice de produccion industrial", normalized) &
+      grepl("series empalmadas y mensuales", normalized) &
+      grepl(paste0(months_es[lubridate::month(period)], " ", lubridate::year(period)),
+            normalized, fixed = TRUE)
+    links <- c(links, page_links[keep])
+  }
+  unique(links)
+}
 
-  mineria <- read_ine_series_optional(
-    sector_urls$mineria, ipmin_path,
-    c("indice de produccion minera", "produccion minera", "ipmin"),
-    "Índice de Producción Minera", "mineria"
+get_combined_ipi_levels <- function() {
+  file <- resolve_ine_product_file(
+    combined_ipi_urls(), ipi_combined_path, "IPI combinado"
   )
-  manufactura <- read_ine_series_optional(
-    sector_urls$manufactura, ipman_path,
-    c("indice de produccion manufacturera", "produccion manufacturera", "ipman"),
-    "Índice de Producción Manufacturera", "manufactura"
+  mineria <- read_index_series_from_excel(
+    file, c("indice de produccion minera", "produccion minera", "ipmin"),
+    "Índice de Producción Minera"
+  ) |>
+    dplyr::rename(mineria = value)
+  manufactura <- read_index_series_from_excel(
+    file, c("indice de produccion manufacturera", "produccion manufacturera", "ipman"),
+    "Índice de Producción Manufacturera"
+  ) |>
+    dplyr::rename(manufactura = value)
+  electricidad <- read_index_series_from_excel(
+    file, c("indice de produccion de electricidad gas y agua", "electricidad gas y agua", "ipega"),
+    "Índice de Producción de Electricidad, Gas y Agua"
+  ) |>
+    dplyr::rename(electricidad = value)
+  result <- purrr::reduce(
+    list(mineria, manufactura, electricidad),
+    dplyr::full_join, by = "Periodo"
+  ) |>
+    dplyr::arrange(Periodo)
+  # No aceptar accidentalmente el Excel del mes anterior, aunque se descargue.
+  expected <- lubridate::floor_date(as.Date(last_date), "month") %m-%
+    lubridate::period(months = 1)
+  recent <- result |>
+    dplyr::filter(Periodo == expected)
+  if (nrow(recent) != 1L ||
+      !all(is.finite(as.numeric(recent[1, c("mineria", "manufactura", "electricidad")])))) {
+    stop("El Excel IPI combinado no contiene las tres series para ",
+         format(expected, "%Y-%m"), ".")
+  }
+  message("INE directo · IPI combinado · IPMin/IPMan/IPEGA completos para ",
+          format(expected, "%Y-%m"))
+  result
+}
+
+get_ine_levels_direct <- function() {
+  combined <- tryCatch(
+    get_combined_ipi_levels(),
+    error = function(e) {
+      warning("Excel IPI combinado no disponible: ",
+              conditionMessage(e), call. = FALSE)
+      NULL
+    }
   )
-  electricidad <- read_ine_series_optional(
-    sector_urls$electricidad, ipega_path,
-    c("indice de produccion de electricidad gas y agua", "electricidad gas y agua", "ipega"),
-    "Índice de Producción de Electricidad, Gas y Agua", "electricidad"
-  )
+
+  if (is.null(combined)) {
+    # Respaldo individual para cada índice, sin bloquear al resto por fallos.
+    sector_urls <- discover_ipi_sector_urls()
+    mineria <- read_ine_series_optional(
+      sector_urls$mineria, ipmin_path,
+      c("indice de produccion minera", "produccion minera", "ipmin"),
+      "Índice de Producción Minera", "mineria"
+    )
+    manufactura <- read_ine_series_optional(
+      sector_urls$manufactura, ipman_path,
+      c("indice de produccion manufacturera", "produccion manufacturera", "ipman"),
+      "Índice de Producción Manufacturera", "manufactura"
+    )
+    electricidad <- read_ine_series_optional(
+      sector_urls$electricidad, ipega_path,
+      c("indice de produccion de electricidad gas y agua", "electricidad gas y agua", "ipega"),
+      "Índice de Producción de Electricidad, Gas y Agua", "electricidad"
+    )
+    combined <- purrr::reduce(
+      list(mineria, manufactura, electricidad),
+      dplyr::full_join, by = "Periodo"
+    )
+  }
 
   commerce_urls <- discover_ine_excel_urls(
     page_url = commerce_page,
@@ -536,10 +626,7 @@ get_ine_levels_direct <- function() {
     "Índice de Actividad del Comercio al por Menor", "comercio"
   )
 
-  purrr::reduce(
-    list(mineria, manufactura, comercio, electricidad),
-    dplyr::full_join, by = "Periodo"
-  ) |>
+  dplyr::full_join(combined, comercio, by = "Periodo") |>
     dplyr::arrange(Periodo)
 }
 
