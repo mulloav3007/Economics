@@ -153,6 +153,102 @@ extract_excel_urls <- function(page) {
   hits
 }
 
+fetch_ine_page <- function(url) {
+  response <- httr::RETRY(
+    "GET", url, times = 3, pause_base = 1, pause_cap = 6,
+    httr::timeout(60), httr::user_agent("Economics-IMACEC/3.1")
+  )
+  httr::stop_for_status(response)
+  httr::content(response, as = "text", encoding = "UTF-8")
+}
+
+extract_href_urls <- function(page) {
+  page <- gsub("\\\\/", "/", page)
+  page <- gsub("&amp;", "&", page, fixed = TRUE)
+  pattern <- "href[[:space:]]*=[[:space:]]*['\"]([^'\"]+)['\"]"
+  matches <- regmatches(page, gregexpr(pattern, page, perl = TRUE, ignore.case = TRUE))[[1]]
+  if (!length(matches) || identical(matches, character(0))) return(character())
+  hits <- sub(pattern, "\\1", matches, perl = TRUE, ignore.case = TRUE)
+  hits <- unique(hits)
+  hits <- gsub("^//", "https://", hits)
+  relative <- startsWith(hits, "/")
+  hits[relative] <- paste0("https://www.ine.gob.cl", hits[relative])
+  hits
+}
+
+discover_latest_ine_news_url <- function(page_url, slug_pattern) {
+  page <- fetch_ine_page(page_url)
+  links <- extract_href_urls(page)
+  if (!length(links)) return(character())
+  normalized <- normalize_ivs_text(URLdecode(links))
+  keep <- grepl("sala de prensa", normalized, fixed = TRUE) &
+    grepl("noticia", normalized, fixed = TRUE) &
+    grepl(slug_pattern, normalized, perl = TRUE)
+  unique(links[keep])
+}
+
+discover_ipi_sector_urls <- function() {
+  news_urls <- tryCatch(
+    discover_latest_ine_news_url(
+      ipi_page,
+      "indice de produccion industrial"
+    ),
+    error = function(e) {
+      warning("No se pudo localizar la noticia IPI más reciente: ", conditionMessage(e), call. = FALSE)
+      character()
+    }
+  )
+
+  links <- character()
+  if (length(news_urls)) {
+    for (news_url in news_urls) {
+      candidate <- tryCatch(
+        extract_excel_urls(fetch_ine_page(news_url)),
+        error = function(e) character()
+      )
+      if (length(candidate)) {
+        links <- unique(c(links, candidate))
+        # La primera noticia relacionada suele ser la publicación vigente.
+        if (length(links) >= 3L) break
+      }
+    }
+  }
+
+  normalized <- normalize_ivs_text(URLdecode(links))
+  pick <- function(patterns) {
+    if (!length(links)) return(character())
+    keep <- vapply(seq_along(links), function(i) {
+      all(vapply(patterns, function(p) grepl(p, normalized[i], perl = TRUE), logical(1)))
+    }, logical(1))
+    unique(links[keep])
+  }
+
+  list(
+    mineria = pick(c("mineria", "serie")),
+    manufactura = pick(c("industria manufacturera|manufacturera", "serie")),
+    electricidad = pick(c("electricidad gas y agua", "serie"))
+  )
+}
+
+empty_ine_series <- function(name) {
+  out <- tibble::tibble(Periodo = as.Date(character()))
+  out[[name]] <- numeric()
+  out
+}
+
+read_ine_series_optional <- function(urls, destination, target_patterns, label, name) {
+  tryCatch({
+    if (!length(urls)) stop("No se descubrió un enlace oficial para ", label, ".")
+    file <- resolve_ine_product_file(urls, destination, label)
+    out <- read_index_series_from_excel(file, target_patterns, label)
+    names(out)[names(out) == "value"] <- name
+    out
+  }, error = function(e) {
+    warning(label, " directo no disponible: ", conditionMessage(e), call. = FALSE)
+    empty_ine_series(name)
+  })
+}
+
 discover_ine_excel_urls <- function(page_url, include_patterns, fallback_url, override = "") {
   if (nzchar(override)) return(unique(c(override, fallback_url)))
 
@@ -188,7 +284,7 @@ discover_ine_excel_urls <- function(page_url, include_patterns, fallback_url, ov
 
 resolve_ine_product_file <- function(urls, destination, label) {
   # Siempre intenta primero la publicación remota: un archivo cacheado del mes
-  # anterior no debe impedir que M8P detecte el nuevo corte.
+  # anterior no debe impedir que el corte INE detecte el nuevo dato.
   for (url in urls) {
     downloaded <- tryCatch(
       download_ine_excel(url, destination, label),
@@ -339,7 +435,7 @@ read_ivs_optional <- function() {
     read_ivs_official(),
     error = function(e) {
       warning(
-        "El IVS oficial no está disponible; el ciclo EEE/M4 continuará y M8P quedará pendiente: ",
+        "El IVS oficial no está disponible; el corte experimental continuará y el corte INE quedará pendiente: ",
         conditionMessage(e), call. = FALSE
       )
       out <- tibble::tibble(Periodo = as.Date(character()))
@@ -366,43 +462,35 @@ get_base_levels <- function() {
 }
 
 get_ine_levels_direct <- function() {
-  ipi_urls <- discover_ine_excel_urls(
-    page_url = ipi_page,
-    include_patterns = c("indice de produccion industrial|indice-de-produccion-industrial", "serie"),
-    fallback_url = official_ipi_url,
-    override = ipi_url_override
+  sector_urls <- discover_ipi_sector_urls()
+
+  mineria <- read_ine_series_optional(
+    sector_urls$mineria, ipmin_path,
+    c("indice de produccion minera", "produccion minera", "ipmin"),
+    "Índice de Producción Minera", "mineria"
   )
+  manufactura <- read_ine_series_optional(
+    sector_urls$manufactura, ipman_path,
+    c("indice de produccion manufacturera", "produccion manufacturera", "ipman"),
+    "Índice de Producción Manufacturera", "manufactura"
+  )
+  electricidad <- read_ine_series_optional(
+    sector_urls$electricidad, ipega_path,
+    c("indice de produccion de electricidad gas y agua", "electricidad gas y agua", "ipega"),
+    "Índice de Producción de Electricidad, Gas y Agua", "electricidad"
+  )
+
   commerce_urls <- discover_ine_excel_urls(
     page_url = commerce_page,
     include_patterns = c("actividad mensual del comercio|actividad-mensual-del-comercio", "serie"),
     fallback_url = official_commerce_url,
     override = commerce_url_override
   )
-
-  ipi_file <- resolve_ine_product_file(ipi_urls, ipi_path, "IPI")
-  commerce_file <- resolve_ine_product_file(commerce_urls, commerce_path, "comercio")
-
-  mineria <- read_index_series_from_excel(
-    ipi_file, c("indice de produccion minera", "produccion minera", "ipmin"), "Índice de Producción Minera"
-  ) |>
-    dplyr::rename(mineria = value)
-  manufactura <- read_index_series_from_excel(
-    ipi_file, c("indice de produccion manufacturera", "produccion manufacturera", "ipman"),
-    "Índice de Producción Manufacturera"
-  ) |>
-    dplyr::rename(manufactura = value)
-  electricidad <- read_index_series_from_excel(
-    ipi_file,
-    c("indice de produccion de electricidad gas y agua", "electricidad gas y agua", "ipega"),
-    "Índice de Producción de Electricidad, Gas y Agua"
-  ) |>
-    dplyr::rename(electricidad = value)
-  comercio <- read_index_series_from_excel(
-    commerce_file,
+  comercio <- read_ine_series_optional(
+    commerce_urls, commerce_path,
     c("indice de actividad del comercio al por menor", "actividad del comercio al por menor"),
-    "Índice de Actividad del Comercio al por Menor"
-  ) |>
-    dplyr::rename(comercio = value)
+    "Índice de Actividad del Comercio al por Menor", "comercio"
+  )
 
   purrr::reduce(
     list(mineria, manufactura, comercio, electricidad),
@@ -434,7 +522,7 @@ get_ine_levels <- function() {
   )
 
   if (is.null(direct) && is.null(bde)) {
-    stop("No existe ninguna fuente disponible para los indicadores sectoriales de M8P.")
+    stop("No existe ninguna fuente disponible para los indicadores sectoriales del corte INE.")
   }
   if (is.null(direct)) return(bde)
   if (is.null(bde)) return(direct)
