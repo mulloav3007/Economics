@@ -192,7 +192,7 @@ discover_latest_ine_news_url <- function(page_url, slug_pattern) {
 # como Excel antes de usarla. La noticia oficial sigue como fuente de enlaces.
 expected_ipi_sector_urls <- function(as_of = as.Date(last_date)) {
   period <- lubridate::floor_date(as.Date(as_of), "month") %m-%
-    lubridate::months(1)
+    lubridate::period(months = 1)
   months_es <- c(
     "enero", "febrero", "marzo", "abril", "mayo", "junio",
     "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"
