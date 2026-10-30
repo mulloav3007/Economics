@@ -1,2 +1,2 @@
 fecha_actualizacion,fecha_hora_actualizacion,ultima_observacion_imacec,periodo_objetivo,siguiente_periodo_imacec,ciclo_estado,ciclo_estado_label,modelo_principal,tiene_eee,tiene_experimentales,tiene_ine
-2026-10-30,2026-10-30 13:42:52 UTC,2026-08-01,2026-09-01,2026-09-01,experimental,Corte experimental completo · señal principal del corte experimental,m4,TRUE,TRUE,FALSE
+2026-10-30,2026-10-30 13:53:45 UTC,2026-08-01,2026-09-01,2026-09-01,ine,Corte INE completo · señal principal basada en indicadores INE e IVS,m8p,TRUE,TRUE,TRUE
