@@ -571,7 +571,7 @@ get_combined_ipi_levels <- function() {
   recent <- result |>
     dplyr::filter(Periodo == expected)
   if (nrow(recent) != 1L ||
-      !all(is.finite(as.numeric(recent[1, c("mineria", "manufactura", "electricidad")])))) {
+      !all(is.finite(unlist(recent[1, c("mineria", "manufactura", "electricidad")], use.names = FALSE)))) {
     stop("El Excel IPI combinado no contiene las tres series para ",
          format(expected, "%Y-%m"), ".")
   }
