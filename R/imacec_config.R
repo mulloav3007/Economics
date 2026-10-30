@@ -27,6 +27,7 @@ ivs_page <- paste0(
   "comercio-y-servicios/ventas-mensuales-de-servicios"
 )
 
+ipi_combined_path <- Sys.getenv("IMACEC_IPI_FILE", unset = "data/raw/ine_ipi_current.xls")
 ipmin_path <- Sys.getenv("IMACEC_IPMIN_FILE", unset = "data/raw/ine_ipmin_current.xls")
 ipman_path <- Sys.getenv("IMACEC_IPMAN_FILE", unset = "data/raw/ine_ipman_current.xls")
 ipega_path <- Sys.getenv("IMACEC_IPEGA_FILE", unset = "data/raw/ine_ipega_current.xls")
