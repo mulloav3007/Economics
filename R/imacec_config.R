@@ -27,7 +27,9 @@ ivs_page <- paste0(
   "comercio-y-servicios/ventas-mensuales-de-servicios"
 )
 
-ipi_path <- Sys.getenv("IMACEC_IPI_FILE", unset = "data/raw/ine_ipi_current.xls")
+ipmin_path <- Sys.getenv("IMACEC_IPMIN_FILE", unset = "data/raw/ine_ipmin_current.xls")
+ipman_path <- Sys.getenv("IMACEC_IPMAN_FILE", unset = "data/raw/ine_ipman_current.xls")
+ipega_path <- Sys.getenv("IMACEC_IPEGA_FILE", unset = "data/raw/ine_ipega_current.xls")
 commerce_path <- Sys.getenv("IMACEC_COMMERCE_FILE", unset = "data/raw/ine_commerce_current.xls")
 ivs_path <- Sys.getenv(
   "IMACEC_IVS_FILE",
@@ -40,21 +42,18 @@ ipi_url_override <- trimws(Sys.getenv("IMACEC_IPI_URL", unset = ""))
 commerce_url_override <- trimws(Sys.getenv("IMACEC_COMMERCE_URL", unset = ""))
 ivs_url <- trimws(Sys.getenv("IMACEC_IVS_URL", unset = ""))
 
-# URLs conocidas únicamente como respaldo si el HTML del INE cambia.
-official_ipi_url <- paste0(
-  "https://www.ine.gob.cl/docs/default-source/indice-de-produccion-industrial/",
-  "cuadros-estadisticos/base-promedio-2018-100/",
-  "series-empalmadas-y-mensuales-a-agosto-2026.xls?sfvrsn=e7cb61a3_6"
-)
+# URLs estables de productos cuyo nombre no cambia con cada publicación.
+# El IPI no usa aquí un Excel mensual fijo: IPMin/IPMan/IPEGA se descubren
+# desde la noticia oficial más reciente y, si eso falla, cada serie cae a BDE.
 official_commerce_url <- paste0(
   "https://www.ine.gob.cl/docs/default-source/actividad-mensual-del-comercio/",
   "cuadros-estadisticos/base-promedio-a%C3%B1o-2018-100/",
-  "series-mensuales-desde-enero-de-2018-a-la-fecha.xls?sfvrsn=15bec33d_83"
+  "series-mensuales-desde-enero-de-2018-a-la-fecha.xls"
 )
 official_ivs_url <- paste0(
   "https://www.ine.gob.cl/docs/default-source/ventas-de-servicios/",
   "cuadro-estadisticos/base-promedio-a%C3%B1o-2018-100/",
-  "series_mensuales_desde_enero_2018_a_la_fecha.xls?sfvrsn=1ff3a838_74"
+  "series_mensuales_desde_enero_2018_a_la_fecha.xls"
 )
 
 model_start_date <- as.Date(Sys.getenv("IMACEC_MODEL_START_DATE", unset = "2019-01-01"))
