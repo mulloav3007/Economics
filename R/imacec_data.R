@@ -187,6 +187,34 @@ discover_latest_ine_news_url <- function(page_url, slug_pattern) {
   unique(links[keep])
 }
 
+# Respaldo derivado del período, no de un nombre de archivo fijo. El INE
+# publica tabulados sectoriales con esta estructura; se valida cada descarga
+# como Excel antes de usarla. La noticia oficial sigue como fuente de enlaces.
+expected_ipi_sector_urls <- function(as_of = as.Date(last_date)) {
+  period <- lubridate::floor_date(as.Date(as_of), "month") %m-%
+    lubridate::months(1)
+  months_es <- c(
+    "enero", "febrero", "marzo", "abril", "mayo", "junio",
+    "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"
+  )
+  suffix <- paste0(months_es[lubridate::month(period)], "-", lubridate::year(period), ".xls")
+  prefix <- "https://www.ine.gob.cl/docs/default-source/"
+  filename <- paste0("series-empalmadas-y-mensuales-a-", suffix)
+  list(
+    mineria = paste0(
+      prefix, "mineria/cuadros-estadisticos/base-promedio-2018-100/", filename
+    ),
+    manufactura = paste0(
+      prefix, "producci%C3%B3n-de-la-industria-manufacturera/",
+      "cuadros-estadisticos/base-promedio-2018_100/", filename
+    ),
+    electricidad = paste0(
+      prefix, "produccion-de-electricidad-gas-y-agua/",
+      "cuadros-estadisticos/base-promedio-2018-100/", filename
+    )
+  )
+}
+
 discover_ipi_sector_urls <- function() {
   news_urls <- tryCatch(
     discover_latest_ine_news_url(
@@ -223,10 +251,19 @@ discover_ipi_sector_urls <- function() {
     unique(links[keep])
   }
 
+  # La URL mensual esperada precede a las alternativas descubiertas: si la
+  # página de prensa conserva una noticia antigua, no tapa un release nuevo.
+  # Ante 404, error de formato o restricción de acceso, se prueban los enlaces
+  # de la noticia y finalmente la BDE por cada indicador.
+  expected <- expected_ipi_sector_urls()
   list(
-    mineria = pick(c("mineria", "serie")),
-    manufactura = pick(c("industria manufacturera|manufacturera", "serie")),
-    electricidad = pick(c("electricidad gas y agua", "serie"))
+    mineria = unique(c(expected$mineria, pick(c("mineria", "serie")))),
+    manufactura = unique(c(
+      expected$manufactura, pick(c("industria manufacturera|manufacturera", "serie"))
+    )),
+    electricidad = unique(c(
+      expected$electricidad, pick(c("electricidad gas y agua", "serie"))
+    ))
   )
 }
 
