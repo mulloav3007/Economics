@@ -156,8 +156,8 @@ def browse_candidates(page_url: str, product: str) -> list[Candidate]:
             page = browser.new_page(accept_downloads=False, locale="es-CL")
             page.goto(page_url, wait_until="domcontentloaded", timeout=60000)
             for action in ("cuadros", "base"):
-                selector = (r"(?i)cuadros estadisticos|cuadros estadísticos" if action == "cuadros"
-                            else r"(?i)base promedio (?:a[nñ]o )?2018\s*[=]_?\s*100")
+                selector = (r"cuadros estadisticos|cuadros estadísticos" if action == "cuadros"
+                            else r"base promedio (?:a[nñ]o )?2018\s*[=]_?\s*100")
                 nodes = page.get_by_text(re.compile(selector, re.I))
                 for i in range(min(nodes.count(), 12)):
                     node = nodes.nth(i)
