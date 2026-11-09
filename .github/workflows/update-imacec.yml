@@ -3,9 +3,9 @@ name: Update IMACEC nowcasts
 on:
   workflow_dispatch:
   schedule:
-    # 11:00-22:30 UTC, con filtro en hora Santiago para horario estacional.
-    # Abarca 08:00-18:30 CLT/CLST con revisiones cada 30 minutos.
-    - cron: '0,30 11-22 * * 1-5'
+    # Programación nativa en hora Santiago, incluido cambio de horario estacional.
+    - cron: '0,30 8-18 * * 1-5'
+      timezone: America/Santiago
   push:
     branches: [main]
     paths:
@@ -54,15 +54,8 @@ jobs:
         id: schedule_window
         shell: bash
         run: |
-          chile_time=$(TZ=America/Santiago date +%H:%M)
-          chile_hour=$(TZ=America/Santiago date +%H)
-          if [ "$GITHUB_EVENT_NAME" = "schedule" ] && { [ "$chile_hour" -lt 8 ] || [ "$chile_hour" -gt 18 ]; }; then
-            echo "should_run=false" >> "$GITHUB_OUTPUT"
-            echo "Fuera de la ventana 08:00-18:30 Santiago · $chile_time"
-          else
-            echo "should_run=true" >> "$GITHUB_OUTPUT"
-            echo "Poll IMACEC · UTC=$(date -u +%H:%M) · Santiago=$chile_time"
-          fi
+          echo "should_run=true" >> "$GITHUB_OUTPUT"
+          echo "Poll IMACEC · UTC=$(date -u +%H:%M) · Santiago=$(TZ=America/Santiago date +%H:%M)"
 
       - name: Check BCCh credentials
         if: steps.schedule_window.outputs.should_run == 'true'
