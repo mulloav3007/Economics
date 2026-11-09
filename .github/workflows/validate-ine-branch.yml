@@ -2,15 +2,6 @@ name: Validate INE IMACEC end-to-end (no publication)
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - feature/ine-release-discovery
-    paths:
-      - '.github/workflows/validate-ine-branch.yml'
-      - 'R/imacec_*.R'
-      - 'scripts/fetch_ine_releases.py'
-      - 'scripts/test_ine_live.R'
-      - 'tests/test_fetch_ine_releases.py'
 
 permissions:
   contents: read
