@@ -49,6 +49,12 @@ URL_HINTS = {
     "comercio": ("actividad-mensual-del-comercio", "series-mensuales"),
     "ivs": ("ventas-de-servicios", "series_mensuales"),
 }
+# Respaldo oficial para tabulados cuyo nombre es estable («a la fecha»).
+# NO se utiliza para el IPI, cuya ruta y nombre cambian por publicación mensual.
+KNOWN_STABLE_URLS = {
+    "comercio": BASE + "/docs/default-source/actividad-mensual-del-comercio/cuadros-estadisticos/base-promedio-a%C3%B1o-2018-100/series-mensuales-desde-enero-de-2018-a-la-fecha.xls",
+    "ivs": BASE + "/docs/default-source/ventas-de-servicios/cuadro-estadisticos/base-promedio-a%C3%B1o-2018-100/series_mensuales_desde_enero_2018_a_la_fecha.xls",
+}
 MONTH_PATTERN = re.compile(r"(?:\ba[\s_-]+|\bde[\s_-]+)(" + "|".join(MONTHS) + r")[\s_-]+(?:de[\s_-]+)?(20\d{2})\b")
 EXCEL_OLE = bytes.fromhex("d0cf11e0a1b11ae1")
 
@@ -247,6 +253,13 @@ def run(products: list[str], manifest: Path, strict: bool = False) -> int:
     }
     for product in products:
         candidates, strategy = discover(session, product)
+        if not candidates and product in KNOWN_STABLE_URLS:
+            candidate = score_candidate(product, KNOWN_STABLE_URLS[product],
+                                        "Series mensuales desde enero de 2018 a la fecha")
+            if candidate:
+                candidates = [candidate]
+                strategy = "official_stable_url"
+                LOG.warning("%s: descubrimiento web no disponible; se prueba la URL oficial estable", product)
         failure = "No se detectaron enlaces oficiales a las series Excel"
         for item in candidates[:12]:
             try:
