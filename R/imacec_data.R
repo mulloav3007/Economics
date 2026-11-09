@@ -285,6 +285,11 @@ read_ine_series_optional <- function(urls, destination, target_patterns, label, 
     if (!length(urls)) stop("No se descubrió un enlace oficial para ", label, ".")
     file <- resolve_ine_product_file(urls, destination, label)
     out <- read_index_series_from_excel(file, target_patterns, label)
+    first_allowed <- lubridate::floor_date(as.Date(last_date), "month") %m-%
+      lubridate::period(months = 3)
+    if (max(out$Periodo) < first_allowed) {
+      stop("El Excel ", label, " está desactualizado (", format(max(out$Periodo), "%Y-%m"), ").")
+    }
     names(out)[names(out) == "value"] <- name
     out
   }, error = function(e) {
@@ -326,7 +331,47 @@ discover_ine_excel_urls <- function(page_url, include_patterns, fallback_url, ov
   unique(c(links, fallback_url))
 }
 
+# El Excel preparado por Python tiene URL, fecha y checksum en el manifiesto.
+# Solo se utiliza cuando GitHub Actions activa IMACEC_INE_PREPARED=1.
+ine_manifest_product <- function(product) {
+  if (!identical(Sys.getenv("IMACEC_INE_PREPARED", unset = ""), "1")) return(NULL)
+  path <- Sys.getenv("IMACEC_INE_MANIFEST", unset = "data/raw/ine_source_manifest.json")
+  if (!file.exists(path)) return(NULL)
+  manifest <- jsonlite::fromJSON(path, simplifyVector = FALSE)
+  manifest$products[[product]]
+}
+
+ine_prepared_excel <- function(destination) {
+  product <- if (identical(destination, ipi_combined_path)) {
+    "ipi"
+  } else if (identical(destination, commerce_path)) {
+    "comercio"
+  } else if (identical(destination, ivs_path)) {
+    "ivs"
+  } else {
+    NULL
+  }
+  if (is.null(product)) return(NULL)
+  entry <- ine_manifest_product(product)
+  if (is.null(entry)) return(NULL)
+  allowed <- unique(c(destination,
+    sub("[.]xls$", ".xlsx", destination, ignore.case = TRUE),
+    sub("[.]xlsx$", ".xls", destination, ignore.case = TRUE)))
+  if (!entry$path %in% allowed || !file.exists(entry$path)) {
+    stop("El manifiesto INE señala un Excel inexistente o inesperado para ", product)
+  }
+  md5 <- as.character(unname(tools::md5sum(entry$path)))
+  if (!identical(tolower(md5), tolower(entry$md5))) {
+    stop("La descarga INE fue alterada después de su validación: ", product)
+  }
+  message("INE preparado por Python · ", product, " · ", entry$path,
+          " · publicación ", entry$period %||% "sin período en URL")
+  entry$path
+}
+
 resolve_ine_product_file <- function(urls, destination, label) {
+  prepared <- ine_prepared_excel(destination)
+  if (!is.null(prepared)) return(prepared)
   # Siempre intenta primero la publicación remota: un archivo cacheado del mes
   # anterior no debe impedir que el corte INE detecte el nuevo dato.
   for (url in urls) {
@@ -468,10 +513,16 @@ read_ivs_official <- function(path = resolve_ivs_file()) {
   rows <- 7:nrow(raw)
   out <- tibble::tibble(Periodo = parse_ivs_period(raw[[2]][rows]))
   for (name in names(ivs_columns)) out[[name]] <- parse_ivs_number(raw[[ivs_columns[[name]]]][rows])
-  out |>
+  out <- out |>
     dplyr::filter(!is.na(Periodo)) |>
     dplyr::distinct(Periodo, .keep_all = TRUE) |>
     dplyr::arrange(Periodo)
+  first_allowed <- lubridate::floor_date(as.Date(last_date), "month") %m-%
+    lubridate::period(months = 3)
+  if (!nrow(out) || max(out$Periodo) < first_allowed) {
+    stop("El Excel IVS no contiene observaciones recientes.")
+  }
+  out
 }
 
 read_ivs_optional <- function() {
@@ -565,9 +616,20 @@ get_combined_ipi_levels <- function() {
     dplyr::full_join, by = "Periodo"
   ) |>
     dplyr::arrange(Periodo)
-  # No aceptar accidentalmente el Excel del mes anterior, aunque se descargue.
-  expected <- lubridate::floor_date(as.Date(last_date), "month") %m-%
-    lubridate::period(months = 1)
+  # El último dato publicado puede ser M-2 antes de que salga el nuevo Excel.
+  # La URL identificada por Python declara el período; R verifica su contenido.
+  manifest <- ine_manifest_product("ipi")
+  expected <- if (!is.null(manifest) && !is.null(manifest$period)) {
+    as.Date(paste0(manifest$period, "-01"))
+  } else {
+    max(result$Periodo)
+  }
+  first_allowed <- lubridate::floor_date(as.Date(last_date), "month") %m-%
+    lubridate::period(months = 3)
+  if (is.na(expected) || expected < first_allowed ||
+      expected > lubridate::floor_date(as.Date(last_date), "month")) {
+    stop("El IPI descargado no tiene un período de publicación razonablemente reciente.")
+  }
   recent <- result |>
     dplyr::filter(Periodo == expected)
   if (nrow(recent) != 1L ||
