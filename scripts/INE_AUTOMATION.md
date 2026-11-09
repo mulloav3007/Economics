@@ -41,7 +41,7 @@ No incorporar las credenciales al código ni al manifiesto. La opción \`--stric
 
 ## Calendario y operación
 
-El workflow \`.github/workflows/update-imacec.yml\` revisa los datos de lunes a viernes **cada 30 minutos entre las 08:00 y las 18:30 (America/Santiago)**, con ajuste horario automático a verano/invierno. El scheduler de GitHub no asegura puntualidad al minuto; pueden producirse demoras o ejecuciones omitidas.
+El workflow \`.github/workflows/update-imacec.yml\` revisa los datos de lunes a viernes **cada 15 minutos entre las 08:00 y las 12:00 inclusive (America/Santiago)** (17 revisiones programadas al día), con ajuste horario automático a verano/invierno. El scheduler de GitHub no asegura puntualidad al minuto; pueden producirse demoras o ejecuciones omitidas.
 
 Una PR ejecuta pruebas unitarias y una comprobación real de descarga/lectura sin credenciales del Banco Central. El workflow de validación end-to-end realiza una ejecución aislada, sin publicar ni hacer push a \`main\`, cuando se dispara manualmente.
 
