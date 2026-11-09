@@ -3,8 +3,11 @@ name: Update IMACEC nowcasts
 on:
   workflow_dispatch:
   schedule:
-    # Programación nativa en hora Santiago, incluido cambio de horario estacional.
-    - cron: '0,30 8-18 * * 1-5'
+    # De lunes a viernes, cada 15 minutos desde las 08:00 hasta las 12:00 inclusive.
+    # La zona horaria IANA ajusta automáticamente horario de verano/invierno.
+    - cron: '0,15,30,45 8-11 * * 1-5'
+      timezone: America/Santiago
+    - cron: '0 12 * * 1-5'
       timezone: America/Santiago
   push:
     branches: [main]
