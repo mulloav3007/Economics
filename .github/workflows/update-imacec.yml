@@ -3,9 +3,12 @@ name: Update IMACEC nowcasts
 on:
   workflow_dispatch:
   schedule:
-    # Ventana redundante para absorber retrasos de GitHub Actions.
-    # 07:00-16:30 UTC cubre la mañana chilena incluso con varias horas de cola.
-    - cron: '0,30 7-16 * * 1-5'
+    # De lunes a viernes, cada 15 minutos desde las 08:00 hasta las 12:00 inclusive.
+    # La zona horaria IANA ajusta automáticamente horario de verano/invierno.
+    - cron: '0,15,30,45 8-11 * * 1-5'
+      timezone: America/Santiago
+    - cron: '0 12 * * 1-5'
+      timezone: America/Santiago
   push:
     branches: [main]
     paths:
@@ -13,6 +16,9 @@ on:
       - 'R/00_packages.R'
       - 'scripts/01_update_imacec.R'
       - 'scripts/test_imacec.R'
+      - 'scripts/test_ine_live.R'
+      - 'scripts/fetch_ine_releases.py'
+      - 'tests/test_fetch_ine_releases.py'
       - 'scripts/generate_site_assets.py'
       - 'scripts/build_site.py'
       - 'data/raw/imacec_ine_yoy_fallback.csv'
@@ -23,6 +29,9 @@ on:
       - 'R/imacec_*.R'
       - 'scripts/01_update_imacec.R'
       - 'scripts/test_imacec.R'
+      - 'scripts/test_ine_live.R'
+      - 'scripts/fetch_ine_releases.py'
+      - 'tests/test_fetch_ine_releases.py'
       - 'data/raw/imacec_ine_yoy_fallback.csv'
       - '.github/workflows/update-imacec.yml'
 
@@ -115,17 +124,33 @@ jobs:
             any::httr
             any::jsonlite
 
-      - name: Test incomplete cuts and historical fits
-        if: steps.schedule_window.outputs.should_run == 'true'
-        run: Rscript scripts/test_imacec.R
-
       - name: Set up Python
-        if: steps.schedule_window.outputs.should_run == 'true' && steps.credentials.outputs.configured == 'true' && github.event_name != 'pull_request'
+        if: steps.schedule_window.outputs.should_run == 'true'
         uses: actions/setup-python@v7
         with:
           python-version: '3.12'
           cache: pip
           cache-dependency-path: requirements-site.txt
+
+      - name: Install and test INE extractor
+        if: steps.schedule_window.outputs.should_run == 'true'
+        run: |
+          python -m pip install requests beautifulsoup4 playwright
+          python -m unittest discover -s tests -p 'test_fetch_ine_releases.py' -v
+
+      - name: Test incomplete cuts and historical fits
+        if: steps.schedule_window.outputs.should_run == 'true'
+        run: Rscript scripts/test_imacec.R
+
+      - name: Live INE integration smoke test (PR)
+        if: github.event_name == 'pull_request'
+        run: |
+          python scripts/fetch_ine_releases.py --strict
+          Rscript scripts/test_ine_live.R
+
+      - name: Discover and download latest INE sector Excel files
+        if: steps.credentials.outputs.configured == 'true' && github.event_name != 'pull_request'
+        run: python scripts/fetch_ine_releases.py
 
       - name: Install site dependencies
         if: steps.credentials.outputs.configured == 'true' && github.event_name != 'pull_request'
@@ -136,6 +161,8 @@ jobs:
         env:
           BCCH_USER: ${{ secrets.BCCH_USER }}
           BCCH_PASS: ${{ secrets.BCCH_PASS }}
+          IMACEC_INE_PREPARED: '1'
+          IMACEC_INE_MANIFEST: data/raw/ine_source_manifest.json
         run: Rscript scripts/01_update_imacec.R
 
       - name: Detect substantive analytical changes

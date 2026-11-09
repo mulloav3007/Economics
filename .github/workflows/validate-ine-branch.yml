@@ -1,0 +1,66 @@
+name: Validate INE IMACEC end-to-end (no publication)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-site.txt
+      - name: Install Python dependencies
+        run: python -m pip install -r requirements-site.txt requests playwright
+      - name: Check Python discovery tests
+        run: python -m unittest discover -s tests -p 'test_fetch_ine_releases.py' -v
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::rjson
+            any::dplyr
+            any::tidyr
+            any::lubridate
+            any::readxl
+            any::ggplot2
+            any::knitr
+            any::tibble
+            any::readr
+            any::purrr
+            any::stringr
+            any::scales
+            any::gt
+            any::plotly
+            any::httr
+            any::jsonlite
+      - name: Fetch official INE Excel files
+        run: python scripts/fetch_ine_releases.py --strict
+      - name: Validate parsed series and periods in R
+        run: Rscript scripts/test_ine_live.R
+      - name: Check BCCh secret availability
+        env:
+          BCCH_USER: ${{ secrets.BCCH_USER }}
+          BCCH_PASS: ${{ secrets.BCCH_PASS }}
+        run: |
+          test -n "$BCCH_USER" && test -n "$BCCH_PASS" || { echo "::error::BCCh secrets unavailable"; exit 1; }
+      - name: End-to-end nowcast and pseudo-OOS (no git push)
+        env:
+          BCCH_USER: ${{ secrets.BCCH_USER }}
+          BCCH_PASS: ${{ secrets.BCCH_PASS }}
+          IMACEC_INE_PREPARED: '1'
+          IMACEC_INE_MANIFEST: data/raw/ine_source_manifest.json
+        run: Rscript scripts/01_update_imacec.R
+      - name: Build and validate site output (no publication)
+        run: |
+          python scripts/build_site.py
+          python scripts/validate_site.py
