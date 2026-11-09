@@ -13,6 +13,9 @@ on:
       - 'R/00_packages.R'
       - 'scripts/01_update_imacec.R'
       - 'scripts/test_imacec.R'
+      - 'scripts/test_ine_live.R'
+      - 'scripts/fetch_ine_releases.py'
+      - 'tests/test_fetch_ine_releases.py'
       - 'scripts/generate_site_assets.py'
       - 'scripts/build_site.py'
       - 'data/raw/imacec_ine_yoy_fallback.csv'
@@ -23,6 +26,9 @@ on:
       - 'R/imacec_*.R'
       - 'scripts/01_update_imacec.R'
       - 'scripts/test_imacec.R'
+      - 'scripts/test_ine_live.R'
+      - 'scripts/fetch_ine_releases.py'
+      - 'tests/test_fetch_ine_releases.py'
       - 'data/raw/imacec_ine_yoy_fallback.csv'
       - '.github/workflows/update-imacec.yml'
 
@@ -139,6 +145,12 @@ jobs:
       - name: Test incomplete cuts and historical fits
         if: steps.schedule_window.outputs.should_run == 'true'
         run: Rscript scripts/test_imacec.R
+
+      - name: Live INE integration smoke test (PR)
+        if: github.event_name == 'pull_request'
+        run: |
+          python scripts/fetch_ine_releases.py --strict
+          Rscript scripts/test_ine_live.R
 
       - name: Discover and download latest INE sector Excel files
         if: steps.credentials.outputs.configured == 'true' && github.event_name != 'pull_request'
