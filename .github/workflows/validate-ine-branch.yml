@@ -43,6 +43,9 @@ jobs:
             any::plotly
             any::httr
             any::jsonlite
+            any::seasonal
+      - name: Check standalone seasonal unit tests
+        run: Rscript scripts/test_imacec_seasonal.R
       - name: Fetch official INE Excel files
         run: python scripts/fetch_ine_releases.py --strict
       - name: Validate parsed series and periods in R
@@ -60,6 +63,11 @@ jobs:
           IMACEC_INE_PREPARED: '1'
           IMACEC_INE_MANIFEST: data/raw/ine_source_manifest.json
         run: Rscript scripts/01_update_imacec.R
+      - name: Compare direct X-13 with official BCCh SA levels
+        env:
+          BCCH_USER: ${{ secrets.BCCH_USER }}
+          BCCH_PASS: ${{ secrets.BCCH_PASS }}
+        run: Rscript scripts/validate_imacec_seasonal.R
       - name: Build and validate site output (no publication)
         run: |
           python scripts/build_site.py

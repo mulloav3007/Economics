@@ -16,6 +16,7 @@ on:
       - 'R/00_packages.R'
       - 'scripts/01_update_imacec.R'
       - 'scripts/test_imacec.R'
+      - 'scripts/test_imacec_seasonal.R'
       - 'scripts/test_ine_live.R'
       - 'scripts/fetch_ine_releases.py'
       - 'tests/test_fetch_ine_releases.py'
@@ -29,6 +30,7 @@ on:
       - 'R/imacec_*.R'
       - 'scripts/01_update_imacec.R'
       - 'scripts/test_imacec.R'
+      - 'scripts/test_imacec_seasonal.R'
       - 'scripts/test_ine_live.R'
       - 'scripts/fetch_ine_releases.py'
       - 'tests/test_fetch_ine_releases.py'
@@ -40,7 +42,7 @@ permissions:
 
 concurrency:
   # Grupo versionado para no quedar bloqueado por una ejecución antigua/atascada.
-  group: imacec-update-v2
+  group: imacec-update-v2-${{ github.ref }}
   cancel-in-progress: true
 
 env:
@@ -85,7 +87,8 @@ jobs:
             imacec_projection_all_models.csv \
             imacec_nowcast_history_all_models.csv \
             imacec_pseudo_oos_metrics.csv \
-            imacec_eee_aligned.csv
+            imacec_eee_aligned.csv \
+            imacec_seasonal_table.csv
           do
             if [ -f "data/processed/$f" ]; then
               cp "data/processed/$f" "/tmp/imacec-before/$f"
@@ -123,6 +126,7 @@ jobs:
             any::plotly
             any::httr
             any::jsonlite
+            any::seasonal
 
       - name: Set up Python
         if: steps.schedule_window.outputs.should_run == 'true'
@@ -141,6 +145,10 @@ jobs:
       - name: Test incomplete cuts and historical fits
         if: steps.schedule_window.outputs.should_run == 'true'
         run: Rscript scripts/test_imacec.R
+
+      - name: Test seasonal adjustment and implicit mining
+        if: steps.schedule_window.outputs.should_run == 'true'
+        run: Rscript scripts/test_imacec_seasonal.R
 
       - name: Live INE integration smoke test (PR)
         if: github.event_name == 'pull_request'
@@ -185,6 +193,7 @@ jobs:
               "imacec_nowcast_history_all_models.csv": {"fit_timestamp"},
               "imacec_pseudo_oos_metrics.csv": set(),
               "imacec_eee_aligned.csv": set(),
+              "imacec_seasonal_table.csv": set(),
           }
 
           def normalized(path, ignored):

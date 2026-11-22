@@ -54,6 +54,16 @@ Los dos paneles responden al mismo calendario de publicación. Antes de la nueva
   <p class="chart-help">La serie no minera se estima de forma independiente, manteniendo el conjunto fijo de predictores del corte experimental o del corte INE.</p>
 </div>
 
+## Tabla de proyecciones · original y desestacionalizado
+
+{{ imacec.seasonal_table|safe }}
+
+La columna original muestra las tasas interanuales del modelo vigente. Para el IMACEC total y no minero, la variación mensual desestacionalizada se aproxima mediante **X-13ARIMA-SEATS directo** sobre el índice proyectado; para minería se utiliza el **factor estacional oficial del mismo mes del año anterior**, que presentó menor error retrospectivo. Ninguno reproduce exactamente el ajuste indirecto del Banco Central. **Minería implícita** es un residuo aproximado de los dos modelos, no una predicción sectorial independiente, y puede amplificar sus errores. Los datos efectivos proceden de las series oficiales del Banco Central.
+
+{% if imacec.seasonal_download %}
+<a href="../assets/files/imacec-seasonal-table.csv" download>Descargar tabla original y desestacionalizada (CSV)</a>
+{% endif %}
+
 ## Cómo se actualiza
 
 | Momento del mes | Publicación visible | Opción predeterminada |
@@ -89,7 +99,7 @@ La evaluación es recursiva y mantiene fijas las dos especificaciones principale
 - La EEE publicada en **M** se asigna al IMACEC de **M−1**.
 - AR(1) y media móvil de tres meses son referencias transparentes; no sustituyen a los cortes experimental o INE.
 - El modelo principal cambia por disponibilidad verificable, no por cuál arroje la cifra más conveniente.
-- La tarea programada lanza sondeos redundantes cada 30 minutos durante una ventana amplia de días hábiles para amortiguar retrasos de GitHub Actions; cada ejecución vuelve a consultar las fuentes oficiales y publica el nuevo corte cuando la cobertura requerida está completa.
+- La tarea programada consulta las fuentes cada 15 minutos entre las 08:00 y las 12:00, de lunes a viernes, hora de Santiago; el siguiente corte se publica cuando la cobertura requerida está completa. La ejecución de GitHub Actions puede sufrir retrasos.
 
 <div class="callout">
   <strong>Fuentes de alta frecuencia:</strong> IPMin, IPMan, IPEGA, comercio al por menor e IVS se leen directamente desde los Excel oficiales del INE. La BDE se conserva únicamente como respaldo de continuidad si una descarga oficial falla.
