@@ -2,13 +2,6 @@ name: Validate INE IMACEC end-to-end (no publication)
 
 on:
   workflow_dispatch:
-  push:
-    branches: [feature/imacec-seasonal-table]
-    paths:
-      - '.github/workflows/validate-ine-branch.yml'
-      - 'R/imacec_seasonal.R'
-      - 'scripts/test_imacec_seasonal.R'
-      - 'scripts/validate_imacec_seasonal.R'
 
 permissions:
   contents: read
