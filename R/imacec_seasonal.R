@@ -47,8 +47,8 @@ fetch_imacec_seasonal_levels <- function(start = "2012-01-01") {
 # La tasa resultante se aplica al último nivel SA oficial conocido.
 seasonal_one_step <- function(levels, raw_name, sa_name, period, yoy_forecast) {
   period <- as.Date(period)
-  previous <- period %m-% lubridate::months(1)
-  lag12 <- period %m-% lubridate::months(12)
+  previous <- period %m-% lubridate::period(months = 1)
+  lag12 <- period %m-% lubridate::period(months = 12)
   hist <- levels |>
     dplyr::filter(Periodo <= previous, !is.na(.data[[raw_name]])) |>
     dplyr::select(Periodo, value = dplyr::all_of(raw_name)) |>
@@ -125,7 +125,7 @@ build_imacec_seasonal_table <- function(levels, projections, cycle) {
   keys <- c(total = "IMACEC",
             minero = if (observed) "IMACEC minero" else "Minería implícita",
             no_minero = "IMACEC no minero")
-  previous <- target %m-% lubridate::months(1)
+  previous <- target %m-% lubridate::period(months = 1)
   selected <- projections |>
     dplyr::filter(Periodo == target, model_key == model)
   output <- list()
@@ -154,7 +154,7 @@ build_imacec_seasonal_table <- function(levels, projections, cycle) {
       "X-13 directo sobre índice proyectado; no equivale al ajuste indirecto BCCh."
     }
     if (observed) {
-      lag12 <- target %m-% lubridate::months(12)
+      lag12 <- target %m-% lubridate::period(months = 12)
       aa <- 100 * (seasonal_level_at(levels, raw_name, target) /
                      seasonal_level_at(levels, raw_name, lag12) - 1)
       mm <- 100 * (seasonal_level_at(levels, sa_name, target) /
