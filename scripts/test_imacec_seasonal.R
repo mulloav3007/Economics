@@ -47,7 +47,7 @@ stopifnot(all(observed$tipo == "Efectivo BCCh"),
 
 # No calcular m/m si falta el índice oficial del mes anterior.
 gap <- cycle
-gap$periodo_objetivo <- target %m+% lubridate::months(1)
+gap$periodo_objetivo <- target %m+% lubridate::period(months = 1)
 gap_proj <- projected
 gap_proj$Periodo <- gap$periodo_objetivo
 incomplete <- build_imacec_seasonal_table(levels[levels$Periodo <= last_actual, ], gap_proj, gap)
