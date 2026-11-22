@@ -4,8 +4,8 @@ source("R/imacec_run_all.R", encoding = "UTF-8")
 levels <- fetch_imacec_seasonal_levels()
 dates <- levels$Periodo[is.finite(levels$total_original) & is.finite(levels$total_sa) &
                          is.finite(levels$no_minero_original) & is.finite(levels$no_minero_sa)]
-periods <- utils::tail(dates, 6L)
-if (length(periods) < 6L) stop("Muestra oficial insuficiente para contraste SA.")
+periods <- utils::tail(dates, 12L)
+if (length(periods) < 12L) stop("Muestra oficial insuficiente para contraste SA.")
 table <- readr::read_csv("data/processed/imacec_seasonal_table.csv", show_col_types = FALSE)
 required <- table[table$target_key %in% c("total", "no_minero"), ]
 if (nrow(required) != 2L || !all(is.finite(required$desestacionalizado_mm))) {
@@ -30,10 +30,33 @@ for (i in seq_along(periods)) {
     realized[[key]] <- growth
     estimated <- seasonal_one_step(prior, original, sa, date, growth)$growth
     official <- 100 * (sa_now / sa_prev - 1)
-    rows[[length(rows) + 1L]] <- tibble::tibble(
-      Periodo = date, serie = key, estimado_mm = estimated,
-      oficial_mm = official, error_pp = estimated - official
-    )
+    lag_sa <- seasonal_level_at(levels, sa, lag12)
+    lag12_est <- 100 * ((current / past) * lag_sa / sa_prev - 1)
+    prior_factors <- vapply(1:3, function(k) {
+      month <- date %m-% lubridate::period(months = 12 * k)
+      raw <- seasonal_level_at(levels, original, month)
+      adjusted <- seasonal_level_at(levels, sa, month)
+      if (is.finite(raw) && is.finite(adjusted) && adjusted > 0) raw / adjusted else NA_real_
+    }, numeric(1))
+    factor3 <- if (all(is.finite(prior_factors))) {
+      stats::weighted.mean(prior_factors, w = c(.55, .30, .15))
+    } else {
+      NA_real_
+    }
+    factor3_est <- if (is.finite(factor3)) {
+      100 * ((current / factor3) / sa_prev - 1)
+    } else {
+      NA_real_
+    }
+    candidates <- c(x13_directo = estimated, factor_12m = lag12_est,
+                    factor_3anios = factor3_est)
+    for (method in names(candidates)) {
+      rows[[length(rows) + 1L]] <- tibble::tibble(
+        Periodo = date, serie = key, metodo = method,
+        estimado_mm = candidates[[method]],
+        oficial_mm = official, error_pp = candidates[[method]] - official
+      )
+    }
   }
   if (all(c("total", "no_minero", "minero") %in% names(realized))) {
     w <- seasonal_mining_weight(prior, previous)
@@ -46,7 +69,7 @@ for (i in seq_along(periods)) {
 }
 comparison <- dplyr::bind_rows(rows)
 summary <- comparison |>
-  dplyr::group_by(serie) |>
+  dplyr::group_by(serie, metodo) |>
   dplyr::summarise(
     N = dplyr::n(), MAE = mean(abs(error_pp)),
     RMSE = sqrt(mean(error_pp^2)),
