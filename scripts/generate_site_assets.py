@@ -638,6 +638,87 @@ def imacec_assets() -> None:
     plt.close(fig)
 
 
+    # Cuarto PNG: únicamente IMACEC total y no minero, original a/a y SA m/m.
+    seasonal_file = ROOT / "data/processed/imacec_seasonal_table.csv"
+    seasonal = pd.read_csv(seasonal_file, parse_dates=["Periodo"])
+    required = {"Periodo", "target_key", "tipo", "model_key",
+                "original_aa", "desestacionalizado_mm"}
+    if not required.issubset(seasonal.columns):
+        raise ValueError("Esquema incompleto en imacec_seasonal_table.csv")
+    seasonal = seasonal[
+        seasonal["Periodo"].eq(target_period)
+        & seasonal["target_key"].isin(["total", "no_minero"])
+    ]
+    if len(seasonal) != 2 or set(seasonal["target_key"]) != {"total", "no_minero"}:
+        raise ValueError("Faltan las dos series del período vigente en la tabla estacional")
+    seasonal = seasonal.set_index("target_key")
+    if seasonal["tipo"].nunique() != 1 or seasonal["model_key"].nunique() != 1:
+        raise ValueError("La tabla estacional mezcla fuentes o cortes de modelos")
+
+    def seasonal_pct(value: float) -> str:
+        return "—" if pd.isna(value) else f"{float(value):+.2f}%".replace(".", ",")
+
+    rows = [
+        [
+            label,
+            seasonal_pct(seasonal.loc[key, "original_aa"]),
+            seasonal_pct(seasonal.loc[key, "desestacionalizado_mm"]),
+        ]
+        for key, label in [("total", "IMACEC"), ("no_minero", "IMACEC no minero")]
+    ]
+    observed = seasonal.loc["total", "tipo"] == "Efectivo BCCh"
+    method = str(seasonal.loc["total", "model_key"])
+    subtitle = (
+        f"{target_label} · Efectivo BCCh" if observed
+        else f"{target_label} · Proyección ({cut_labels.get(method, method)})"
+    )
+    fig, ax = plt.subplots(figsize=(10.8, 4.1))
+    ax.axis("off")
+    fig.suptitle(
+        "IMACEC — original y desestacionalizado",
+        x=0.06, y=0.95, ha="left", fontsize=18,
+        fontweight="bold", color=COLORS["ink"],
+    )
+    fig.text(
+        0.06, 0.865, subtitle,
+        ha="left", va="top", fontsize=11, color=COLORS["muted"],
+    )
+    table = ax.table(
+        cellText=rows,
+        colLabels=["Indicador", "Original (a/a)", "Desestacionalizado (m/m)"],
+        cellLoc="center",
+        colLoc="center",
+        loc="center",
+        colWidths=[0.34, 0.25, 0.38],
+    )
+    table.auto_set_font_size(False)
+    table.set_fontsize(11.8)
+    table.scale(1, 2.05)
+    for (r, c), cell in table.get_celld().items():
+        cell.set_edgecolor(COLORS["grid"])
+        cell.set_linewidth(0.8)
+        cell.set_facecolor(COLORS["soft"] if r == 0 else "white")
+        cell.set_text_props(
+            color=COLORS["ink"],
+            weight="bold" if r == 0 or c == 0 else "normal",
+            ha="left" if c == 0 else "center",
+        )
+    if not observed:
+        fig.text(
+            0.06, 0.115,
+            "Nota: m/m estimado con X-13 directo; no reproduce el ajuste indirecto del BCCh.",
+            ha="left", va="bottom", fontsize=9.4, color=COLORS["muted"],
+        )
+    fig.text(
+        0.06, 0.055,
+        "Fuente: Banco Central de Chile y elaboración propia.",
+        ha="left", va="bottom", fontsize=9, color=COLORS["muted"],
+    )
+    fig.tight_layout(rect=[0.04, 0.16, 0.98, 0.78])
+    fig.savefig(OUT / "imacec_seasonal_summary.png", dpi=180, bbox_inches="tight")
+    plt.close(fig)
+
+
 def ipom_assets() -> None:
     d = pd.read_csv(ROOT / "data/processed/ipom/ipom_scenarios_long.csv", parse_dates=["date"])
     d = d[(d["scenario_id"].isin(["baseline_ipom", "tpm45_2026"])) & (d["date"] >= "2024-01-01")]
