@@ -77,7 +77,9 @@ seasonal_one_step <- function(levels, raw_name, sa_name, period, yoy_forecast) {
   n <- length(adjusted)
   if (n != length(x) || any(!is.finite(adjusted[(n-1L):n])) ||
       adjusted[n-1L] <= 0 || adjusted[n] <= 0) {
-    stop("X-13 no produjo dos niveles SA finales válidos.")
+    stop("X-13 sin niveles finales: n_ajustado=", n,
+         ", n_original=", length(x),
+         ", últimos=", paste(utils::tail(adjusted, 3L), collapse = ","))
   }
   growth <- 100 * (adjusted[n] / adjusted[n - 1L] - 1)
   list(growth = growth, level_original = level_forecast,
