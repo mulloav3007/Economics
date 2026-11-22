@@ -502,6 +502,8 @@ def copy_public_assets(contexts: dict[str, Any]) -> None:
          f"imacec-no-minero-{contexts['imacec']['target_slug']}.png"),
         (chart_dir / "imacec_projection_table.png",
          f"imacec-tabla-proyecciones-{contexts['imacec']['target_slug']}.png"),
+        (chart_dir / "imacec_seasonal_summary.png",
+         f"imacec-tabla-desestacionalizada-{contexts['imacec']['target_slug']}.png"),
     ]
     for src, _ in chart_sources:
         if not src.exists():
