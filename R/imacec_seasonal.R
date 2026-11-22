@@ -189,8 +189,11 @@ build_imacec_seasonal_table <- function(levels, projections, cycle) {
     mm <- NA_real_
     if (is.finite(aa) && identical(previous, last_actual)) {
       prediction <- tryCatch(
-        if (key == "minero") seasonal_mining_one_step(levels, target, aa)
-        else seasonal_one_step(levels, raw_name, sa_name, target, aa),
+        if (key == "minero") {
+          seasonal_mining_one_step(levels, target, aa)
+        } else {
+          seasonal_one_step(levels, raw_name, sa_name, target, aa)
+        },
         error = function(e) {
           warning("Ajuste estacional ", key, ": ", conditionMessage(e), call. = FALSE)
           NULL
