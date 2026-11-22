@@ -86,6 +86,23 @@ seasonal_one_step <- function(levels, raw_name, sa_name, period, yoy_forecast) {
        level_sa = sa_prev * adjusted[n] / adjusted[n - 1L])
 }
 
+# Para minería el factor oficial de t-12 reprodujo mejor la tasa SA que
+# X-13 directo en el contraste retrospectivo. No supone identidad contable.
+seasonal_mining_one_step <- function(levels, period, yoy_forecast) {
+  period <- as.Date(period)
+  previous <- period %m-% lubridate::period(months = 1)
+  lag12 <- period %m-% lubridate::period(months = 12)
+  sa_lag12 <- seasonal_level_at(levels, "minero_sa", lag12)
+  sa_prev <- seasonal_level_at(levels, "minero_sa", previous)
+  if (!is.finite(sa_lag12) || sa_lag12 <= 0 ||
+      !is.finite(sa_prev) || sa_prev <= 0 ||
+      !is.finite(yoy_forecast) || yoy_forecast <= -100) {
+    stop("Niveles SA oficiales insuficientes para minería implícita.")
+  }
+  sa_hat <- sa_lag12 * (1 + yoy_forecast / 100)
+  list(growth = 100 * (sa_hat / sa_prev - 1), level_sa = sa_hat)
+}
+
 # Proyección minera implícita; mínimo cuadrado de la identidad aproximada
 # g_total - g_no_minero = w*(g_minero - g_no_minero).
 # Sin ponderaciones manuales ni información posterior al mes objetivo.
@@ -151,7 +168,7 @@ build_imacec_seasonal_table <- function(levels, projections, cycle) {
     raw_name <- paste0(key, "_original")
     sa_name <- paste0(key, "_sa")
     note <- if (key == "minero") {
-      "Residuo aproximado del total y no minero; mayor incertidumbre."
+      "Residuo aproximado total/no minero; m/m con factor estacional oficial t-12; mayor incertidumbre."
     } else {
       "X-13 directo sobre índice proyectado; no equivale al ajuste indirecto BCCh."
     }
@@ -172,7 +189,8 @@ build_imacec_seasonal_table <- function(levels, projections, cycle) {
     mm <- NA_real_
     if (is.finite(aa) && identical(previous, last_actual)) {
       prediction <- tryCatch(
-        seasonal_one_step(levels, raw_name, sa_name, target, aa),
+        if (key == "minero") seasonal_mining_one_step(levels, target, aa)
+        else seasonal_one_step(levels, raw_name, sa_name, target, aa),
         error = function(e) {
           warning("Ajuste estacional ", key, ": ", conditionMessage(e), call. = FALSE)
           NULL
