@@ -122,7 +122,9 @@ build_imacec_seasonal_table <- function(levels, projections, cycle) {
   model <- as.character(cycle$modelo_principal[1])
   observed <- identical(as.character(cycle$ciclo_estado[1]), "official_review") ||
     target <= last_actual
-  keys <- c(total = "IMACEC", minero = "Minería implícita", no_minero = "IMACEC no minero")
+  keys <- c(total = "IMACEC",
+            minero = if (observed) "IMACEC minero" else "Minería implícita",
+            no_minero = "IMACEC no minero")
   previous <- target %m-% lubridate::months(1)
   selected <- projections |>
     dplyr::filter(Periodo == target, model_key == model)
