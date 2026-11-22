@@ -36,6 +36,13 @@ stopifnot(all(table$tipo == "Proyección"),
 stopifnot(abs(table$original_aa[table$target_key == "minero"] -
               yoy_at(levels$minero_original)) < 3)
 stopifnot(all(abs(table$desestacionalizado_mm) < 15))
+lag12 <- target %m-% lubridate::period(months = 12)
+sa_lag12 <- seasonal_level_at(levels, "minero_sa", lag12)
+sa_previous <- seasonal_level_at(levels, "minero_sa", last_actual)
+mining_yoy <- table$original_aa[table$target_key == "minero"]
+expected_mining_mm <- 100 * (sa_lag12 * (1 + mining_yoy/100) / sa_previous - 1)
+stopifnot(abs(table$desestacionalizado_mm[table$target_key == "minero"] -
+              expected_mining_mm) < 1e-8)
 
 closed <- tibble::tibble(
   periodo_objetivo = last_actual,
