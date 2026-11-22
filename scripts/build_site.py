@@ -393,6 +393,9 @@ def copy_public_assets(contexts: dict[str, Any]) -> None:
         if not src.exists():
             raise FileNotFoundError(f"Falta un archivo público requerido: {src}")
         shutil.copy2(src, dst)
+    seasonal_download = ROOT / "data/processed/imacec_seasonal_table.csv"
+    if seasonal_download.exists():
+        shutil.copy2(seasonal_download, files_out / "imacec-seasonal-table.csv")
 
     # Public downloads: IMACEC total/no minero, historia observada y proyección vigente.
     imacec_hist = pd.read_csv(
