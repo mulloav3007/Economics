@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import re
 import sys
+import zipfile
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
@@ -23,6 +24,7 @@ EXPECTED = {
     "assets/vendor/plotly/plotly-basic-2.35.2.min.js",
     "proyectos/estres-externo.html", "assets/css/site.css", "assets/js/site.js",
     "assets/data/project_charts.json",
+    "assets/img/charts/imacec_seasonal_summary.png",
     "assets/files/cv-mauricio-ulloa.pdf", ".nojekyll", "sitemap.xml", "robots.txt",
 }
 SKIP_SCHEMES = {"http", "https", "mailto", "tel", "javascript", "data"}
@@ -127,6 +129,37 @@ def main() -> int:
                 ident = unquote(anchor["href"][1:])
                 if ident not in id_set:
                     errors.append(f"{rel}: ancla interna inexistente #{ident}")
+
+        # Confirmar que el botón entrega un ZIP real con los cuatro PNG.
+        imacec_page = BeautifulSoup(
+            (DOCS / "proyectos/imacec.html").read_text(encoding="utf-8"),
+            "html.parser",
+        )
+        graph_link = next(
+            (a for a in imacec_page.find_all("a", href=True)
+             if "imacec-graficos-" in a["href"]),
+            None,
+        )
+        if graph_link is None or graph_link.has_attr("data-multi-download"):
+            errors.append("Descargar gráficos debe enlazar al ZIP, sin descargas PNG independientes.")
+        packages = list((DOCS / "assets/files").glob("imacec-graficos-*.zip"))
+        if len(packages) != 1:
+            errors.append("Debe existir exactamente un ZIP de gráficos IMACEC vigente.")
+        else:
+            try:
+                with zipfile.ZipFile(packages[0]) as archive:
+                    pngs = archive.namelist()
+                    prefixes = [
+                        "imacec-total-", "imacec-no-minero-",
+                        "imacec-tabla-proyecciones-", "imacec-tabla-desestacionalizada-",
+                    ]
+                    if len(pngs) != 4 or any(
+                        sum(name.startswith(prefix) and name.endswith(".png") for name in pngs) != 1
+                        for prefix in prefixes
+                    ) or archive.testzip() is not None:
+                        errors.append("El ZIP del IMACEC debe contener cuatro imágenes PNG válidas.")
+            except (OSError, zipfile.BadZipFile) as exc:
+                errors.append(f"ZIP de gráficos IMACEC inválido: {exc}")
 
         # Public outputs should never contain source templates or old Quarto pages.
         forbidden_ext = {".qmd", ".rmd", ".r", ".m", ".py"}
