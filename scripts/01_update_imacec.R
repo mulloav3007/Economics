@@ -31,6 +31,10 @@ exports <- export_imacec_outputs(
   fig_dir = "assets/img/imacec"
 )
 
+seasonal_table <- export_imacec_seasonal_table(exports$projections, cycle)
+message("Tabla IMACEC original/SA: ", nrow(seasonal_table), " filas para ",
+        format(cycle$periodo_objetivo[1], "%Y-%m"))
+
 if (nrow(exports$projections)) {
   purrr::pwalk(
     exports$projections[, c("variable", "modelo", "Periodo", "forecast", "eee_value")],
