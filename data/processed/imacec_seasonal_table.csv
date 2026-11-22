@@ -1,0 +1,4 @@
+Periodo,target_key,variable,tipo,model_key,original_aa,desestacionalizado_mm,nota
+2026-10-01,total,IMACEC,Proyección,ar1,0.14259631792850186,0.2540985831238185,X-13 directo sobre índice proyectado; no equivale al ajuste indirecto BCCh.
+2026-10-01,minero,Minería implícita,Proyección,ar1,-13.411629509525042,-0.07360164090566279,Residuo aproximado total/no minero; m/m con factor estacional oficial t-12; mayor incertidumbre.
+2026-10-01,no_minero,IMACEC no minero,Proyección,ar1,2.111959551490523,0.20640822887807442,X-13 directo sobre índice proyectado; no equivale al ajuste indirecto BCCh.
