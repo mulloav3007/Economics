@@ -58,7 +58,7 @@ Los dos paneles responden al mismo calendario de publicación. Antes de la nueva
 
 {{ imacec.seasonal_table|safe }}
 
-La columna original utiliza las tasas interanuales del modelo vigente. La variación mensual desestacionalizada se estima mediante **X-13ARIMA-SEATS aplicado directamente** al índice original prolongado con el nowcast. No replica el ajuste indirecto del Banco Central. **Minería implícita** es un residuo aproximado del total y no minero, no una predicción sectorial independiente; puede amplificar los errores de ambos modelos. Los valores efectivos, cuando existen, provienen de las series oficiales del Banco Central.
+La columna original muestra las tasas interanuales del modelo vigente. Para el IMACEC total y no minero, la variación mensual desestacionalizada se aproxima mediante **X-13ARIMA-SEATS directo** sobre el índice proyectado; para minería se utiliza el **factor estacional oficial del mismo mes del año anterior**, que presentó menor error retrospectivo. Ninguno reproduce exactamente el ajuste indirecto del Banco Central. **Minería implícita** es un residuo aproximado de los dos modelos, no una predicción sectorial independiente, y puede amplificar sus errores. Los datos efectivos proceden de las series oficiales del Banco Central.
 
 {% if imacec.seasonal_download %}
 <a href="../assets/files/imacec-seasonal-table.csv" download>Descargar tabla original y desestacionalizada (CSV)</a>
