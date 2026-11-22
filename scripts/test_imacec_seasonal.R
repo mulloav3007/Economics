@@ -2,10 +2,11 @@
 source("R/imacec_run_all.R", encoding = "UTF-8")
 dates <- seq(as.Date("2012-01-01"), by = "month", length.out = 180L)
 t <- seq_along(dates)
+set.seed(611)
 nm_trend <- 93 + 0.12 * t
 m_trend <- 102 + 0.05 * t
-nm_raw <- nm_trend * (1 + 0.05 * sin(2 * pi * t / 12))
-m_raw <- m_trend * (1 + 0.11 * cos(2 * pi * t / 12))
+nm_raw <- nm_trend * (1 + 0.05 * sin(2 * pi * t / 12)) + stats::rnorm(length(t), 0, 0.6)
+m_raw <- m_trend * (1 + 0.11 * cos(2 * pi * t / 12)) + stats::rnorm(length(t), 0, 1.0)
 weight <- 0.12
 levels <- tibble::tibble(
   Periodo = dates,
