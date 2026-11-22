@@ -8,8 +8,8 @@ periods <- utils::tail(dates, 6L)
 if (length(periods) < 6L) stop("Muestra oficial insuficiente para contraste SA.")
 rows <- list()
 for (date in periods) {
-  previous <- date %m-% lubridate::months(1)
-  lag12 <- date %m-% lubridate::months(12)
+  previous <- date %m-% lubridate::period(months = 1)
+  lag12 <- date %m-% lubridate::period(months = 12)
   prior <- levels[levels$Periodo <= previous, , drop = FALSE]
   realized <- list()
   for (key in c("total", "no_minero", "minero")) {
