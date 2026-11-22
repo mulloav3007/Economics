@@ -7,9 +7,10 @@ dates <- levels$Periodo[is.finite(levels$total_original) & is.finite(levels$tota
 periods <- utils::tail(dates, 12L)
 if (length(periods) < 12L) stop("Muestra oficial insuficiente para contraste SA.")
 table <- readr::read_csv("data/processed/imacec_seasonal_table.csv", show_col_types = FALSE)
-required <- table[table$target_key %in% c("total", "no_minero"), ]
-if (nrow(required) != 2L || !all(is.finite(required$desestacionalizado_mm))) {
-  stop("No se produjeron variaciones desestacionalizadas válidas para total y no minero.")
+required <- table[table$target_key %in% c("total", "no_minero", "minero"), ]
+if (nrow(required) != 3L || !all(is.finite(required$original_aa)) ||
+    !all(is.finite(required$desestacionalizado_mm))) {
+  stop("La tabla de producción debe contener tasas válidas para las tres series.")
 }
 rows <- list()
 for (i in seq_along(periods)) {
@@ -80,4 +81,4 @@ if (!all(c("total", "no_minero") %in% summary$serie) ||
     any(!is.finite(summary$MAE))) {
   stop("Validación insuficiente del ajuste estacional.")
 }
-message("Contraste BCCh completado: evaluación ex post de X-13 directo, no OOS del nowcast.")
+message("Contraste BCCh completado: tres métodos estacionales; evaluación ex post, no OOS del nowcast.")
