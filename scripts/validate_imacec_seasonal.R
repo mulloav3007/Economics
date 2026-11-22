@@ -6,8 +6,14 @@ dates <- levels$Periodo[is.finite(levels$total_original) & is.finite(levels$tota
                          is.finite(levels$no_minero_original) & is.finite(levels$no_minero_sa)]
 periods <- utils::tail(dates, 6L)
 if (length(periods) < 6L) stop("Muestra oficial insuficiente para contraste SA.")
+table <- readr::read_csv("data/processed/imacec_seasonal_table.csv", show_col_types = FALSE)
+required <- table[table$target_key %in% c("total", "no_minero"), ]
+if (nrow(required) != 2L || !all(is.finite(required$desestacionalizado_mm))) {
+  stop("No se produjeron variaciones desestacionalizadas válidas para total y no minero.")
+}
 rows <- list()
-for (date in periods) {
+for (i in seq_along(periods)) {
+  date <- as.Date(periods[i])
   previous <- date %m-% lubridate::period(months = 1)
   lag12 <- date %m-% lubridate::period(months = 12)
   prior <- levels[levels$Periodo <= previous, , drop = FALSE]
