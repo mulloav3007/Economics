@@ -177,6 +177,52 @@ def build_contexts() -> dict[str, Any]:
             "oos_table": '<div class="callout">Las métricas se publicarán después de la primera actualización reproducible.</div>',
         }
 
+    # Tabla adicional de tasas originales a/a y desestacionalizadas m/m.
+    # No participa en la generación de los gráficos existentes.
+    seasonal_file = ROOT / "data/processed/imacec_seasonal_table.csv"
+    imacec["seasonal_table"] = (
+        '<div class="callout">La tabla desestacionalizada estará disponible '
+        'tras la primera ejecución validada del nuevo módulo.</div>'
+    )
+    imacec["seasonal_download"] = False
+    if ready and seasonal_file.exists():
+        seasonal = pd.read_csv(seasonal_file)
+        expected_cols = {
+            "Periodo", "target_key", "variable", "tipo", "original_aa",
+            "desestacionalizado_mm", "nota"
+        }
+        if not expected_cols.issubset(seasonal.columns):
+            raise ValueError("El CSV de desestacionalización no cumple el esquema requerido")
+        seasonal = seasonal[
+            pd.to_datetime(seasonal["Periodo"]).eq(pd.to_datetime(row["periodo_objetivo"]))
+        ].copy()
+        keys = ["total", "minero", "no_minero"]
+        if not seasonal.empty and set(seasonal["target_key"]) == set(keys):
+            seasonal["orden"] = pd.Categorical(
+                seasonal["target_key"], categories=keys, ordered=True
+            )
+            seasonal = seasonal.sort_values("orden")
+            seasonal["fuente"] = seasonal["tipo"].map({
+                "Proyección": "Estimación",
+                "Efectivo BCCh": "Efectivo BCCh",
+                "No disponible": "Sin datos",
+            }).fillna("Sin datos")
+            imacec["seasonal_table"] = table_html(
+                seasonal,
+                ["variable", "original_aa", "desestacionalizado_mm", "fuente"],
+                {
+                    "variable": "IMACEC",
+                    "original_aa": "Original (a/a)",
+                    "desestacionalizado_mm": "Desestacionalizado (m/m)",
+                    "fuente": "Estado",
+                },
+                {
+                    "original_aa": lambda x: "—" if pd.isna(x) else f"{fmt_num(x, 1)}%",
+                    "desestacionalizado_mm": lambda x: "—" if pd.isna(x) else f"{fmt_num(x, 1)}%",
+                },
+            )
+            imacec["seasonal_download"] = True
+
     # IPoM / IRIS
     ipom_diff = pd.read_csv(ROOT / "data/processed/ipom/ipom_scenario_differences_summary.csv")
     filt = ipom_diff[(ipom_diff["scenario_id"].eq("tpm45_2026")) & (ipom_diff["variable"].eq("D4L_CPI"))]
