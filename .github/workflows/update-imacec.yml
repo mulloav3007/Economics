@@ -42,7 +42,7 @@ permissions:
 
 concurrency:
   # Grupo versionado para no quedar bloqueado por una ejecución antigua/atascada.
-  group: imacec-update-v2
+  group: imacec-update-v2-${{ github.ref }}
   cancel-in-progress: true
 
 env:
