@@ -60,11 +60,11 @@
       <div class="kpi-grid imacec-cycle-kpis">
 <div class="kpi"><div class="kpi-label">Último dato efectivo</div><div class="kpi-value">septiembre de 2026</div><div class="kpi-note">Total y no minero publicados por el BCCh</div></div>
 <div class="kpi"><div class="kpi-label">Período en seguimiento</div><div class="kpi-value">octubre de 2026</div><div class="kpi-note">La EEE de M corresponde al IMACEC de M−1</div></div>
-<div class="kpi"><div class="kpi-label">Señal principal</div><div class="kpi-value">AR(1) de referencia</div><div class="kpi-note">Cambia solo cuando el corte informativo está completo</div></div>
-<div class="kpi"><div class="kpi-label">Última actualización</div><div class="kpi-value">22 de noviembre de 2026</div><div class="kpi-note">Última ejecución publicada del ciclo</div></div>
+<div class="kpi"><div class="kpi-label">Señal principal</div><div class="kpi-value">Corte experimental</div><div class="kpi-note">Cambia solo cuando el corte informativo está completo</div></div>
+<div class="kpi"><div class="kpi-label">Última actualización</div><div class="kpi-value">23 de noviembre de 2026</div><div class="kpi-note">Última ejecución publicada del ciclo</div></div>
 </div>
-<div class="callout imacec-status" data-cycle-stage="eee_proxy">
-<strong>Estado del ciclo:</strong> EEE publicada · proxies AR(1) y media móvil hasta el corte experimental.
+<div class="callout imacec-status" data-cycle-stage="experimental">
+<strong>Estado del ciclo:</strong> Corte experimental completo · señal principal del corte experimental.
 </div>
 <div class="download-grid imacec-downloads imacec-downloads-top">
 <a class="download" download="imacec-graficos-octubre-2026.zip" href="../assets/files/imacec-graficos-octubre-2026.zip"><div><strong>Descargar gráficos</strong><span>ZIP · 4 PNG: total, no minero, tabla histórica y tabla desestacionalizada · octubre de 2026</span></div><span>↓</span></a>
@@ -97,7 +97,7 @@
 <p class="chart-help">La serie no minera se estima de forma independiente, manteniendo el conjunto fijo de predictores del corte experimental o del corte INE.</p>
 </div>
 <h2 id="tabla-de-proyecciones-original-y-desestacionalizado">Tabla de proyecciones · original y desestacionalizado</h2>
-<div class="table-wrap"><table><thead><tr><th>IMACEC</th><th>Original (a/a)</th><th>Desestacionalizado (m/m)</th><th>Estado</th></tr></thead><tbody><tr><td>IMACEC</td><td>0,1%</td><td>0,3%</td><td>Estimación</td></tr><tr><td>Minería implícita</td><td>-13,4%</td><td>-0,1%</td><td>Estimación</td></tr><tr><td>IMACEC no minero</td><td>2,1%</td><td>0,2%</td><td>Estimación</td></tr></tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th>IMACEC</th><th>Original (a/a)</th><th>Desestacionalizado (m/m)</th><th>Estado</th></tr></thead><tbody><tr><td>IMACEC</td><td>-0,9%</td><td>0,1%</td><td>Estimación</td></tr><tr><td>Minería implícita</td><td>-6,4%</td><td>8,0%</td><td>Estimación</td></tr><tr><td>IMACEC no minero</td><td>-0,1%</td><td>-0,5%</td><td>Estimación</td></tr></tbody></table></div>
 <p>La columna original muestra las tasas interanuales del modelo vigente. Para el IMACEC total y no minero, la variación mensual desestacionalizada se aproxima mediante <strong>X-13ARIMA-SEATS directo</strong> sobre el índice proyectado; para minería se utiliza el <strong>factor estacional oficial del mismo mes del año anterior</strong>, que presentó menor error retrospectivo. Ninguno reproduce exactamente el ajuste indirecto del Banco Central. <strong>Minería implícita</strong> es un residuo aproximado de los dos modelos, no una predicción sectorial independiente, y puede amplificar sus errores. Los datos efectivos proceden de las series oficiales del Banco Central.</p>
 <p><a download="" href="../assets/files/imacec-seasonal-table.csv">Descargar tabla original y desestacionalizada (CSV)</a></p>
 <h2 id="como-se-actualiza">Cómo se actualiza</h2>
@@ -157,7 +157,7 @@
 <div class="callout">
 <strong>Fuentes de alta frecuencia:</strong> IPMin, IPMan, IPEGA, comercio al por menor e IVS se leen directamente desde los Excel oficiales del INE. La BDE se conserva únicamente como respaldo de continuidad si una descarga oficial falla.
 </div>
-<p>Última ejecución publicada: <strong>22 de noviembre de 2026</strong>.</p>
+<p>Última ejecución publicada: <strong>23 de noviembre de 2026</strong>.</p>
 <h2 id="archivos-principales">Archivos principales</h2>
 <div class="download-grid">
 <a class="download" href="../assets/files/imacec-nowcast-summary.csv"><div><strong>Estado y proyecciones vigentes</strong><span>CSV · total, no minero, corte experimental, corte INE y EEE</span></div><span>↓</span></a>
