@@ -5,7 +5,7 @@ on:
   schedule:
     # De lunes a viernes, cada 15 minutos desde las 08:00 hasta las 12:00 inclusive.
     # La zona horaria IANA ajusta automáticamente horario de verano/invierno.
-    - cron: '0,15,30,45 8-11 * * 1-5'
+    - cron: '*/15 8-11 * * 1-5'
       timezone: America/Santiago
     - cron: '0 12 * * 1-5'
       timezone: America/Santiago
