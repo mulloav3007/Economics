@@ -128,11 +128,19 @@ chile_x13_regressors <- function(periods, method = c("chile", "chile_td"),
   if (!length(periods) || anyNA(periods) || anyDuplicated(periods)) {
     stop("Los períodos requeridos para X-13 no son válidos.")
   }
+  expected <- seq(periods[1], by = "month", length.out = length(periods))
+  if (!identical(periods, expected)) {
+    stop("Los períodos del X-13 deben ser mensuales, continuos y ordenados.")
+  }
+  # X-13 extrapola su regARIMA hasta 36 meses: los xreg deben cubrir también
+  # ese horizonte. El calendario futuro es determinístico, no una proyección
+  # económica; se conoce en el archivo nacional hasta diciembre de 2030.
+  extended <- seq(periods[1], by = "month", length.out = length(periods) + 36L)
   cal <- read_chile_x13_calendar(path)
-  matched <- match(periods, cal$Periodo)
+  matched <- match(extended, cal$Periodo)
   if (anyNA(matched)) {
     stop("Calendario chileno sin meses requeridos: ",
-         paste(format(periods[is.na(matched)], "%Y-%m"), collapse = ", "))
+         paste(format(extended[is.na(matched)], "%Y-%m"), collapse = ", "))
   }
   selection <- if (method == "chile_td") "td_chile" else c("td_chile", "pascua_chile")
   mat <- as.matrix(cal[matched, selection, drop = FALSE])
