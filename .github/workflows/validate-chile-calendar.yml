@@ -1,0 +1,53 @@
+name: Validate Chilean X-13 calendar (no publication)
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'R/imacec_seasonal.R'
+      - 'scripts/test_imacec_seasonal.R'
+      - 'scripts/validate_imacec_seasonal.R'
+      - '.github/workflows/validate-chile-calendar.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  calendar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v6
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::rjson
+            any::dplyr
+            any::tidyr
+            any::lubridate
+            any::readxl
+            any::ggplot2
+            any::knitr
+            any::tibble
+            any::readr
+            any::purrr
+            any::stringr
+            any::scales
+            any::gt
+            any::plotly
+            any::httr
+            any::jsonlite
+            any::seasonal
+      - name: Test Chilean holiday calendar and X-13 regressors
+        run: Rscript scripts/test_imacec_seasonal.R
+      - name: Benchmark 24 monthly rates vs official BCCh seasonal adjustment
+        env:
+          BCCH_USER: ${{ secrets.BCCH_USER }}
+          BCCH_PASS: ${{ secrets.BCCH_PASS }}
+        run: |
+          test -n "$BCCH_USER" && test -n "$BCCH_PASS" || { echo "::error::Faltan secretos BCCh"; exit 1; }
+          Rscript scripts/validate_imacec_seasonal.R

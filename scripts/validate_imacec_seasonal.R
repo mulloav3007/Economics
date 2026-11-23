@@ -4,8 +4,8 @@ source("R/imacec_run_all.R", encoding = "UTF-8")
 levels <- fetch_imacec_seasonal_levels()
 dates <- levels$Periodo[is.finite(levels$total_original) & is.finite(levels$total_sa) &
                          is.finite(levels$no_minero_original) & is.finite(levels$no_minero_sa)]
-periods <- utils::tail(dates, 12L)
-if (length(periods) < 12L) stop("Muestra oficial insuficiente para contraste SA.")
+periods <- utils::tail(dates, 24L)
+if (length(periods) < 24L) stop("Muestra oficial insuficiente para contraste SA.")
 table <- readr::read_csv("data/processed/imacec_seasonal_table.csv", show_col_types = FALSE)
 required <- table[table$target_key %in% c("total", "no_minero", "minero"), ]
 if (nrow(required) != 3L || !all(is.finite(required$original_aa)) ||
@@ -51,6 +51,17 @@ for (i in seq_along(periods)) {
     }
     candidates <- c(x13_directo = estimated, factor_12m = lag12_est,
                     factor_3anios = factor3_est)
+    if (key %in% c("total", "no_minero")) {
+      candidates <- c(
+        candidates,
+        x13_chile_td = seasonal_one_step(
+          prior, original, sa, date, growth, calendar_method = "chile_td"
+        )$growth,
+        x13_chile_completo = seasonal_one_step(
+          prior, original, sa, date, growth, calendar_method = "chile"
+        )$growth
+      )
+    }
     for (method in names(candidates)) {
       rows[[length(rows) + 1L]] <- tibble::tibble(
         Periodo = date, serie = key, metodo = method,
@@ -81,4 +92,12 @@ if (!all(c("total", "no_minero") %in% summary$serie) ||
     any(!is.finite(summary$MAE))) {
   stop("Validación insuficiente del ajuste estacional.")
 }
-message("Contraste BCCh completado: tres métodos estacionales; evaluación ex post, no OOS del nowcast.")
+for (key in c("total", "no_minero")) {
+  candidate <- summary |>
+    dplyr::filter(serie == key, metodo %in% c("x13_directo", "x13_chile_td", "x13_chile_completo")) |>
+    dplyr::arrange(MAE)
+  print(candidate, n = Inf)
+  message("Mejor método ex post para ", key, ": ", candidate$metodo[1],
+          " · MAE=", round(candidate$MAE[1], 3), " pp")
+}
+message("Contraste BCCh completado: 24 meses, tasas a/a efectivas (NO backtest del nowcast ni vintages oficiales en tiempo real).")

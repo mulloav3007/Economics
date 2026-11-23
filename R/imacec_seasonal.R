@@ -43,9 +43,118 @@ fetch_imacec_seasonal_levels <- function(start = "2012-01-01") {
     dplyr::arrange(Periodo)
 }
 
+# Regresores de calendario nacional para X-13, sin introducir información
+# económica del futuro. Se extraen del calendario mensual ya versionado
+# (lun-vie menos feriados lun_f-vie_f), no del calendario estadounidense.
+chile_easter_date <- function(year) {
+  year <- as.integer(year)
+  a <- year %% 19L
+  b <- year %/% 100L
+  c <- year %% 100L
+  d <- b %/% 4L
+  e <- b %% 4L
+  f <- (b + 8L) %/% 25L
+  g <- (b - f + 1L) %/% 3L
+  h <- (19L * a + b - d - g + 15L) %% 30L
+  i <- c %/% 4L
+  k <- c %% 4L
+  l <- (32L + 2L * e + 2L * i - h - k) %% 7L
+  m <- (a + 11L * h + 22L * l) %/% 451L
+  month <- (h + l - 7L * m + 114L) %/% 31L
+  day <- (h + l - 7L * m + 114L) %% 31L + 1L
+  as.Date(sprintf("%04d-%02d-%02d", year, month, day))
+}
+
+read_chile_x13_calendar <- function(path = cal_path) {
+  if (!file.exists(path)) stop("No se encuentra el calendario chileno: ", path)
+  raw <- readxl::read_excel(path)
+  if (!"mes" %in% names(raw)) names(raw)[1] <- "mes"
+  needed <- c("lun", "mar", "mie", "jue", "vie",
+              "lun_f", "mar_f", "mie_f", "jue_f", "vie_f")
+  if (!all(needed %in% names(raw))) {
+    stop("Calendario de Chile sin columnas requeridas: ",
+         paste(setdiff(needed, names(raw)), collapse = ", "))
+  }
+  if (inherits(raw$mes, c("Date", "POSIXct", "POSIXt"))) {
+    dates <- as.Date(raw$mes)
+  } else {
+    dates <- suppressWarnings(lubridate::ymd(raw$mes))
+    if (all(is.na(dates))) dates <- suppressWarnings(lubridate::dmy(raw$mes))
+    if (all(is.na(dates)) && is.numeric(raw$mes)) {
+      dates <- as.Date(raw$mes, origin = "1899-12-30")
+    }
+  }
+  if (anyNA(dates)) stop("El calendario chileno tiene meses inválidos.")
+  periods <- as.Date(lubridate::floor_date(dates, "month"))
+  values <- lapply(raw[needed], as.numeric)
+  if (any(!is.finite(unlist(values)))) {
+    stop("El calendario chileno tiene conteos de días/feriados inválidos.")
+  }
+  workdays <- rowSums(as.data.frame(values[1:5])) -
+    rowSums(as.data.frame(values[6:10]))
+  if (any(workdays < 15 | workdays > 24) || anyDuplicated(periods)) {
+    stop("El calendario chileno contiene meses duplicados o días laborales imposibles.")
+  }
+  # Proporción de ocho días anteriores al Domingo de Resurrección que cae
+  # dentro de cada mes: capta su desplazamiento entre marzo y abril.
+  years <- unique(lubridate::year(periods))
+  easter <- vapply(years, function(y) as.character(chile_easter_date(y)), character(1))
+  easter <- as.Date(easter)
+  easter_window <- lapply(easter, function(d) seq(d - 8L, d - 1L, by = "day"))
+  march_april <- vapply(periods, function(p) {
+    year_pos <- match(lubridate::year(p), years)
+    dates8 <- easter_window[[year_pos]]
+    mean(lubridate::floor_date(dates8, "month") == p)
+  }, numeric(1))
+  cal <- tibble::tibble(Periodo = periods, dias_laborales = workdays,
+                        semana_santa = march_april) |>
+    dplyr::arrange(Periodo) |>
+    dplyr::mutate(
+      mes = lubridate::month(Periodo)
+    ) |>
+    dplyr::group_by(mes) |>
+    dplyr::mutate(
+      td_chile = dias_laborales - mean(dias_laborales),
+      pascua_chile = semana_santa - mean(semana_santa)
+    ) |>
+    dplyr::ungroup()
+  cal
+}
+
+chile_x13_regressors <- function(periods, method = c("chile", "chile_td"),
+                                path = cal_path) {
+  method <- match.arg(method)
+  periods <- as.Date(periods)
+  if (!length(periods) || anyNA(periods) || anyDuplicated(periods)) {
+    stop("Los períodos requeridos para X-13 no son válidos.")
+  }
+  expected <- seq(periods[1], by = "month", length.out = length(periods))
+  if (!identical(periods, expected)) {
+    stop("Los períodos del X-13 deben ser mensuales, continuos y ordenados.")
+  }
+  # X-13 extrapola su regARIMA hasta 36 meses: los xreg deben cubrir también
+  # ese horizonte. El calendario futuro es determinístico, no una proyección
+  # económica; se conoce en el archivo nacional hasta diciembre de 2030.
+  extended <- seq(periods[1], by = "month", length.out = length(periods) + 36L)
+  cal <- read_chile_x13_calendar(path)
+  matched <- match(extended, cal$Periodo)
+  if (anyNA(matched)) {
+    stop("Calendario chileno sin meses requeridos: ",
+         paste(format(extended[is.na(matched)], "%Y-%m"), collapse = ", "))
+  }
+  selection <- if (method == "chile_td") "td_chile" else c("td_chile", "pascua_chile")
+  mat <- as.matrix(cal[matched, selection, drop = FALSE])
+  xreg <- stats::ts(mat,
+     start = c(lubridate::year(periods[1]), lubridate::month(periods[1])),
+     frequency = 12)
+  xreg
+}
+
 # Se usan SIEMPRE los dos últimos valores ajustados en una misma corrida X-13.
 # La tasa resultante se aplica al último nivel SA oficial conocido.
-seasonal_one_step <- function(levels, raw_name, sa_name, period, yoy_forecast) {
+seasonal_one_step <- function(levels, raw_name, sa_name, period, yoy_forecast,
+                              calendar_method = c("none", "chile_td", "chile")) {
+  calendar_method <- match.arg(calendar_method)
   period <- as.Date(period)
   previous <- period %m-% lubridate::period(months = 1)
   lag12 <- period %m-% lubridate::period(months = 12)
@@ -72,7 +181,20 @@ seasonal_one_step <- function(levels, raw_name, sa_name, period, yoy_forecast) {
   )
   # Evitar el test automático de feriados estadounidenses; la aproximación
   # directa no reproduce la parametrización nacional del Banco Central.
-  fit <- seasonal::seas(x, regression.aictest = NULL)
+  fit <- if (calendar_method == "none") {
+    seasonal::seas(x, regression.aictest = NULL)
+  } else {
+    periods <- c(hist$Periodo, period)
+    xreg <- chile_x13_regressors(periods,
+      method = if (calendar_method == "chile_td") "chile_td" else "chile")
+    # usertype=td/holiday elimina los efectos calendario de la serie final.
+    # lpyear corrige febrero bisiesto; no se utilizan feriados de EE.UU.
+    types <- if (calendar_method == "chile_td") "td" else c("td", "holiday")
+    seasonal::seas(
+      x, xreg = xreg, regression.usertype = types,
+      regression.variables = "lpyear", regression.aictest = NULL
+    )
+  }
   adjusted <- as.numeric(seasonal::final(fit))
   n <- length(adjusted)
   if (n != length(x) || any(!is.finite(adjusted[(n-1L):n])) ||
@@ -169,8 +291,10 @@ build_imacec_seasonal_table <- function(levels, projections, cycle) {
     sa_name <- paste0(key, "_sa")
     note <- if (key == "minero") {
       "Residuo aproximado total/no minero; m/m con factor estacional oficial t-12; mayor incertidumbre."
+    } else if (key == "total") {
+      "X-13 directo con días laborales chilenos y bisiesto; no equivale al ajuste indirecto BCCh."
     } else {
-      "X-13 directo sobre índice proyectado; no equivale al ajuste indirecto BCCh."
+      "X-13 directo con días laborales chilenos, bisiesto y Semana Santa; no equivale al ajuste indirecto BCCh."
     }
     if (observed) {
       lag12 <- target %m-% lubridate::period(months = 12)
@@ -192,7 +316,10 @@ build_imacec_seasonal_table <- function(levels, projections, cycle) {
         if (key == "minero") {
           seasonal_mining_one_step(levels, target, aa)
         } else {
-          seasonal_one_step(levels, raw_name, sa_name, target, aa)
+          seasonal_one_step(
+            levels, raw_name, sa_name, target, aa,
+            calendar_method = if (key == "total") "chile_td" else "chile"
+          )
         },
         error = function(e) {
           warning("Ajuste estacional ", key, ": ", conditionMessage(e), call. = FALSE)

@@ -36,6 +36,20 @@ stopifnot(all(table$tipo == "Proyección"),
 stopifnot(abs(table$original_aa[table$target_key == "minero"] -
               yoy_at(levels$minero_original)) < 3)
 stopifnot(all(abs(table$desestacionalizado_mm) < 15))
+# La tabla operativa debe utilizar los métodos ganadores de la validación:
+# total TD + bisiesto y no minero TD + bisiesto + Semana Santa.
+for (key in c("total", "no_minero")) {
+  method <- if (key == "total") "chile_td" else "chile"
+  result <- seasonal_one_step(
+    levels[levels$Periodo <= last_actual, ],
+    paste0(key, "_original"), paste0(key, "_sa"), target,
+    yoy_at(levels[[paste0(key, "_original")]]),
+    calendar_method = method
+  )
+  published <- table$desestacionalizado_mm[table$target_key == key]
+  stopifnot(length(published) == 1L, is.finite(published),
+            abs(published - result$growth) < 1e-7)
+}
 lag12 <- target %m-% lubridate::period(months = 12)
 sa_lag12 <- seasonal_level_at(levels, "minero_sa", lag12)
 sa_previous <- seasonal_level_at(levels, "minero_sa", last_actual)
@@ -60,4 +74,34 @@ gap_proj <- projected
 gap_proj$Periodo <- gap$periodo_objetivo
 incomplete <- build_imacec_seasonal_table(levels[levels$Periodo <= last_actual, ], gap_proj, gap)
 stopifnot(all(is.na(incomplete$desestacionalizado_mm)))
+# Verificación del calendario nacional y de la regresión exógena X-13.
+stopifnot(
+  identical(chile_easter_date(2026), as.Date("2026-04-05")),
+  identical(chile_easter_date(2027), as.Date("2027-03-28"))
+)
+cal <- read_chile_x13_calendar()
+get_wd <- function(year, month) {
+  hit <- cal$dias_laborales[cal$Periodo == as.Date(sprintf("%04d-%02d-01", year, month))]
+  stopifnot(length(hit) == 1L)
+  hit
+}
+# BCCh, blog 18/03/2026: octubre 2026 un día laboral menos;
+# noviembre 2026 uno adicional, en relación con 2025.
+stopifnot(get_wd(2026, 10) - get_wd(2025, 10) == -1L)
+stopifnot(get_wd(2026, 11) - get_wd(2025, 11) == 1L)
+xreg <- chile_x13_regressors(levels$Periodo, "chile")
+stopifnot(
+  ncol(xreg) == 2L, nrow(xreg) == nrow(levels) + 36L,
+  all(is.finite(as.numeric(xreg))),
+  all(colnames(xreg) == c("td_chile", "pascua_chile"))
+)
+levels_prior <- levels[levels$Periodo <= last_actual, ]
+for (method in c("chile_td", "chile")) {
+  pred <- seasonal_one_step(levels_prior, "total_original", "total_sa",
+                             target, yoy_at(levels$total_original),
+                             calendar_method = method)
+  stopifnot(is.finite(pred$growth), abs(pred$growth) < 15)
+}
+message("OK: calendario nacional (días hábiles, Pascua y bisiesto) y regresores X-13.")
+
 message("OK: X-13 sobre nivel proyectado, minería implícita y control de meses faltantes.")
