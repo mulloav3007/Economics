@@ -589,30 +589,31 @@ def imacec_assets() -> None:
             "Proyección",
         ])
 
-    fig, ax = plt.subplots(figsize=(10.8, 5.2))
+    # El lienzo y la tabla usan coordenadas fijas de figura para evitar
+    # un exceso de márgenes blancos y conservar proporciones al exportar.
+    fig = plt.figure(figsize=(11.6, 4.9))
+    ax = fig.add_axes([0, 0, 1, 1])
     ax.axis("off")
-    fig.suptitle(
+    fig.text(
+        0.055, 0.935,
         f"IMACEC — histórico reciente y proyección: {target_label}",
-        x=0.06, y=0.96, ha="left",
-        fontsize=18, fontweight="bold", color=COLORS["ink"],
+        ha="left", va="top", fontsize=18, fontweight="bold", color=COLORS["ink"],
     )
-    ax.text(
-        0.06, 0.88,
+    fig.text(
+        0.055, 0.835,
         "Variación anual, %. La última fila corresponde a la proyección vigente.",
-        transform=fig.transFigure,
-        ha="left", va="top", fontsize=10.5, color=COLORS["muted"],
+        ha="left", va="top", fontsize=11, color=COLORS["muted"],
     )
     table = ax.table(
         cellText=table_rows,
         colLabels=["Periodo", "IMACEC", "IMACEC no minero", "Tipo"],
         cellLoc="right",
         colLoc="center",
-        loc="center",
-        colWidths=[0.22, 0.18, 0.27, 0.20],
+        bbox=[0.055, 0.20, 0.89, 0.57],
+        colWidths=[0.23, 0.19, 0.34, 0.24],
     )
     table.auto_set_font_size(False)
-    table.set_fontsize(11.2)
-    table.scale(1, 1.65)
+    table.set_fontsize(12)
     for (r, c), cell in table.get_celld().items():
         cell.set_edgecolor(COLORS["grid"])
         cell.set_linewidth(0.8)
@@ -621,20 +622,18 @@ def imacec_assets() -> None:
             cell.set_text_props(weight="bold", color=COLORS["ink"], ha="center")
         else:
             cell.set_facecolor("white")
-            cell.set_text_props(color=COLORS["ink"])
+            cell.set_text_props(color=COLORS["ink"], ha="center" if c in (0, 3) else "right")
     if table_rows:
-        last_row = len(table_rows)
         for c in range(4):
-            table[(last_row, c)].set_facecolor("#F6EDEA")
-            table[(last_row, c)].set_text_props(weight="bold", color=COLORS["ink"])
+            table[(len(table_rows), c)].set_facecolor("#F6EDEA")
+            table[(len(table_rows), c)].set_text_props(weight="bold", color=COLORS["ink"])
     fig.text(
-        0.06, 0.045,
+        0.055, 0.065,
         "Fuente: Banco Central de Chile, INE y elaboración propia.",
-        ha="left", va="bottom", fontsize=8.5, color=COLORS["muted"],
+        ha="left", va="bottom", fontsize=9, color=COLORS["muted"],
     )
-    fig.tight_layout(rect=[0.04, 0.08, 0.98, 0.86])
-    fig.savefig(OUT / "imacec_projection_table.png", dpi=180, bbox_inches="tight")
-    fig.savefig(OUT / "imacec_projection_table.svg", bbox_inches="tight")
+    fig.savefig(OUT / "imacec_projection_table.png", dpi=180, bbox_inches="tight", pad_inches=0.12)
+    fig.savefig(OUT / "imacec_projection_table.svg", bbox_inches="tight", pad_inches=0.12)
     plt.close(fig)
 
 
@@ -672,28 +671,28 @@ def imacec_assets() -> None:
         f"{target_label} · Efectivo BCCh" if observed
         else f"{target_label} · Proyección ({cut_labels.get(method, method)})"
     )
-    fig, ax = plt.subplots(figsize=(10.8, 4.1))
+    fig = plt.figure(figsize=(11.6, 3.7))
+    ax = fig.add_axes([0, 0, 1, 1])
     ax.axis("off")
-    fig.suptitle(
+    fig.text(
+        0.055, 0.935,
         "IMACEC — original y desestacionalizado",
-        x=0.06, y=0.95, ha="left", fontsize=18,
-        fontweight="bold", color=COLORS["ink"],
+        ha="left", va="top", fontsize=18, fontweight="bold", color=COLORS["ink"],
     )
     fig.text(
-        0.06, 0.865, subtitle,
-        ha="left", va="top", fontsize=11, color=COLORS["muted"],
+        0.055, 0.825, subtitle,
+        ha="left", va="top", fontsize=11.5, color=COLORS["muted"],
     )
     table = ax.table(
         cellText=rows,
         colLabels=["Indicador", "Original (a/a)", "Desestacionalizado (m/m)"],
         cellLoc="center",
         colLoc="center",
-        loc="center",
-        colWidths=[0.34, 0.25, 0.38],
+        bbox=[0.055, 0.24, 0.89, 0.47],
+        colWidths=[0.33, 0.24, 0.43],
     )
     table.auto_set_font_size(False)
-    table.set_fontsize(11.8)
-    table.scale(1, 2.05)
+    table.set_fontsize(13)
     for (r, c), cell in table.get_celld().items():
         cell.set_edgecolor(COLORS["grid"])
         cell.set_linewidth(0.8)
@@ -703,19 +702,12 @@ def imacec_assets() -> None:
             weight="bold" if r == 0 or c == 0 else "normal",
             ha="left" if c == 0 else "center",
         )
-    if not observed:
-        fig.text(
-            0.06, 0.115,
-            "Nota: m/m estimado con X-13 directo; no reproduce el ajuste indirecto del BCCh.",
-            ha="left", va="bottom", fontsize=9.4, color=COLORS["muted"],
-        )
     fig.text(
-        0.06, 0.055,
+        0.055, 0.075,
         "Fuente: Banco Central de Chile y elaboración propia.",
         ha="left", va="bottom", fontsize=9, color=COLORS["muted"],
     )
-    fig.tight_layout(rect=[0.04, 0.16, 0.98, 0.78])
-    fig.savefig(OUT / "imacec_seasonal_summary.png", dpi=180, bbox_inches="tight")
+    fig.savefig(OUT / "imacec_seasonal_summary.png", dpi=180, bbox_inches="tight", pad_inches=0.12)
     plt.close(fig)
 
 
