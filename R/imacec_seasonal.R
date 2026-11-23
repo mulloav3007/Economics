@@ -291,8 +291,10 @@ build_imacec_seasonal_table <- function(levels, projections, cycle) {
     sa_name <- paste0(key, "_sa")
     note <- if (key == "minero") {
       "Residuo aproximado total/no minero; m/m con factor estacional oficial t-12; mayor incertidumbre."
+    } else if (key == "total") {
+      "X-13 directo con días laborales chilenos y bisiesto; no equivale al ajuste indirecto BCCh."
     } else {
-      "X-13 directo sobre índice proyectado; no equivale al ajuste indirecto BCCh."
+      "X-13 directo con días laborales chilenos, bisiesto y Semana Santa; no equivale al ajuste indirecto BCCh."
     }
     if (observed) {
       lag12 <- target %m-% lubridate::period(months = 12)
@@ -314,7 +316,10 @@ build_imacec_seasonal_table <- function(levels, projections, cycle) {
         if (key == "minero") {
           seasonal_mining_one_step(levels, target, aa)
         } else {
-          seasonal_one_step(levels, raw_name, sa_name, target, aa)
+          seasonal_one_step(
+            levels, raw_name, sa_name, target, aa,
+            calendar_method = if (key == "total") "chile_td" else "chile"
+          )
         },
         error = function(e) {
           warning("Ajuste estacional ", key, ": ", conditionMessage(e), call. = FALSE)
