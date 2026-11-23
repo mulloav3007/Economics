@@ -1,4 +1,4 @@
 Periodo,target_key,variable,tipo,model_key,original_aa,desestacionalizado_mm,nota
-2026-10-01,total,IMACEC,Proyección,m4,-0.9018633009792181,0.08774189724205517,X-13 directo sobre índice proyectado; no equivale al ajuste indirecto BCCh.
+2026-10-01,total,IMACEC,Proyección,m4,-0.9018633009792181,0.10868355565043508,X-13 directo con días laborales chilenos y bisiesto; no equivale al ajuste indirecto BCCh.
 2026-10-01,minero,Minería implícita,Proyección,m4,-6.398193839451768,8.020180037440117,Residuo aproximado total/no minero; m/m con factor estacional oficial t-12; mayor incertidumbre.
-2026-10-01,no_minero,IMACEC no minero,Proyección,m4,-0.1032731476376782,-0.49745498081994466,X-13 directo sobre índice proyectado; no equivale al ajuste indirecto BCCh.
+2026-10-01,no_minero,IMACEC no minero,Proyección,m4,-0.1032731476376782,-0.18323479630387718,"X-13 directo con días laborales chilenos, bisiesto y Semana Santa; no equivale al ajuste indirecto BCCh."
