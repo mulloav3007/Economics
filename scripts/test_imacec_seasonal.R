@@ -77,7 +77,7 @@ stopifnot(get_wd(2026, 10) - get_wd(2025, 10) == -1L)
 stopifnot(get_wd(2026, 11) - get_wd(2025, 11) == 1L)
 xreg <- chile_x13_regressors(levels$Periodo, "chile")
 stopifnot(
-  ncol(xreg) == 2L, nrow(xreg) == nrow(levels),
+  ncol(xreg) == 2L, nrow(xreg) == nrow(levels) + 36L,
   all(is.finite(as.numeric(xreg))),
   all(colnames(xreg) == c("td_chile", "pascua_chile"))
 )
