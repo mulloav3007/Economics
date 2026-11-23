@@ -36,6 +36,20 @@ stopifnot(all(table$tipo == "Proyección"),
 stopifnot(abs(table$original_aa[table$target_key == "minero"] -
               yoy_at(levels$minero_original)) < 3)
 stopifnot(all(abs(table$desestacionalizado_mm) < 15))
+# La tabla operativa debe utilizar los métodos ganadores de la validación:
+# total TD + bisiesto y no minero TD + bisiesto + Semana Santa.
+for (key in c("total", "no_minero")) {
+  method <- if (key == "total") "chile_td" else "chile"
+  result <- seasonal_one_step(
+    levels[levels$Periodo <= last_actual, ],
+    paste0(key, "_original"), paste0(key, "_sa"), target,
+    yoy_at(levels[[paste0(key, "_original")]]),
+    calendar_method = method
+  )
+  published <- table$desestacionalizado_mm[table$target_key == key]
+  stopifnot(length(published) == 1L, is.finite(published),
+            abs(published - result$growth) < 1e-7)
+}
 lag12 <- target %m-% lubridate::period(months = 12)
 sa_lag12 <- seasonal_level_at(levels, "minero_sa", lag12)
 sa_previous <- seasonal_level_at(levels, "minero_sa", last_actual)
