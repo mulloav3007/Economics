@@ -93,192 +93,192 @@ Periodo,target_key,variable,observed,fitted,model_key,modelo,corte,tipo,fit_time
 2026-08-01,no_minero,IMACEC no minero,1.3476391917419006,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
 2026-09-01,no_minero,IMACEC no minero,2.083999127358771,NA,actual,IMACEC efectivo,oficial,Efectivo,NA,NA
 2019-02-01,no_minero,IMACEC no minero,1.6595585372416455,2.6949472563488213,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2019-03-01,no_minero,IMACEC no minero,2.0466527540109025,1.731345020409309,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2019-04-01,no_minero,IMACEC no minero,1.854854981195575,2.0784694171575637,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2019-05-01,no_minero,IMACEC no minero,2.3594432769310947,1.9064759248707346,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2019-06-01,no_minero,IMACEC no minero,1.1635809008067488,2.3589624260261632,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2019-07-01,no_minero,IMACEC no minero,3.699210497436334,1.2865800758823411,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2019-08-01,no_minero,IMACEC no minero,3.367958748266986,3.5603905746626183,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-03-01,no_minero,IMACEC no minero,2.0466527540109025,1.7313450204093095,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-04-01,no_minero,IMACEC no minero,1.854854981195575,2.078469417157564,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-05-01,no_minero,IMACEC no minero,2.3594432769310947,1.906475924870735,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-06-01,no_minero,IMACEC no minero,1.1635809008067488,2.3589624260261637,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-07-01,no_minero,IMACEC no minero,3.699210497436334,1.2865800758823414,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-08-01,no_minero,IMACEC no minero,3.367958748266986,3.5603905746626188,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
 2019-09-01,no_minero,IMACEC no minero,3.484051165327595,3.263342572855979,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2019-10-01,no_minero,IMACEC no minero,-4.712059303855154,3.3674477454301077,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2019-11-01,no_minero,IMACEC no minero,-4.351675091891083,-3.9823647266922397,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2019-12-01,no_minero,IMACEC no minero,1.228133832481304,-3.6591923651423564,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2020-01-01,no_minero,IMACEC no minero,1.0520356730939318,1.3444675267796466,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2020-02-01,no_minero,IMACEC no minero,2.332493148386061,1.1865525678427702,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2020-03-01,no_minero,IMACEC no minero,-4.6573727980858575,2.3347950613169686,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-10-01,no_minero,IMACEC no minero,-4.712059303855154,3.367447745430108,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-11-01,no_minero,IMACEC no minero,-4.351675091891083,-3.9823647266922406,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2019-12-01,no_minero,IMACEC no minero,1.228133832481304,-3.659192365142357,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-01-01,no_minero,IMACEC no minero,1.0520356730939318,1.3444675267796469,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-02-01,no_minero,IMACEC no minero,2.332493148386061,1.1865525678427704,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-03-01,no_minero,IMACEC no minero,-4.6573727980858575,2.334795061316969,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
 2020-04-01,no_minero,IMACEC no minero,-16.253706219075205,-3.933324933528002,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2020-05-01,no_minero,IMACEC no minero,-17.51663250266762,-14.332266764405404,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2020-06-01,no_minero,IMACEC no minero,-15.45518696546634,-15.464788267796537,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2020-07-01,no_minero,IMACEC no minero,-13.156314088362864,-13.616199455226068,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2020-08-01,no_minero,IMACEC no minero,-12.018710106610374,-11.554699112168386,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-05-01,no_minero,IMACEC no minero,-17.51663250266762,-14.332266764405405,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-06-01,no_minero,IMACEC no minero,-15.45518696546634,-15.46478826779654,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-07-01,no_minero,IMACEC no minero,-13.156314088362864,-13.61619945522607,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-08-01,no_minero,IMACEC no minero,-12.018710106610374,-11.554699112168388,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
 2020-09-01,no_minero,IMACEC no minero,-5.4415880935850485,-10.534559624681195,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2020-10-01,no_minero,IMACEC no minero,-1.7617207822021141,-4.636565254819545,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-10-01,no_minero,IMACEC no minero,-1.7617207822021141,-4.636565254819546,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
 2020-11-01,no_minero,IMACEC no minero,1.0157142703611788,-1.3366665086214038,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2020-12-01,no_minero,IMACEC no minero,1.3347235420328785,1.1539815697072624,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2021-01-01,no_minero,IMACEC no minero,-3.350273769976153,1.440051203891819,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2021-02-01,no_minero,IMACEC no minero,-1.3854611211324586,-2.7611917887611486,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2021-03-01,no_minero,IMACEC no minero,7.68507855505729,-0.9992579341415593,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2021-04-01,no_minero,IMACEC no minero,16.734270191563038,7.134693638571624,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2021-05-01,no_minero,IMACEC no minero,22.13975263630448,15.24950148586593,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2021-06-01,no_minero,IMACEC no minero,23.407318658335143,20.09683516195296,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2020-12-01,no_minero,IMACEC no minero,1.3347235420328785,1.1539815697072626,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-01-01,no_minero,IMACEC no minero,-3.350273769976153,1.4400512038918194,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-02-01,no_minero,IMACEC no minero,-1.3854611211324586,-2.761191788761149,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-03-01,no_minero,IMACEC no minero,7.68507855505729,-0.9992579341415591,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-04-01,no_minero,IMACEC no minero,16.734270191563038,7.134693638571625,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-05-01,no_minero,IMACEC no minero,22.13975263630448,15.249501485865931,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-06-01,no_minero,IMACEC no minero,23.407318658335143,20.096835161952963,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
 2021-07-01,no_minero,IMACEC no minero,20.76463937480795,21.233517322715546,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2021-08-01,no_minero,IMACEC no minero,21.657203493350764,18.86371066492116,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2021-09-01,no_minero,IMACEC no minero,16.849040783117687,19.66411213770524,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2021-10-01,no_minero,IMACEC no minero,15.655913827209456,15.352421319415383,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2021-11-01,no_minero,IMACEC no minero,15.7452903795817,14.282491940799517,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2021-12-01,no_minero,IMACEC no minero,10.477766339800976,14.362639823360489,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-08-01,no_minero,IMACEC no minero,21.657203493350764,18.863710664921165,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-09-01,no_minero,IMACEC no minero,16.849040783117687,19.664112137705242,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-10-01,no_minero,IMACEC no minero,15.655913827209456,15.352421319415384,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-11-01,no_minero,IMACEC no minero,15.7452903795817,14.282491940799519,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2021-12-01,no_minero,IMACEC no minero,10.477766339800976,14.36263982336049,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
 2022-01-01,no_minero,IMACEC no minero,10.22222540329465,9.639019512195377,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
 2022-02-01,no_minero,IMACEC no minero,7.808978207744599,9.40986472355094,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2022-03-01,no_minero,IMACEC no minero,7.994692106551549,7.245799902455793,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2022-04-01,no_minero,IMACEC no minero,9.085282350398138,7.412337717536497,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-03-01,no_minero,IMACEC no minero,7.994692106551549,7.2457999024557935,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-04-01,no_minero,IMACEC no minero,9.085282350398138,7.412337717536498,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
 2022-05-01,no_minero,IMACEC no minero,7.123730100359338,8.390317920016354,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2022-06-01,no_minero,IMACEC no minero,4.404975133900391,6.631307808297791,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-06-01,no_minero,IMACEC no minero,4.404975133900391,6.631307808297792,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
 2022-07-01,no_minero,IMACEC no minero,1.2528044069725075,4.193280742135392,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2022-08-01,no_minero,IMACEC no minero,2.5916980923111455,1.366590715183664,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2022-09-01,no_minero,IMACEC no minero,1.1620904191933956,2.5672355264448528,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2022-10-01,no_minero,IMACEC no minero,-2.3643191172496913,1.2852434955138259,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2022-11-01,no_minero,IMACEC no minero,-2.537906042892557,-1.8770429195135896,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2022-12-01,no_minero,IMACEC no minero,-1.3300179238098009,-2.0327059447844684,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2023-01-01,no_minero,IMACEC no minero,0.5845919328884674,-0.9495395824052579,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2023-02-01,no_minero,IMACEC no minero,0.5722515823792129,0.7673752221132886,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2023-03-01,no_minero,IMACEC no minero,-0.06153635370935717,0.7563090874602347,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2023-04-01,no_minero,IMACEC no minero,-0.628578866738827,0.18796359054931605,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-08-01,no_minero,IMACEC no minero,2.5916980923111455,1.3665907151836645,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-09-01,no_minero,IMACEC no minero,1.1620904191933956,2.567235526444853,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-10-01,no_minero,IMACEC no minero,-2.3643191172496913,1.285243495513826,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-11-01,no_minero,IMACEC no minero,-2.537906042892557,-1.8770429195135898,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2022-12-01,no_minero,IMACEC no minero,-1.3300179238098009,-2.032705944784469,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-01-01,no_minero,IMACEC no minero,0.5845919328884674,-0.9495395824052577,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-02-01,no_minero,IMACEC no minero,0.5722515823792129,0.7673752221132888,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-03-01,no_minero,IMACEC no minero,-0.06153635370935717,0.756309087460235,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-04-01,no_minero,IMACEC no minero,-0.628578866738827,0.18796359054931616,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
 2023-05-01,no_minero,IMACEC no minero,0.765823394874432,-0.320528352081023,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2023-06-01,no_minero,IMACEC no minero,-0.15502564733940183,0.9298934390960603,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2023-07-01,no_minero,IMACEC no minero,2.330988389425115,0.10412763214982834,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2023-08-01,no_minero,IMACEC no minero,-0.48439612663464526,2.333445677823385,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2023-09-01,no_minero,IMACEC no minero,-0.9565011146409841,-0.19123335227995808,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-06-01,no_minero,IMACEC no minero,-0.15502564733940183,0.9298934390960605,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-07-01,no_minero,IMACEC no minero,2.330988389425115,0.10412763214982845,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-08-01,no_minero,IMACEC no minero,-0.48439612663464526,2.3334456778233856,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-09-01,no_minero,IMACEC no minero,-0.9565011146409841,-0.19123335227995802,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
 2023-10-01,no_minero,IMACEC no minero,3.136077145990246,-0.6145906437716806,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2023-11-01,no_minero,IMACEC no minero,2.167097326798406,3.055404149029532,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2023-12-01,no_minero,IMACEC no minero,0.7938512913761464,2.1864773590467745,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2024-01-01,no_minero,IMACEC no minero,4.1128471186122395,0.9550272856993012,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2024-02-01,no_minero,IMACEC no minero,4.628470622877567,3.9313167119659336,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2024-03-01,no_minero,IMACEC no minero,-0.2650223798154494,4.393698969601197,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2024-04-01,no_minero,IMACEC no minero,4.2313298983302605,0.005488727844555813,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-11-01,no_minero,IMACEC no minero,2.167097326798406,3.0554041490295325,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2023-12-01,no_minero,IMACEC no minero,0.7938512913761464,2.186477359046775,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-01-01,no_minero,IMACEC no minero,4.1128471186122395,0.9550272856993014,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-02-01,no_minero,IMACEC no minero,4.628470622877567,3.931316711965934,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-03-01,no_minero,IMACEC no minero,-0.2650223798154494,4.393698969601198,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-04-01,no_minero,IMACEC no minero,4.2313298983302605,0.005488727844555896,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
 2024-05-01,no_minero,IMACEC no minero,-0.21752102603829204,4.037565427790047,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2024-06-01,no_minero,IMACEC no minero,-1.2529263884246133,0.04808527943408791,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-06-01,no_minero,IMACEC no minero,-1.2529263884246133,0.048085279434087996,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
 2024-07-01,no_minero,IMACEC no minero,4.6495518840197425,-0.8804082144961074,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2024-08-01,no_minero,IMACEC no minero,1.5667466901213345,4.412603462976855,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2024-09-01,no_minero,IMACEC no minero,0.8477262615004033,1.6481165580684893,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2024-10-01,no_minero,IMACEC no minero,2.9737865888798565,1.0033393391841006,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2024-11-01,no_minero,IMACEC no minero,2.4453500701363318,2.9098710738907143,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2024-12-01,no_minero,IMACEC no minero,5.8056759175583394,2.4359988230481333,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-08-01,no_minero,IMACEC no minero,1.5667466901213345,4.412603462976856,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-09-01,no_minero,IMACEC no minero,0.8477262615004033,1.6481165580684898,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-10-01,no_minero,IMACEC no minero,2.9737865888798565,1.0033393391841008,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-11-01,no_minero,IMACEC no minero,2.4453500701363318,2.9098710738907148,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2024-12-01,no_minero,IMACEC no minero,5.8056759175583394,2.4359988230481338,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
 2025-01-01,no_minero,IMACEC no minero,3.7667226031889323,5.44935069484642,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
 2025-02-01,no_minero,IMACEC no minero,1.2705337021299723,3.6209316470097277,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2025-03-01,no_minero,IMACEC no minero,4.880608001916276,1.3824893533438287,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-03-01,no_minero,IMACEC no minero,4.880608001916276,1.382489353343829,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
 2025-04-01,no_minero,IMACEC no minero,2.692860351031956,4.61980163868,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2025-05-01,no_minero,IMACEC no minero,2.506905661515213,2.6579521698636936,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2025-06-01,no_minero,IMACEC no minero,4.9721635080541615,2.491198427170902,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2025-07-01,no_minero,IMACEC no minero,2.240705074317506,4.701903484846405,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-05-01,no_minero,IMACEC no minero,2.506905661515213,2.657952169863694,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-06-01,no_minero,IMACEC no minero,4.9721635080541615,2.4911984271709025,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-07-01,no_minero,IMACEC no minero,2.240705074317506,4.701903484846406,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
 2025-08-01,no_minero,IMACEC no minero,1.3299898699509427,2.2524846612659037,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2025-09-01,no_minero,IMACEC no minero,4.257546154405323,1.4358063120937443,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2025-10-01,no_minero,IMACEC no minero,2.838327035510746,4.061074696802139,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2025-11-01,no_minero,IMACEC no minero,2.2056769858848746,2.788398539014097,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2025-12-01,no_minero,IMACEC no minero,2.6444701441954432,2.2210734349037446,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-09-01,no_minero,IMACEC no minero,4.257546154405323,1.4358063120937445,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-10-01,no_minero,IMACEC no minero,2.838327035510746,4.06107469680214,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-11-01,no_minero,IMACEC no minero,2.2056769858848746,2.7883985390140973,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2025-12-01,no_minero,IMACEC no minero,2.6444701441954432,2.221073434903745,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
 2026-01-01,no_minero,IMACEC no minero,-0.8432962255164655,2.61455854467125,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
 2026-02-01,no_minero,IMACEC no minero,-0.2800518495744586,-0.5130748444030591,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2026-03-01,no_minero,IMACEC no minero,1.306154163844453,-0.007988858225018713,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2026-04-01,no_minero,IMACEC no minero,1.0301801677423894,1.4144317868622913,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2026-05-01,no_minero,IMACEC no minero,0.3621820772311546,1.1669537756569786,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2026-06-01,no_minero,IMACEC no minero,1.579816571679249,0.5679305297583739,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2026-07-01,no_minero,IMACEC no minero,-0.5656205959393201,1.6598368952753524,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2026-03-01,no_minero,IMACEC no minero,1.306154163844453,-0.007988858225018658,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2026-04-01,no_minero,IMACEC no minero,1.0301801677423894,1.4144317868622918,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2026-05-01,no_minero,IMACEC no minero,0.3621820772311546,1.1669537756569788,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2026-06-01,no_minero,IMACEC no minero,1.579816571679249,0.5679305297583741,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2026-07-01,no_minero,IMACEC no minero,-0.5656205959393201,1.6598368952753526,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
 2026-08-01,no_minero,IMACEC no minero,1.3476391917419006,-0.2640709036748143,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2026-09-01,no_minero,IMACEC no minero,2.083999127358771,1.451633234621378,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
-2026-10-01,no_minero,IMACEC no minero,NA,2.1119595514905227,ar1,AR(1) de referencia,proxy,Nowcast,NA,NA
-2019-01-01,no_minero,IMACEC no minero,2.7341152560787396,2.4076771332277684,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2019-02-01,no_minero,IMACEC no minero,1.6595585372416455,1.670296500624179,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2019-03-01,no_minero,IMACEC no minero,2.0466527540109025,1.5094080175253275,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2019-04-01,no_minero,IMACEC no minero,1.854854981195575,1.6399444860440207,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2019-05-01,no_minero,IMACEC no minero,2.3594432769310947,1.1600534265443305,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2019-06-01,no_minero,IMACEC no minero,1.1635809008067488,-0.31913779093639244,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2019-07-01,no_minero,IMACEC no minero,3.699210497436334,4.141161632113289,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2019-08-01,no_minero,IMACEC no minero,3.367958748266986,1.946995446096192,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2019-09-01,no_minero,IMACEC no minero,3.484051165327595,3.0373044721979956,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2019-10-01,no_minero,IMACEC no minero,-4.712059303855154,-2.775124680850402,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2019-11-01,no_minero,IMACEC no minero,-4.351675091891083,-3.997423686576851,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2019-12-01,no_minero,IMACEC no minero,1.228133832481304,0.8685616692817181,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-01-01,no_minero,IMACEC no minero,1.0520356730939318,2.2195485523537903,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-02-01,no_minero,IMACEC no minero,2.332493148386061,2.436824995089275,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-03-01,no_minero,IMACEC no minero,-4.6573727980858575,-2.4945302975068895,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-04-01,no_minero,IMACEC no minero,-16.253706219075205,-14.075263761804097,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-05-01,no_minero,IMACEC no minero,-17.51663250266762,-17.80590578821399,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-06-01,no_minero,IMACEC no minero,-15.45518696546634,-15.54632957721762,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-07-01,no_minero,IMACEC no minero,-13.156314088362864,-13.984039681755164,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-08-01,no_minero,IMACEC no minero,-12.018710106610374,-11.553912976197559,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-09-01,no_minero,IMACEC no minero,-5.4415880935850485,-4.4993393964685495,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-10-01,no_minero,IMACEC no minero,-1.7617207822021141,-2.020687858061045,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-11-01,no_minero,IMACEC no minero,1.0157142703611788,1.6686121993436018,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-12-01,no_minero,IMACEC no minero,1.3347235420328785,0.2591337097766908,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-01-01,no_minero,IMACEC no minero,-3.350273769976153,-2.932218444766578,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-02-01,no_minero,IMACEC no minero,-1.3854611211324586,-1.4174353567205513,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-03-01,no_minero,IMACEC no minero,7.68507855505729,5.6940239006179345,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-04-01,no_minero,IMACEC no minero,16.734270191563038,12.790040035846191,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-05-01,no_minero,IMACEC no minero,22.13975263630448,21.62448331233379,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-06-01,no_minero,IMACEC no minero,23.407318658335143,25.2304781962975,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-07-01,no_minero,IMACEC no minero,20.76463937480795,24.61625806538534,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-08-01,no_minero,IMACEC no minero,21.657203493350764,21.73128406765848,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-09-01,no_minero,IMACEC no minero,16.849040783117687,16.95887832649487,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-10-01,no_minero,IMACEC no minero,15.655913827209456,12.738270513924608,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-11-01,no_minero,IMACEC no minero,15.7452903795817,13.291046138543813,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-12-01,no_minero,IMACEC no minero,10.477766339800976,12.19690027684771,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-01-01,no_minero,IMACEC no minero,10.22222540329465,7.4733072828343685,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-02-01,no_minero,IMACEC no minero,7.808978207744599,5.252797881841273,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-03-01,no_minero,IMACEC no minero,7.994692106551549,8.246871912443767,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-04-01,no_minero,IMACEC no minero,9.085282350398138,11.326313833137533,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-05-01,no_minero,IMACEC no minero,7.123730100359338,9.052874020939901,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-06-01,no_minero,IMACEC no minero,4.404975133900391,3.2377320627881088,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-07-01,no_minero,IMACEC no minero,1.2528044069725075,-0.25988834760940555,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-08-01,no_minero,IMACEC no minero,2.5916980923111455,1.5615958120564817,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-09-01,no_minero,IMACEC no minero,1.1620904191933956,0.3368041101840074,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-10-01,no_minero,IMACEC no minero,-2.3643191172496913,-0.5360370959361667,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-11-01,no_minero,IMACEC no minero,-2.537906042892557,-0.7206374112139061,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-12-01,no_minero,IMACEC no minero,-1.3300179238098009,-1.7846827615939382,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-01-01,no_minero,IMACEC no minero,0.5845919328884674,0.7092466176932659,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-02-01,no_minero,IMACEC no minero,0.5722515823792129,2.4244599528803175,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-03-01,no_minero,IMACEC no minero,-0.06153635370935717,1.2762192153648473,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-04-01,no_minero,IMACEC no minero,-0.628578866738827,-0.48208481715989815,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-05-01,no_minero,IMACEC no minero,0.765823394874432,0.9737178476555554,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-06-01,no_minero,IMACEC no minero,-0.15502564733940183,0.9985014729238615,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-07-01,no_minero,IMACEC no minero,2.330988389425115,1.138956011907549,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-08-01,no_minero,IMACEC no minero,-0.48439612663464526,1.0211347773266781,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-09-01,no_minero,IMACEC no minero,-0.9565011146409841,-1.393224467177594,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-10-01,no_minero,IMACEC no minero,3.136077145990246,1.8837420813843289,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-11-01,no_minero,IMACEC no minero,2.167097326798406,2.0980022127105182,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-12-01,no_minero,IMACEC no minero,0.7938512913761464,2.2082736211626237,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-01-01,no_minero,IMACEC no minero,4.1128471186122395,3.134407905096671,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-02-01,no_minero,IMACEC no minero,4.628470622877567,4.060720054193161,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-03-01,no_minero,IMACEC no minero,-0.2650223798154494,-1.294667657029449,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-04-01,no_minero,IMACEC no minero,4.2313298983302605,4.740342891266749,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-05-01,no_minero,IMACEC no minero,-0.21752102603829204,0.625781891192024,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-06-01,no_minero,IMACEC no minero,-1.2529263884246133,-1.8007954890507094,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-07-01,no_minero,IMACEC no minero,4.6495518840197425,2.95523322657457,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-08-01,no_minero,IMACEC no minero,1.5667466901213345,2.2035978422392155,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-09-01,no_minero,IMACEC no minero,0.8477262615004033,0.35058565026958827,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-10-01,no_minero,IMACEC no minero,2.9737865888798565,3.196049214127142,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-11-01,no_minero,IMACEC no minero,2.4453500701363318,2.331320781444832,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-12-01,no_minero,IMACEC no minero,5.8056759175583394,4.208843675516024,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-01-01,no_minero,IMACEC no minero,3.7667226031889323,3.7708927820568543,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-02-01,no_minero,IMACEC no minero,1.2705337021299723,0.8390892157368764,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-03-01,no_minero,IMACEC no minero,4.880608001916276,3.4987747740916437,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-04-01,no_minero,IMACEC no minero,2.692860351031956,1.6591637609170233,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-05-01,no_minero,IMACEC no minero,2.506905661515213,1.8346803483679084,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-06-01,no_minero,IMACEC no minero,4.9721635080541615,4.847512860751458,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-07-01,no_minero,IMACEC no minero,2.240705074317506,3.244511807753448,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-08-01,no_minero,IMACEC no minero,1.3299898699509427,1.2897443121207446,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-09-01,no_minero,IMACEC no minero,4.257546154405323,5.135800422637145,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-10-01,no_minero,IMACEC no minero,2.838327035510746,3.279793219694873,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-11-01,no_minero,IMACEC no minero,2.2056769858848746,2.0186276637268383,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-12-01,no_minero,IMACEC no minero,2.6444701441954432,2.9975729526444472,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2026-01-01,no_minero,IMACEC no minero,-0.8432962255164655,1.4961061631681902,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2026-02-01,no_minero,IMACEC no minero,-0.2800518495744586,1.3400195864076205,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2026-03-01,no_minero,IMACEC no minero,1.306154163844453,2.49315418426261,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2026-04-01,no_minero,IMACEC no minero,1.0301801677423894,1.1480364261997908,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2026-05-01,no_minero,IMACEC no minero,0.3621820772311546,0.057998559690265905,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2026-06-01,no_minero,IMACEC no minero,1.579816571679249,2.0167540359891194,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2026-07-01,no_minero,IMACEC no minero,-0.5656205959393201,-0.6362277716926665,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2026-08-01,no_minero,IMACEC no minero,1.3476391917419006,1.157690571197814,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2026-09-01,no_minero,IMACEC no minero,2.083999127358771,2.3595555845396707,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2026-10-01,no_minero,IMACEC no minero,NA,-0.1032731476376782,m4,Corte experimental,experimental,Nowcast,NA,NA
+2026-09-01,no_minero,IMACEC no minero,2.083999127358771,1.4516332346213783,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
+2026-10-01,no_minero,IMACEC no minero,NA,2.111959551490523,ar1,AR(1) de referencia,proxy,Nowcast,NA,NA
+2019-01-01,no_minero,IMACEC no minero,2.7341152560787396,2.4076771332277698,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2019-02-01,no_minero,IMACEC no minero,1.6595585372416455,1.6702965006241794,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2019-03-01,no_minero,IMACEC no minero,2.0466527540109025,1.5094080175253282,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2019-04-01,no_minero,IMACEC no minero,1.854854981195575,1.6399444860440227,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2019-05-01,no_minero,IMACEC no minero,2.3594432769310947,1.1600534265443307,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2019-06-01,no_minero,IMACEC no minero,1.1635809008067488,-0.3191377909363928,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2019-07-01,no_minero,IMACEC no minero,3.699210497436334,4.141161632113291,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2019-08-01,no_minero,IMACEC no minero,3.367958748266986,1.946995446096192,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2019-09-01,no_minero,IMACEC no minero,3.484051165327595,3.037304472197996,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2019-10-01,no_minero,IMACEC no minero,-4.712059303855154,-2.775124680850402,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2019-11-01,no_minero,IMACEC no minero,-4.351675091891083,-3.9974236865768504,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2019-12-01,no_minero,IMACEC no minero,1.228133832481304,0.8685616692817203,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-01-01,no_minero,IMACEC no minero,1.0520356730939318,2.219548552353792,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-02-01,no_minero,IMACEC no minero,2.332493148386061,2.436824995089276,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-03-01,no_minero,IMACEC no minero,-4.6573727980858575,-2.494530297506889,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-04-01,no_minero,IMACEC no minero,-16.253706219075205,-14.0752637618041,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-05-01,no_minero,IMACEC no minero,-17.51663250266762,-17.80590578821399,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-06-01,no_minero,IMACEC no minero,-15.45518696546634,-15.546329577217621,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-07-01,no_minero,IMACEC no minero,-13.156314088362864,-13.984039681755165,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-08-01,no_minero,IMACEC no minero,-12.018710106610374,-11.55391297619756,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-09-01,no_minero,IMACEC no minero,-5.4415880935850485,-4.4993393964685495,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-10-01,no_minero,IMACEC no minero,-1.7617207822021141,-2.0206878580610463,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-11-01,no_minero,IMACEC no minero,1.0157142703611788,1.6686121993436012,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-12-01,no_minero,IMACEC no minero,1.3347235420328785,0.25913370977669015,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-01-01,no_minero,IMACEC no minero,-3.350273769976153,-2.9322184447665793,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-02-01,no_minero,IMACEC no minero,-1.3854611211324586,-1.4174353567205515,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-03-01,no_minero,IMACEC no minero,7.68507855505729,5.694023900617934,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-04-01,no_minero,IMACEC no minero,16.734270191563038,12.790040035846191,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-05-01,no_minero,IMACEC no minero,22.13975263630448,21.624483312333794,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-06-01,no_minero,IMACEC no minero,23.407318658335143,25.230478196297504,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-07-01,no_minero,IMACEC no minero,20.76463937480795,24.61625806538534,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-08-01,no_minero,IMACEC no minero,21.657203493350764,21.731284067658486,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-09-01,no_minero,IMACEC no minero,16.849040783117687,16.958878326494872,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-10-01,no_minero,IMACEC no minero,15.655913827209456,12.738270513924608,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-11-01,no_minero,IMACEC no minero,15.7452903795817,13.291046138543814,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-12-01,no_minero,IMACEC no minero,10.477766339800976,12.196900276847714,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-01-01,no_minero,IMACEC no minero,10.22222540329465,7.473307282834372,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-02-01,no_minero,IMACEC no minero,7.808978207744599,5.252797881841276,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-03-01,no_minero,IMACEC no minero,7.994692106551549,8.24687191244377,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-04-01,no_minero,IMACEC no minero,9.085282350398138,11.326313833137538,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-05-01,no_minero,IMACEC no minero,7.123730100359338,9.052874020939905,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-06-01,no_minero,IMACEC no minero,4.404975133900391,3.2377320627881114,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-07-01,no_minero,IMACEC no minero,1.2528044069725075,-0.25988834760940327,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-08-01,no_minero,IMACEC no minero,2.5916980923111455,1.5615958120564841,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-09-01,no_minero,IMACEC no minero,1.1620904191933956,0.3368041101840094,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-10-01,no_minero,IMACEC no minero,-2.3643191172496913,-0.5360370959361646,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-11-01,no_minero,IMACEC no minero,-2.537906042892557,-0.720637411213904,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-12-01,no_minero,IMACEC no minero,-1.3300179238098009,-1.784682761593937,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-01-01,no_minero,IMACEC no minero,0.5845919328884674,0.7092466176932677,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-02-01,no_minero,IMACEC no minero,0.5722515823792129,2.424459952880319,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-03-01,no_minero,IMACEC no minero,-0.06153635370935717,1.2762192153648482,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-04-01,no_minero,IMACEC no minero,-0.628578866738827,-0.48208481715989715,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-05-01,no_minero,IMACEC no minero,0.765823394874432,0.9737178476555557,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-06-01,no_minero,IMACEC no minero,-0.15502564733940183,0.9985014729238608,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-07-01,no_minero,IMACEC no minero,2.330988389425115,1.138956011907549,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-08-01,no_minero,IMACEC no minero,-0.48439612663464526,1.0211347773266781,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-09-01,no_minero,IMACEC no minero,-0.9565011146409841,-1.3932244671775942,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-10-01,no_minero,IMACEC no minero,3.136077145990246,1.8837420813843304,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-11-01,no_minero,IMACEC no minero,2.167097326798406,2.0980022127105182,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-12-01,no_minero,IMACEC no minero,0.7938512913761464,2.2082736211626237,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-01-01,no_minero,IMACEC no minero,4.1128471186122395,3.1344079050966736,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-02-01,no_minero,IMACEC no minero,4.628470622877567,4.060720054193163,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-03-01,no_minero,IMACEC no minero,-0.2650223798154494,-1.29466765702945,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-04-01,no_minero,IMACEC no minero,4.2313298983302605,4.740342891266752,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-05-01,no_minero,IMACEC no minero,-0.21752102603829204,0.6257818911920239,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-06-01,no_minero,IMACEC no minero,-1.2529263884246133,-1.8007954890507105,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-07-01,no_minero,IMACEC no minero,4.6495518840197425,2.9552332265745713,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-08-01,no_minero,IMACEC no minero,1.5667466901213345,2.2035978422392155,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-09-01,no_minero,IMACEC no minero,0.8477262615004033,0.3505856502695884,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-10-01,no_minero,IMACEC no minero,2.9737865888798565,3.196049214127144,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-11-01,no_minero,IMACEC no minero,2.4453500701363318,2.3313207814448322,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-12-01,no_minero,IMACEC no minero,5.8056759175583394,4.208843675516026,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-01-01,no_minero,IMACEC no minero,3.7667226031889323,3.770892782056856,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-02-01,no_minero,IMACEC no minero,1.2705337021299723,0.8390892157368761,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-03-01,no_minero,IMACEC no minero,4.880608001916276,3.4987747740916446,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-04-01,no_minero,IMACEC no minero,2.692860351031956,1.6591637609170249,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-05-01,no_minero,IMACEC no minero,2.506905661515213,1.8346803483679082,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-06-01,no_minero,IMACEC no minero,4.9721635080541615,4.847512860751458,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-07-01,no_minero,IMACEC no minero,2.240705074317506,3.244511807753448,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-08-01,no_minero,IMACEC no minero,1.3299898699509427,1.2897443121207446,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-09-01,no_minero,IMACEC no minero,4.257546154405323,5.135800422637147,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-10-01,no_minero,IMACEC no minero,2.838327035510746,3.2797932196948736,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-11-01,no_minero,IMACEC no minero,2.2056769858848746,2.0186276637268388,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-12-01,no_minero,IMACEC no minero,2.6444701441954432,2.9975729526444486,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2026-01-01,no_minero,IMACEC no minero,-0.8432962255164655,1.4961061631681907,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2026-02-01,no_minero,IMACEC no minero,-0.2800518495744586,1.3400195864076205,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2026-03-01,no_minero,IMACEC no minero,1.306154163844453,2.4931541842626106,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2026-04-01,no_minero,IMACEC no minero,1.0301801677423894,1.1480364261997924,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2026-05-01,no_minero,IMACEC no minero,0.3621820772311546,0.05799855969026557,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2026-06-01,no_minero,IMACEC no minero,1.579816571679249,2.01675403598912,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2026-07-01,no_minero,IMACEC no minero,-0.5656205959393201,-0.6362277716926665,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2026-08-01,no_minero,IMACEC no minero,1.3476391917419006,1.1576905711978147,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2026-09-01,no_minero,IMACEC no minero,2.083999127358771,2.3595555845396716,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2026-10-01,no_minero,IMACEC no minero,NA,-0.10327314763767712,m4,Corte experimental,experimental,Nowcast,NA,NA
 2019-04-01,no_minero,IMACEC no minero,1.854854981195575,2.146775515777096,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
 2019-05-01,no_minero,IMACEC no minero,2.3594432769310947,1.8536887574827077,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
 2019-06-01,no_minero,IMACEC no minero,1.1635809008067488,2.086983670712524,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
@@ -556,100 +556,100 @@ Periodo,target_key,variable,observed,fitted,model_key,modelo,corte,tipo,fit_time
 2026-08-01,total,IMACEC total,-1.323334787361241,-1.4762175999925953,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
 2026-09-01,total,IMACEC total,-0.06213719198756573,-0.9685581315422923,ar1,AR(1) de referencia,proxy,Ajuste,NA,NA
 2026-10-01,total,IMACEC total,NA,0.14259631792850186,ar1,AR(1) de referencia,proxy,Nowcast,NA,NA
-2019-01-01,total,IMACEC total,1.9659919484973587,2.178064696954478,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2019-02-01,total,IMACEC total,0.4024410183006255,1.0922422267552103,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2019-03-01,total,IMACEC total,1.347042473024107,0.8144971953900126,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2019-04-01,total,IMACEC total,1.7820940125048201,1.202339365954839,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2019-05-01,total,IMACEC total,1.8589031828119662,0.941513100575986,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2019-06-01,total,IMACEC total,0.880313809166644,-0.3558614686138247,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2019-07-01,total,IMACEC total,2.7653306128001987,3.3077706455676505,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2019-08-01,total,IMACEC total,3.1909427561596093,1.2713022386390227,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2019-09-01,total,IMACEC total,2.7842901635932282,2.581042473098968,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2019-10-01,total,IMACEC total,-4.534436503098838,-2.597500305951714,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2019-11-01,total,IMACEC total,-4.988669054665129,-3.9317016636078774,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2019-12-01,total,IMACEC total,0.9258849701172522,0.2317563693369179,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-01-01,total,IMACEC total,0.9300521010913165,1.7128777105146478,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-02-01,total,IMACEC total,2.7210597729153907,2.999443994282837,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-03-01,total,IMACEC total,-4.349724855185732,-2.3394671850895365,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-04-01,total,IMACEC total,-15.088301570672291,-12.801122453437923,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-05-01,total,IMACEC total,-15.97711767892427,-15.91025043218901,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-06-01,total,IMACEC total,-13.962357751796306,-13.915681285367395,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-07-01,total,IMACEC total,-11.717591602160715,-12.727932806786509,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-08-01,total,IMACEC total,-11.011337841146728,-10.76065337129422,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-09-01,total,IMACEC total,-4.9506576054560885,-4.473232273351028,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-10-01,total,IMACEC total,-1.3585290872647038,-1.790454194636599,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-11-01,total,IMACEC total,1.012732990849563,1.398474495551421,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2020-12-01,total,IMACEC total,0.5689922284684901,0.438914728108607,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-01-01,total,IMACEC total,-3.4287687132994904,-2.828347436284557,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-02-01,total,IMACEC total,-2.1666510508181247,-2.6745469648873,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-03-01,total,IMACEC total,6.6327425250128025,4.760742875606436,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-04-01,total,IMACEC total,15.285035960989358,11.495119649168167,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-05-01,total,IMACEC total,19.551829417289813,18.97899235758651,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-06-01,total,IMACEC total,20.382431879961494,22.20539529555761,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-07-01,total,IMACEC total,17.42490393209195,20.995492487527716,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-08-01,total,IMACEC total,17.966595780594965,18.22676443654437,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-09-01,total,IMACEC total,13.463442930231295,14.101252088698978,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-10-01,total,IMACEC total,13.261557495479682,10.453975878471352,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-11-01,total,IMACEC total,13.33203729920507,10.803003342890046,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2021-12-01,total,IMACEC total,8.751161872273826,9.98598732333669,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-01-01,total,IMACEC total,7.209596697608389,5.362255575160517,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-02-01,total,IMACEC total,5.005438687016195,3.0080774250847915,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-03-01,total,IMACEC total,5.669655027882148,5.6641732718319115,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-04-01,total,IMACEC total,5.904856300445971,8.60318264419931,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-05-01,total,IMACEC total,5.588591818479638,6.2186557036649805,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-06-01,total,IMACEC total,2.7970632563766307,1.8808663577874987,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-07-01,total,IMACEC total,-0.43808421788794627,-1.6848843192578997,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-08-01,total,IMACEC total,0.6349071225385083,-0.047722732407719876,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-09-01,total,IMACEC total,0.17856372039597446,-0.7794795041376085,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-10-01,total,IMACEC total,-1.8790917978623423,-1.1305975973994675,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-11-01,total,IMACEC total,-2.866486420366976,-1.1603633865159702,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2022-12-01,total,IMACEC total,-1.2635246838221925,-1.963276850697234,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-01-01,total,IMACEC total,1.359126237823327,0.32143879118159896,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-02-01,total,IMACEC total,0.16342433643201648,2.119507209141387,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-03-01,total,IMACEC total,-1.4905514158231825,0.8295747464674565,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-04-01,total,IMACEC total,-0.497119351657882,-0.83051576151457,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-05-01,total,IMACEC total,-0.599359494821039,1.0430850083096193,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-06-01,total,IMACEC total,0.02746104306026176,0.7328899403200623,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-07-01,total,IMACEC total,2.915341321974929,1.1528054169112951,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-08-01,total,IMACEC total,0.418336336923697,1.0760531178023454,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-09-01,total,IMACEC total,0.9023618496374564,-0.8550811538401475,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-10-01,total,IMACEC total,2.3886867770460896,2.406725423494646,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-11-01,total,IMACEC total,2.281348596189936,1.8924377527299825,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2023-12-01,total,IMACEC total,0.5421059316974342,2.5893490802250883,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-01-01,total,IMACEC total,3.744961609875319,2.5711483266087836,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-02-01,total,IMACEC total,5.836527826096916,4.446706191686482,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-03-01,total,IMACEC total,1.184659965776258,-0.39960197848541107,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-04-01,total,IMACEC total,3.8954766293294307,4.423939402289726,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-05-01,total,IMACEC total,0.3278935451245246,0.46963043216231687,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-06-01,total,IMACEC total,-0.7129540412657787,-1.5144725377339312,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-07-01,total,IMACEC total,4.491494430948828,2.4024922016133403,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-08-01,total,IMACEC total,2.2341186703822347,1.76004569468899,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-09-01,total,IMACEC total,0.5088925620504003,0.5828808762583103,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-10-01,total,IMACEC total,2.893919855317506,2.7164388495954483,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-11-01,total,IMACEC total,2.431240856349004,2.0486220237772255,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2024-12-01,total,IMACEC total,6.790041427242954,3.6654443585070395,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-01-01,total,IMACEC total,3.3277451570978167,3.723482630171717,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-02-01,total,IMACEC total,0.31195371691388196,-0.29158778205993097,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-03-01,total,IMACEC total,4.927883606216077,2.7138028359029778,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-04-01,total,IMACEC total,3.8776905480138346,1.6938718676461766,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-05-01,total,IMACEC total,3.933046812718355,2.192822078083867,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-06-01,total,IMACEC total,3.375601478984036,4.889665260444661,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-07-01,total,IMACEC total,1.5968501075468655,2.2927639765571777,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-08-01,total,IMACEC total,0.2696093831863422,0.7822078755452222,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-09-01,total,IMACEC total,3.2961209339912534,3.989020331960035,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-10-01,total,IMACEC total,2.0572659006846905,2.7707845867284218,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-11-01,total,IMACEC total,1.3711953861016202,1.5229270888382613,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2025-12-01,total,IMACEC total,1.2666989233431902,2.633185660503843,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2026-01-01,total,IMACEC total,-0.9404610854425344,1.1273236589443156,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2026-02-01,total,IMACEC total,-0.3548233105457599,1.2195286963076724,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2026-03-01,total,IMACEC total,0.1295548650719125,2.007540430350549,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2026-04-01,total,IMACEC total,-0.7703443280394628,0.6025734866080501,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2026-05-01,total,IMACEC total,-1.3426776588870037,-0.5933383044022845,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2026-06-01,total,IMACEC total,2.3112314047016858,1.1759895167939813,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2026-07-01,total,IMACEC total,-1.8995453233341064,-0.59980834015277,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2026-08-01,total,IMACEC total,-1.323334787361241,0.07184016175937263,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2026-09-01,total,IMACEC total,-0.06213719198756573,0.9744745237684445,m4,Corte experimental,experimental,Ajuste,2026-11-23 15:35:56 UTC,2026-09-01
-2026-10-01,total,IMACEC total,NA,-0.9018633009792181,m4,Corte experimental,experimental,Nowcast,NA,NA
+2019-01-01,total,IMACEC total,1.9659919484973587,2.178064696954479,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2019-02-01,total,IMACEC total,0.4024410183006255,1.09224222675521,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2019-03-01,total,IMACEC total,1.347042473024107,0.8144971953900126,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2019-04-01,total,IMACEC total,1.7820940125048201,1.2023393659548391,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2019-05-01,total,IMACEC total,1.8589031828119662,0.9415131005759865,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2019-06-01,total,IMACEC total,0.880313809166644,-0.35586146861382467,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2019-07-01,total,IMACEC total,2.7653306128001987,3.3077706455676505,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2019-08-01,total,IMACEC total,3.1909427561596093,1.271302238639023,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2019-09-01,total,IMACEC total,2.7842901635932282,2.5810424730989685,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2019-10-01,total,IMACEC total,-4.534436503098838,-2.5975003059517143,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2019-11-01,total,IMACEC total,-4.988669054665129,-3.931701663607877,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2019-12-01,total,IMACEC total,0.9258849701172522,0.23175636933691746,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-01-01,total,IMACEC total,0.9300521010913165,1.7128777105146484,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-02-01,total,IMACEC total,2.7210597729153907,2.999443994282837,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-03-01,total,IMACEC total,-4.349724855185732,-2.3394671850895365,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-04-01,total,IMACEC total,-15.088301570672291,-12.801122453437921,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-05-01,total,IMACEC total,-15.97711767892427,-15.91025043218901,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-06-01,total,IMACEC total,-13.962357751796306,-13.915681285367397,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-07-01,total,IMACEC total,-11.717591602160715,-12.727932806786509,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-08-01,total,IMACEC total,-11.011337841146728,-10.76065337129422,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-09-01,total,IMACEC total,-4.9506576054560885,-4.473232273351028,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-10-01,total,IMACEC total,-1.3585290872647038,-1.7904541946366013,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-11-01,total,IMACEC total,1.012732990849563,1.3984744955514206,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2020-12-01,total,IMACEC total,0.5689922284684901,0.4389147281086061,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-01-01,total,IMACEC total,-3.4287687132994904,-2.828347436284557,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-02-01,total,IMACEC total,-2.1666510508181247,-2.6745469648873,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-03-01,total,IMACEC total,6.6327425250128025,4.760742875606434,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-04-01,total,IMACEC total,15.285035960989358,11.495119649168169,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-05-01,total,IMACEC total,19.551829417289813,18.978992357586513,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-06-01,total,IMACEC total,20.382431879961494,22.20539529555761,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-07-01,total,IMACEC total,17.42490393209195,20.995492487527713,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-08-01,total,IMACEC total,17.966595780594965,18.22676443654437,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-09-01,total,IMACEC total,13.463442930231295,14.101252088698978,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-10-01,total,IMACEC total,13.261557495479682,10.453975878471354,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-11-01,total,IMACEC total,13.33203729920507,10.803003342890046,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2021-12-01,total,IMACEC total,8.751161872273826,9.98598732333669,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-01-01,total,IMACEC total,7.209596697608389,5.362255575160518,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-02-01,total,IMACEC total,5.005438687016195,3.0080774250847915,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-03-01,total,IMACEC total,5.669655027882148,5.664173271831911,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-04-01,total,IMACEC total,5.904856300445971,8.60318264419931,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-05-01,total,IMACEC total,5.588591818479638,6.2186557036649805,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-06-01,total,IMACEC total,2.7970632563766307,1.8808663577874987,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-07-01,total,IMACEC total,-0.43808421788794627,-1.6848843192579006,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-08-01,total,IMACEC total,0.6349071225385083,-0.04772273240771953,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-09-01,total,IMACEC total,0.17856372039597446,-0.7794795041376082,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-10-01,total,IMACEC total,-1.8790917978623423,-1.1305975973994684,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-11-01,total,IMACEC total,-2.866486420366976,-1.1603633865159702,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2022-12-01,total,IMACEC total,-1.2635246838221925,-1.9632768506972345,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-01-01,total,IMACEC total,1.359126237823327,0.3214387911815995,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-02-01,total,IMACEC total,0.16342433643201648,2.1195072091413865,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-03-01,total,IMACEC total,-1.4905514158231825,0.8295747464674569,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-04-01,total,IMACEC total,-0.497119351657882,-0.83051576151457,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-05-01,total,IMACEC total,-0.599359494821039,1.0430850083096197,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-06-01,total,IMACEC total,0.02746104306026176,0.7328899403200625,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-07-01,total,IMACEC total,2.915341321974929,1.1528054169112947,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-08-01,total,IMACEC total,0.418336336923697,1.076053117802346,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-09-01,total,IMACEC total,0.9023618496374564,-0.8550811538401473,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-10-01,total,IMACEC total,2.3886867770460896,2.406725423494646,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-11-01,total,IMACEC total,2.281348596189936,1.892437752729983,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2023-12-01,total,IMACEC total,0.5421059316974342,2.589349080225088,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-01-01,total,IMACEC total,3.744961609875319,2.5711483266087845,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-02-01,total,IMACEC total,5.836527826096916,4.4467061916864825,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-03-01,total,IMACEC total,1.184659965776258,-0.3996019784854108,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-04-01,total,IMACEC total,3.8954766293294307,4.423939402289727,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-05-01,total,IMACEC total,0.3278935451245246,0.4696304321623175,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-06-01,total,IMACEC total,-0.7129540412657787,-1.5144725377339314,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-07-01,total,IMACEC total,4.491494430948828,2.40249220161334,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-08-01,total,IMACEC total,2.2341186703822347,1.7600456946889904,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-09-01,total,IMACEC total,0.5088925620504003,0.5828808762583108,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-10-01,total,IMACEC total,2.893919855317506,2.716438849595448,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-11-01,total,IMACEC total,2.431240856349004,2.0486220237772255,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2024-12-01,total,IMACEC total,6.790041427242954,3.6654443585070404,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-01-01,total,IMACEC total,3.3277451570978167,3.723482630171718,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-02-01,total,IMACEC total,0.31195371691388196,-0.29158778205993097,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-03-01,total,IMACEC total,4.927883606216077,2.713802835902978,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-04-01,total,IMACEC total,3.8776905480138346,1.6938718676461768,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-05-01,total,IMACEC total,3.933046812718355,2.1928220780838674,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-06-01,total,IMACEC total,3.375601478984036,4.88966526044466,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-07-01,total,IMACEC total,1.5968501075468655,2.2927639765571772,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-08-01,total,IMACEC total,0.2696093831863422,0.7822078755452228,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-09-01,total,IMACEC total,3.2961209339912534,3.9890203319600346,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-10-01,total,IMACEC total,2.0572659006846905,2.7707845867284213,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-11-01,total,IMACEC total,1.3711953861016202,1.5229270888382613,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2025-12-01,total,IMACEC total,1.2666989233431902,2.633185660503843,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2026-01-01,total,IMACEC total,-0.9404610854425344,1.1273236589443163,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2026-02-01,total,IMACEC total,-0.3548233105457599,1.2195286963076724,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2026-03-01,total,IMACEC total,0.1295548650719125,2.0075404303505495,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2026-04-01,total,IMACEC total,-0.7703443280394628,0.6025734866080504,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2026-05-01,total,IMACEC total,-1.3426776588870037,-0.5933383044022844,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2026-06-01,total,IMACEC total,2.3112314047016858,1.1759895167939813,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2026-07-01,total,IMACEC total,-1.8995453233341064,-0.5998083401527705,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2026-08-01,total,IMACEC total,-1.323334787361241,0.0718401617593732,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2026-09-01,total,IMACEC total,-0.06213719198756573,0.974474523768445,m4,Corte experimental,experimental,Ajuste,2026-11-24 01:58:51 UTC,2026-09-01
+2026-10-01,total,IMACEC total,NA,-0.9018633009792189,m4,Corte experimental,experimental,Nowcast,NA,NA
 2019-04-01,total,IMACEC total,1.7820940125048201,1.2384918132740304,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
 2019-05-01,total,IMACEC total,1.8589031828119662,1.1771925012765176,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
 2019-06-01,total,IMACEC total,0.880313809166644,1.6626798894469645,ma3,Promedio móvil 3 meses,proxy,Ajuste,NA,NA
